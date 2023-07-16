@@ -1,0 +1,33 @@
+.rectangle_1
+{
+    width: 1650px;
+    height: 513px;
+    background-color: #8F00FF;
+}
+
+.quest
+{
+    font-family: 'Inter';
+    font-size: 30px;
+    color: #ffff; 
+    stroke: #ffff;
+    stroke-width: 10%;
+    padding-top: 20px;
+    margin-left: 555px;
+}
+
+.answer
+{
+    font-size: 22px;
+    color: white;
+    margin-top: 40px;
+    margin-left: 40px;
+}
+
+.answer_second
+{
+    margin-top: 40px;
+}
+
+
+
