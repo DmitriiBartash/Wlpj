@@ -1,7 +1,8 @@
-.footer
+/* .footer
 {
     max-width: 1600px;
-}
+    max-height: 320px;
+} */
 
 .rectangle_big
 {
@@ -20,7 +21,8 @@
 .logo
 {
     font-family: 'Luckiest Guy', cursive;
-    width: 10%;
+    max-width: 145px;
+    max-height: 51px;
     border: 10px solid yellow;
     font-size: 30px;
     padding-top: 50px;
@@ -37,24 +39,23 @@
     margin-left: 38px;
 } 
 
-/* .social_networks
+.social_networks
 {
     display: flex;
-    width: 28%;
-    border: 10px solid yellow;
-} */
+    max-width: 444px;
+    max-height: 54px;
+    
+}
 
 .rectangle
 {
+    /* display: flex;
+    align-items: center; */
     height: 54px;
     width: 444px;
     background-color:#D9D9D9;
     border-radius: 20px;
     margin-left: 300px;
-    margin-bottom: 150px;
-    /* display: flex;
-    align-items: center; */
-    border: 10px solid yellow;
 }
 
 .navigation
@@ -68,8 +69,8 @@
 
 .date
 {
-    /* width: 500px;
-    border: 10px solid yellow; */
+    /* max-width: 430px;
+    max-height: 86px; */
     margin-top: 50px;
     
 }
@@ -103,7 +104,8 @@
 .phone_number
 {
     margin-left: 50px;
-    border: 10px solid yellow;
+    /* max-width: 200px;
+    max-height: 51px;   */
 }
 
 .phn_1
