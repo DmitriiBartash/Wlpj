@@ -13,25 +13,36 @@ body
    border-radius: 20px;
 }
 
-.back
+.before
 {
    width: 775px;
    height: 394px;
    background-color: #FFE600;
    border-radius: 20px;
+   transform: rotate(8deg);
+   padding-left: 50px;
 }
 
 .map
 {
-   float: right; 
-   margin-right: 20px;
-   margin-top: 50px;
+   position: absolute;
+   right: 50px;
+   top: 30px;
+   transform: rotate(-8deg);
 }
 
+.TEXT
+{
+   font-family:'Inter';
+   transform: rotate(-8deg);
+}
 .where
 {
-    font-size: 25px;
-    font-family:'Inter';
-    float: left; 
-    margin-left: 20px;
+   font-size: 50px;
+   top: 20px;
+}
+
+.adres
+{
+   top: 15px;
 }
