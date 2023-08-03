@@ -4,124 +4,116 @@
     max-height: 320px;
 } */
 
-.rectangle_big
-{
-    width: 1600px;
-    height: 237px;
-    background-color: #FFE1E1;
+body {
+    margin: 0;
 }
 
-.rectangle_min
-{
-    width: 1600px;
+.rectangle_big {
+    width: 100%;
+    height: 100%;
+    min-height: 200px;
+    background-color: #FFE1E1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.rectangle_min {
+    width: 100%;
     height: 67px;
     background: #E6E0E0;
 }
 
-.logo
-{
+.logo {
     font-family: 'Luckiest Guy', cursive;
-    max-width: 145px;
-    max-height: 51px;
-    border: 10px solid yellow;
-    font-size: 30px;
-    padding-top: 50px;
-    margin-left: 100px;
+    /* max-width: 145px;
+    max-height: 51px; */
+    /* font-size: 30px; */
+    /* padding-top: 50px;
+    margin-left: 100px; */
+    /* margin-right: 10%; */
 }
 
-.Emirat
-{
-    margin-top: 30px;
+.Emirat {
+    /* margin-top: 30px; */
 }
 
- .Travel
-{
-    margin-left: 38px;
-} 
+.Travel {
+    /* margin-left: 38px; */
+}
 
-.social_networks
-{
+.social_network {
     display: flex;
-    max-width: 444px;
-    max-height: 54px;
-    
-}
-
-.rectangle
-{
-    /* display: flex;
-    align-items: center; */
-    height: 54px;
     width: 444px;
-    background-color:#D9D9D9;
+    height: 54px;
+    background-color: #D9D9D9;
     border-radius: 20px;
-    margin-left: 300px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    margin-right: 15%;
 }
 
-.navigation
-{
+
+.navigation {
     font-family: 'Luckiest Guy', cursive;
-    font-size: 30px;
+    /* font-size: 30px; */
     text-align: left;
-    margin-left: 25px;
-    margin-top: 8px;
+    /* margin-left: 25px;
+    margin-top: 8px; */
 }
 
-.date
-{
+.date {
     /* max-width: 430px;
     max-height: 86px; */
-    margin-top: 50px;
-    
+    /* margin-top: 50px; */
+    margin-right: 15%;
 }
 
-.information
-{
+.information {
     font-family: 'Luckiest Guy', cursive;
-    font-size: 20px;
+    /* font-size: 20px; */
     color: #848484;
-    margin-left: 915px;
-    margin-top: -140px;
+    /* margin-left: 915px;
+    margin-top: -140px; */
 }
 
-.person_date
-{
+.person_date {
     font-family: 'Luckiest Guy', cursive;
-    font-size: 20px;
+    /* font-size: 20px; */
     color: #848484;
-    margin-left: 915px;
-    margin-top: 10px;
-} 
+    /* margin-left: 915px;
+    margin-top: 10px; */
+}
 
-.adress
-{
-    font-size: 20px;
+.adress {
+    /* font-size: 20px; */
     color: #848484;
-    margin-left: 915px;
-    margin-top: 10px;
-} 
+    /* margin-left: 915px;
+    margin-top: 10px; */
+}
 
-.phone_number
-{
-    margin-left: 50px;
+.phone_number {
+    /* margin-left: 50px; */
     /* max-width: 200px;
     max-height: 51px;   */
 }
 
-.phn_1
-{
+.phn_1 {
     font-family: 'Inter';
-    font-size: 20px;
+    /* font-size: 20px; */
     color: #252020;
-    margin-left: 1400px;
-    margin-top: -75px;
+    /* margin-left: 1400px;
+    margin-top: -75px; */
 }
 
-.phn_2
-{
+.phn_2 {
     font-family: 'Inter';
-    font-size: 20px;
+    /* font-size: 20px; */
     color: #252020;
-    margin-left: 1400px;
-    margin-top: 5px;
+    /* margin-left: 1400px;
+    margin-top: 5px; */
 }
