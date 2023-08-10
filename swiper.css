@@ -1,0 +1,40 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+swiper-container {
+  flex-grow: 4;
+  width: inherit;
+  height: 99%;
+}
+
+swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-v {
+  background: #eee;
+}
+
+.columnsW {
+  position: relative;
+  height: 100%;
+  display: flex;
+  grid-template-columns: 50% 50%;
+}
+
+.columnsW>div {
+  height: fit-content;
+}
