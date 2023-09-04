@@ -28,6 +28,10 @@ body {
 
 .logo {
     font-family: 'Luckiest Guy', cursive;
+    margin-left: 2%;
+    border-color: yellow ;
+    border-width: 2px;
+    border-style: solid;
     /* max-width: 145px;
     max-height: 51px; */
     /* font-size: 30px; */
@@ -54,7 +58,7 @@ body {
     justify-content: center;
     align-items: center;
     justify-content: space-around;
-    margin-right: 15%;
+    /* margin-right: 15%; */
 }
 
 
@@ -70,7 +74,7 @@ body {
     /* max-width: 430px;
     max-height: 86px; */
     /* margin-top: 50px; */
-    margin-right: 15%;
+    margin-right: 20%;
 }
 
 .information {
@@ -96,10 +100,12 @@ body {
     margin-top: 10px; */
 }
 
-.phone_number {
+.phone_number 
+{
     /* margin-left: 50px; */
     /* max-width: 200px;
     max-height: 51px;   */
+    margin-right: 3%;
 }
 
 .phn_1 {
@@ -116,4 +122,25 @@ body {
     color: #252020;
     /* margin-left: 1400px;
     margin-top: 5px; */
+}
+
+.rectangle_min
+{
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width: 320px ) and (max-width: 480px)
+{
+    .rectangle_big
+    {
+    display: grid;
+    grid-row: 50% 50%;
+    }
+
+    .row1-container
+    {
+       display: flex;
+       flex-direction: row;
+    }
 }

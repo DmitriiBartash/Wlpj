@@ -36,9 +36,9 @@ body
    font-family:'Inter';
    transform: rotate(-8deg);
 }
-.where
+.Where
 {
-   font-size: 50px;
+   font-size: 0.8rem;
    top: 20px;
 }
 
