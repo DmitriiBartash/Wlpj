@@ -30,6 +30,33 @@ body
    transform: rotate(-8deg);
 }
 
+.arrow_red_1
+{
+   width: 25%;
+   height: 40%;
+   left: 50%;
+   top: -20%;/* top: -16.6%; */
+   transform: rotate(30deg);
+}
+
+.arrow_red_2
+{
+   width: 25%;
+   height: 50%;
+   left: 87.5%;/* left: 85.1%; */
+   top: -8%;
+   transform: rotate(45deg);
+}
+
+.arrow_red_3
+{
+   width: 25%;
+   height: 40%;
+   left: 56.3%;
+   top: 80%;/* top: 75.4%; */
+   transform: rotate(-47deg);
+}
+
 .TEXT
 {
    font-family: 'Lobster', cursive;
@@ -37,3 +64,17 @@ body
    width: 50%;
    padding-top: 2%;
 }
+
+/* .arrow_red_1
+{
+   left: 80%;
+   top: -25%;
+
+}
+
+.arrow_red_2
+{
+   left: 75%;
+   top: 70%;
+   transform: rotate(30deg);
+} */
