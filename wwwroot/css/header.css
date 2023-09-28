@@ -19,11 +19,18 @@ header {
     /* opacity: .8; */
     background: transparent;
     backdrop-filter: blur(35px);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 24a90e46a50edfe0d45643a09eb4253a8d0d1d6c
 }
 
 .nav-header-element {
     /* position: absolute; */
+<<<<<<< HEAD
+=======
+    color: #F4C430;;
+>>>>>>> 24a90e46a50edfe0d45643a09eb4253a8d0d1d6c
     padding: 10px 20px;
     width: 26px;
     left: 18px;
@@ -38,6 +45,18 @@ header {
     transform: translate(0%) !important;
 }
 
+<<<<<<< HEAD
+=======
+.fa-times::before{
+    color: black;
+    transition: 0.2s linear;
+}
+
+.fa-bars::before{
+    transition: 0.2s linear;
+}
+
+>>>>>>> 24a90e46a50edfe0d45643a09eb4253a8d0d1d6c
 .sidebar {
     width: 300px;
     background: yellow;

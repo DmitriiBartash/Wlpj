@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "D:\\Code shit\\Wlpj\\LandingPage.csproj": {}
   },
   "projects": {
@@ -12,12 +13,29 @@
         "projectPath": "D:\\Code shit\\Wlpj\\LandingPage.csproj",
         "packagesPath": "C:\\Users\\djuls\\.nuget\\packages\\",
         "outputPath": "D:\\Code shit\\Wlpj\\obj\\",
+=======
+    "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\LandingPage.csproj": {}
+  },
+  "projects": {
+    "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\LandingPage.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\LandingPage.csproj",
+        "projectName": "LandingPage",
+        "projectPath": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\LandingPage.csproj",
+        "packagesPath": "C:\\Users\\Dimon Prorock\\.nuget\\packages\\",
+        "outputPath": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\obj\\",
+>>>>>>> 24a90e46a50edfe0d45643a09eb4253a8d0d1d6c
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\djuls\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\Dimon Prorock\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 24a90e46a50edfe0d45643a09eb4253a8d0d1d6c
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -27,6 +45,10 @@
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
+<<<<<<< HEAD
+=======
+          "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+>>>>>>> 24a90e46a50edfe0d45643a09eb4253a8d0d1d6c
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -109,7 +131,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+>>>>>>> 24a90e46a50edfe0d45643a09eb4253a8d0d1d6c
         }
       }
     }

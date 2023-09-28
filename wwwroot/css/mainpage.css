@@ -18,7 +18,11 @@ body {
     overflow-x: hidden;
     /* background-color: #eee; */
     /* font-family: 'Poppins', sans-serif; */
+<<<<<<< HEAD
     background-image: url("../content/background_sea.png");
+=======
+    background-image: url("../content/background/background_sea.png");
+>>>>>>> 24a90e46a50edfe0d45643a09eb4253a8d0d1d6c
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -46,12 +50,20 @@ body {
     object-fit: cover;
     width: 100%;
     min-height: 100vh;
+<<<<<<< HEAD
+=======
+    filter: brightness(70%);
+>>>>>>> 24a90e46a50edfe0d45643a09eb4253a8d0d1d6c
 }
 
 .mainpage-text {
     /* position: absolute; */
     /* padding: 70px 17% 60px; */
     width: 100%;
+<<<<<<< HEAD
+=======
+    z-index: 1;
+>>>>>>> 24a90e46a50edfe0d45643a09eb4253a8d0d1d6c
 }
 
 .mainpage-text h5{
@@ -76,8 +88,13 @@ h1 span{
 }
 
 .mainpage-text p{
+<<<<<<< HEAD
     font-size: 1rem;
     font-weight: 500;
+=======
+    font-size: 1.1rem;
+    font-weight: 700;
+>>>>>>> 24a90e46a50edfe0d45643a09eb4253a8d0d1d6c
     line-height: 30px;
     color: #ffffffab;
 }

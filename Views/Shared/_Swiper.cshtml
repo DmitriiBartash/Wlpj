@@ -15,7 +15,12 @@
 
 		<!-- Swiper -->
 		<div class="swiperAndTags">
+<<<<<<< HEAD
 			<swiper-container class="mySwiper swiper-h" pagination="true" pagination-type="progressbar" navigation="true" autoplay="false" space-between="50" loop="true">
+=======
+			<swiper-container class="mySwiper swiper-h"
+			                  navigation="true" autoplay="false" space-between="50" loop="true">
+>>>>>>> 24a90e46a50edfe0d45643a09eb4253a8d0d1d6c
 				@foreach (var photo in Model.picturePathsChosen)
 				{
 					<swiper-slide>
@@ -25,12 +30,21 @@
 			</swiper-container>
 
 			<div class="swiper-tagdescription">
+<<<<<<< HEAD
 				<ul class="swiper-tagdescription-items">
 					@foreach (var tag in Model.tags)
 					{
 						<li>@tag</li>
 					}
 				</ul>
+=======
+				<div class="swiper-tagdescription-items">
+					@foreach (var tag in Model.tags)
+					{
+						<p>@tag</p>
+					}
+				</div>
+>>>>>>> 24a90e46a50edfe0d45643a09eb4253a8d0d1d6c
 			</div>
 		</div>
 	</div>
