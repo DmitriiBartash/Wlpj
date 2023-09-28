@@ -1,0 +1,140 @@
+/* About us */
+.About_us {
+    margin-top: 0%;
+    letter-spacing: 1px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.heading_about_us {
+    font-size: 300%;
+    padding-top: 5%;
+    text-align: center;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    /* font-weight: bold; */
+}
+
+.Information_cards {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    margin-top: 5%;
+    font-size: 120%;
+    padding-left: 3%;
+    padding-right: 3%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    word-break: break-all;
+    text-align: justify;
+}
+
+.hand_with_money,
+.people_notebook,
+.Earth {
+    width: inherit;
+}
+
+
+.Information_cards>div {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    word-break: break-word;
+}
+
+.prime_card,
+.third_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.t_prime_praim,
+.t_second_praime,
+.t_third_praime {
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: rgba(255, 255, 255, 0.8);
+    /* color: #ffffff; */
+}
+
+.second_card {
+    margin-left: 2%;
+    margin-right: 2%;
+    padding-bottom: 6%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.information_cards_text {
+    font-size: 1.3rem;
+}
+
+
+/*Info about us*/
+.text_About_us {
+    /* margin-top: 5%; */
+    min-height: 0vh;
+    font-family: 'Sofia Sans Extra Condensed', sans-serif;
+    font-size: 2.6rem;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /* align-items: center; */
+    word-break: break-all;
+    /*margin: 0, 3%;*/
+}
+
+.text_About_us1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* padding: 0, 10%; */
+    /* width: 40%; */
+    /* padding: 0,5%; */
+    padding-left: 3%;
+    padding-right: 3%;
+    word-break: break-word;
+}
+
+.text_About_us2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* padding: 0, 10%; */
+    /* width: 60%; */
+    /* padding: 10%; */
+    padding-left: 3%;
+    padding-right: 3%;
+    word-break: break-word;
+}
+
+.years_count,
+.client_count {
+    font-size: 5rem;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    /* font-family: 'Roboto Slab', serif !important; */
+}
+
+.years_count_text,
+.client_count_text {
+    color: rgba(210, 22, 22, 0.895);
+}
+
+.text_A_us1,
+.text_A_us2 {
+    font-weight: lighter;
+    font-size: 80%;
+}

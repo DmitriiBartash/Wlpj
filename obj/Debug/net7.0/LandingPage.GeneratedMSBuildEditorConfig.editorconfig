@@ -1,0 +1,97 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = LandingPage
+build_property.RootNamespace = LandingPage
+build_property.ProjectDir = D:\Programms\wlpj\Web-tourism project\Alex_work\newbranch\Wlpj\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\Programms\wlpj\Web-tourism project\Alex_work\newbranch\Wlpj
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/Programms/wlpj/Web-tourism project/Alex_work/newbranch/Wlpj/Views/Admin/Calls.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ2FsbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programms/wlpj/Web-tourism project/Alex_work/newbranch/Wlpj/Views/Admin/CountryAdd.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ291bnRyeUFkZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programms/wlpj/Web-tourism project/Alex_work/newbranch/Wlpj/Views/Admin/ListCountries.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTGlzdENvdW50cmllcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programms/wlpj/Web-tourism project/Alex_work/newbranch/Wlpj/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programms/wlpj/Web-tourism project/Alex_work/newbranch/Wlpj/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programms/wlpj/Web-tourism project/Alex_work/newbranch/Wlpj/Views/Login/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programms/wlpj/Web-tourism project/Alex_work/newbranch/Wlpj/Views/Shared/_AboutUs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BYm91dFVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programms/wlpj/Web-tourism project/Alex_work/newbranch/Wlpj/Views/Shared/_AdminLayuot.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pbkxheXVvdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programms/wlpj/Web-tourism project/Alex_work/newbranch/Wlpj/Views/Shared/_CallUs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DYWxsVXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programms/wlpj/Web-tourism project/Alex_work/newbranch/Wlpj/Views/Shared/_Footer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Gb290ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programms/wlpj/Web-tourism project/Alex_work/newbranch/Wlpj/Views/Shared/_Header.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9IZWFkZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programms/wlpj/Web-tourism project/Alex_work/newbranch/Wlpj/Views/Shared/_LoginLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpbkxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programms/wlpj/Web-tourism project/Alex_work/newbranch/Wlpj/Views/Shared/_Map.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NYXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programms/wlpj/Web-tourism project/Alex_work/newbranch/Wlpj/Views/Shared/_Swiper.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Td2lwZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programms/wlpj/Web-tourism project/Alex_work/newbranch/Wlpj/Views/Shared/_Testimonials.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9UZXN0aW1vbmlhbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programms/wlpj/Web-tourism project/Alex_work/newbranch/Wlpj/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programms/wlpj/Web-tourism project/Alex_work/newbranch/Wlpj/Views/Shared/_Video.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WaWRlby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programms/wlpj/Web-tourism project/Alex_work/newbranch/Wlpj/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programms/wlpj/Web-tourism project/Alex_work/newbranch/Wlpj/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programms/wlpj/Web-tourism project/Alex_work/newbranch/Wlpj/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-lgzfp6pi73
