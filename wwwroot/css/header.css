@@ -1,0 +1,259 @@
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10000;
+}
+
+.nav-headercontainer {
+    position: relative;
+    width: 100%;
+    padding: 5px 0%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: black;
+    /* background-color: #FCE38A; */
+    /* background-color:rgba(252, 227, 138, 0.8); */
+    /* background-color: #F9ED69; */
+    /* opacity: .8; */
+    background: transparent;
+    backdrop-filter: blur(35px);
+
+}
+
+.nav-header-element {
+    /* position: absolute; */
+    padding: 10px 20px;
+    width: 26px;
+    left: 18px;
+    top: 5px;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 5;
+}
+
+/*Sidebar*/
+.sidebaractive {
+    transform: translate(0%) !important;
+}
+
+.sidebar {
+    width: 300px;
+    background: yellow;
+    height: 200vh;
+    position: fixed;
+    padding: 20px;
+    box-sizing: border-box;
+    left: 0;
+    top: 0;
+    transform: translate(-101%);
+    transition: all 0.3s linear 0s;
+    z-index: 1;
+}
+
+ul.nav-links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-top: 50px;
+}
+
+ul.nav-links li a {
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+/*Languages*/
+.headerbar-languages {
+    display: inline-flex;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    margin: 10px;
+}
+
+.radio__input {
+    display: none;
+}
+
+.radio__label {
+    padding: 8px 14px;
+    font-size: 15px;
+    font-family: sans-serif;
+    color: black;
+    background: #FCE883;
+    cursor: pointer;
+    transition: background-color 0.1s;
+}
+
+.radio__label:not(:last-of-type) {
+    border-right: 1px solid #F4C430;
+}
+
+.radio__input:checked + .radio__label{
+    background: #F4C430;
+}
+
+
+/*Arrow up*/
+/* .material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48,
+        'size' 40,
+} */
+
+.arrowup-container {
+    position: fixed;
+    z-index: 100000;
+    bottom: 30px;
+    left: 30px;
+    min-height: 30px;
+    display: block;
+}
+
+span.arrow-btn {
+    font-size: 50px;
+    color: #DAA520;
+    transition: .5s;
+}
+
+span.arrow-btn:hover {
+    color: #FCE883;
+}
+
+/*Popup btn of socials menu*/
+.popup-socials-btncontainer {
+    width: 58px;
+    height: 70px;
+    bottom: 30px;
+    right: 40px;
+    cursor: pointer;
+    position: fixed;
+    z-index: 100000;
+}
+
+span.phone-btn {
+    padding: 4px;
+    font-size: 50px;
+    color: #fff;
+}
+
+.popup-socials-btn-call {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: inherit;
+    background-color: #DAA520;
+    border-radius: 20%;
+    /* box-shadow: 0px 0px 5px 0px #a7a7a7; */
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, .3);
+
+    animation: popup-socials-btn-call 4s infinite;
+}
+
+@keyframes popup-socials-btn-call {
+    0% {
+        transform: translateX(0)
+    }
+
+    25% {
+        transform: translateY(-9px)
+    }
+
+    35% {
+        transform: translateY(-9px) rotate(17deg)
+    }
+
+    55% {
+        transform: translateY(-9px) rotate(-17deg)
+    }
+
+    65% {
+        transform: translateY(-9px) rotate(17deg)
+    }
+
+    75% {
+        transform: translateY(-9px) rotate(-17deg)
+    }
+
+    100% {
+        transform: translateY(0) rotate(0)
+    }
+}
+
+.close-btn {
+    color: red;
+    font-size: 40px;
+}
+
+/*Popup menu*/
+.popup-menu {
+    position: relative;
+    z-index: 10000;
+    transition: .2s;
+    visibility: hidden;
+    opacity: 0;
+
+}
+
+.popup-menu-show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup-menu-container {
+    margin: 0;
+    top: initial;
+    left: initial;
+    bottom: 120px;
+    right: 40px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, .4);
+    background: #fff;
+    position: fixed;
+    z-index: 1;
+    cursor: default;
+    max-width: 300px;
+
+}
+
+.popup-menu-wrapper {
+    padding: 30px 20px 20px;
+    border-radius: 5px;
+    max-height: 65vh;
+}
+
+.popup-menu-title {
+    font-size: 16px;
+}
+
+.popup-menu-content {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.popup-menu-content li {
+    padding: 5px;
+    list-style: none;
+}
+
+.popup-menu-content a {
+    padding: 10px;
+    font-size: 12px;
+    color: #229ED9;
+}
+
+.popup-menu-objects {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}

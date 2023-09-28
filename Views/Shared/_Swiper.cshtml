@@ -1,0 +1,37 @@
+﻿@model LandingPage.Models.SwiperMiniModel;
+
+<p hidden id="selectedCountry">@ViewBag.SelectedCountry</p>
+
+<p id="Anchor1"></p>
+<div class="hot-deals-container">
+	<h2>Горячие предложения</h2>
+	<div id="Hotdeals" class="swiper hot-deals">
+		<div class="countries">
+			@foreach (var countryName in Model.countriesData)
+			{
+				<p id="@countryName.Value" onclick="SelectCountry(this)">@countryName.Key</p>
+			}
+		</div>
+
+		<!-- Swiper -->
+		<div class="swiperAndTags">
+			<swiper-container class="mySwiper swiper-h" pagination="true" pagination-type="progressbar" navigation="true" autoplay="false" space-between="50" loop="true">
+				@foreach (var photo in Model.picturePathsChosen)
+				{
+					<swiper-slide>
+						<img src="@photo">
+					</swiper-slide>
+				}
+			</swiper-container>
+
+			<div class="swiper-tagdescription">
+				<ul class="swiper-tagdescription-items">
+					@foreach (var tag in Model.tags)
+					{
+						<li>@tag</li>
+					}
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
