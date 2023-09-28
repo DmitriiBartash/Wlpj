@@ -83,13 +83,15 @@
     color: #fff;
     padding: 0 5px;
     pointer-events: none;
-    transition: .5s;
+    transition: 0.9s;
 }
 
-.inputbox-1:focus-within label {
+.inputbox-1 input:focus ~ label,
+.inputbox-1 input:valid ~ label {
     top: 0;
     font-size: 12px;
     /* background: blue; */
+    filter: blur(20px);
 }
 
 .inputbox-2 {
