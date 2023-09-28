@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		#imagesToAdd {
+			display: flex;
+			gap: 10px;
+			overflow-y: auto;
+		}
+
+		.stretched-button {
+			position: relative;
+			width: 200px;
+			height: 200px;
+			border: 1px solid black;
+			border-radius: 5px;
+		}
+
+			.stretched-button img {
+				width: inherit;
+				height: inherit;
+			}
+
+			.stretched-button button {
+				width: inherit;
+				height: inherit;
+				background-color: white;
+				cursor: pointer;
+				font-size: 100px;
+			}
+
+			.stretched-button p {
+				position: absolute;
+				margin: 0;
+				padding: 0;
+				top: 0;
+				font-size: 40px;
+				right: 0;
+				color: red;
+				background-color: black;
+			}
+	</style>
+</head>
+
+<body>
+
+	@RenderBody()
+	<script src="~/lib/jquery/dist/jquery.min.js"></script>
+	<script src="~/lib/jquery/dist/jquery.js"></script>
+
+	<script src="~/js/getImages.js"></script>
+	<script src="~/js/tagsProcessor.js"></script>
+</body>
+</html>

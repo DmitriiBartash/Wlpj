@@ -1,0 +1,21 @@
+﻿@model LandingPage.Models.CallBackModel;
+
+<p id="Anchor3"></p>
+<div id="callme" class="call-container">
+	<div class="call-header-text">
+		<h1> Хочу узнать поподробнее:</h1>
+	</div>
+	<form method="post" asp-action="AddUserDetails">
+		<div class="inputbox-container inputbox">
+			<div class="inputbox-1">
+				<input asp-for="NameSurname" id="name" /><label for="">Имя и фамилия</label>
+			</div>
+			<div class="inputbox-1">
+				<input asp-for="PhoneNumber" id="number" /><label for="">Телефон</label>
+			</div>
+			<div class="inputbox-2">
+				<button class="btn-call" type="submit"><span>Перезвоните мне</span></button>
+			</div>
+		</div>
+	</form>
+</div>

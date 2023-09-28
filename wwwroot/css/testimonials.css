@@ -1,0 +1,59 @@
+/* Testimonials */
+.testimonials {
+    min-height: 100vh;
+    margin-top: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Lobster', cursive;
+}
+
+.heading_test_ls {
+    /* font-size: 300%; */
+    text-align: center;
+    /* color: white; */
+    /* color: #f42094cb; */
+    color: #ffb703;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    font-size: 4rem;
+}
+
+.rectangle_test_ls {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.text_rectangle_test_ls_heading_1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Oswald', sans-serif;
+}
+
+.star_1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-left: 20%;
+}
+
+.rectangle_test_ls_1 {
+    width: 25%;
+    /* height: 20%; */
+    background-color: white;
+    border-radius: 20px;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 2%;
+    padding-bottom: 3%;
+    word-break: break-all;
+}
+
+.text_rectangle_test_ls_1{
+    display: inline-block;
+    word-break: break-all;
+}
