@@ -12,7 +12,7 @@
 }
 
 .call-header-text {
-    padding: 30px;
+    padding: 20px 0;
     color: #ffb703;
     font-size: 2.2rem;
     font-family: 'Rubik-PFDinDisplayPro', Arial, sans-serif;
@@ -30,6 +30,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
@@ -37,26 +38,21 @@
 }
 
 .inputbox-1 {
-    color: #ffb703;
-    font-size: 30px;
     font-family: 'Rubik-PFDinDisplayPro', Arial, sans-serif;
-    line-height: 1.45;
-    font-weight: 100;
     background-position: center center;
     border-color: transparent;
     border-style: solid;
-}
 
-.inputbox-1,
-.inputbox-2 {
-    padding: 0 20px;
-
+    /* font-size: 30px;
+    line-height: 1.45;
+    font-weight: 100; */
 }
 
 .inputbox-1,
 .inputbox1,
 .inputbox-2,
 .inputbox2 {
+    padding: 0 20px;
     position: relative;
     width: 23vw;
     height: 30px;
@@ -68,8 +64,8 @@
 
 .inputbox-1 input,
 .inputbox-2 input {
-    border: 1.2px solid #fff;
     padding: 0 10px;
+    border: 1.2px solid #fff;
     outline: none;
     border-radius: 5px;
 }
@@ -86,17 +82,16 @@
     transition: 0.9s;
 }
 
-.inputbox-1 input:focus ~ label,
-.inputbox-1 input:valid ~ label {
+.inputbox-1 input:focus~label,
+.inputbox-1 input:valid~label {
     top: 0;
     font-size: 12px;
-    /* background: blue; */
     filter: blur(20px);
 }
 
 .inputbox-2 {
     padding-right: 20px;
-    width: 20vw;
+    width: 23vw;
 }
 
 .btn-call {
@@ -105,7 +100,6 @@
     justify-content: center;
     align-items: center;
     position: relative;
-
     height: 100%;
     width: 100%;
     font-size: 16px;
@@ -113,9 +107,7 @@
     border: none;
     border-radius: 5px;
     transition: .4s ease-in;
-
     overflow: hidden;
-
 }
 
 .btn-call:hover {
@@ -172,4 +164,27 @@
 
 .btn-call:hover span {
     opacity: 1;
+}
+
+@media (max-width:961px) {
+    .call-header-text {
+        font-size: 1rem;
+        display: flex;
+    text-align: start;
+    }
+
+    .inputbox-container {
+        display: block;
+        flex-direction: column;
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .inputbox-1,
+    .inputbox1,
+    .inputbox-2,
+    .inputbox2 {
+        padding: 10px;
+        width: 90%;
+    }
 }
