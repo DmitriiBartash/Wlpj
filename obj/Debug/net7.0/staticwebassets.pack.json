@@ -1,435 +1,515 @@
 {
   "Files": [
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\LandingPage.bundle.scp.css",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\LandingPage.bundle.scp.css",
       "PackagePath": "staticwebassets\\LandingPage.bundle.scp.css"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\5929224_airplane_earth_global_globe_trave_icon.svg",
-      "PackagePath": "staticwebassets\\content\\5929224_airplane_earth_global_globe_trave_icon.svg"
-    },
-    {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\Earth.svg",
-      "PackagePath": "staticwebassets\\content\\Earth.svg"
-    },
-    {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\Viber.png",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\Viber.png",
       "PackagePath": "staticwebassets\\content\\Viber.png"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\arrow_red_1.png",
-      "PackagePath": "staticwebassets\\content\\arrow_red_1.png"
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\aboutus\\airplane_icon.svg",
+      "PackagePath": "staticwebassets\\content\\aboutus\\airplane_icon.svg"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\arrow_red_2.png",
-      "PackagePath": "staticwebassets\\content\\arrow_red_2.png"
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\aboutus\\earth.svg",
+      "PackagePath": "staticwebassets\\content\\aboutus\\earth.svg"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\arrow_red_3.png",
-      "PackagePath": "staticwebassets\\content\\arrow_red_3.png"
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\aboutus\\hand_with_money.svg",
+      "PackagePath": "staticwebassets\\content\\aboutus\\hand_with_money.svg"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\background_720.png",
-      "PackagePath": "staticwebassets\\content\\background_720.png"
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\aboutus\\people_notebook.svg",
+      "PackagePath": "staticwebassets\\content\\aboutus\\people_notebook.svg"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\background_sea.png",
-      "PackagePath": "staticwebassets\\content\\background_sea.png"
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\background\\background_720.png",
+      "PackagePath": "staticwebassets\\content\\background\\background_720.png"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\facebook.png",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\background\\background_sea.png",
+      "PackagePath": "staticwebassets\\content\\background\\background_sea.png"
+    },
+    {
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\facebook.png",
       "PackagePath": "staticwebassets\\content\\facebook.png"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\facebook_footer.svg",
-      "PackagePath": "staticwebassets\\content\\facebook_footer.svg"
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\findus\\arrow_red_1.png",
+      "PackagePath": "staticwebassets\\content\\findus\\arrow_red_1.png"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\hand with money.svg",
-      "PackagePath": "staticwebassets\\content\\hand with money.svg"
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\findus\\arrow_red_2.png",
+      "PackagePath": "staticwebassets\\content\\findus\\arrow_red_2.png"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\img_for_swiper\\China_1364513553.jpg",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\findus\\arrow_red_3.png",
+      "PackagePath": "staticwebassets\\content\\findus\\arrow_red_3.png"
+    },
+    {
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\footer\\facebook_footer.svg",
+      "PackagePath": "staticwebassets\\content\\footer\\facebook_footer.svg"
+    },
+    {
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\footer\\instagram_footer.svg",
+      "PackagePath": "staticwebassets\\content\\footer\\instagram_footer.svg"
+    },
+    {
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\footer\\telegram_footer.svg",
+      "PackagePath": "staticwebassets\\content\\footer\\telegram_footer.svg"
+    },
+    {
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\footer\\viber_footer.svg",
+      "PackagePath": "staticwebassets\\content\\footer\\viber_footer.svg"
+    },
+    {
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\img_for_swiper\\China_1364513553.jpg",
       "PackagePath": "staticwebassets\\content\\img_for_swiper\\China_1364513553.jpg"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\img_for_swiper\\China_2126089998.jpg",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\img_for_swiper\\China_2126089998.jpg",
       "PackagePath": "staticwebassets\\content\\img_for_swiper\\China_2126089998.jpg"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\img_for_swiper\\China_760507799.jpg",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\img_for_swiper\\China_760507799.jpg",
       "PackagePath": "staticwebassets\\content\\img_for_swiper\\China_760507799.jpg"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\img_for_swiper\\China_807573060.jpg",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\img_for_swiper\\China_807573060.jpg",
       "PackagePath": "staticwebassets\\content\\img_for_swiper\\China_807573060.jpg"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\img_for_swiper\\Turcia_210531781.jpg",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\img_for_swiper\\Hurghada_1417561320.jpg",
+      "PackagePath": "staticwebassets\\content\\img_for_swiper\\Hurghada_1417561320.jpg"
+    },
+    {
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\img_for_swiper\\Hurghada_1724624762.jpg",
+      "PackagePath": "staticwebassets\\content\\img_for_swiper\\Hurghada_1724624762.jpg"
+    },
+    {
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\img_for_swiper\\Hurghada_661163724.jpg",
+      "PackagePath": "staticwebassets\\content\\img_for_swiper\\Hurghada_661163724.jpg"
+    },
+    {
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\img_for_swiper\\Turcia_210531781.jpg",
       "PackagePath": "staticwebassets\\content\\img_for_swiper\\Turcia_210531781.jpg"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\img_for_swiper\\Turcia_349983850.jpg",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\img_for_swiper\\Turcia_349983850.jpg",
       "PackagePath": "staticwebassets\\content\\img_for_swiper\\Turcia_349983850.jpg"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\img_for_swiper\\moldova_1354920648.jpg",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\img_for_swiper\\moldova_1354920648.jpg",
       "PackagePath": "staticwebassets\\content\\img_for_swiper\\moldova_1354920648.jpg"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\img_for_swiper\\moldova_1947935261.jpg",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\img_for_swiper\\moldova_1947935261.jpg",
       "PackagePath": "staticwebassets\\content\\img_for_swiper\\moldova_1947935261.jpg"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\img_for_swiper\\moldova_2015158640.jpg",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\img_for_swiper\\moldova_2015158640.jpg",
       "PackagePath": "staticwebassets\\content\\img_for_swiper\\moldova_2015158640.jpg"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\img_for_swiper\\moldova_2121949042.jpg",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\img_for_swiper\\moldova_2121949042.jpg",
       "PackagePath": "staticwebassets\\content\\img_for_swiper\\moldova_2121949042.jpg"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\img_for_swiper\\moldova_294456936.jpg",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\img_for_swiper\\moldova_294456936.jpg",
       "PackagePath": "staticwebassets\\content\\img_for_swiper\\moldova_294456936.jpg"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\img_for_swiper\\moldova_367605953.jpg",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\img_for_swiper\\moldova_367605953.jpg",
       "PackagePath": "staticwebassets\\content\\img_for_swiper\\moldova_367605953.jpg"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\instagram.svg",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\instagram.svg",
       "PackagePath": "staticwebassets\\content\\instagram.svg"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\instagram_footer.svg",
-      "PackagePath": "staticwebassets\\content\\instagram_footer.svg"
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\mainpage\\leFinale.svg",
+      "PackagePath": "staticwebassets\\content\\mainpage\\leFinale.svg"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\leFinale.svg",
-      "PackagePath": "staticwebassets\\content\\leFinale.svg"
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\mainpage\\path9650.svg",
+      "PackagePath": "staticwebassets\\content\\mainpage\\path9650.svg"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\mobile-messages-icon.svg",
-      "PackagePath": "staticwebassets\\content\\mobile-messages-icon.svg"
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\mobile_message.svg",
+      "PackagePath": "staticwebassets\\content\\mobile_message.svg"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\path9650.svg",
-      "PackagePath": "staticwebassets\\content\\path9650.svg"
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\popupmenu\\1.Call big svg.jpg",
+      "PackagePath": "staticwebassets\\content\\popupmenu\\1.Call big svg.jpg"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\people_notebook.svg",
-      "PackagePath": "staticwebassets\\content\\people_notebook.svg"
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\popupmenu\\1.Call big.svg",
+      "PackagePath": "staticwebassets\\content\\popupmenu\\1.Call big.svg"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\star_testimonials.svg",
-      "PackagePath": "staticwebassets\\content\\star_testimonials.svg"
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\popupmenu\\2.Call.svg",
+      "PackagePath": "staticwebassets\\content\\popupmenu\\2.Call.svg"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\telegram.png",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\popupmenu\\3.Telegram.svg",
+      "PackagePath": "staticwebassets\\content\\popupmenu\\3.Telegram.svg"
+    },
+    {
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\popupmenu\\4.Viber.svg",
+      "PackagePath": "staticwebassets\\content\\popupmenu\\4.Viber.svg"
+    },
+    {
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\popupmenu\\5.Whatsapp.svg",
+      "PackagePath": "staticwebassets\\content\\popupmenu\\5.Whatsapp.svg"
+    },
+    {
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\popupmenu\\6.Instagram.svg",
+      "PackagePath": "staticwebassets\\content\\popupmenu\\6.Instagram.svg"
+    },
+    {
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\popupmenu\\7.Facebook.svg",
+      "PackagePath": "staticwebassets\\content\\popupmenu\\7.Facebook.svg"
+    },
+    {
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\tags\\1.Plane.svg",
+      "PackagePath": "staticwebassets\\content\\tags\\1.Plane.svg"
+    },
+    {
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\tags\\2.Transfer.svg",
+      "PackagePath": "staticwebassets\\content\\tags\\2.Transfer.svg"
+    },
+    {
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\tags\\3.Residence.svg",
+      "PackagePath": "staticwebassets\\content\\tags\\3.Residence.svg"
+    },
+    {
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\tags\\4.Food.svg",
+      "PackagePath": "staticwebassets\\content\\tags\\4.Food.svg"
+    },
+    {
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\tags\\5.Medical insurance.svg",
+      "PackagePath": "staticwebassets\\content\\tags\\5.Medical insurance.svg"
+    },
+    {
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\telegram.png",
       "PackagePath": "staticwebassets\\content\\telegram.png"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\telegram_footer.svg",
-      "PackagePath": "staticwebassets\\content\\telegram_footer.svg"
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\testimonials\\star_testimonials.svg",
+      "PackagePath": "staticwebassets\\content\\testimonials\\star_testimonials.svg"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\viber_footer.svg",
-      "PackagePath": "staticwebassets\\content\\viber_footer.svg"
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\video\\not (2).mp4",
+      "PackagePath": "staticwebassets\\content\\video\\not (2).mp4"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\video\\video 1 (1080p).mp4",
-      "PackagePath": "staticwebassets\\content\\video\\video 1 (1080p).mp4"
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\video\\not (3).mp4",
+      "PackagePath": "staticwebassets\\content\\video\\not (3).mp4"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\css\\aboutus.css",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\video\\not (4).mp4",
+      "PackagePath": "staticwebassets\\content\\video\\not (4).mp4"
+    },
+    {
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\video\\not.mp4",
+      "PackagePath": "staticwebassets\\content\\video\\not.mp4"
+    },
+    {
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\video\\video1.mp4",
+      "PackagePath": "staticwebassets\\content\\video\\video1.mp4"
+    },
+    {
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\css\\aboutus.css",
       "PackagePath": "staticwebassets\\css\\aboutus.css"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\css\\callrequest.css",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\css\\callrequest.css",
       "PackagePath": "staticwebassets\\css\\callrequest.css"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\css\\findus.css",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\css\\findus.css",
       "PackagePath": "staticwebassets\\css\\findus.css"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\css\\footer.css",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\css\\footer.css",
       "PackagePath": "staticwebassets\\css\\footer.css"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\css\\header.css",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\css\\header.css",
       "PackagePath": "staticwebassets\\css\\header.css"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\css\\mainpage.css",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\css\\mainpage.css",
       "PackagePath": "staticwebassets\\css\\mainpage.css"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\css\\swiper.css",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\css\\swiper.css",
       "PackagePath": "staticwebassets\\css\\swiper.css"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\css\\testimonials.css",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\css\\testimonials.css",
       "PackagePath": "staticwebassets\\css\\testimonials.css"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\favicon.ico",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\js\\SelectCountry.js",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\js\\SelectCountry.js",
       "PackagePath": "staticwebassets\\js\\SelectCountry.js"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\js\\getImages.js",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\js\\getImages.js",
       "PackagePath": "staticwebassets\\js\\getImages.js"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\js\\languagesChange.js",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\js\\languagesChange.js",
       "PackagePath": "staticwebassets\\js\\languagesChange.js"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\js\\script.js",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\js\\script.js",
       "PackagePath": "staticwebassets\\js\\script.js"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\js\\site.js",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\js\\swiper.js",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\js\\swiper.js",
       "PackagePath": "staticwebassets\\js\\swiper.js"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\js\\tagsProcessor.js",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\js\\tagsProcessor.js",
       "PackagePath": "staticwebassets\\js\\tagsProcessor.js"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {

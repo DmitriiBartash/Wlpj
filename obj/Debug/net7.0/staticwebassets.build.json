@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Udln6lowxseh2b6SDmMB8pB2t8LwX0a+i8ucwZWctwk=",
+  "Hash": "A6mlSMXigAirrPDzPAC5nKTCea+0/l85sfBe+KmUBjk=",
   "Source": "LandingPage",
   "BasePath": "_content/LandingPage",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "LandingPage\\wwwroot",
       "Source": "LandingPage",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\obj\\Debug\\net7.0\\scopedcss\\bundle\\LandingPage.styles.css",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\obj\\Debug\\net7.0\\scopedcss\\bundle\\LandingPage.styles.css",
       "SourceId": "LandingPage",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "LandingPage.styles.css",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\Code shit\\code\\LandingPage\\obj\\Debug\\net7.0\\scopedcss\\bundle\\LandingPage.styles.css"
+      "OriginalItemSpec": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\obj\\Debug\\net7.0\\scopedcss\\bundle\\LandingPage.styles.css"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\LandingPage.bundle.scp.css",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\LandingPage.bundle.scp.css",
       "SourceId": "LandingPage",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "LandingPage.bundle.scp.css",
       "AssetKind": "All",
@@ -48,15 +48,15 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\Code shit\\code\\LandingPage\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\LandingPage.bundle.scp.css"
+      "OriginalItemSpec": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\LandingPage.bundle.scp.css"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\5929224_airplane_earth_global_globe_trave_icon.svg",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\aboutus\\airplane_icon.svg",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
-      "RelativePath": "content/5929224_airplane_earth_global_globe_trave_icon.svg",
+      "RelativePath": "content/aboutus/airplane_icon.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -65,15 +65,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\content\\5929224_airplane_earth_global_globe_trave_icon.svg"
+      "OriginalItemSpec": "wwwroot\\content\\aboutus\\airplane_icon.svg"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\arrow_red_1.png",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\aboutus\\earth.svg",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
-      "RelativePath": "content/arrow_red_1.png",
+      "RelativePath": "content/aboutus/earth.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -82,15 +82,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\content\\arrow_red_1.png"
+      "OriginalItemSpec": "wwwroot\\content\\aboutus\\earth.svg"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\arrow_red_2.png",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\aboutus\\hand_with_money.svg",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
-      "RelativePath": "content/arrow_red_2.png",
+      "RelativePath": "content/aboutus/hand_with_money.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -99,15 +99,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\content\\arrow_red_2.png"
+      "OriginalItemSpec": "wwwroot\\content\\aboutus\\hand_with_money.svg"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\arrow_red_3.png",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\aboutus\\people_notebook.svg",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
-      "RelativePath": "content/arrow_red_3.png",
+      "RelativePath": "content/aboutus/people_notebook.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -116,15 +116,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\content\\arrow_red_3.png"
+      "OriginalItemSpec": "wwwroot\\content\\aboutus\\people_notebook.svg"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\background_720.png",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\background\\background_720.png",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
-      "RelativePath": "content/background_720.png",
+      "RelativePath": "content/background/background_720.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -133,15 +133,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\content\\background_720.png"
+      "OriginalItemSpec": "wwwroot\\content\\background\\background_720.png"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\background_sea.png",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\background\\background_sea.png",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
-      "RelativePath": "content/background_sea.png",
+      "RelativePath": "content/background/background_sea.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -150,30 +150,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\content\\background_sea.png"
+      "OriginalItemSpec": "wwwroot\\content\\background\\background_sea.png"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\Earth.svg",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\facebook.png",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
-      "BasePath": "_content/LandingPage",
-      "RelativePath": "content/Earth.svg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\content\\Earth.svg"
-    },
-    {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\facebook.png",
-      "SourceId": "LandingPage",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "content/facebook.png",
       "AssetKind": "All",
@@ -187,12 +170,12 @@
       "OriginalItemSpec": "wwwroot\\content\\facebook.png"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\facebook_footer.svg",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\findus\\arrow_red_1.png",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
-      "RelativePath": "content/facebook_footer.svg",
+      "RelativePath": "content/findus/arrow_red_1.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -201,15 +184,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\content\\facebook_footer.svg"
+      "OriginalItemSpec": "wwwroot\\content\\findus\\arrow_red_1.png"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\hand with money.svg",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\findus\\arrow_red_2.png",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
-      "RelativePath": "content/hand with money.svg",
+      "RelativePath": "content/findus/arrow_red_2.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -218,13 +201,98 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\content\\hand with money.svg"
+      "OriginalItemSpec": "wwwroot\\content\\findus\\arrow_red_2.png"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\img_for_swiper\\China_1364513553.jpg",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\findus\\arrow_red_3.png",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
+      "BasePath": "_content/LandingPage",
+      "RelativePath": "content/findus/arrow_red_3.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\content\\findus\\arrow_red_3.png"
+    },
+    {
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\footer\\facebook_footer.svg",
+      "SourceId": "LandingPage",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
+      "BasePath": "_content/LandingPage",
+      "RelativePath": "content/footer/facebook_footer.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\content\\footer\\facebook_footer.svg"
+    },
+    {
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\footer\\instagram_footer.svg",
+      "SourceId": "LandingPage",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
+      "BasePath": "_content/LandingPage",
+      "RelativePath": "content/footer/instagram_footer.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\content\\footer\\instagram_footer.svg"
+    },
+    {
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\footer\\telegram_footer.svg",
+      "SourceId": "LandingPage",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
+      "BasePath": "_content/LandingPage",
+      "RelativePath": "content/footer/telegram_footer.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\content\\footer\\telegram_footer.svg"
+    },
+    {
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\footer\\viber_footer.svg",
+      "SourceId": "LandingPage",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
+      "BasePath": "_content/LandingPage",
+      "RelativePath": "content/footer/viber_footer.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\content\\footer\\viber_footer.svg"
+    },
+    {
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\img_for_swiper\\China_1364513553.jpg",
+      "SourceId": "LandingPage",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "content/img_for_swiper/China_1364513553.jpg",
       "AssetKind": "All",
@@ -238,10 +306,10 @@
       "OriginalItemSpec": "wwwroot\\content\\img_for_swiper\\China_1364513553.jpg"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\img_for_swiper\\China_2126089998.jpg",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\img_for_swiper\\China_2126089998.jpg",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "content/img_for_swiper/China_2126089998.jpg",
       "AssetKind": "All",
@@ -255,10 +323,10 @@
       "OriginalItemSpec": "wwwroot\\content\\img_for_swiper\\China_2126089998.jpg"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\img_for_swiper\\China_760507799.jpg",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\img_for_swiper\\China_760507799.jpg",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "content/img_for_swiper/China_760507799.jpg",
       "AssetKind": "All",
@@ -272,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\content\\img_for_swiper\\China_760507799.jpg"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\img_for_swiper\\China_807573060.jpg",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\img_for_swiper\\China_807573060.jpg",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "content/img_for_swiper/China_807573060.jpg",
       "AssetKind": "All",
@@ -289,10 +357,61 @@
       "OriginalItemSpec": "wwwroot\\content\\img_for_swiper\\China_807573060.jpg"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\img_for_swiper\\moldova_1354920648.jpg",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\img_for_swiper\\Hurghada_1417561320.jpg",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
+      "BasePath": "_content/LandingPage",
+      "RelativePath": "content/img_for_swiper/Hurghada_1417561320.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\content\\img_for_swiper\\Hurghada_1417561320.jpg"
+    },
+    {
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\img_for_swiper\\Hurghada_1724624762.jpg",
+      "SourceId": "LandingPage",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
+      "BasePath": "_content/LandingPage",
+      "RelativePath": "content/img_for_swiper/Hurghada_1724624762.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\content\\img_for_swiper\\Hurghada_1724624762.jpg"
+    },
+    {
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\img_for_swiper\\Hurghada_661163724.jpg",
+      "SourceId": "LandingPage",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
+      "BasePath": "_content/LandingPage",
+      "RelativePath": "content/img_for_swiper/Hurghada_661163724.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\content\\img_for_swiper\\Hurghada_661163724.jpg"
+    },
+    {
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\img_for_swiper\\moldova_1354920648.jpg",
+      "SourceId": "LandingPage",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "content/img_for_swiper/moldova_1354920648.jpg",
       "AssetKind": "All",
@@ -306,10 +425,10 @@
       "OriginalItemSpec": "wwwroot\\content\\img_for_swiper\\moldova_1354920648.jpg"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\img_for_swiper\\moldova_1947935261.jpg",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\img_for_swiper\\moldova_1947935261.jpg",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "content/img_for_swiper/moldova_1947935261.jpg",
       "AssetKind": "All",
@@ -323,10 +442,10 @@
       "OriginalItemSpec": "wwwroot\\content\\img_for_swiper\\moldova_1947935261.jpg"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\img_for_swiper\\moldova_2015158640.jpg",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\img_for_swiper\\moldova_2015158640.jpg",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "content/img_for_swiper/moldova_2015158640.jpg",
       "AssetKind": "All",
@@ -340,10 +459,10 @@
       "OriginalItemSpec": "wwwroot\\content\\img_for_swiper\\moldova_2015158640.jpg"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\img_for_swiper\\moldova_2121949042.jpg",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\img_for_swiper\\moldova_2121949042.jpg",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "content/img_for_swiper/moldova_2121949042.jpg",
       "AssetKind": "All",
@@ -357,10 +476,10 @@
       "OriginalItemSpec": "wwwroot\\content\\img_for_swiper\\moldova_2121949042.jpg"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\img_for_swiper\\moldova_294456936.jpg",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\img_for_swiper\\moldova_294456936.jpg",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "content/img_for_swiper/moldova_294456936.jpg",
       "AssetKind": "All",
@@ -374,10 +493,10 @@
       "OriginalItemSpec": "wwwroot\\content\\img_for_swiper\\moldova_294456936.jpg"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\img_for_swiper\\moldova_367605953.jpg",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\img_for_swiper\\moldova_367605953.jpg",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "content/img_for_swiper/moldova_367605953.jpg",
       "AssetKind": "All",
@@ -391,10 +510,10 @@
       "OriginalItemSpec": "wwwroot\\content\\img_for_swiper\\moldova_367605953.jpg"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\img_for_swiper\\Turcia_210531781.jpg",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\img_for_swiper\\Turcia_210531781.jpg",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "content/img_for_swiper/Turcia_210531781.jpg",
       "AssetKind": "All",
@@ -408,10 +527,10 @@
       "OriginalItemSpec": "wwwroot\\content\\img_for_swiper\\Turcia_210531781.jpg"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\img_for_swiper\\Turcia_349983850.jpg",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\img_for_swiper\\Turcia_349983850.jpg",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "content/img_for_swiper/Turcia_349983850.jpg",
       "AssetKind": "All",
@@ -425,10 +544,10 @@
       "OriginalItemSpec": "wwwroot\\content\\img_for_swiper\\Turcia_349983850.jpg"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\instagram.svg",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\instagram.svg",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "content/instagram.svg",
       "AssetKind": "All",
@@ -442,12 +561,12 @@
       "OriginalItemSpec": "wwwroot\\content\\instagram.svg"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\instagram_footer.svg",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\mainpage\\leFinale.svg",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
-      "RelativePath": "content/instagram_footer.svg",
+      "RelativePath": "content/mainpage/leFinale.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -456,15 +575,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\content\\instagram_footer.svg"
+      "OriginalItemSpec": "wwwroot\\content\\mainpage\\leFinale.svg"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\leFinale.svg",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\mainpage\\path9650.svg",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
-      "RelativePath": "content/leFinale.svg",
+      "RelativePath": "content/mainpage/path9650.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -473,15 +592,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\content\\leFinale.svg"
+      "OriginalItemSpec": "wwwroot\\content\\mainpage\\path9650.svg"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\mobile-messages-icon.svg",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\mobile_message.svg",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
-      "RelativePath": "content/mobile-messages-icon.svg",
+      "RelativePath": "content/mobile_message.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -490,15 +609,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\content\\mobile-messages-icon.svg"
+      "OriginalItemSpec": "wwwroot\\content\\mobile_message.svg"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\path9650.svg",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\popupmenu\\1.Call big svg.jpg",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
-      "RelativePath": "content/path9650.svg",
+      "RelativePath": "content/popupmenu/1.Call big svg.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -507,15 +626,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\content\\path9650.svg"
+      "OriginalItemSpec": "wwwroot\\content\\popupmenu\\1.Call big svg.jpg"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\people_notebook.svg",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\popupmenu\\1.Call big.svg",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
-      "RelativePath": "content/people_notebook.svg",
+      "RelativePath": "content/popupmenu/1.Call big.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -524,15 +643,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\content\\people_notebook.svg"
+      "OriginalItemSpec": "wwwroot\\content\\popupmenu\\1.Call big.svg"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\star_testimonials.svg",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\popupmenu\\2.Call.svg",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
-      "RelativePath": "content/star_testimonials.svg",
+      "RelativePath": "content/popupmenu/2.Call.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -541,13 +660,183 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\content\\star_testimonials.svg"
+      "OriginalItemSpec": "wwwroot\\content\\popupmenu\\2.Call.svg"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\telegram.png",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\popupmenu\\3.Telegram.svg",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
+      "BasePath": "_content/LandingPage",
+      "RelativePath": "content/popupmenu/3.Telegram.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\content\\popupmenu\\3.Telegram.svg"
+    },
+    {
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\popupmenu\\4.Viber.svg",
+      "SourceId": "LandingPage",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
+      "BasePath": "_content/LandingPage",
+      "RelativePath": "content/popupmenu/4.Viber.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\content\\popupmenu\\4.Viber.svg"
+    },
+    {
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\popupmenu\\5.Whatsapp.svg",
+      "SourceId": "LandingPage",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
+      "BasePath": "_content/LandingPage",
+      "RelativePath": "content/popupmenu/5.Whatsapp.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\content\\popupmenu\\5.Whatsapp.svg"
+    },
+    {
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\popupmenu\\6.Instagram.svg",
+      "SourceId": "LandingPage",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
+      "BasePath": "_content/LandingPage",
+      "RelativePath": "content/popupmenu/6.Instagram.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\content\\popupmenu\\6.Instagram.svg"
+    },
+    {
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\popupmenu\\7.Facebook.svg",
+      "SourceId": "LandingPage",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
+      "BasePath": "_content/LandingPage",
+      "RelativePath": "content/popupmenu/7.Facebook.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\content\\popupmenu\\7.Facebook.svg"
+    },
+    {
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\tags\\1.Plane.svg",
+      "SourceId": "LandingPage",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
+      "BasePath": "_content/LandingPage",
+      "RelativePath": "content/tags/1.Plane.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\content\\tags\\1.Plane.svg"
+    },
+    {
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\tags\\2.Transfer.svg",
+      "SourceId": "LandingPage",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
+      "BasePath": "_content/LandingPage",
+      "RelativePath": "content/tags/2.Transfer.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\content\\tags\\2.Transfer.svg"
+    },
+    {
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\tags\\3.Residence.svg",
+      "SourceId": "LandingPage",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
+      "BasePath": "_content/LandingPage",
+      "RelativePath": "content/tags/3.Residence.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\content\\tags\\3.Residence.svg"
+    },
+    {
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\tags\\4.Food.svg",
+      "SourceId": "LandingPage",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
+      "BasePath": "_content/LandingPage",
+      "RelativePath": "content/tags/4.Food.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\content\\tags\\4.Food.svg"
+    },
+    {
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\tags\\5.Medical insurance.svg",
+      "SourceId": "LandingPage",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
+      "BasePath": "_content/LandingPage",
+      "RelativePath": "content/tags/5.Medical insurance.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\content\\tags\\5.Medical insurance.svg"
+    },
+    {
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\telegram.png",
+      "SourceId": "LandingPage",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "content/telegram.png",
       "AssetKind": "All",
@@ -561,12 +850,12 @@
       "OriginalItemSpec": "wwwroot\\content\\telegram.png"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\telegram_footer.svg",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\testimonials\\star_testimonials.svg",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
-      "RelativePath": "content/telegram_footer.svg",
+      "RelativePath": "content/testimonials/star_testimonials.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -575,13 +864,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\content\\telegram_footer.svg"
+      "OriginalItemSpec": "wwwroot\\content\\testimonials\\star_testimonials.svg"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\Viber.png",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\Viber.png",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "content/Viber.png",
       "AssetKind": "All",
@@ -595,12 +884,12 @@
       "OriginalItemSpec": "wwwroot\\content\\Viber.png"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\viber_footer.svg",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\video\\not (2).mp4",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
-      "RelativePath": "content/viber_footer.svg",
+      "RelativePath": "content/video/not (2).mp4",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -609,15 +898,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\content\\viber_footer.svg"
+      "OriginalItemSpec": "wwwroot\\content\\video\\not (2).mp4"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\content\\video\\video 1 (1080p).mp4",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\video\\not (3).mp4",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
-      "RelativePath": "content/video/video 1 (1080p).mp4",
+      "RelativePath": "content/video/not (3).mp4",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -626,13 +915,64 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\content\\video\\video 1 (1080p).mp4"
+      "OriginalItemSpec": "wwwroot\\content\\video\\not (3).mp4"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\css\\aboutus.css",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\video\\not (4).mp4",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
+      "BasePath": "_content/LandingPage",
+      "RelativePath": "content/video/not (4).mp4",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\content\\video\\not (4).mp4"
+    },
+    {
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\video\\not.mp4",
+      "SourceId": "LandingPage",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
+      "BasePath": "_content/LandingPage",
+      "RelativePath": "content/video/not.mp4",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\content\\video\\not.mp4"
+    },
+    {
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\content\\video\\video1.mp4",
+      "SourceId": "LandingPage",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
+      "BasePath": "_content/LandingPage",
+      "RelativePath": "content/video/video1.mp4",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\content\\video\\video1.mp4"
+    },
+    {
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\css\\aboutus.css",
+      "SourceId": "LandingPage",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "css/aboutus.css",
       "AssetKind": "All",
@@ -646,10 +986,10 @@
       "OriginalItemSpec": "wwwroot\\css\\aboutus.css"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\css\\callrequest.css",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\css\\callrequest.css",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "css/callrequest.css",
       "AssetKind": "All",
@@ -663,10 +1003,10 @@
       "OriginalItemSpec": "wwwroot\\css\\callrequest.css"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\css\\findus.css",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\css\\findus.css",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "css/findus.css",
       "AssetKind": "All",
@@ -680,10 +1020,10 @@
       "OriginalItemSpec": "wwwroot\\css\\findus.css"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\css\\footer.css",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\css\\footer.css",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "css/footer.css",
       "AssetKind": "All",
@@ -697,10 +1037,10 @@
       "OriginalItemSpec": "wwwroot\\css\\footer.css"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\css\\header.css",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\css\\header.css",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "css/header.css",
       "AssetKind": "All",
@@ -714,10 +1054,10 @@
       "OriginalItemSpec": "wwwroot\\css\\header.css"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\css\\mainpage.css",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\css\\mainpage.css",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "css/mainpage.css",
       "AssetKind": "All",
@@ -731,10 +1071,10 @@
       "OriginalItemSpec": "wwwroot\\css\\mainpage.css"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\css\\swiper.css",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\css\\swiper.css",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "css/swiper.css",
       "AssetKind": "All",
@@ -748,10 +1088,10 @@
       "OriginalItemSpec": "wwwroot\\css\\swiper.css"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\css\\testimonials.css",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\css\\testimonials.css",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "css/testimonials.css",
       "AssetKind": "All",
@@ -765,10 +1105,10 @@
       "OriginalItemSpec": "wwwroot\\css\\testimonials.css"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\favicon.ico",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\favicon.ico",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -782,10 +1122,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\js\\getImages.js",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\js\\getImages.js",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "js/getImages.js",
       "AssetKind": "All",
@@ -799,10 +1139,10 @@
       "OriginalItemSpec": "wwwroot\\js\\getImages.js"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\js\\languagesChange.js",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\js\\languagesChange.js",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "js/languagesChange.js",
       "AssetKind": "All",
@@ -816,10 +1156,10 @@
       "OriginalItemSpec": "wwwroot\\js\\languagesChange.js"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\js\\script.js",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\js\\script.js",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "js/script.js",
       "AssetKind": "All",
@@ -833,10 +1173,10 @@
       "OriginalItemSpec": "wwwroot\\js\\script.js"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\js\\SelectCountry.js",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\js\\SelectCountry.js",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "js/SelectCountry.js",
       "AssetKind": "All",
@@ -850,10 +1190,10 @@
       "OriginalItemSpec": "wwwroot\\js\\SelectCountry.js"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\js\\site.js",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\js\\site.js",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -867,10 +1207,10 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\js\\swiper.js",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\js\\swiper.js",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "js/swiper.js",
       "AssetKind": "All",
@@ -884,10 +1224,10 @@
       "OriginalItemSpec": "wwwroot\\js\\swiper.js"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\js\\tagsProcessor.js",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\js\\tagsProcessor.js",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "js/tagsProcessor.js",
       "AssetKind": "All",
@@ -901,10 +1241,10 @@
       "OriginalItemSpec": "wwwroot\\js\\tagsProcessor.js"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css",
       "AssetKind": "All",
@@ -918,10 +1258,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css.map",
       "AssetKind": "All",
@@ -935,10 +1275,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -952,10 +1292,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -969,10 +1309,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css",
       "AssetKind": "All",
@@ -986,10 +1326,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "AssetKind": "All",
@@ -1003,10 +1343,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "AssetKind": "All",
@@ -1020,10 +1360,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "AssetKind": "All",
@@ -1037,10 +1377,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css",
       "AssetKind": "All",
@@ -1054,10 +1394,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "AssetKind": "All",
@@ -1071,10 +1411,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "AssetKind": "All",
@@ -1088,10 +1428,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "AssetKind": "All",
@@ -1105,10 +1445,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "AssetKind": "All",
@@ -1122,10 +1462,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "AssetKind": "All",
@@ -1139,10 +1479,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "AssetKind": "All",
@@ -1156,10 +1496,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "AssetKind": "All",
@@ -1173,10 +1513,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css",
       "AssetKind": "All",
@@ -1190,10 +1530,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "AssetKind": "All",
@@ -1207,10 +1547,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "AssetKind": "All",
@@ -1224,10 +1564,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "AssetKind": "All",
@@ -1241,10 +1581,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "AssetKind": "All",
@@ -1258,10 +1598,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "AssetKind": "All",
@@ -1275,10 +1615,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "AssetKind": "All",
@@ -1292,10 +1632,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "AssetKind": "All",
@@ -1309,10 +1649,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css",
       "AssetKind": "All",
@@ -1326,10 +1666,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "AssetKind": "All",
@@ -1343,10 +1683,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "AssetKind": "All",
@@ -1360,10 +1700,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "AssetKind": "All",
@@ -1377,10 +1717,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "AssetKind": "All",
@@ -1394,10 +1734,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "AssetKind": "All",
@@ -1411,10 +1751,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "AssetKind": "All",
@@ -1428,10 +1768,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "AssetKind": "All",
@@ -1445,10 +1785,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js",
       "AssetKind": "All",
@@ -1462,10 +1802,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "AssetKind": "All",
@@ -1479,10 +1819,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "AssetKind": "All",
@@ -1496,10 +1836,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "AssetKind": "All",
@@ -1513,10 +1853,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js",
       "AssetKind": "All",
@@ -1530,10 +1870,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "AssetKind": "All",
@@ -1547,10 +1887,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "AssetKind": "All",
@@ -1564,10 +1904,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "AssetKind": "All",
@@ -1581,10 +1921,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js",
       "AssetKind": "All",
@@ -1598,10 +1938,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js.map",
       "AssetKind": "All",
@@ -1615,10 +1955,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -1632,10 +1972,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js.map",
       "AssetKind": "All",
@@ -1649,10 +1989,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\bootstrap\\LICENSE",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "lib/bootstrap/LICENSE",
       "AssetKind": "All",
@@ -1666,10 +2006,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -1683,10 +2023,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -1700,10 +2040,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -1717,10 +2057,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",
@@ -1734,10 +2074,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -1751,10 +2091,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -1768,10 +2108,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -1785,10 +2125,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -1802,10 +2142,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -1819,10 +2159,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -1836,10 +2176,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -1853,10 +2193,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "D:\\Code shit\\code\\LandingPage\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code shit\\code\\LandingPage\\wwwroot\\",
+      "ContentRoot": "D:\\Programms\\wlpj\\Web-tourism project\\Alex_work\\Wlpj\\wwwroot\\",
       "BasePath": "_content/LandingPage",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",

@@ -5,7 +5,7 @@
 
 /*Hot deals*/
 .hot-deals-container {
-  min-height: 100vh;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,6 +14,7 @@
 
 .hot-deals-container h2 {
   padding-top: 5%;
+  padding-bottom: 2%;
   color: #ffb703;
   font-size: 3rem;
   line-height: 4rem;
@@ -22,14 +23,15 @@
 .hot-deals {
   margin: auto;
   border-radius: 10px;
-  border: 3px dashed #ffb703;
+  border: 5px solid #ffb703;
 
   display: flex;
   height: 500px;
   width: 50%;
 
   background-color: #C0C0C0;
-  gap: 10px;
+  box-shadow: 7px 10px 10px rgba(0, 0, 0, 0.3);
+  /* gap: 10px; */
 }
 
 .hot-deals::before {
@@ -74,6 +76,7 @@
   padding: 15px 0 15px 15px;
 }
 
+/*Countries design*/
 .countries {
   padding: 0;
   text-align: center;
@@ -84,6 +87,15 @@
 
 .countries p {
   padding: 10%;
+  color: #fff;
+  font-weight: 700;
+  /* border: 5px solid #ffb703; */
+  /* border: 5px solid #ffb703;
+  border-right: 10px solid #ffb703; */
+}
+
+.countries p:hover{
+  color: black;
 }
 
 /* width */
@@ -176,33 +188,50 @@ swiper-slide img {
 }
 
 /*Swiper arrows*/
-
-.swiper-button-prev::after,
-.swiper-button-next::after {
-  font-size: 19px;
-}
-
 swiper-container::part(button-next),
 swiper-container::part(button-prev) {
-  background-color: red;
+  background-color: white;
+  color: grey;
+  height: 5%;
+  width: 3%;
   border-radius: 10px;
-  width: 40px;
-  height: 40px;
   padding: 10px;
-  color: white;
+  transition: color 0.7s ease-in;
+  transition: background-color 0.4s ease-out;
+
+}
+
+swiper-container::part(button-prev) {
+  top: 5%;
+  left: 85%;
+}
+
+swiper-container::part(button-next) {
+  top: 5%;
+  right: 1%;
+}
+
+swiper-container::part(button-prev):hover {
+  /* color: black; */
+  background-color: #FCE883;
+  color: red;
+}
+
+swiper-container::part(button-next):hover {
+  /* color: black; */
+  background-color: #FCE883;
+  color: red;
 }
 
 /*Swiper tags*/
 .swiper-tagdescription {
   position: absolute;
-  bottom: 0;
-
   z-index: 1;
+  bottom: 0;
   left: 0;
   width: 100%;
   color: white;
-  display: flex;
-  flex-wrap: wrap;
+  display: block;
   align-items: center;
   justify-content: center;
 
@@ -214,16 +243,18 @@ swiper-container::part(button-prev) {
   /* border-radius: 20px; */
 }
 
-.swiper-tagdescription ul {
-  list-style: none;
+.swiper-tagdescription p {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 2px;
+  padding-left: 3%;
+  font-size: 1.3rem;
+  font-weight: bold;
+  line-height: 1.1;
 }
 
-.swiper-tagdescription li {
+.swiper-tagdescription-items img {
+  width: 4%;
   padding: 5px;
-  /* width: 120px; */
-  font-size: 1.25rem;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 1.1;
-
 }

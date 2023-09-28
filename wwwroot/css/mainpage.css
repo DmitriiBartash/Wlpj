@@ -18,7 +18,7 @@ body {
     overflow-x: hidden;
     /* background-color: #eee; */
     /* font-family: 'Poppins', sans-serif; */
-    background-image: url("../content/background_sea.png");
+    background-image: url("../content/background/background_sea.png");
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -46,12 +46,14 @@ body {
     object-fit: cover;
     width: 100%;
     min-height: 100vh;
+    filter: brightness(70%);
 }
 
 .mainpage-text {
     /* position: absolute; */
     /* padding: 70px 17% 60px; */
     width: 100%;
+    z-index: 1;
 }
 
 .mainpage-text h5{
@@ -76,8 +78,8 @@ h1 span{
 }
 
 .mainpage-text p{
-    font-size: 1rem;
-    font-weight: 500;
+    font-size: 1.1rem;
+    font-weight: 700;
     line-height: 30px;
     color: #ffffffab;
 }

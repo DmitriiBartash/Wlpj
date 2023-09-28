@@ -19,11 +19,11 @@ header {
     /* opacity: .8; */
     background: transparent;
     backdrop-filter: blur(35px);
-
 }
 
 .nav-header-element {
     /* position: absolute; */
+    color: #F4C430;;
     padding: 10px 20px;
     width: 26px;
     left: 18px;
@@ -36,6 +36,15 @@ header {
 /*Sidebar*/
 .sidebaractive {
     transform: translate(0%) !important;
+}
+
+.fa-times::before{
+    color: black;
+    transition: 0.2s linear;
+}
+
+.fa-bars::before{
+    transition: 0.2s linear;
 }
 
 .sidebar {
