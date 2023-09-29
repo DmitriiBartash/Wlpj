@@ -40,13 +40,14 @@ body {
 
 /*Video background*/
 #myVideo {
-    right: 0;
-    bottom: 0;
+    position: fixed;
+    top: 0;
+    z-index: -1;
 
     object-fit: cover;
     width: 100%;
     min-height: 100vh;
-    filter: brightness(70%);
+    /*filter: brightness(70%);*/
 }
 
 .mainpage-text {

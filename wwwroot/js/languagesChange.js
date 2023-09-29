@@ -73,6 +73,9 @@ function changeLanguage(element) {
                         "FIND US": "Найди нас ➜",
                         "phone_numberes": "Связь с нами: <br> 060 144 445 <br> 068 525 050"
                     }
+                },
+                {
+                    "reviews": "Что о нас говорят?"
                 }
             ],
             "Eng": [
@@ -141,6 +144,9 @@ function changeLanguage(element) {
                         "FIND US": "Find us ➜",
                         "phone_numberes": "Contact us: <br> 060 144 445 <br> 068 525 050"
                     }
+                },
+                {
+                    "reviews": "What are we known for?"
                 }
             ],
             "Ro": [
@@ -209,6 +215,9 @@ function changeLanguage(element) {
                         "FIND US": "Găsiți-ne ➜",
                         "phone_numberes": "Contactează-ne: <br> 060 144 445 <br> 068 525 050"
                     }
+                },
+                {
+                    "reviews": "Ce spun despre noi?"
                 }
             ]
         }
@@ -248,10 +257,10 @@ function changeLanguage(element) {
         // FACTS
         document.getElementsByClassName("heading_about_us")[1].innerHTML = languageModelJson[selectedLanguage][4]["about-us"]["heading_about_us"];
 
-        document.getElementsByClassName("years_count_text")[0].innerHTML = languageModelJson[selectedLanguage][4]["about-us"]["years_count_text"];
-        document.getElementsByClassName("text_A_us1")[0].innerHTML = `<br> ${languageModelJson[selectedLanguage][4]["about-us"]["text_A_us1"]}`;
-        document.getElementsByClassName("client_count_text")[0].innerHTML = languageModelJson[selectedLanguage][4]["about-us"]["client_count_text"];
-        document.getElementsByClassName("text_A_us2")[0].innerHTML = `<br> ${languageModelJson[selectedLanguage][4]["about-us"]["text_A_us2"]}`;
+        document.getElementsByClassName("text_counter")[0].innerHTML = languageModelJson[selectedLanguage][4]["about-us"]["years_count_text"];
+        document.getElementsByClassName("text_A_us")[0].innerHTML = `<br> ${languageModelJson[selectedLanguage][4]["about-us"]["text_A_us1"]}`;
+        document.getElementsByClassName("text_counter")[1].innerHTML = languageModelJson[selectedLanguage][4]["about-us"]["client_count_text"];
+        document.getElementsByClassName("text_A_us")[1].innerHTML = `<br> ${languageModelJson[selectedLanguage][4]["about-us"]["text_A_us2"]}`;
 
         // CALL US 
         document.getElementsByClassName("call-header-text")[0].children[0].innerHTML = languageModelJson[selectedLanguage][5]["call-header-text"];
@@ -266,6 +275,8 @@ function changeLanguage(element) {
         document.querySelector(".social_network p").innerHTML = languageModelJson[selectedLanguage][7]["footer"]["FIND US"];
         document.getElementsByClassName("phone_numberes")[0].innerHTML = languageModelJson[selectedLanguage][7]["footer"]["phone_numberes"];
 
+
+        document.querySelector(".heading_test_ls").innerHTML = languageModelJson[selectedLanguage][8]["reviews"];
 
         SelectCountry(document.querySelector(`#selectedCountry`));
 

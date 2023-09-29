@@ -6,7 +6,7 @@ using Microsoft.Identity.Client;
 
 namespace LandingPage.Controllers
 {
-	//[Authorize]
+	[Authorize]
 	public class AdminController : Controller
 	{
 		private readonly DatabaseContext _context;

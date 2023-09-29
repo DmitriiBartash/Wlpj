@@ -4,14 +4,15 @@
 
 @* <p id="Anchor1"></p>
 <div class="hot-deals-container">
-	<h2>Горячие предложения</h2>
-	<div id="Hotdeals" class="swiper hot-deals">
-		<div class="countries">
-			@foreach (var countryName in Model.countriesData)
-			{
-				<p id="@countryName.Value" onclick="SelectCountry(this)">@countryName.Key</p>
-			}
-		</div>
+	<h2>Горячие предложения</h2> *@
+
+<div id="Hotdeals" class="swiper hot-deals">
+	<div class="countries">
+		@foreach (var countryName in Model.countriesData)
+		{
+			<p id="@countryName.Value" onclick="SelectCountry(this)">@countryName.Key</p>
+		}
+	</div>
 
 	<!-- Swiper -->
 	<div class="swiperAndTags">

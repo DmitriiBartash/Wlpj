@@ -32,6 +32,7 @@
 	<link rel="stylesheet" href="~/css/findus.css" asp-append-version="true" />
 	<link rel="stylesheet" href="~/css/footer.css" asp-append-version="true" />
 	<link rel="stylesheet" href="~/css/swiper.css" asp-append-version="true" />
+	<link rel="stylesheet" href="~/css/animations.css" asp-append-version="true" />
 
 	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
 </head>
@@ -42,7 +43,9 @@
 
 	@* <div id="swiper-container"> *@
 	<p id="Anchor1"></p>
-	<h2 id="hot_deals_h2">Горячие предложения</h2>
+	<h2 id="hot_deals_h2" style="padding-top: 5%;color: #ffb703;font-size: 3rem;text-align:center; line-height: 4rem;">
+		Горячие предложения
+	</h2>
 	<div class="hot-deals-container">
 		<partial name="_Swiper" model="@ViewBag.SwiperViewModel" />
 	</div>
@@ -61,5 +64,7 @@
 	<script src="~/js/languagesChange.js"></script>
 	<script src="~/js/SelectCountry.js"></script>
 	<script src="~/js/script.js"></script>
+	<script src="~/js/scrolling.js"></script>
+
 </body>
 </html>
