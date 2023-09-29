@@ -8,11 +8,33 @@ namespace LandingPage.Controllers
 	{
 		private readonly DatabaseContext _context;
 		public readonly Dictionary<string, int> CountryCodes;
+		public readonly Dictionary<string, string> Icons;
 
 		public HomeController(DatabaseContext context)
 		{
 			_context = context;
-			CountryCodes = new() { { "Ru", 0 }, { "Eng", 1 }, { "Ro", 2 } };
+			CountryCodes = new() {
+				{ "Ru", 0 },
+				{ "Eng", 1 },
+				{ "Ro", 2 } };
+
+			Icons = new() {
+				{"Перелёт,Flight,Zbor",
+					"1.Plane.svg"
+				},
+				{"Трансфер,Transfer,Transfer",
+					"2.Transfer.svg"
+				},
+				{"Проживание,Residence,Cazare",
+					"3.Residence.svg"
+				},
+				{"Питание согласно концепции отеля,Meals according to the hotel concept,Mese conform conceptului hotelului",
+					"4.Food.svg"
+				},
+				{"Медицинская страховка,Medical insurance,Asigurare medicala",
+					"5.Medical insurance.svg"
+				}
+			};
 		}
 
 		public IActionResult Index()
@@ -49,7 +71,8 @@ namespace LandingPage.Controllers
 				.First<string>();
 
 			List<string> tagsFinal = new();
-			foreach (var tag in tagsRaw.Split("|"))
+			List<string> tagsForIcons = tagsRaw.Split("|").ToList();
+			foreach (var tag in tagsForIcons)
 			{
 				int i = 0;
 				foreach (var miniTag in tag.Split(","))
@@ -77,13 +100,16 @@ namespace LandingPage.Controllers
 			{
 				model.picturePathsChosen.Add(photo);
 			}
-			foreach (var tag in tagsFinal)
+			int j = 0;
+			foreach (var tagAndIcon in tagsFinal)
 			{
-				model.tags.Add(tag);
+				TagsAndIcons tagsAndIcons = new() { tag = tagAndIcon, icon = Icons[tagsForIcons[j++]] };
+				model.tags.Add(tagsAndIcons);
 			}
 
 			// Set the ViewBag property
 			ViewBag.SwiperViewModel = model;
+			ViewBag.ReviewModel = _context.reviewModels;
 
 			return View();
 		}
@@ -133,7 +159,8 @@ namespace LandingPage.Controllers
 				.First<string>();
 
 			List<string> tagsFinal = new();
-			foreach (var tag in tagsRaw.Split("|"))
+			List<string> tagsForIcons = tagsRaw.Split("|").ToList();
+			foreach (var tag in tagsForIcons)
 			{
 				int i = 0;
 				foreach (var miniTag in tag.Split(","))
@@ -161,9 +188,11 @@ namespace LandingPage.Controllers
 			{
 				model.picturePathsChosen.Add(photo);
 			}
-			foreach (var tag in tagsFinal)
+			int j = 0;
+			foreach (var tagAndIcon in tagsFinal)
 			{
-				model.tags.Add(tag);
+				TagsAndIcons tagsAndIcons = new() { tag = tagAndIcon, icon = Icons[tagsForIcons[j++]] };
+				model.tags.Add(tagsAndIcons);
 			}
 
 			return PartialView("_Swiper", model);

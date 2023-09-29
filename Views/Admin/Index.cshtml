@@ -1,0 +1,91 @@
+﻿@{
+	Layout = "~/Views/Shared/_AdminLayuot.cshtml";
+}
+
+<style>
+	* {
+		margin: 0;
+	}
+
+	body {
+		width: 100vw;
+		height: 95vh;
+	}
+
+	.listOptions {
+		padding: 100px;
+		padding-bottom: 0px;
+		display: flex;
+		height: calc(95vh - 2 * 100px);
+		gap: 5%;
+	}
+
+	.options {
+		width: 100%;
+	}
+
+	.countryOptions,
+	.callsOptions,
+	.reviewOptions {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.countryOptions {
+		background-color: blue;
+		font-size: 3rem;
+	}
+
+	.reviewOptions {
+		background-color: red;
+		font-size: 3rem;
+	}
+
+	.callsOptions {
+		background-color: yellow;
+		font-size: 3rem;
+	}
+
+	header {
+		width: 100%;
+		height: 10%;
+	}
+
+	.panel {
+		width: calc(100% - 2 * 1%);
+		height: 100%;
+		display: grid;
+		padding: 0 1% 0 1%;
+		grid-template-columns: auto auto;
+		align-items: center;
+		background-color: rgb(255, 200, 100);
+	}
+
+		.panel h1 {
+			color: blue;
+			font-size: 3rem;
+		}
+
+	.rightPanel {
+		display: flex;
+		gap: 1%;
+		justify-content: end;
+	}
+</style>
+
+<header>
+	<div class="panel">
+		<h1>Панель админа</h1>
+		<div class="rightPanel">
+			<h1><a asp-controller="Home" asp-action="Index">На главную</a></h1>
+			<h1><a asp-controller="Login" asp-action="Logout">Выйти из системы</a></h1>
+		</div>
+	</div>
+</header>
+
+<div class="listOptions">
+	<div class="countryOptions options"><a asp-controller="Admin" asp-action="ListCountries">Страны</a></div>
+	<div class="reviewOptions options"><a asp-controller="Admin" asp-action="Reviews">Отзывы</a></div>
+	<div class="callsOptions options"><a asp-controller="Admin" asp-action="Calls">Звонки</a></div>
+</div>

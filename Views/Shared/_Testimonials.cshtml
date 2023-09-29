@@ -1,58 +1,71 @@
-﻿<p id="Anchor4"></p>
+﻿@model IEnumerable<LandingPage.Models.ReviewModel>;
+
+@{
+	int incr = 0;
+}
+
+<p id="Anchor4"></p>
 <div class="testimonials">
-    <div class="heading_test_ls">Что о нас говорят?</div>
-    <div class="rectangle_test_ls">
-        <div class="rectangle_test_ls_1">
-            <div class="text_rectangle_test_ls_heading_1">
-                Никита Резниченко
-                <div class="star_1">
-                    <img src="content/testimonials/star_testimonials.svg" width="25" height="25" style="position: relative">
-                    <img src="content/testimonials/star_testimonials.svg" width="25" height="25" style="position: relative">
-                    <img src="content/testimonials/star_testimonials.svg" width="25" height="25" style="position: relative">
-                    <img src="content/testimonials/star_testimonials.svg" width="25" height="25" style="position: relative">
-                    <img src="content/testimonials/star_testimonials.svg" width="25" height="25" style="position: relative">
-                </div>
-            </div>
-            <br>
-            <hr>
-            <p class="text_rectangle_test_ls_1">
-                <br>"adad asdad
-                уктидуктитукдлиулкдтплдкутилтукитукитукдитдуктидуктиуклтитукитдуктидуктидуктитукдлиулкдтплдкутилтукитукитукдитдуктидуктиуклтитукитдуктидуктидуктитукдли"
-            </p>
-        </div>
-        <div class="rectangle_test_ls_1">
-            <div class="text_rectangle_test_ls_heading_1">
-                Дима Барташ
-                <div class="star_1">
-                    <img src="content/testimonials/star_testimonials.svg" width="25" height="25" style="position: relative">
-                    <img src="content/testimonials/star_testimonials.svg" width="25" height="25" style="position: relative">
-                    <img src="content/testimonials/star_testimonials.svg" width="25" height="25" style="position: relative">
-                    <img src="content/testimonials/star_testimonials.svg" width="25" height="25" style="position: relative">
-                    <img src="content/testimonials/star_testimonials.svg" width="25" height="25" style="position: relative">
-                </div>
-            </div>
-            <br>
-            <hr>
-            <p class="text_rectangle_test_ls_1">
-                <br>"улкдтплдкутилтукитукитукдитдуктидуктиуклтитукитдуктидуктидуктитукдлиулкдтплдкутилтукитукитукдитдуктидуктиуклтитукитдуктидуктидуктитукдлиулкдтплдкутилтукитукитукдитдуктидуктиуклтитукитдуктидуктидуктитукдлиулкдтплдкутилтукитукитукдитдуктидуктиуклтитукитдуктидуктидуктитукдли"
-            </p>
-        </div>
-        <div class="rectangle_test_ls_1">
-            <div class="text_rectangle_test_ls_heading_1">
-                Барон Ррртищев
-                <div class="star_1">
-                    <img src="content/testimonials/star_testimonials.svg" width="25" height="25" style="position: relative">
-                    <img src="content/testimonials/star_testimonials.svg" width="25" height="25" style="position: relative">
-                    <img src="content/testimonials/star_testimonials.svg" width="25" height="25" style="position: relative">
-                    <img src="content/testimonials/star_testimonials.svg" width="25" height="25" style="position: relative">
-                    <img src="content/testimonials/star_testimonials.svg" width="25" height="25" style="position: relative">
-                </div>
-            </div>
-            <br>
-            <hr>
-            <p class="text_rectangle_test_ls_1">
-                <br>"улкдтплдкутилтукитукитукдитдуктидуктиуклтитукитдуктидуктидуктитукдлиулкдтплдкутилтукитукитукдитдуктидуктиуклтитукитдуктидуктидуктитукдлиулкдтплдкутилтукитукитукдитдуктидуктиуклтитукитдуктидуктидуктитукдлиулкдтплдкутилтукитукитукдитдуктидуктиуклтитукитдуктидуктидуктитукдли"
-            </p>
-        </div>
-    </div>
+	<div class="heading_test_ls">Что о нас говорят?</div>
+
+	<div class="rectangle_test_ls">
+
+		@foreach (var item in Model)
+		{
+			@if (incr++ > 2) break;
+			<div class="rectangle_test_ls_1">
+				<div class="text_rectangle_test_ls_heading_1">
+					@item.Person
+					<div class="star_1">
+						<img src="content/testimonials/star_testimonials.svg" width="25" height="25" style="position: relative">
+						<img src="content/testimonials/star_testimonials.svg" width="25" height="25" style="position: relative">
+						<img src="content/testimonials/star_testimonials.svg" width="25" height="25" style="position: relative">
+						<img src="content/testimonials/star_testimonials.svg" width="25" height="25" style="position: relative">
+						<img src="content/testimonials/star_testimonials.svg" width="25" height="25" style="position: relative">
+					</div>
+				</div>
+				<br>
+				<hr>
+				<p class="text_rectangle_test_ls_1">
+					<br>"@item.Review"
+				</p>
+			</div>
+		}
+
+		@*  <div class="rectangle_test_ls_1">
+		<div class="text_rectangle_test_ls_heading_1">
+		Дима Барташ
+		<div class="star_1">
+		<img src="content/testimonials/star_testimonials.svg" width="25" height="25" style="position: relative">
+		<img src="content/testimonials/star_testimonials.svg" width="25" height="25" style="position: relative">
+		<img src="content/testimonials/star_testimonials.svg" width="25" height="25" style="position: relative">
+		<img src="content/testimonials/star_testimonials.svg" width="25" height="25" style="position: relative">
+		<img src="content/testimonials/star_testimonials.svg" width="25" height="25" style="position: relative">
+		</div>
+		</div>
+		<br>
+		<hr>
+		<p class="text_rectangle_test_ls_1">
+		<br>"улкдтплдкутилтукитукитукдитдуктидуктиуклтитукитдуктидуктидуктитукдлиулкдтплдкутилтукитукитукдитдуктидуктиуклтитукитдуктидуктидуктитукдлиулкдтплдкутилтукитукитукдитдуктидуктиуклтитукитдуктидуктидуктитукдлиулкдтплдкутилтукитукитукдитдуктидуктиуклтитукитдуктидуктидуктитукдли"
+		</p>
+		</div>
+		<div class="rectangle_test_ls_1">
+		<div class="text_rectangle_test_ls_heading_1">
+		Барон Ррртищев
+		<div class="star_1">
+		<img src="content/testimonials/star_testimonials.svg" width="25" height="25" style="position: relative">
+		<img src="content/testimonials/star_testimonials.svg" width="25" height="25" style="position: relative">
+		<img src="content/testimonials/star_testimonials.svg" width="25" height="25" style="position: relative">
+		<img src="content/testimonials/star_testimonials.svg" width="25" height="25" style="position: relative">
+		<img src="content/testimonials/star_testimonials.svg" width="25" height="25" style="position: relative">
+		</div>
+		</div>
+		<br>
+		<hr>
+		<p class="text_rectangle_test_ls_1">
+		<br>"улкдтплдкутилтукитукитукдитдуктидуктиуклтитукитдуктидуктидуктитукдлиулкдтплдкутилтукитукитукдитдуктидуктиуклтитукитдуктидуктидуктитукдлиулкдтплдкутилтукитукитукдитдуктидуктиуклтитукитдуктидуктидуктитукдлиулкдтплдкутилтукитукитукдитдуктидуктиуклтитукитдуктидуктидуктитукдли"
+		</p>
+		</div> *@
+
+	</div>
 </div>

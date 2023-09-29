@@ -5,16 +5,16 @@
 	Layout = "~/Views/Shared/_AdminLayuot.cshtml";
 }
 
-<h1>Calls</h1>
+<h1>Звонки</h1>
 
 <table class="table">
 	<thead>
 		<tr>
 			<th>
-				@Html.DisplayNameFor(model => model.NameSurname)
+				<h1>Имя Фамилия</h1>
 			</th>
 			<th>
-				@Html.DisplayNameFor(model => model.PhoneNumber)
+				<h1>Номер телефона</h1>
 			</th>
 		</tr>
 	</thead>
@@ -23,13 +23,13 @@
 		{
 			<tr>
 				<td>
-					@Html.DisplayFor(modelItem => item.NameSurname)
+					<h1>@Html.DisplayFor(modelItem => item.NameSurname)</h1>
 				</td>
 				<td>
-					@Html.DisplayFor(modelItem => item.PhoneNumber)
+					<h1>@Html.DisplayFor(modelItem => item.PhoneNumber)</h1>
 				</td>
 				<td>
-					<a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+					<a asp-action="DeleteCall" asp-route-id="@item.ID">Delete</a>
 				</td>
 			</tr>
 		}

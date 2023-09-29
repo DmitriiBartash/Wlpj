@@ -14,8 +14,7 @@
         data: JSON.stringify(dataJSON),
         contentType: 'application/json',
         success: function (result) {
-            console.log("success");
-            $('#swiper-container').html(result);
+            $('.hot-deals-container').html(result);
         }
     });
 }

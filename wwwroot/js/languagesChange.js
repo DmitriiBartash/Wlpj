@@ -232,8 +232,9 @@ function changeLanguage(element) {
         document.getElementsByClassName("button-know")[0].innerHTML = `<span>${languageModelJson[selectedLanguage][1]["button-know"]}</span>`;
 
         // HOT DEALS
-        let hotDealsDiv = document.getElementsByClassName("hot-deals-container")[0];
-        hotDealsDiv.children[0].innerHTML = languageModelJson[selectedLanguage][2]["hot-deals-container"];
+        //let hotDealsDiv = document.getElementsByClassName("hot-deals-container")[0];
+        let hotDealsDiv = document.querySelector("#hot_deals_h2");
+        hotDealsDiv.innerHTML = languageModelJson[selectedLanguage][2]["hot-deals-container"];
 
         // ABOUT US
         document.getElementsByClassName("heading_about_us")[0].innerHTML = languageModelJson[selectedLanguage][3]["heading_about_us"];
@@ -262,7 +263,7 @@ function changeLanguage(element) {
         document.getElementsByClassName("TEXT")[0].innerHTML = languageModelJson[selectedLanguage][6]["map"]["TEXT"];
 
         // FOOTER 
-        document.getElementsByClassName("FIND_US")[0].innerHTML = languageModelJson[selectedLanguage][7]["footer"]["FIND US"];
+        document.querySelector(".social_network p").innerHTML = languageModelJson[selectedLanguage][7]["footer"]["FIND US"];
         document.getElementsByClassName("phone_numberes")[0].innerHTML = languageModelJson[selectedLanguage][7]["footer"]["phone_numberes"];
 
 

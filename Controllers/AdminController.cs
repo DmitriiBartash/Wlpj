@@ -2,10 +2,11 @@
 using LandingPage.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Identity.Client;
 
 namespace LandingPage.Controllers
 {
-	[Authorize]
+	//[Authorize]
 	public class AdminController : Controller
 	{
 		private readonly DatabaseContext _context;
@@ -19,12 +20,73 @@ namespace LandingPage.Controllers
 			return View();
 		}
 
+		// REVIEWS
+		[HttpGet]
+		public IActionResult Reviews()
+		{
+			return View(_context.reviewModels);
+		}
+
+		[HttpGet]
+		public IActionResult ReviewAdd()
+		{
+			return View();
+		}
+
+		[HttpPost]
+		public IActionResult ReviewAdd(ReviewModel reviewModel)
+		{
+			_context.reviewModels.Add(reviewModel);
+			_context.SaveChanges();
+
+			return View("Reviews", _context.reviewModels);
+		}
+
+		[HttpGet]
+		public IActionResult ReviewDelete(int id)
+		{
+			var review = _context.reviewModels.Find(id);
+			_context.reviewModels.Remove(review);
+			_context.SaveChanges();
+			return View("Reviews", _context.reviewModels);
+		}
+
+		[HttpGet]
+		public IActionResult ReviewEdit(int id)
+		{
+			var review = _context.reviewModels.Find(id);
+			return View(review);
+		}
+
+		[HttpPost]
+		public IActionResult ReviewEdit(ReviewModel reviewModel)
+		{
+			var _review = _context.reviewModels.Find(reviewModel.Id);
+			_review.Review = reviewModel.Review;
+			_review.Person = reviewModel.Person;
+
+			_context.SaveChanges();
+			return View("Reviews", _context.reviewModels);
+		}
+
+
+		// CALLS
+		[HttpGet]
+		public IActionResult DeleteCall(int id)
+		{
+			_context.callBackModels.Remove(_context.callBackModels.Find(id));
+			_context.SaveChanges();
+
+			return View("Calls", _context.callBackModels);
+		}
+
 		[HttpGet]
 		public IActionResult Calls()
 		{
 			return View(_context.callBackModels);
 		}
 
+		// COUNTRIES
 		[HttpGet]
 		public IActionResult CountryAdd()
 		{
