@@ -1,0 +1,67 @@
+.findus-container{
+    min-height: 50vh;
+}
+
+/*Where are we from*/
+.back_rectangle {
+    margin: auto;
+    margin-top: 15%;
+    width: 55%;
+    height: 394px;
+    background-color: #FFEF60;
+    border-radius: 20px;
+}
+
+.before_rectangle {
+    width: 100%;
+    height: 394px;
+    background-color: #FCE883;
+    border-radius: 20px;
+    transform: rotate(8deg);
+    padding-left: 7%;
+}
+
+.map {
+    position: absolute;
+    right: 6%;
+    top: 8%;
+    transform: rotate(-8deg);
+}
+
+.arrow_up {
+    width: 25%;
+    height: 40%;
+    left: 50%;
+    top: -20%;
+    /* top: -16.6%; */
+    transform: rotate(30deg);
+    z-index: -1;
+}
+
+.arrow_right {
+    width: 25%;
+    height: 50%;
+    left: 86%;
+    /* left: 85.1%; */
+    top: -8%;
+    transform: rotate(45deg);
+    z-index: -1;
+}
+
+.arrow_under {
+    width: 25%;
+    height: 40%;
+    left: 56.3%;
+    top: 80%;
+    /* top: 75.4%; */
+    transform: rotate(-47deg);
+    z-index: -1;
+}
+
+.TEXT {
+    font-family: 'Lobster', cursive;
+    transform: rotate(-8deg);
+    width: 50%;
+    text-align: left;
+    font-size: 130%;
+}
