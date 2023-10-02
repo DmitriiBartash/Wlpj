@@ -11,7 +11,7 @@ function changeLanguage(element) {
                 {
                     "nav-links": [
                         "Главная",
-                        "Горячие цены",
+                        "Горящие предложения",
                         "О нас",
                         "Заявка",
                         "Отзывы",
@@ -27,7 +27,7 @@ function changeLanguage(element) {
                     "button-know": "Узнать"
                 },
                 {
-                    "hot-deals-container": "Горячие предложения"
+                    "hot-deals-container": "Горящие предложения"
                 },
                 {
                     "heading_about_us": "Что мы предлагаем?",
