@@ -22,16 +22,6 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-/* :root{
-    --text-color: #fff;
-    --bg-color: #000;
-    --main-color: #ffa343;
-
-    --h1-font: 6rem;
-    --h2-font: 3rem;
-    --p-font: 1rem;
-} */
-
 #Mainpage {
     position: relative;
     width: 100%;
@@ -59,7 +49,7 @@ body {
 
 .mainpage-text h5{
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 800;
     margin-bottom: 10px;
     text-transform: uppercase;
     letter-spacing: 6px;
@@ -163,7 +153,6 @@ h1 span{
     width: 200px;
     height: 200px;
     margin-top: 6vh;
-    left: 0;
 }
 
 .button-know-sun {
@@ -218,3 +207,38 @@ h1 span{
     -webkit-text-fill-color: transparent;
 }
 
+@media (max-width:961px){
+    
+    .mainpage-innerDiv{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        padding: 5% 0;
+        top: 10vh;
+    }
+
+    .mainpage-text{
+        padding: 5% 5%;
+    }
+    
+    .mainpage-text h5{
+        font-size: 1.2rem;
+    }
+
+    .mainpage-text h1{
+        font-size: 2rem;
+    }
+
+    .mainpage-text p{
+        font-size: 1rem;
+    }
+
+    .logo-holder{
+        padding: 3%;
+    }
+
+    .logo-holder::after{
+        height: 70%;
+        width: 30%;
+    }
+}
