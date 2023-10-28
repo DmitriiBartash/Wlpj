@@ -5,7 +5,7 @@ body {
     margin: 0px;
     padding: 0px;
     height: 100vh;
-    /* overflow-y: hidden; */
+    overflow-y: hidden;
 }
 
 header {
@@ -135,7 +135,7 @@ polyline {
     height: 100%;
     grid-gap: 10px;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
+    grid-template-rows: max-content;
     overflow-y: scroll;
 }
 
@@ -180,12 +180,13 @@ polyline {
 
 .countries-wrapper {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     padding: 10px;
 }
 
-.countries-wrapper a:active{
+.countries-wrapper a:active {
     box-shadow: 0 0 9e9q inset #0009;
     color: #fff;
 }
@@ -227,7 +228,7 @@ span {
 }
 
 span:nth-child(2) {
-    width: 20px;
+    /* width: 20px; */
     margin-left: 30px;
     position: relative;
     top: 12%;
@@ -336,7 +337,7 @@ svg path {
     transition: 1s;
 }
 
-.add:active{
+.add:active {
     box-shadow: 0 0 9e9q inset #0009;
     color: #fff;
 }
@@ -363,11 +364,105 @@ svg path {
 }
 
 
+
+/*Buttons submit - reject of popup*/
+.submit1 {
+    --c: #33b249;
+    /* the color*/
+
+    box-shadow: 0 0 0 .1em inset var(--c);
+    --_g: linear-gradient(var(--c) 0 0) no-repeat;
+    background:
+        var(--_g) calc(var(--_p, 0%) - 100%) 0%,
+        var(--_g) calc(200% - var(--_p, 0%)) 0%,
+        var(--_g) calc(var(--_p, 0%) - 100%) 100%,
+        var(--_g) calc(200% - var(--_p, 0%)) 100%;
+    background-size: 50.5% calc(var(--_p, 0%)/2 + .5%);
+    outline-offset: .1em;
+    transition: background-size .4s, background-position 0s .4s;
+}
+
+.submit1:hover {
+    --_p: 100%;
+    transition: background-position .4s, background-size 0s;
+}
+
+.submit1:active {
+    box-shadow: 0 0 9e9q inset #0009;
+    background-color: var(--c);
+    color: #fff;
+}
+
+.reject1 {
+    --c: red;
+    /* the color*/
+
+    box-shadow: 0 0 0 .1em inset var(--c);
+    --_g: linear-gradient(var(--c) 0 0) no-repeat;
+    background:
+        var(--_g) calc(var(--_p, 0%) - 100%) 0%,
+        var(--_g) calc(200% - var(--_p, 0%)) 0%,
+        var(--_g) calc(var(--_p, 0%) - 100%) 100%,
+        var(--_g) calc(200% - var(--_p, 0%)) 100%;
+    background-size: 50.5% calc(var(--_p, 0%)/2 + .5%);
+    outline-offset: .1em;
+    transition: background-size .4s, background-position 0s .4s;
+}
+
+.reject1:hover {
+    --_p: 100%;
+    transition: background-position .4s, background-size 0s;
+}
+
+.reject1:active {
+    box-shadow: 0 0 9e9q inset #0009;
+    background-color: var(--c);
+    color: #fff;
+}
+
+.submit1,
+.reject1 {
+    font-size: 2rem;
+    cursor: pointer;
+    padding: .2em .5em;
+    font-weight: bold;
+    border: none;
+    margin-right: 0.5em;
+}
+
+
+/* Accordion */
+.accordion {
+    cursor: pointer;
+}
+
+.panel {
+    padding: 0 18px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
 /*Checkboxes*/
+.popup {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 0%);
+    height: calc(100% - 0%);
+    /* margin: 0% 10% 0 10%; */
+    background-color: rgba(0, 0, 0, 0.61);
+
+    backdrop-filter: blur(2px);
+    /* opacity: 0.; */
+}
+
 .popup-wrapper {
-    max-width: 75rem;
-    width: 100%;
-    padding: min(3rem, 5vw);
+    background-color: orange;
 }
 
 .popup-grid {
@@ -419,68 +514,4 @@ input[type="radio"] {
     height: 1.5em;
     padding-left: 10px;
     box-shadow: 7px 7px 10px #cbced1, -7px -7px 10px white;
-}
-
-/*Buttons submit - reject of popup*/
-.submit1{
-    --c: #33b249;
-    /* the color*/
-
-    box-shadow: 0 0 0 .1em inset var(--c);
-    --_g: linear-gradient(var(--c) 0 0) no-repeat;
-    background:
-        var(--_g) calc(var(--_p, 0%) - 100%) 0%,
-        var(--_g) calc(200% - var(--_p, 0%)) 0%,
-        var(--_g) calc(var(--_p, 0%) - 100%) 100%,
-        var(--_g) calc(200% - var(--_p, 0%)) 100%;
-    background-size: 50.5% calc(var(--_p, 0%)/2 + .5%);
-    outline-offset: .1em;
-    transition: background-size .4s, background-position 0s .4s;
-}
-
-.submit1:hover{
-    --_p: 100%;
-    transition: background-position .4s, background-size 0s;
-}
-
-.submit1:active{
-    box-shadow: 0 0 9e9q inset #0009;
-    background-color: var(--c);
-    color: #fff;
-}
-
-.reject1 {
-    --c: red;
-    /* the color*/
-
-    box-shadow: 0 0 0 .1em inset var(--c);
-    --_g: linear-gradient(var(--c) 0 0) no-repeat;
-    background:
-        var(--_g) calc(var(--_p, 0%) - 100%) 0%,
-        var(--_g) calc(200% - var(--_p, 0%)) 0%,
-        var(--_g) calc(var(--_p, 0%) - 100%) 100%,
-        var(--_g) calc(200% - var(--_p, 0%)) 100%;
-    background-size: 50.5% calc(var(--_p, 0%)/2 + .5%);
-    outline-offset: .1em;
-    transition: background-size .4s, background-position 0s .4s;
-}
-
-.reject1:hover {
-    --_p: 100%;
-    transition: background-position .4s, background-size 0s;
-}
-
-.reject1:active {
-    box-shadow: 0 0 9e9q inset #0009;
-    background-color: var(--c);
-    color: #fff;
-}
-
-.submit1, .reject1 {
-    font-size: 2rem;
-    cursor: pointer;
-    padding: .2em .5em;
-    font-weight: bold;
-    border: none;
-    margin-right: 0.5em;
 }
