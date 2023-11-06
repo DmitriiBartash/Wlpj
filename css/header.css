@@ -23,7 +23,8 @@ header {
 
 .nav-header-element {
     /* position: absolute; */
-    color: #F4C430;;
+    color: #F4C430;
+    ;
     padding: 10px 20px;
     width: 26px;
     left: 18px;
@@ -38,12 +39,12 @@ header {
     transform: translate(0%) !important;
 }
 
-.fa-times::before{
+.fa-times::before {
     color: black;
     transition: 0.2s linear;
 }
 
-.fa-bars::before{
+.fa-bars::before {
     transition: 0.2s linear;
 }
 
@@ -105,7 +106,7 @@ ul.nav-links li a {
     border-right: 1px solid #F4C430;
 }
 
-.radio__input:checked + .radio__label{
+.radio__input:checked+.radio__label {
     background: #F4C430;
 }
 
@@ -139,131 +140,202 @@ span.arrow-btn:hover {
     color: #FCE883;
 }
 
-/*Popup btn of socials menu*/
-.popup-socials-btncontainer {
-    width: 58px;
-    height: 70px;
-    bottom: 30px;
-    right: 40px;
-    cursor: pointer;
-    position: fixed;
-    z-index: 100000;
-}
-
-span.phone-btn {
-    padding: 4px;
-    font-size: 50px;
-    color: #fff;
-}
-
-.popup-socials-btn-call {
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    height: inherit;
-    background-color: #DAA520;
-    border-radius: 20%;
-    /* box-shadow: 0px 0px 5px 0px #a7a7a7; */
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, .3);
-
-    animation: popup-socials-btn-call 4s infinite;
-}
-
-@keyframes popup-socials-btn-call {
+/*Popup-menu*/
+/* Navigation */
+@-webkit-keyframes come-in {
     0% {
-        transform: translateX(0)
+        -webkit-transform: translatey(100px);
+        transform: translatey(100px);
+        opacity: 0;
     }
 
-    25% {
-        transform: translateY(-9px)
+    30% {
+        -webkit-transform: translateX(-50px) scale(0.4);
+        transform: translateX(-50px) scale(0.4);
     }
 
-    35% {
-        transform: translateY(-9px) rotate(17deg)
-    }
-
-    55% {
-        transform: translateY(-9px) rotate(-17deg)
-    }
-
-    65% {
-        transform: translateY(-9px) rotate(17deg)
-    }
-
-    75% {
-        transform: translateY(-9px) rotate(-17deg)
+    70% {
+        -webkit-transform: translateX(0px) scale(1.2);
+        transform: translateX(0px) scale(1.2);
     }
 
     100% {
-        transform: translateY(0) rotate(0)
+        -webkit-transform: translatey(0px) scale(1);
+        transform: translatey(0px) scale(1);
+        opacity: 1;
     }
 }
 
-.close-btn {
-    color: red;
-    font-size: 40px;
+@keyframes come-in {
+    0% {
+        -webkit-transform: translatey(100px);
+        transform: translatey(100px);
+        opacity: 0;
+    }
+
+    30% {
+        -webkit-transform: translateX(-50px) scale(0.4);
+        transform: translateX(-50px) scale(0.4);
+    }
+
+    70% {
+        -webkit-transform: translateX(0px) scale(1.2);
+        transform: translateX(0px) scale(1.2);
+    }
+
+    100% {
+        -webkit-transform: translatey(0px) scale(1);
+        transform: translatey(0px) scale(1);
+        opacity: 1;
+    }
 }
 
-/*Popup menu*/
-.popup-menu {
-    position: relative;
-    z-index: 10000;
-    transition: .2s;
-    visibility: hidden;
-    opacity: 0;
-
-}
-
-.popup-menu-show {
-    visibility: visible;
-    opacity: 1;
-}
-
-.popup-menu-container {
-    margin: 0;
-    top: initial;
-    left: initial;
-    bottom: 120px;
-    right: 40px;
-    border-radius: 5px;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, .4);
-    background: #fff;
+.floating-container {
     position: fixed;
-    z-index: 1;
-    cursor: default;
-    max-width: 300px;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    bottom: 0;
+    right: 0;
+    margin: 35px 25px;
 }
 
-.popup-menu-wrapper {
-    padding: 30px 20px 20px;
-    border-radius: 5px;
-    max-height: 65vh;
+.floating-container:hover {
+    height: 500px;
 }
 
-.popup-menu-title {
+.floating-container:hover .floating-button {
+    box-shadow: 0 10px 25px rgba(44, 179, 240, 0.6);
+    -webkit-transform: translatey(5px);
+    transform: translatey(5px);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.floating-container:hover .element-container .float-element:nth-child(1) {
+    -webkit-animation: come-in 0.4s forwards 0.2s;
+    animation: come-in 0.4s forwards 0.2s;
+}
+
+.floating-container:hover .element-container .float-element:nth-child(2) {
+    -webkit-animation: come-in 0.4s forwards 0.4s;
+    animation: come-in 0.4s forwards 0.4s;
+}
+
+.floating-container:hover .element-container .float-element:nth-child(3) {
+    -webkit-animation: come-in 0.4s forwards 0.6s;
+    animation: come-in 0.4s forwards 0.6s;
+}
+
+.floating-container:hover .element-container .float-element:nth-child(4) {
+    -webkit-animation: come-in 0.4s forwards 0.8s;
+    animation: come-in 0.4s forwards 0.8s;
+}
+
+.floating-container:hover .element-container .float-element:nth-child(5) {
+    -webkit-animation: come-in 0.4s forwards 1s;
+    animation: come-in 0.4s forwards 1s;
+}
+
+.floating-container:hover .element-container .float-element:nth-child(6) {
+    -webkit-animation: come-in 0.4s forwards 1.2s;
+    animation: come-in 0.4s forwards 1.2s;
+}
+
+.floating-container .floating-button {
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    background: #2cb3f0;
+    bottom: 0;
+    border-radius: 50%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    color: white;
+    line-height: 65px;
+    text-align: center;
+    font-size: 23px;
+    z-index: 100;
+    box-shadow: 0 10px 25px -5px rgba(44, 179, 240, 0.6);
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.floating-container .float-element {
+    position: relative;
+    /* display: block; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 10px auto;
+    color: white;
+    font-weight: 500;
+    text-align: center;
+    line-height: 50px;
+    z-index: 0;
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+}
+
+.floating-container .float-element .material-icons {
+    vertical-align: middle;
     font-size: 16px;
 }
 
-.popup-menu-content {
-    display: flex;
-    flex-direction: column;
-    padding: 5px;
+.fa-phone{
+    color: white;
 }
 
-.popup-menu-content li {
-    padding: 5px;
-    list-style: none;
+.floating-container .float-element:nth-child(1) {
+    /* background: #42A5F5; */
+    background: #00FF00;
+    box-shadow: 0 15px 15px -10px #00FF00;
 }
 
-.popup-menu-content a {
-    padding: 10px;
-    font-size: 12px;
-    color: #229ED9;
+.floating-container .float-element:nth-child(2) {
+    background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
 }
 
-.popup-menu-objects {
-    display: flex;
-    align-items: center;
-    list-style: none;
+.fa-facebook{
+    color: white;
+}
+
+.floating-container .float-element:nth-child(3) {
+    background: #4267B2;
+    box-shadow: 0 20px 20px -10px #4267B2;
+}
+
+.fa-telegram{
+    color: white;
+}
+
+.floating-container .float-element:nth-child(4) {
+    background: #229ED9;
+    box-shadow: 0 20px 20px -10px #229ED9;
+}
+
+.fa-whatsapp{
+    color: white;
+}
+
+.floating-container .float-element:nth-child(5) {
+    background: #25D366;
+    box-shadow: 0 20px 20px -10px #25D366;
+}
+
+.fa-phone-square{
+    color: white;
+}
+
+.floating-container .float-element:nth-child(6) {
+    background: #7360F2;
+    box-shadow: 0 20px 20px -10px #7360F2;
 }
