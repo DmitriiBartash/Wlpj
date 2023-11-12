@@ -202,11 +202,11 @@ span.arrow-btn:hover {
     margin: 35px 25px;
 }
 
-.floating-container:hover {
+.floating-container-show {
     height: 500px;
 }
 
-.floating-container:hover .floating-button {
+.floating-container-show .floating-button {
     box-shadow: 0 10px 25px rgba(44, 179, 240, 0.6);
     -webkit-transform: translatey(5px);
     transform: translatey(5px);
@@ -214,32 +214,32 @@ span.arrow-btn:hover {
     transition: all 0.3s;
 }
 
-.floating-container:hover .element-container .float-element:nth-child(1) {
+.floating-container-show .element-container .float-element:nth-child(1) {
     -webkit-animation: come-in 0.4s forwards 0.2s;
     animation: come-in 0.4s forwards 0.2s;
 }
 
-.floating-container:hover .element-container .float-element:nth-child(2) {
+.floating-container-show .element-container .float-element:nth-child(2) {
     -webkit-animation: come-in 0.4s forwards 0.4s;
     animation: come-in 0.4s forwards 0.4s;
 }
 
-.floating-container:hover .element-container .float-element:nth-child(3) {
+.floating-container-show .element-container .float-element:nth-child(3) {
     -webkit-animation: come-in 0.4s forwards 0.6s;
     animation: come-in 0.4s forwards 0.6s;
 }
 
-.floating-container:hover .element-container .float-element:nth-child(4) {
+.floating-container-show .element-container .float-element:nth-child(4) {
     -webkit-animation: come-in 0.4s forwards 0.8s;
     animation: come-in 0.4s forwards 0.8s;
 }
 
-.floating-container:hover .element-container .float-element:nth-child(5) {
+.floating-container-show .element-container .float-element:nth-child(5) {
     -webkit-animation: come-in 0.4s forwards 1s;
     animation: come-in 0.4s forwards 1s;
 }
 
-.floating-container:hover .element-container .float-element:nth-child(6) {
+.floating-container-show .element-container .float-element:nth-child(6) {
     -webkit-animation: come-in 0.4s forwards 1.2s;
     animation: come-in 0.4s forwards 1.2s;
 }
@@ -295,7 +295,6 @@ span.arrow-btn:hover {
 }
 
 .floating-container .float-element:nth-child(1) {
-    /* background: #42A5F5; */
     background: #00FF00;
     box-shadow: 0 15px 15px -10px #00FF00;
 }

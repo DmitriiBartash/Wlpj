@@ -13,27 +13,27 @@ toggle_bar.addEventListener("click", function () {
 })
 
 
-let phonebtn = document.querySelector(".popup-socials-btn-call")
+// let phonebtn = document.querySelector(".popup-socials-btn-call")
 // console.log(phonebtn.children)
 
-let isContactsClicked = false
-phonebtn.innerHTML = '<span class="material-symbols-outlined phone-btn">phone_in_talk</span>'
+// let isContactsClicked = false
+// phonebtn.innerHTML = '<span class="material-symbols-outlined phone-btn">phone_in_talk</span>'
 
-phonebtn.addEventListener("click", function () {
-    if (isContactsClicked == true) {
-        phonebtn.innerHTML = '<span class="material-symbols-outlined phone-btn">phone_in_talk</span>'
-    }
-    else {
-        phonebtn.innerHTML = '<span class="material-symbols-outlined close-btn">close</span>'
-    }
-    isContactsClicked = !isContactsClicked
-})
+// phonebtn.addEventListener("click", function () {
+//     if (isContactsClicked == true) {
+//         phonebtn.innerHTML = '<span class="material-symbols-outlined phone-btn">phone_in_talk</span>'
+//     }
+//     else {
+//         phonebtn.innerHTML = '<span class="material-symbols-outlined close-btn">close</span>'
+//     }
+//     isContactsClicked = !isContactsClicked
+// })
 
-let popupmenu = document.querySelector(".popup-menu")
+// let popupmenu = document.querySelector(".popup-menu")
 
-phonebtn.addEventListener("click", function () {
-    popupmenu.classList.toggle("popup-menu-show")
-})
+// phonebtn.addEventListener("click", function () {
+//     popupmenu.classList.toggle("popup-menu-show")
+// })
 
 // reveal();
 // window.addEventListener('scroll', reveal);
@@ -56,3 +56,19 @@ phonebtn.addEventListener("click", function () {
 
 //     }
 // }
+
+/*Popup menu*/
+let floatingContainer = document.querySelector(".floating-container");
+let floatingButton = document.querySelector(".floating-button");
+
+let isMenuOpen = false;
+
+floatingButton.addEventListener('click', () => {
+  if (!isMenuOpen) {
+    floatingContainer.classList.add('floating-container-show');
+    isMenuOpen = true;
+  } else {
+    floatingContainer.classList.remove('floating-container-show');
+    isMenuOpen = false;
+  }
+});
