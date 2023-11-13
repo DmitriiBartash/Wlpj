@@ -6,29 +6,23 @@ header {
 }
 
 .nav-headercontainer {
-    position: relative;
+    /* position: relative; */
     width: 100%;
     padding: 5px 0%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     color: black;
-    /* background-color: #FCE38A; */
-    /* background-color:rgba(252, 227, 138, 0.8); */
-    /* background-color: #F9ED69; */
-    /* opacity: .8; */
     background: transparent;
     backdrop-filter: blur(35px);
 }
 
 .nav-header-element {
-    /* position: absolute; */
     color: #F4C430;
-    ;
     padding: 10px 20px;
     width: 26px;
-    left: 18px;
-    top: 5px;
+    /* left: 18px;
+    top: 5px; */
     font-size: 30px;
     cursor: pointer;
     z-index: 5;
@@ -77,6 +71,11 @@ ul.nav-links li a {
     margin-bottom: 20px;
     display: inline-block;
     text-decoration: none;
+    transition: ease .3s;
+}
+
+ul.nav-links li a:hover{
+    color: #ffff;
 }
 
 /*Languages*/
@@ -100,6 +99,11 @@ ul.nav-links li a {
     background: #FCE883;
     cursor: pointer;
     transition: background-color 0.1s;
+    transition: ease .3s;
+}
+
+.radio__label:hover{
+    color:#ffff;
 }
 
 .radio__label:not(:last-of-type) {
@@ -110,17 +114,7 @@ ul.nav-links li a {
     background: #F4C430;
 }
 
-
-/*Arrow up*/
-/* .material-symbols-outlined {
-    font-variation-settings:
-        'FILL' 0,
-        'wght' 400,
-        'GRAD' 0,
-        'opsz' 48,
-        'size' 40,
-} */
-
+/*Arrowup*/
 .arrowup-container {
     position: fixed;
     z-index: 100000;
@@ -133,11 +127,11 @@ ul.nav-links li a {
 span.arrow-btn {
     font-size: 50px;
     color: #DAA520;
-    transition: .5s;
+    transition: ease .3s;
 }
 
 span.arrow-btn:hover {
-    color: #FCE883;
+    color: #ffff;
 }
 
 /*Popup-menu*/
@@ -207,7 +201,6 @@ span.arrow-btn:hover {
 }
 
 .floating-container-show .floating-button {
-    box-shadow: 0 10px 25px rgba(44, 179, 240, 0.6);
     -webkit-transform: translatey(5px);
     transform: translatey(5px);
     -webkit-transition: all 0.3s;
@@ -248,7 +241,8 @@ span.arrow-btn:hover {
     position: absolute;
     width: 65px;
     height: 65px;
-    background: #2cb3f0;
+    /* background: #2cb3f0; */
+    background: #ffa343;
     bottom: 0;
     border-radius: 50%;
     left: 0;
@@ -259,15 +253,19 @@ span.arrow-btn:hover {
     text-align: center;
     font-size: 23px;
     z-index: 100;
-    box-shadow: 0 10px 25px -5px rgba(44, 179, 240, 0.6);
+    /* box-shadow: 0 10px 25px -5px rgba(44, 179, 240, 0.6); */
+    box-shadow: 0 10px 25px -5px rgba(246, 196, 71, 0.6);
     cursor: pointer;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
 }
 
+.floating-button:hover{
+    background-color: #FCE883;
+}
+
 .floating-container .float-element {
     position: relative;
-    /* display: block; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -301,6 +299,7 @@ span.arrow-btn:hover {
 
 .floating-container .float-element:nth-child(2) {
     background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+    box-shadow: 0 15px 15px -10px #e70dbf;
 }
 
 .fa-facebook{
