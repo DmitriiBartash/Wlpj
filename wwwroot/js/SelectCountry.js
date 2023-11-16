@@ -15,6 +15,7 @@
         contentType: 'application/json',
         success: function (result) {
             $('.hot-deals-container').html(result);
+            changeImgOnClick();
         }
     });
 }

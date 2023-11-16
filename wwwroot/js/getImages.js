@@ -1,4 +1,4 @@
-﻿let i = -1;
+﻿let iCounter = -1;
 let imgsContainer = document.getElementById("imagesToAdd");
 
 let files = [];
@@ -24,7 +24,7 @@ function asyncGet() {
     const clickElement = document.getElementById('hidden-file-input');
     clickElement.click();
 
-    i++;
+    iCounter++;
     let fileSelected = false;
 
     clickElement.addEventListener('input', function () {
@@ -37,7 +37,7 @@ function asyncGet() {
 
             // Create a new FileReader object and read the image file.
             const reader = new FileReader();
-            reader.readAsDataURL(files[i]);
+            reader.readAsDataURL(files[iCounter]);
 
             reader.onload = function () {
                 // The image file has been read.
@@ -64,7 +64,7 @@ function deleteElement(element) {
         if (srcs == mainDiv.children[1].src) {
             files.splice(k, 1);
             srcs.splice(k, 1);
-            i--;
+            iCounter--;
         }
         k++;
     });

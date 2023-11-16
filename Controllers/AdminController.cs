@@ -1,18 +1,41 @@
 ﻿using LandingPage.Data;
 using LandingPage.Models;
+using LandingPage.Utils;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Identity.Client;
+using System.Diagnostics;
+using System.Diagnostics.Metrics;
+using System.Text;
 
 namespace LandingPage.Controllers
 {
-	[Authorize]
+	//[Authorize]
 	public class AdminController : Controller
 	{
 		private readonly DatabaseContext _context;
-		public AdminController(DatabaseContext context)
+		private readonly string absoluteRootPath;
+		public readonly Dictionary<string, int> _countryCodes;
+		public readonly Dictionary<string, string> _icons;
+
+		public readonly string[] tagsList;
+
+		public AdminController(DatabaseContext context, CountryCodes countryCodes, Icons icons)
 		{
 			_context = context;
+			_countryCodes = countryCodes.value;
+			_icons = icons.value;
+			tagsList = new string[]
+			{
+				"Перелёт,Flight,Zbor",
+				"Трансфер,Transfer,Transfer",
+				"Проживание,Residence,Cazare",
+				"Питание согласно концепции отеля,Meals according to the hotel concept,Mese conform conceptului hotelului",
+				"Медицинская страховка,Medical insurance,Asigurare medicala"
+			};
+
+			//Get the destination file path.
+			absoluteRootPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "content", "img_for_swiper");
 		}
 
 		public IActionResult Index()
@@ -20,7 +43,7 @@ namespace LandingPage.Controllers
 			return View();
 		}
 
-		// REVIEWS
+		#region REVIEWS
 		[HttpGet]
 		public IActionResult Reviews()
 		{
@@ -34,10 +57,10 @@ namespace LandingPage.Controllers
 		}
 
 		[HttpPost]
-		public IActionResult ReviewAdd(ReviewModel reviewModel)
+		public async Task<IActionResult> ReviewAdd(ReviewModel reviewModel)
 		{
 			_context.reviewModels.Add(reviewModel);
-			_context.SaveChanges();
+			await _context.SaveChangesAsync();
 
 			return View("Reviews", _context.reviewModels);
 		}
@@ -68,9 +91,9 @@ namespace LandingPage.Controllers
 			_context.SaveChanges();
 			return View("Reviews", _context.reviewModels);
 		}
+		#endregion
 
-
-		// CALLS
+		#region CALLS
 		[HttpGet]
 		public IActionResult DeleteCall(int id)
 		{
@@ -85,8 +108,9 @@ namespace LandingPage.Controllers
 		{
 			return View(_context.callBackModels);
 		}
+		#endregion
 
-		// COUNTRIES
+		#region COUNTRIES
 		[HttpGet]
 		public IActionResult CountryAdd()
 		{
@@ -101,9 +125,6 @@ namespace LandingPage.Controllers
 
 			foreach (var photo in country.Files)
 			{
-				//Get the destination file path.
-				var absoluteRootPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "content", "img_for_swiper");
-
 				string absoluteFilePath, relativeFilePath;
 
 				int randomNumber = new Random((int)(DateTime.Now.Ticks - DateTime.UnixEpoch.Ticks)).Next();
@@ -123,38 +144,195 @@ namespace LandingPage.Controllers
 			return Ok();
 		}
 
-		//[HttpPost]
-		//public IActionResult CountryAdd(IFormFileCollection photos, [FromForm] string CountryName, [FromForm] string Tags)
-		//{
-		//	foreach (var photo in photos)
-		//	{
-		//		//Get the destination file path.
-		//		var absoluteRootPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "content", "img_for_swiper");
-
-		//		string absoluteFilePath, relativeFilePath;
-
-		//		int randomNumber = new Random((int)(DateTime.Now.Ticks - DateTime.UnixEpoch.Ticks)).Next();
-
-		//		absoluteFilePath = Path.Combine(absoluteRootPath, $"{CountryName.Normalize()}_{randomNumber}.jpg");
-		//		relativeFilePath = $"/content/img_for_swiper/{CountryName.Normalize()}_{randomNumber}.jpg";
-
-		//		// Create a new file stream to the destination file path.
-		//		using (var fileStream = new FileStream(absoluteFilePath, FileMode.Create))
-		//		{
-		//			// Copy the picture file to the destination file stream.
-		//			photo.CopyTo(fileStream);
-		//		}
-
-		//		//_context.swiperModels.Add(new() { CountryName = CountryName, Tags = Tags, PathToPicture = relativeFilePath });
-		//		_context.SaveChanges();
-		//	}
-		//	return View();
-		//}
-
 		[HttpGet]
 		public IActionResult ListCountries()
 		{
 			return View(_context.swiperModels);
 		}
+
+		[HttpGet]
+		public IActionResult Countries()
+		{
+			// default shall be Russian 
+			var model = Functions.generateAdminCountriesData(_context, _icons);
+
+			// iterate through the loop and grab all items that have the same Country
+			var photoPaths = _context.swiperModels.Where(country => country.CountryName.Contains(model[0].Name))
+				.Select(s => s.PathToPicture)
+				.ToList();
+
+
+
+			CountryTagsNPrices countryTagsNPrices = new()
+			{
+				Tags = model[0].Tags,
+				PriceEuro = model[0].PriceEuro,
+				PriceUsd = model[0].PriceUsd
+			};
+
+			ViewBag.Images = photoPaths;
+			ViewBag.Countries = model;
+			ViewBag.TagsNPrices = countryTagsNPrices;
+
+			return View();
+		}
+
+		[HttpPost]
+		public PartialViewResult LoadImages([FromBody] int selectedCountry)
+		{
+			// get the country's name 
+			var name = _context.swiperModels.Find(selectedCountry);
+
+			var photoPaths = _context.swiperModels.Where(country => country.CountryName.Contains(name.CountryName))
+				.Select(s => s.PathToPicture)
+				.ToList();
+
+			return PartialView("_AdminCountryImages", photoPaths);
+		}
+
+		[HttpPost]
+		public PartialViewResult LoadTags([FromBody] int selectedCountry)
+		{
+			// get the country's name 
+			var name = _context.swiperModels.Find(selectedCountry);
+
+
+			CountryNoPics countryNoPics = new();
+			countryNoPics.Tags = new();
+
+
+			// somehow get all the tags
+			// first need to split them by '|' and only then by ','
+			string tagsRaw = name.Tags;
+
+			List<string> tagsFinal = new();
+			List<string> tagsForIcons = tagsRaw.Split("|").ToList();
+			int j = 0;
+			for (int k = 0; k < tagsForIcons.Count; k++)
+			{
+				tagsFinal.Add(tagsForIcons[k].Split(",")[0]);
+				var tagToSearch = tagsForIcons[k].Split(",")[0];
+				if (tagsForIcons[k].Contains('\n'))
+				{
+					tagsForIcons[j] = tagsForIcons[k][..^1];
+				}
+				TagsAndIcons tagsAndIcons = new() { tag = tagToSearch, icon = _icons[tagsForIcons[j++]] };
+				countryNoPics.Tags.Add(tagsAndIcons);
+			}
+
+
+			CountryTagsNPrices countryTagsNPrices = new()
+			{
+				Tags = countryNoPics.Tags,
+				PriceEuro = name.PriceEuro,
+				PriceUsd = name.PriceUsd
+			};
+
+			ViewBag.ID = selectedCountry;
+			return PartialView("_AdminCountryTagsNPrices", countryTagsNPrices);
+		}
+
+
+		[HttpPost]
+		public PartialViewResult LoadPopUp([FromBody] int selectedCountry)
+		{
+			// get the country's name 
+			var country = _context.swiperModels.Find(selectedCountry);
+
+			bool[] ifPresent = new bool[5] { false, false, false, false, false };
+
+			foreach (var tag in country.Tags.Split("|"))
+			{
+				for (int i = 0; i < 5; i++)
+				{
+					if (tag == tagsList[i])
+					{
+						ifPresent[i] = true;
+					}
+				}
+			}
+			CountryFull countryFull = new()
+			{
+				Id = selectedCountry,
+				Name = country.CountryName,
+				ifTagsPresent = ifPresent,
+				PriceEuro = country.PriceEuro,
+				PriceUsd = country.PriceUsd
+			};
+
+			// compare tags 
+			// 0-	fly
+			// 1-   transfer
+			// 2-	accommodation
+			// 3-	nutrition
+			// 4-	insurance
+			// if the tag is not present, mark as false
+
+			return PartialView("_AdminPopUp", countryFull);
+		}
+
+		[HttpPost]
+		public PartialViewResult SubmitPoster([FromBody] CountryFull countryFull)
+		{
+			var country = _context.swiperModels.Find(countryFull.Id);
+
+			// assemble the tags 
+			int i = 0;
+			string assembledTags = "";
+			StringBuilder stringBuilder = new();
+			foreach (var item in countryFull.ifTagsPresent)
+			{
+				if (item)
+				{
+					stringBuilder.Append(tagsList[i]);
+					stringBuilder.Append('|');
+				}
+				i++;
+			}
+			stringBuilder.Remove(stringBuilder.Length - 1, 1);
+			assembledTags = stringBuilder.ToString();
+
+			// update the db entry
+			country.Tags = assembledTags;
+			country.CountryName = countryFull.Name;
+			country.PriceEuro = (float)Convert.ToDouble(countryFull.PriceEuro);
+			country.PriceUsd = (float)Convert.ToDouble(countryFull.PriceUsd);
+			_context.SaveChanges();
+
+
+			CountryNoPics countryNoPics = new();
+			countryNoPics.Tags = new();
+
+			// somehow get all the tagss
+			// first need to split them by '|' and only then by ','
+			string tagsRaw = country.Tags;
+
+			List<string> tagsFinal = new();
+			List<string> tagsForIcons = tagsRaw.Split("|").ToList();
+			int j = 0;
+			for (int k = 0; k < tagsForIcons.Count; k++)
+			{
+				tagsFinal.Add(tagsForIcons[k].Split(",")[0]);
+				var tagToSearch = tagsForIcons[k].Split(",")[0];
+				if (tagsForIcons[k].Contains('\n'))
+				{
+					tagsForIcons[j] = tagsForIcons[k][..^1];
+				}
+				TagsAndIcons tagsAndIcons = new() { tag = tagToSearch, icon = _icons[tagsForIcons[j++]] };
+				countryNoPics.Tags.Add(tagsAndIcons);
+			}
+
+
+			CountryTagsNPrices countryTagsNPrices = new()
+			{
+				Tags = countryNoPics.Tags,
+				PriceEuro = country.PriceEuro,
+				PriceUsd = country.PriceUsd
+			};
+
+			ViewBag.ID = countryFull.Id;
+			return PartialView("_AdminCountryTagsNPrices", countryTagsNPrices);
+		}
+		#endregion
 	}
 }

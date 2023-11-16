@@ -1,0 +1,12 @@
+﻿<div class="panel">
+	<p id="countrySelectedID" hidden>@ViewBag.ID</p>
+	<div>
+		<p>Цена в $: @Model?.PriceUsd</p>
+		<p>Цена в €: @Model?.PriceEuro</p>
+	</div>
+	@foreach (var tag in @Model.Tags)
+	{
+		<p><img src="~/content/tags/@tag?.icon">@tag?.tag</p>
+	}
+	<button onclick="openPopUp(this)">Редактировать</button>
+</div>

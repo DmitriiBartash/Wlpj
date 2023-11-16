@@ -1,0 +1,76 @@
+﻿@using LandingPage.Models;
+@{
+	string[] Names = { "", "", "" };
+	if (Model is not null)
+		Names = Model.Name.Split("|");
+}
+
+<div class="popup-wrapper">
+	<p id="countrySelected" hidden>@ViewBag.ID</p>
+	<div class="popup-grid">
+
+		<form action="SubmitPoster" method="post">
+			<fieldset>
+				<legend>Измените название</legend>
+				<div class="country-input">
+					<div class="validationDiv">
+						<input type="text" placeholder="Страна" value="@Names[0]">
+						<p class="text-danger"></p>
+					</div>
+					<div class="validationDiv">
+						<input type="text" placeholder="Страна" value="@Names[1]">
+						<p class="text-danger"></p>
+					</div>
+					<div class="validationDiv">
+						<input type="text" placeholder="Страна" value="@Names[2]">
+						<p class="text-danger"></p>
+					</div>
+				</div>
+			</fieldset>
+
+			<fieldset>
+				<legend>Выберите тэги</legend>
+				<div class="form__group">
+					<input type="checkbox" id="fly" checked="@Model?.ifTagsPresent[0]">
+					<label>Перелёт</label>
+				</div>
+				<div class="form__group">
+					<input type="checkbox" id="transfer" checked="@Model?.ifTagsPresent[1]">
+					<label>Трансфер</label>
+				</div>
+				<div class="form__group">
+					<input type="checkbox" id="accommodation" checked="@Model?.ifTagsPresent[2]">
+					<label>Проживание</label>
+				</div>
+				<div class="form__group">
+					<input type="checkbox" id="nutrition" checked="@Model?.ifTagsPresent[3]">
+					<label>Питание согласно концепции отеля</label>
+				</div>
+				<div class="form__group">
+					<input type="checkbox" id="insurance" checked="@Model?.ifTagsPresent[4]">
+					<label>Медицинская страховка</label>
+				</div>
+				<p id="tagsErr" class="text-danger"></p>
+			</fieldset>
+
+			<fieldset>
+				<legend>$ Цена начинается от</legend>
+				<div class="price-input">
+					<input type="text" placeholder="Цена" value="@Model?.PriceUsd">
+					<p class="text-danger"></p>
+				</div>
+				<legend>€ Цена начинается от</legend>
+				<div class="price-input">
+					<input type="text" placeholder="Цена" value="@Model?.PriceEuro">
+					<p class="text-danger"></p>
+				</div>
+			</fieldset>
+
+			<fieldset>
+				<div onclick="submit()" class="submit1">V</div>
+				<div onclick="reject()" class="reject1">Х</div>
+			</fieldset>
+		</form>
+
+	</div>
+</div>

@@ -1,0 +1,89 @@
+﻿<head>
+	@* <style>
+		#imagesToAdd {
+			display: flex;
+			gap: 10px;
+			overflow-y: auto;
+		}
+
+		.stretched-button {
+			position: relative;
+			width: 200px;
+			height: 200px;
+			border: 1px solid black;
+			border-radius: 5px;
+		}
+
+			.stretched-button img {
+				width: inherit;
+				height: inherit;
+			}
+
+			.stretched-button button {
+				width: inherit;
+				height: inherit;
+				background-color: white;
+				cursor: pointer;
+				font-size: 100px;
+			}
+
+			.stretched-button p {
+				position: absolute;
+				margin: 0;
+				padding: 0;
+				top: 0;
+				font-size: 40px;
+				right: 0;
+				color: red;
+				background-color: black;
+			}
+	</style> *@
+</head>
+
+<div class="photos-container">
+	<!-- <p>Country name</p> -->
+	<div class="main-photo">
+		<img src="@Model[0]" />
+	</div>
+
+	<div class="arrows-container">
+		<button class="arrow left">
+			<svg width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve">
+			<polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+					  points="
+	45.63,75.8 0.375,38.087 45.63,0.375 " />
+	</svg>
+		</button>
+		<button class="arrow right">
+			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60px" height="80px"
+				 viewBox="0 0 50 80" xml:space="preserve">
+			<polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+					  points="
+	0.375,0.375 45.63,38.087 0.375,75.8 " />
+	</svg>
+		</button>
+	</div>
+
+	<div class="photoMain">
+		<div class="photos-of-countries">
+			@foreach (var photo in Model)
+			{
+				<img onclick="changeMainPhoto(this)" class="photo" src="@photo">
+			}
+			<div id="imagesToAdd">
+				<div class="stretched-button">
+					<input type="file" id="hidden-file-input" accept="image/*" hidden>
+					<button type="button" onclick="asyncGet()">+</button>
+				</div>
+			</div>
+			@* <img class="photo-add" src="content/+.png" /> *@
+		</div>
+	</div>
+
+</div>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+
+<script src="~/js/getImages.js"></script>
+<script src="~/js/tagsProcessor.js"></script>

@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Страны</title>
+	<link rel="stylesheet" href="~/css/admin.css">
+</head>
+<body>
+
+	<header>
+		<a href="#">Admin countries</a>
+
+		<div class="logout-container">
+			<a href="#">Log out</a> |
+			<a href="#">Home</a>
+		</div>
+	</header>
+
+	<main>
+		<div id="CountryImages">
+			<partial name="_AdminCountryImages" model="@ViewBag.Images" />
+		</div>
+		<div id="CountryMainDiv">
+			<div id="CountryData">
+				<partial name="_AdminCountries" model="@ViewBag.Countries" />
+			</div>
+
+			<div id="TagsNPrices">
+				<partial name="_AdminCountryTagsNPrices" model=@ViewBag.TagsNPrices />
+				@* <partial name="_AdminCountryTagsNPrices" /> *@
+			</div>
+		</div>
+	</main>
+
+	<div class="popup">
+		<partial name="_AdminPopUp" model="@ViewBag.PopUp" />
+	</div>
+
+	@RenderBody()
+
+	<script src="~/lib/jquery/dist/jquery.min.js"></script>
+	<script src="~/lib/jquery/dist/jquery.js"></script>
+	<script src="~/js/admin.js"></script>
+	<script src="~/js/accordion.js"></script>
+	<script src="~/js/popup.js"></script>
+</body>
+</html>

@@ -1,11 +1,14 @@
 using LandingPage.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using LandingPage.Utils;
+using Microsoft.AspNetCore.Builder;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
 	.AddCookie(options =>
@@ -22,6 +25,13 @@ builder.Services.AddDbContext<DatabaseContext>(Options =>
 	Options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
+// dependency injection
+CountryCodes countryCodes = new();
+Icons icons = new();
+builder.Services.AddSingleton<CountryCodes>(countryCodes);
+builder.Services.AddSingleton<Icons>(icons);
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -31,6 +41,7 @@ if (!app.Environment.IsDevelopment())
 	// The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
 	app.UseHsts();
 }
+
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
