@@ -1,4 +1,4 @@
-.findus-container{
+.findus-container {
     min-height: 50vh;
 }
 
@@ -14,8 +14,8 @@
 
 .before_rectangle {
     width: 100%;
-    height: 394px;
-    background-color: #FFE600;
+    height: 400px;
+    background-color: #FCE883;
     border-radius: 20px;
     transform: rotate(8deg);
     padding-left: 7%;
@@ -63,5 +63,9 @@
     transform: rotate(-8deg);
     width: 50%;
     text-align: left;
-    font-size: 130%;
+    font-size: 1.3rem;
+}
+
+.TEXT span {
+    color: green;
 }
