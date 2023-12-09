@@ -1,16 +1,46 @@
 
+let btnLeft = document.querySelector(".arrow left");
+let btnRight = document.querySelector(".arrow right");
+let allImgs;
+let currentImg;
+let currentPos = 0;
 function changeMainPhoto(element) {
-
-    const btn = document.querySelector("#btn");
-    const btnText = document.querySelector("#btnText");
-
     const mainImg = document.querySelector(".main-photo img");
+    currentImg = mainImg;
+    currentPos =
+        mainImg.src = element.src;
+}
 
-    console.log(mainImg);
+function goBack() {
+    allImgs = document.querySelectorAll(".imgEntity");
+    console.log("-1");
 
-    //btn.onclick = () => {
-    //    btnText.innerHTML = "Сохранено";
-    //    btn.classList.add("active");
-    //};
-    mainImg.src = element.src;
+}
+function goNext() {
+    allImgs = document.querySelectorAll(".imgEntity");
+    console.log("+1");
+
+}
+
+function deleteImage(element) {
+    let _id = element.parentNode.children[1].textContent;
+    let Cid = document.querySelector('#countrySelectedID').textContent;
+    let picture = element.src;
+
+    let dataJSON = {
+        "pictureID": _id,
+        "countryID": Cid,
+        "picturePath": picture
+    };
+
+    $.ajax({
+        url: '/Admin/DeleteImage',
+        type: 'POST',
+        data: JSON.stringify(dataJSON),
+        contentType: 'application/json',
+        success: function (result) {
+            $('.photos-container').html(result);
+        }
+    });
+
 }

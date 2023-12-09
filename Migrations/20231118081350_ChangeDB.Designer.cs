@@ -2,6 +2,7 @@
 using LandingPage.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -9,9 +10,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LandingPage.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    partial class DatabaseContextModelSnapshot : ModelSnapshot
+    [Migration("20231118081350_ChangeDB")]
+    partial class ChangeDB
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.11");
@@ -56,17 +59,11 @@ namespace LandingPage.Migrations
 
             modelBuilder.Entity("LandingPage.Models.SwiperImagesAndPictures", b =>
                 {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
                     b.Property<int>("CountryID")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("PathToPicture")
                         .HasColumnType("TEXT");
-
-                    b.HasKey("ID");
 
                     b.ToTable("swiperImagesAndPictures");
                 });

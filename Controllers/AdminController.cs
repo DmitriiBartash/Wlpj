@@ -1,11 +1,7 @@
 ﻿using LandingPage.Data;
 using LandingPage.Models;
 using LandingPage.Utils;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Identity.Client;
-using System.Diagnostics;
-using System.Diagnostics.Metrics;
 using System.Text;
 
 namespace LandingPage.Controllers
@@ -112,21 +108,64 @@ namespace LandingPage.Controllers
 
 		#region COUNTRIES
 		[HttpGet]
-		public IActionResult CountryAdd()
+		public IActionResult Countries()
 		{
+			// default shall be Russian 
+			var model = Functions.generateAdminCountriesData(_context, _icons);
+
+			// iterate through the loop and grab all items that have the same Country
+			if (model.Count > 0)
+			{
+				var photoPaths = _context.swiperImagesAndPictures
+					.Where(country => country.CountryID == model[0].ID)
+					.ToList();
+
+				CountryTagsNPrices countryTagsNPrices = new()
+				{
+					ID = model[0].ID,
+					Tags = model[0].Tags,
+					PriceEuro = model[0].PriceEuro,
+					PriceUsd = model[0].PriceUsd
+				};
+
+				ViewBag.Images = photoPaths;
+				ViewBag.Countries = model;
+				ViewBag.TagsNPrices = countryTagsNPrices;
+			}
+			else
+			{
+				ViewBag.Images = null;
+				ViewBag.Countries = null;
+				ViewBag.TagsNPrices = null;
+			}
+
 			return View();
 		}
 
-		[HttpPut]
-		public IActionResult CountryAdd([FromForm] IFormCollection country)
+		[HttpPost]
+		public PartialViewResult LoadImages([FromBody] int selectedCountry)
 		{
-			string countryEn = country["CountryName"][0].Split("|")[1];
-			string[] items = country["tags"][0].Split("|");
+			// get the country's name 
+			var name = _context.swiperModels.Find(selectedCountry);
+
+			var photoPaths = _context.swiperImagesAndPictures
+				.Where(country => country.CountryID == name.ID)
+				.ToList();
+
+			return PartialView("_AdminCountryImages", photoPaths);
+		}
+
+		[HttpPut]
+		public PartialViewResult LoadImages([FromForm] IFormCollection country)
+		{
+			string absoluteFilePath, relativeFilePath;
+
+			int id = Convert.ToInt32(country["Id"]);
+			var countryModel = _context.swiperModels.Find(id);
+			string countryEn = countryModel!.CountryName.Split("|")[2];
 
 			foreach (var photo in country.Files)
 			{
-				string absoluteFilePath, relativeFilePath;
-
 				int randomNumber = new Random((int)(DateTime.Now.Ticks - DateTime.UnixEpoch.Ticks)).Next();
 
 				absoluteFilePath = Path.Combine(absoluteRootPath, $"{countryEn.Normalize()}_{randomNumber}.jpg");
@@ -138,53 +177,47 @@ namespace LandingPage.Controllers
 					// Copy the picture file to the destination file stream.
 					photo.CopyTo(fileStream);
 				}
-				_context.swiperModels.Add(new() { CountryName = country["CountryName"][0], Tags = country["tags"][0], PathToPicture = relativeFilePath });
+
+				SwiperImagesAndPictures swiperImagesAndPictures = new() { CountryID = id, PathToPicture = relativeFilePath };
+				_context.swiperImagesAndPictures.Add(swiperImagesAndPictures);
 			}
 			_context.SaveChanges();
-			return Ok();
-		}
-
-		[HttpGet]
-		public IActionResult ListCountries()
-		{
-			return View(_context.swiperModels);
-		}
-
-		[HttpGet]
-		public IActionResult Countries()
-		{
-			// default shall be Russian 
-			var model = Functions.generateAdminCountriesData(_context, _icons);
 
 			// iterate through the loop and grab all items that have the same Country
-			var photoPaths = _context.swiperModels.Where(country => country.CountryName.Contains(model[0].Name))
-				.Select(s => s.PathToPicture)
+			var photoPaths = _context.swiperImagesAndPictures.Where(country => country.CountryID == id)
 				.ToList();
 
-
-
-			CountryTagsNPrices countryTagsNPrices = new()
-			{
-				Tags = model[0].Tags,
-				PriceEuro = model[0].PriceEuro,
-				PriceUsd = model[0].PriceUsd
-			};
-
-			ViewBag.Images = photoPaths;
-			ViewBag.Countries = model;
-			ViewBag.TagsNPrices = countryTagsNPrices;
-
-			return View();
+			return PartialView("_AdminCountryImages", photoPaths);
 		}
 
 		[HttpPost]
-		public PartialViewResult LoadImages([FromBody] int selectedCountry)
+		public PartialViewResult DeleteImage([FromBody] PicturePath data)
 		{
-			// get the country's name 
-			var name = _context.swiperModels.Find(selectedCountry);
+			var countryModel = _context.swiperImagesAndPictures.Find(data.pictureID);
 
-			var photoPaths = _context.swiperModels.Where(country => country.CountryName.Contains(name.CountryName))
-				.Select(s => s.PathToPicture)
+			// change the name
+			string pattern = "\\content\\img_for_swiper";
+			string trimmed = absoluteRootPath.Replace(pattern, "");
+
+			var withoutFirst = countryModel.PathToPicture.Skip(1).ToList();
+			StringBuilder stringBuilder = new();
+			for (int i = 0; i < withoutFirst.Count; i++)
+			{
+				stringBuilder.Append(withoutFirst[i]);
+			}
+
+			string absoluteFilePath = Path.Combine(trimmed, stringBuilder.ToString());
+
+			_context.swiperImagesAndPictures.Remove(countryModel);
+			_context.SaveChanges();
+
+			if (System.IO.File.Exists((absoluteFilePath)))
+			{
+				System.IO.File.Delete(absoluteFilePath);
+			}
+
+			// iterate through the loop and grab all items that have the same Country
+			var photoPaths = _context.swiperImagesAndPictures.Where(country => country.CountryID == countryModel.CountryID)
 				.ToList();
 
 			return PartialView("_AdminCountryImages", photoPaths);
@@ -196,12 +229,9 @@ namespace LandingPage.Controllers
 			// get the country's name 
 			var name = _context.swiperModels.Find(selectedCountry);
 
-
 			CountryNoPics countryNoPics = new();
 			countryNoPics.Tags = new();
 
-
-			// somehow get all the tags
 			// first need to split them by '|' and only then by ','
 			string tagsRaw = name.Tags;
 
@@ -293,7 +323,7 @@ namespace LandingPage.Controllers
 			assembledTags = stringBuilder.ToString();
 
 			// update the db entry
-			country.Tags = assembledTags;
+			country!.Tags = assembledTags;
 			country.CountryName = countryFull.Name;
 			country.PriceEuro = (float)Convert.ToDouble(countryFull.PriceEuro);
 			country.PriceUsd = (float)Convert.ToDouble(countryFull.PriceUsd);
@@ -303,7 +333,66 @@ namespace LandingPage.Controllers
 			CountryNoPics countryNoPics = new();
 			countryNoPics.Tags = new();
 
-			// somehow get all the tagss
+			// first need to split them by '|' and only then by ','
+			string tagsRaw = country.Tags;
+
+			List<string> tagsFinal = new();
+			List<string> tagsForIcons = tagsRaw.Split("|").ToList();
+			int j = 0;
+			for (int k = 0; k < tagsForIcons.Count; k++)
+			{
+				tagsFinal.Add(tagsForIcons[k].Split(",")[0]);
+				var tagToSearch = tagsForIcons[k].Split(",")[0];
+				if (tagsForIcons[k].Contains('\n'))
+				{
+					tagsForIcons[j] = tagsForIcons[k][..^1];
+				}
+				TagsAndIcons tagsAndIcons = new() { tag = tagToSearch, icon = _icons[tagsForIcons[j++]] };
+				countryNoPics.Tags.Add(tagsAndIcons);
+			}
+
+			CountryTagsNPrices countryTagsNPrices = new()
+			{
+				Tags = countryNoPics.Tags,
+				PriceEuro = country.PriceEuro,
+				PriceUsd = country.PriceUsd
+			};
+
+			ViewBag.ID = countryFull.Id;
+			return PartialView("_AdminCountryTagsNPrices", countryTagsNPrices);
+		}
+
+		[HttpPost]
+		public IActionResult CountryAdd([FromBody] CountryFull countryFull)
+		{
+			SwiperModel country = new();
+			// assemble the tags 
+			int i = 0;
+			StringBuilder stringBuilder = new();
+			foreach (var item in countryFull.ifTagsPresent)
+			{
+				if (item)
+				{
+					stringBuilder.Append(tagsList[i]);
+					stringBuilder.Append('|');
+				}
+				i++;
+			}
+			stringBuilder.Remove(stringBuilder.Length - 1, 1);
+			string assembledTags = stringBuilder.ToString();
+
+			// update the db entry
+			country.Tags = assembledTags;
+			country.CountryName = countryFull.Name;
+			country.PriceEuro = (float)Convert.ToDouble(countryFull.PriceEuro);
+			country.PriceUsd = (float)Convert.ToDouble(countryFull.PriceUsd);
+			_context.swiperModels.Add(country);
+			_context.SaveChanges();
+
+
+			CountryNoPics countryNoPics = new();
+			countryNoPics.Tags = new();
+
 			// first need to split them by '|' and only then by ','
 			string tagsRaw = country.Tags;
 
@@ -331,7 +420,24 @@ namespace LandingPage.Controllers
 			};
 
 			ViewBag.ID = countryFull.Id;
+
 			return PartialView("_AdminCountryTagsNPrices", countryTagsNPrices);
+		}
+
+		[HttpPost]
+		public IActionResult ListCountries([FromBody] string data)
+		{
+			var countries = _context.swiperModels.Select(s => new ExtraMinCountryModel() { ID = s.ID, Name = s.CountryName }).ToList();
+
+			foreach (var country in countries)
+			{
+				if (country.Name.Split("|").Length > 1)
+				{
+					country.Name = country.Name.Split("|")[0];
+				}
+			}
+
+			return PartialView("_AdminCountries", countries);
 		}
 		#endregion
 	}

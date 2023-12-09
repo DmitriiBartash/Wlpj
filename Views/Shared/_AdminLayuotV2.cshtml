@@ -12,23 +12,27 @@
 
 		<div class="logout-container">
 			<a href="#">Log out</a> |
-			<a href="#">Home</a>
+			<a href="../Home/Index">Home</a>
 		</div>
 	</header>
 
 	<main>
-		<div id="CountryImages">
+		<div class="photos-container">
 			<partial name="_AdminCountryImages" model="@ViewBag.Images" />
 		</div>
+
 		<div id="CountryMainDiv">
 			<div id="CountryData">
 				<partial name="_AdminCountries" model="@ViewBag.Countries" />
 			</div>
 
-			<div id="TagsNPrices">
-				<partial name="_AdminCountryTagsNPrices" model=@ViewBag.TagsNPrices />
-				@* <partial name="_AdminCountryTagsNPrices" /> *@
+			<div class="CTRLButtons">
+				<button onclick="openPopUp(this)">Добавить страну</button>
 			</div>
+		</div>
+
+		<div id="TagsNPrices">
+			<partial name="_AdminCountryTagsNPrices" model=@ViewBag.TagsNPrices />
 		</div>
 	</main>
 
@@ -40,8 +44,11 @@
 
 	<script src="~/lib/jquery/dist/jquery.min.js"></script>
 	<script src="~/lib/jquery/dist/jquery.js"></script>
+
 	<script src="~/js/admin.js"></script>
 	<script src="~/js/accordion.js"></script>
 	<script src="~/js/popup.js"></script>
+	<script src="~/js/getImages.js"></script>
+	<script src="~/js/tagsProcessor.js"></script>
 </body>
 </html>

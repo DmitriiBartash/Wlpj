@@ -1,22 +1,23 @@
 let isPopupOpen = false;
 let popUpWindow = document.querySelector(".popup");
 let EditTxt = 'Измените страну';
-let popUpText = popUpWindow.children[0].children[0];
 
 popUpWindow.style.display = 'none';
 
 let nameId = 0;
+let popupTXT = "";
 
 function openPopUp(element) {
+    console.log(element);
+
+    popupTXT = document.querySelector("#popUPName");
     if (element.textContent == "Редактировать") {
-        popUpText.textContent = "Изменить страну";
+        popupTXT.textContent = "Изменить страну";
 
-        id = document.querySelector("#countrySelectedID").textContent;
+        let id = document.querySelector("#countrySelectedID").textContent;
         nameId = id;
-        //let countriesWrapper = element.parentNode.parentNode;
-        //let targetId = countriesWrapper.children[0].children[0].id;
 
-
+        console.log("if");
         $.ajax({
             url: '/Admin/LoadPopUp',
             type: 'POST',
@@ -26,35 +27,63 @@ function openPopUp(element) {
                 $('.popup').html(result);
             }
         });
-
+        hookAccordion();
     }
     else {
-        popUpText.textContent = "Добавить страну";
+        popupTXT.textContent = "Добавить страну";
     }
     popUpWindow.style.display = 'flex';
 }
 
 function submit() {
-    console.log("submit")
-
     let isValid = customCountryValidation();
     if (isValid) {
-        console.log("valid");
+        if (popupTXT.textContent == "Добавить страну") {
+            $.ajax({
+                url: '/Admin/CountryAdd',
+                type: 'POST',
+                data: JSON.stringify(assembleData()),
+                contentType: 'application/json',
+                success: function (result) {
+                    $('#TagsNPrices').html(result);
+                    hookAccordion();
 
-        console.log(assembleData());
+                    $.ajax({
+                        url: '/Admin/ListCountries',
+                        type: 'POST',
+                        data: JSON.stringify("dd"),
+                        contentType: 'application/json',
+                        success: function (result2) {
+                            $('#CountryData').html(result2);
+                            hookAccordion();
+                        }
+                    });
+                }
+            });
+        }
+        else {
+            $.ajax({
+                url: '/Admin/SubmitPoster',
+                type: 'POST',
+                data: JSON.stringify(assembleData()),
+                contentType: 'application/json',
+                success: function (result) {
+                    $('#TagsNPrices').html(result);
+                    hookAccordion();
 
-        $.ajax({
-            url: '/Admin/SubmitPoster',
-            type: 'POST',
-            data: JSON.stringify(assembleData()),
-            contentType: 'application/json',
-            success: function (result) {
-                console.log("submitted initiated")
-                $('#TagsNPrices').html(result);
-                console.log("submitted completed")
-                hookAccordion();
-            }
-        });
+                    $.ajax({
+                        url: '/Admin/ListCountries',
+                        type: 'POST',
+                        data: JSON.stringify("dd"),
+                        contentType: 'application/json',
+                        success: function (result3) {
+                            $('#CountryData').html(result3);
+                            hookAccordion();
+                        }
+                    });
+                }
+            });
+        }
         popUpWindow.style.display = 'none';
     }
     else {
@@ -62,13 +91,8 @@ function submit() {
     }
 }
 function reject() {
-    console.log("reject")
     popUpWindow.style.display = 'none';
 }
-
-
-
-
 function customCountryValidation() {
     let isValid = true;
 
@@ -118,7 +142,6 @@ function customCountryValidation() {
 }
 
 function assembleData() {
-    //let countryId = document.querySelector("#countrySelected");
     let countryId = nameId;
     let namesDivs = document.querySelectorAll('.validationDiv');
     let tagsDivs = document.querySelectorAll('.form__group');

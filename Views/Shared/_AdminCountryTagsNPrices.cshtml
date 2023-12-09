@@ -1,12 +1,34 @@
 ﻿<div class="panel">
-	<p id="countrySelectedID" hidden>@ViewBag.ID</p>
-	<div>
-		<p>Цена в $: @Model?.PriceUsd</p>
-		<p>Цена в €: @Model?.PriceEuro</p>
-	</div>
-	@foreach (var tag in @Model.Tags)
+	@if (Model is not null)
 	{
-		<p><img src="~/content/tags/@tag?.icon">@tag?.tag</p>
+		@if (@ViewBag.ID == null)
+		{
+			<p id="countrySelectedID" hidden>@Model.ID</p>
+		}
+		else
+		{
+			<p id="countrySelectedID" hidden>@ViewBag.ID</p>
+		}
+		<div>
+			<p>Цена в $: @Model?.PriceUsd</p>
+			<p>Цена в €: @Model?.PriceEuro</p>
+		</div>
+		@foreach (var tag in @Model.Tags)
+		{
+			<p><img src="~/content/tags/@tag?.icon">@tag?.tag</p>
+		}
+		<button onclick="openPopUp(this)">Редактировать</button>
 	}
-	<button onclick="openPopUp(this)">Редактировать</button>
+	else
+	{
+		<h1>aaa</h1>
+		<h1>aaa</h1>
+		<h1>aaa</h1>
+		<h1>aaa</h1>
+		<h1>aaa</h1>
+		<h1>aaa</h1>
+		<h1>aaa</h1>
+		<h1>aaa</h1>
+		<h1>aaa</h1>
+	}
 </div>

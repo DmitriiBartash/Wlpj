@@ -1,60 +1,27 @@
-﻿<head>
-	@* <style>
-		#imagesToAdd {
-			display: flex;
-			gap: 10px;
-			overflow-y: auto;
-		}
+﻿@model IEnumerable<LandingPage.Models.SwiperImagesAndPictures>
 
-		.stretched-button {
-			position: relative;
-			width: 200px;
-			height: 200px;
-			border: 1px solid black;
-			border-radius: 5px;
-		}
-
-			.stretched-button img {
-				width: inherit;
-				height: inherit;
-			}
-
-			.stretched-button button {
-				width: inherit;
-				height: inherit;
-				background-color: white;
-				cursor: pointer;
-				font-size: 100px;
-			}
-
-			.stretched-button p {
-				position: absolute;
-				margin: 0;
-				padding: 0;
-				top: 0;
-				font-size: 40px;
-				right: 0;
-				color: red;
-				background-color: black;
-			}
-	</style> *@
-</head>
-
-<div class="photos-container">
+<div id="CountryImages">
 	<!-- <p>Country name</p> -->
 	<div class="main-photo">
-		<img src="@Model[0]" />
+		@if (Model is null || Model.Count() <= 0)
+		{
+			<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/330px-No-Image-Placeholder.svg.png?20200912122019" />
+		}
+		else
+		{
+			<img src="@Model.FirstOrDefault().PathToPicture" />
+		}
 	</div>
 
 	<div class="arrows-container">
-		<button class="arrow left">
+		<button class="arrow left" onclick="goBack()">
 			<svg width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve">
 			<polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
 					  points="
 	45.63,75.8 0.375,38.087 45.63,0.375 " />
 	</svg>
 		</button>
-		<button class="arrow right">
+		<button class="arrow right" onclick="goNext()">
 			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60px" height="80px"
 				 viewBox="0 0 50 80" xml:space="preserve">
 			<polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
@@ -63,27 +30,25 @@
 	</svg>
 		</button>
 	</div>
-
 	<div class="photoMain">
 		<div class="photos-of-countries">
-			@foreach (var photo in Model)
+			@if (Model is not null)
 			{
-				<img onclick="changeMainPhoto(this)" class="photo" src="@photo">
+				@foreach (var photo in Model)
+				{
+					<div class="imgEntity">
+						<img onclick="changeMainPhoto(this)" class="photo" src="@photo.PathToPicture">
+						<p hidden>@photo.ID</p>
+						<p onclick="deleteImage(this)">X</p>
+					</div>
+				}
 			}
 			<div id="imagesToAdd">
 				<div class="stretched-button">
-					<input type="file" id="hidden-file-input" accept="image/*" hidden>
+					<input type="file" id="hidden-file-input" multiple accept="image/*" hidden>
 					<button type="button" onclick="asyncGet()">+</button>
 				</div>
 			</div>
-			@* <img class="photo-add" src="content/+.png" /> *@
 		</div>
 	</div>
-
 </div>
-
-<script src="~/lib/jquery/dist/jquery.min.js"></script>
-<script src="~/lib/jquery/dist/jquery.js"></script>
-
-<script src="~/js/getImages.js"></script>
-<script src="~/js/tagsProcessor.js"></script>

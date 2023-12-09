@@ -6,6 +6,8 @@ namespace LandingPage.Utils
 {
 	public static class Functions
 	{
+
+
 		public static SwiperMiniModel generateCountriesData(DatabaseContext _context, Dictionary<string, int> _countryCodes, Dictionary<string, string> _icons, StrCountry selectedCountry)
 		{
 			HashSet<string> countryNames = new();
@@ -54,8 +56,8 @@ namespace LandingPage.Utils
 			}
 
 			// iterate through the loop and grab all items that have the same Country
-			var photoPaths = _context.swiperModels.Where(country => country.CountryName == firstItem.CountryName)
-				.Select(s => s.PathToPicture)
+			var photoPaths = _context.swiperImagesAndPictures.Where(country => country.CountryID == firstItem.ID)
+				//.Select(s => s.PathToPicture)
 				.ToList();
 
 			// populate 
@@ -67,7 +69,7 @@ namespace LandingPage.Utils
 			}
 			foreach (var photo in photoPaths)
 			{
-				model.picturePathsChosen.Add(photo);
+				model.picturePathsChosen.Add(photo.PathToPicture);
 			}
 			int j = 0;
 			foreach (var tagAndIcon in tagsFinal)

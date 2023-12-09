@@ -1,12 +1,12 @@
 let countrySelected;
-let ctas = document.querySelectorAll('.cta');
-
 
 hookAccordion();
 
 function hookAccordion() {
-    for (let i = 0; i < ctas.length; i++) {
-        ctas[i].addEventListener("click", function () {
+    let ctas = document.querySelectorAll('.cta');
+
+    for (const element of ctas) {
+        element.addEventListener("click", function () {
 
             $.ajax({
                 url: '/Admin/LoadTags',
@@ -27,37 +27,6 @@ function hookAccordion() {
                     $('#CountryImages').html(result);
                 }
             });
-
         });
     }
 }
-
-
-
-            // remove all other active elements first
-            //for (const element of accordions) {
-            //    if (element.classList.contains("active")) {
-
-            //        if (countrySelected == this) {
-            //            element.classList.toggle("active");
-            //        }
-            //        else {
-            //            element.classList.toggle("active");
-            //            let panelTemp = element.nextElementSibling;
-            //            if (panelTemp.style.maxHeight) {
-            //                panelTemp.style.maxHeight = null;
-            //            }
-            //        }
-            //    }
-            //}
-            //countrySelected = this;
-
-            //// assign active element
-            //this.classList.toggle("active");
-
-            //let panel = this.nextElementSibling;
-            //if (panel.style.maxHeight) {
-            //    panel.style.maxHeight = null;
-            //} else {
-            //    panel.style.maxHeight = panel.scrollHeight + "px";
-            //}

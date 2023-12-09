@@ -20,8 +20,8 @@ namespace LandingPage.Controllers
 
 		public IActionResult Index()
 		{
-			// default shall be Russian 
-			// MUST RETURN TO BACK
+			//default shall be Russian
+			//MUST RETURN TO BACK
 			//var items = _context.swiperModels.ToList<SwiperModel>();
 
 			//// sort them by alphabetic ascending order
@@ -33,7 +33,8 @@ namespace LandingPage.Controllers
 			//ViewBag.SwiperViewModel = actualModel;
 			//ViewBag.ReviewModel = _context.reviewModels;
 
-			return RedirectToAction("Countries","Admin");
+			//return View();
+			return RedirectToAction("Countries", "Admin");
 		}
 
 		[HttpPost]
