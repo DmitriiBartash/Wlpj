@@ -6,26 +6,20 @@ header {
 }
 
 .nav-headercontainer {
-    /* position: relative; */
-    width: 100%;
     padding: 5px 0%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     color: black;
-    background: transparent;
     backdrop-filter: blur(35px);
 }
 
 .nav-header-element {
     color: #F4C430;
     padding: 10px 20px;
-    width: 26px;
-    /* left: 18px;
-    top: 5px; */
-    font-size: 30px;
+    font-size: 2.2rem;
     cursor: pointer;
-    z-index: 5;
+    z-index: 10;
 }
 
 /*Sidebar*/
@@ -35,22 +29,22 @@ header {
 
 .fa-times::before {
     color: black;
-    transition: 0.2s linear;
+    transition: 0.3s linear;
 }
 
 .fa-bars::before {
-    transition: 0.2s linear;
+    transition: 0.3s linear;
 }
 
 .sidebar {
-    width: 300px;
-    background: #FCE883;
-    height: 200vh;
     position: fixed;
-    padding: 20px;
-    box-sizing: border-box;
+    width: 300px;
+    height: 200vh;
     left: 0;
     top: 0;
+    padding: 20px;
+    background: #FCE883;
+    box-sizing: border-box;
     transform: translate(-101%);
     transition: all 0.3s linear 0s;
     z-index: 1;
@@ -117,11 +111,10 @@ ul.nav-links li a:hover{
 /*Arrowup*/
 .arrowup-container {
     position: fixed;
-    z-index: 100000;
+    display: block;
+    z-index: 1000;
     bottom: 30px;
     left: 30px;
-    min-height: 30px;
-    display: block;
 }
 
 span.arrow-btn {
@@ -131,9 +124,7 @@ span.arrow-btn {
 }
 
 span.arrow-btn:hover {
-    color: #ffff;
-    /* color: #E1D9D1; */
-    /* color: #FCE883; */
+    color: #FCE883;
 }
 
 /*Popup-menu*/
@@ -192,7 +183,6 @@ span.arrow-btn:hover {
     justify-content: center;
     align-items: center;
     width: 100px;
-    height: 100px;
     bottom: 0;
     right: 0;
     margin: 35px 25px;
@@ -243,10 +233,9 @@ span.arrow-btn:hover {
     position: absolute;
     width: 65px;
     height: 65px;
-    /* background: #2cb3f0; */
     background: #ffa343;
-    bottom: 0;
     border-radius: 50%;
+    bottom: 0;
     left: 0;
     right: 0;
     margin: auto;
@@ -255,7 +244,6 @@ span.arrow-btn:hover {
     text-align: center;
     font-size: 23px;
     z-index: 100;
-    /* box-shadow: 0 10px 25px -5px rgba(44, 179, 240, 0.6); */
     box-shadow: 0 10px 25px -5px rgba(246, 196, 71, 0.6);
     cursor: pointer;
     -webkit-transition: all 0.3s;
@@ -285,11 +273,6 @@ span.arrow-btn:hover {
     transform: translateY(100px);
 }
 
-.floating-container .float-element .material-icons {
-    vertical-align: middle;
-    font-size: 16px;
-}
-
 .fa-phone{
     color: white;
 }
@@ -297,6 +280,10 @@ span.arrow-btn:hover {
 .floating-container .float-element:nth-child(1) {
     background: #00FF00;
     box-shadow: 0 15px 15px -10px #00FF00;
+}
+
+.fa-instagram{
+    color: white;
 }
 
 .floating-container .float-element:nth-child(2) {

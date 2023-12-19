@@ -7,7 +7,7 @@
     margin: auto;
     margin-top: 15%;
     width: 55%;
-    height: 394px;
+    height: 395px;
     background-color: #FFEF60;
     border-radius: 20px;
 }
@@ -20,6 +20,19 @@
     border-radius: 20px;
     transform: rotate(8deg);
     padding-left: 7%;
+}
+
+.TEXT {
+    font-family: 'Lobster', cursive;
+    transform: rotate(-8deg);
+    width: 90%;
+    text-align: left;
+    font-size: 0.95rem;
+    flex-direction: row;
+}
+
+.TEXT span{
+    color: green;
 }
 
 .map {
@@ -61,31 +74,20 @@
     z-index: -1;
 }
 
-.TEXT {
-    font-family: 'Lobster', cursive;
-    transform: rotate(-8deg);
-    width: 90%;
-    text-align: left;
-    font-size: 0.95rem;
-    flex-direction: row;
-}
 
-.TEXT span{
-    color: green;
-}
 
-@media screen and (max-width: 961px ) {
+@media (max-width: 961px ) {
 
     .back_rectangle {
         width: 70%;
-        height: 788px;
+        height: 650px;
     }
 
     .before_rectangle {
         width: 90%;
         height: 95%;
         transform: rotate(0deg);
-        padding-left: 0%;
+        padding: 0%;
         position: relative;
         top: 50%;
         left: 50%;
@@ -103,10 +105,6 @@
         justify-content: space-around;
     }
 
-    .NAITI{
-        width: 40%;
-    }
-
     .Grafik{
         width: 40%;
     }
@@ -120,11 +118,11 @@
     }  
 
     .arrow_up {
-        bottom: 124%;        
+        bottom: 127%;        
     }
     
     .arrow_right {
-        left: 13%; 
+        left: 10%; 
     }
     
     .arrow_under {
@@ -132,20 +130,25 @@
     }
 }
 
-@media screen and (max-width: 500px ) {
+@media (max-width: 500px ) {
+    .back_rectangle {
+        height: 530px;
+
+    }
+
     .TEXT {
         font-size: 0.78rem;
     }
 
     .arrow_up {
-        bottom: 115%;        
+        bottom: 117%;        
     }
     
     .arrow_right {
-        left: 22.5%; 
+        left: 10%; 
     }
     
     .arrow_under {
-        bottom: 70%;
+        bottom: 67%;
     }
 }

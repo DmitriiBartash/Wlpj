@@ -6,7 +6,6 @@
     background-color: white;
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
     justify-content: space-around;
 }
@@ -34,7 +33,6 @@
     background-color: #dadada;
     border-radius: 20px;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
     justify-content: space-around;
 }
@@ -79,15 +77,6 @@
     .social_network {
         width: 80%;
         font-size: 1rem;
-    }
-
-    .icon_instagram,
-    .icon_facebook,
-    .icon_viber,
-    .icon_telegram {
-        width: 10%;
-        position: relative;
-        top: 2.5px;
     }
 
     .dates {
