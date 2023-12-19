@@ -1,0 +1,219 @@
+/* About us */
+.About_us {
+    margin-top: 0%;
+    letter-spacing: 1px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.heading_about_us {
+    font-size: 2rem;
+    padding-top: 5%;
+    text-align: center;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+}
+
+.Information_cards {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    margin-top: 5%;
+    font-size: 120%;
+    padding: 0 3%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    word-break: break-all;
+    text-align: justify;
+}
+
+.hand_with_money,
+.people_notebook,
+.Earth {
+    width: inherit;
+}
+
+
+.Information_cards > div {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    word-break: break-word;
+}
+
+.prime_card,
+.third_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.second_card {
+    margin-left: 2%;
+    margin-right: 2%;
+    padding-bottom: 6%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.t_praim {
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: rgba(255, 255, 255, 0.8);
+    /* color: #ffffff; */
+}
+
+.information_cards_text {
+    font-size: 1.3rem;
+}
+
+/*Info about us*/
+.text_About_us_container {
+    /* margin-top: 5%; */
+    min-height: 0vh;
+    font-family: 'Sofia Sans Extra Condensed', sans-serif;
+    /* font-size: 2.6rem; */
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    word-break: break-all;
+}
+
+.text_About_us {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    word-break: break-word;
+    height: 100%;
+    width: 50%;
+    padding: 0 3%;
+}
+
+.counter_About_us {
+    font-size: 5rem;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    /* font-family: 'Roboto Slab', serif !important; */
+}
+
+.text_counter {
+    font-size: 2.5rem;
+    text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+    animation: blink 12s infinite;
+    -webkit-animation: blink 12s infinite;
+}
+
+.text_A_us {
+    font-weight: lighter;
+    font-size: 1.8rem;
+}
+
+@-webkit-keyframes blink {
+
+    20%, 24%, 55% {
+        color: #111;
+        text-shadow: none;
+    }
+
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+        color: #fff6a9;
+    }
+}
+
+@keyframes blink {
+
+    20%, 24%, 55% {
+        color: #111;
+        text-shadow: none;
+    }
+
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+        color: #fff6a9;
+    }
+}
+
+@media (max-width:961px) {
+    .About_us {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .heading_about_us {
+        font-size: 1rem;
+        text-align: center;
+        padding-top: 10%;
+    }
+
+    .Information_cards {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        word-break: break-all;
+        text-align: justify;
+    }
+
+        .Information_cards > div {
+            width: 70%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            word-break: break-word;
+            text-align: center;
+        }
+
+        .Information_cards img {
+            width: 40%;
+        }
+
+    .prime_card,
+    .second_card,
+    .third_card {
+        padding-top: 5%;
+    }
+
+    .t_praim {
+        font-size: 1.4rem;
+    }
+
+    .information_cards_text {
+        font-size: 1rem;
+    }
+
+    /*Text counts*/
+    .text_About_us {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        word-break: break-word;
+        width: 50%;
+        height: 100%;
+        padding: 0 3%;
+    }
+
+    .counter_About_us {
+        font-size: 2rem;
+    }
+
+    .text_counter {
+        font-size: 1.4rem;
+    }
+
+    .text_A_us {
+        font-size: 1rem;
+    }
+
+}

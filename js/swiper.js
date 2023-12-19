@@ -44,15 +44,27 @@
 // });
 
 
-var swiperH = new Swiper('.swiper-container-h', {
-  pagination: '.swiper-pagination-h',
-  paginationClickable: true,
-  spaceBetween: 50
-});
-var swiperV = new Swiper('.swiper-container-v', {
-  pagination: '.swiper-pagination-v',
-  paginationClickable: true,
-  direction: 'vertical',
-  spaceBetween: 50,
-  nested: true
-});
+// var swiperH = new Swiper('.swiper-container-h', {
+//   pagination: '.swiper-pagination-h',
+//   paginationClickable: true,
+//   spaceBetween: 50
+// });
+// var swiperV = new Swiper('.swiper-container-v', {
+//   pagination: '.swiper-pagination-v',
+//   paginationClickable: true,
+//   direction: 'vertical',
+//   spaceBetween: 50,
+//   nested: true
+// });
+
+// var swiper = new Swiper(".mySwiper", {
+//   pagination: {
+//     el: ".swiper-pagination",
+//     type: "progressbar"
+//   },
+//   navigation: {
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev",
+//   }
+// });
+
