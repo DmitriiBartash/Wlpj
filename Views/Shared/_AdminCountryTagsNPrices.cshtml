@@ -9,15 +9,23 @@
 		{
 			<p id="countrySelectedID" hidden>@ViewBag.ID</p>
 		}
-		<div>
+		<div class="name_country">
+			<p>Название: </p>
+		</div>
+		<div class="prices">
 			<p>Цена в $: @Model?.PriceUsd</p>
 			<p>Цена в €: @Model?.PriceEuro</p>
 		</div>
+
+		<div class="TAGS">
 		@foreach (var tag in @Model.Tags)
 		{
 			<p><img src="~/content/tags/@tag?.icon">@tag?.tag</p>
 		}
-		<button onclick="openPopUp(this)">Редактировать</button>
+		</div>
+
+		<button class="tag_button" onclick="openPopUp(this)">Редактировать</button>
+	
 	}
 	else
 	{

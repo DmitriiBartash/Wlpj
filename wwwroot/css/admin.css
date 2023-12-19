@@ -1,4 +1,5 @@
 /*Body*/
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@1,700&display=swap');
 body {
     display: grid;
     grid-template-rows: 5% 95%;
@@ -7,6 +8,7 @@ body {
     padding: 0px;
     height: 100vh;
     overflow-y: hidden;
+    font-family: 'PT Serif', serif;
 }
 
 
@@ -24,7 +26,7 @@ header {
     header a {
         color: white;
         text-decoration: none;
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
         header a:hover {
@@ -37,8 +39,7 @@ main {
     grid-template-columns: 40% 35% 25%;*/
 
     display: flex;
-    background-color: #6699CC;
-    background-color: red;
+    background-color: #d7d6d6;
     height: 100%;
     /*height: calc(100% - 20px - 2%);*/
     grid-gap: 2%;
@@ -55,14 +56,10 @@ main {
 } */
 
 .photos-container {
-    /*display: flex;*/
-    /* justify-content: center; */
-    /*flex-direction: column;*/
+    margin-top:-1%;
     height: 100%;
     width: 40%;
     padding: 1% 0 0 0;
-    /*row-gap: 2%;*/
-    /*padding: 5%;*/
 }
 
 /* .photos-container p{
@@ -78,8 +75,11 @@ main {
     .main-photo > img {
         position: relative;
         height: 100%;
-        width: 100%;
+        width: 95%;
         object-fit: contain;
+        border-style: dashed;
+        border-width: 5px;
+        border-color: #5820aa;
     }
 
     .main-photo:hover {
@@ -142,11 +142,13 @@ polyline {
 /*Photos of countries*/
 .photos-of-countries {
     display: grid;
-    height: 100%;
+    height: 124%;
     grid-gap: 10px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: max-content;
     overflow-y: scroll;
+    padding-right:2%;
+    margin-top:2.5%;
 }
 
 .photo {
@@ -186,12 +188,20 @@ polyline {
 }
 
 .CTRLButtons {
-    height: 20%;
+    height: 15%;
+    margin-left:3%;
 }
+
+
 
     .CTRLButtons > button {
         height: 100%;
-        width: 100%;
+        width: 90%;
+        border-radius: 12.5%;
+        margin-top: 3%;
+        font-family: 'PT Serif', serif;
+        background-color: #d52814;
+        margin-left:3%;
     }
 
 .countries {
@@ -457,6 +467,7 @@ svg path {
     background-color: rgba(0, 0, 0, 0.61);
     backdrop-filter: blur(2px);
     /* opacity: 0.; */
+    z-index: 1000;
 }
 
 .popup-wrapper {
@@ -533,7 +544,9 @@ input[type="radio"] {
     display: flex;
     flex-direction: column;
     width: 35%;
-    height: 100%;
+    height: 95%;
+    border-style:groove;
+    border-width:10px;
 }
 
 .panel > p {
@@ -550,13 +563,18 @@ input[type="radio"] {
 }
 
 #TagsNPrices {
-    /*max-height: 45%;*/
+    max-height: 95%;
     width: 25%;
     height: 100%;
+    font-family: 'PT Serif', serif;
+    border-color:aqua;
+    border-style:groove;
+    border-width:10px;
 }
 
 .panel {
     height: inherit;
+    margin-left:1%;
 }
 
 
@@ -582,9 +600,51 @@ input[type="radio"] {
     .imgEntity p {
         position: absolute;
         background-color: antiquewhite;
-        font-size: 2em;
+        font-size: 1.5em;
         margin: 0;
         top: 0%;
-        right: 5%;
-        z-index: 1;
+        right: 1%;
+        z-index: 0;
     }
+
+.prices{
+    display: flex;
+    justify-content: space-around;
+}
+
+.TAGS{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 30% 30% 30%;
+    align-items: center;
+    min-height: 430px;
+    margin-top:5%;
+    font-size:1rem;
+    padding:0%;
+    margin-left:3%;
+    margin-right:3%;
+}
+
+    .TAGS img{
+    height:10vh;
+    }
+
+    .TAGS p {
+        height: 15vh;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+    }
+
+.name_country {
+    display: flex;
+    justify-content: center;
+}
+
+.tag_button {
+    width: 99%;
+    height: 13%;
+    border-radius: 5px;
+    font-family: 'PT Serif', serif;
+    background-color: #c6ce19;
+}
