@@ -1,14 +1,9 @@
 /*Call request*/
 .call-container {
     min-height: 100vh;
-    margin-top: 0%;
-    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-    /* background-color: #FFE1E1;
-    border-color: black; */
 }
 
 .call-header-text {
@@ -17,13 +12,9 @@
     font-size: 2.2rem;
     font-family: 'Rubik-PFDinDisplayPro', Arial, sans-serif;
     line-height: 1.45;
-    font-weight: 100;
-    background-position: center center;
     border-color: transparent;
     border-style: solid;
-    display: flex;
-    justify-content: center;
-
+    text-align: center;
 }
 
 .inputbox-container {
@@ -31,21 +22,13 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .inputbox-1 {
     font-family: 'Rubik-PFDinDisplayPro', Arial, sans-serif;
-    background-position: center center;
     border-color: transparent;
     border-style: solid;
-
-    /* font-size: 30px;
-    line-height: 1.45;
-    font-weight: 100; */
 }
 
 .inputbox-1,
@@ -59,50 +42,43 @@
     font-size: 16px;
     color: #fff;
     background: transparent;
-    /* background-color: transparent; */
 }
 
-.inputbox-1 input,
-.inputbox-2 input {
-    padding: 0 10px;
-    border: 1.2px solid #fff;
-    outline: none;
-    border-radius: 5px;
-}
+    .inputbox-1 input,
+    .inputbox-2 input {
+        padding: 0 10px;
+        border: 1.2px solid #fff;
+        outline: none;
+        border-radius: 10px;
+    }
 
-.inputbox-1 label {
-    position: absolute;
-    top: 50%;
-    left: 25px;
-    transform: translateY(-50%);
-    font-size: 16px;
-    color: #fff;
-    padding: 0 5px;
-    pointer-events: none;
-    transition: 0.9s;
-}
+    .inputbox-1 label {
+        position: absolute;
+        top: 50%;
+        left: 25px;
+        transform: translateY(-50%);
+        font-size: 1.2rem;
+        color: #fff;
+        padding: 0 5px;
+        pointer-events: none;
+        transition: 0.9s;
+    }
 
-.inputbox-1 input:focus~label,
-.inputbox-1 input:valid~label {
-    top: 0;
-    font-size: 12px;
-    filter: blur(20px);
-}
-
-.inputbox-2 {
-    padding-right: 20px;
-    width: 23vw;
-}
+    .inputbox-1 input:focus ~ label,
+    .inputbox-1 input:valid ~ label {
+        top: 0;
+        font-size: 0.7rem;
+        filter: blur(20px);
+    }
 
 .btn-call {
-
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     height: 100%;
-    width: 100%;
-    font-size: 16px;
+    width: 105%;
+    font-size: 1.2rem;
     cursor: pointer;
     border: none;
     border-radius: 5px;
@@ -110,24 +86,24 @@
     overflow: hidden;
 }
 
-.btn-call:hover {
-    background-color: yellow;
-    box-shadow: 0px 0px 5px yellow, 0px 0px 25px yellow, 0px 0px 50px yellow;
-}
+    .btn-call:hover {
+        background-color: yellow;
+        box-shadow: 0px 0px 5px yellow, 0px 0px 25px yellow, 0px 0px 50px yellow;
+    }
 
-.btn-call::before {
-    content: '';
-    position: absolute;
-    width: 40px;
-    height: 600%;
-    background: yellow;
-    transition: 1s;
-    animation: animate 2s linear infinite;
-}
+    .btn-call::before {
+        content: '';
+        position: absolute;
+        width: 40px;
+        height: 600%;
+        background: yellow;
+        transition: 1s;
+        animation: animate 2s linear infinite;
+    }
 
-.btn-call:hover::before {
-    width: 100%;
-}
+    .btn-call:hover::before {
+        width: 100%;
+    }
 
 @keyframes animate {
     0% {
@@ -169,8 +145,7 @@
 @media (max-width:961px) {
     .call-header-text {
         font-size: 1rem;
-        display: flex;
-    text-align: start;
+        text-align: center;
     }
 
     .inputbox-container {
@@ -185,6 +160,6 @@
     .inputbox-2,
     .inputbox2 {
         padding: 10px;
-        width: 90%;
+        width: 100%;
     }
 }

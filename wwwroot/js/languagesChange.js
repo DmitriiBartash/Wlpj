@@ -65,7 +65,7 @@ function changeLanguage(element) {
                 },
                 {
                     "map": {
-                        "TEXT": "Где нас найти? <br><br>”Emirat Travel”<br>Str.ALbisoara 4, oficiu 611 <br> Moldova, Chisinau “Atrium” BC <br><br><br>График работы:<br><br>C 10: 00 - 19: 00, Понедельник-Суббота<br>C 8: 00 - 20: 00, по предварительной договорённости"
+                        "TEXT": "Где нас найти? <br><br>”Emirat Travel”<br>Str.ALbisoara 4, oficiu 611 <br> Moldova, Chisinau “Atrium” BC <br><br><br>График работы:<br><br>C 10: 00 - 19: 00, Понедельник-Суббота<br>C 8: 00 - 20: 00, по предварительной договорённости<br><br>+373 601 44 445<br>+373 601 44 442<br>+373 621 57 575"
                     }
                 },
                 {
@@ -136,7 +136,7 @@ function changeLanguage(element) {
                 },
                 {
                     "map": {
-                        "TEXT": "Where can you find us? <br><br>”Emirat Travel”<br>Str.ALbisoara 4, oficiu 611 <br> Moldova, Chisinau “Atrium” BC <br><br><br>Schedule:<br><br>10:00 - 19:00, Monday-Saturday<br>8:00 - 20:00, by prior arrangement"
+                        "TEXT": "Where can you find us? <br><br>”Emirat Travel”<br>Str.ALbisoara 4, oficiu 611 <br> Moldova, Chisinau “Atrium” BC <br><br><br>Schedule:<br><br>10:00 - 19:00, Monday-Saturday<br>8:00 - 20:00, by prior arrangement<br><br>+373 601 44 445<br>+373 601 44 442<br>+373 621 57 575"
                     }
                 },
                 {
@@ -207,7 +207,7 @@ function changeLanguage(element) {
                 },
                 {
                     "map": {
-                        "TEXT": "Unde ne găsiți? <br><br>”Emirat Travel”<br>Str.ALbisoara 4, oficiu 611 <br> Moldova, Chisinau “Atrium” BC <br><br><br>Orar:<br><br>De la 10:00 la 19:00, Luni-Sâmbătă<br>De la 8:00 - 20:00, cu programare prealabilă"
+                        "TEXT": "Unde ne găsiți? <br><br>”Emirat Travel”<br>Str.ALbisoara 4, oficiu 611 <br> Moldova, Chisinau “Atrium” BC <br><br><br>Orar:<br><br>De la 10:00 la 19:00, Luni-Sâmbătă<br>De la 8:00 - 20:00, cu programare prealabilă<br><br>+373 601 44 445<br>+373 601 44 442<br>+373 621 57 575"
                     }
                 },
                 {

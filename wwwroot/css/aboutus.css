@@ -1,5 +1,5 @@
 /* About us */
-.About_us {
+.about_us {
     margin-top: 0%;
     letter-spacing: 1px;
     display: flex;
@@ -51,8 +51,7 @@
 }
 
 .second_card {
-    margin-left: 2%;
-    margin-right: 2%;
+    margin: 0 2%;
     padding-bottom: 6%;
     display: flex;
     flex-direction: column;
@@ -63,7 +62,6 @@
     font-weight: bold;
     font-size: 2.5rem;
     color: rgba(255, 255, 255, 0.8);
-    /* color: #ffffff; */
 }
 
 .information_cards_text {
@@ -71,11 +69,9 @@
 }
 
 /*Info about us*/
-.text_About_us_container {
-    /* margin-top: 5%; */
+.text_about_us_container {
     min-height: 0vh;
     font-family: 'Sofia Sans Extra Condensed', sans-serif;
-    /* font-size: 2.6rem; */
     font-weight: bold;
     text-align: center;
     display: flex;
@@ -84,7 +80,7 @@
     word-break: break-all;
 }
 
-.text_About_us {
+.text_about_us {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -96,11 +92,10 @@
     padding: 0 3%;
 }
 
-.counter_About_us {
+.counter_about_us {
     font-size: 5rem;
     color: white;
     font-family: 'Montserrat', sans-serif;
-    /* font-family: 'Roboto Slab', serif !important; */
 }
 
 .text_counter {
@@ -142,14 +137,14 @@
 }
 
 @media (max-width:961px) {
-    .About_us {
+    .about_us {
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
     .heading_about_us {
-        font-size: 1rem;
+        font-size: 1.2rem;
         text-align: center;
         padding-top: 10%;
     }
@@ -192,7 +187,7 @@
     }
 
     /*Text counts*/
-    .text_About_us {
+    .text_about_us {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -204,8 +199,8 @@
         padding: 0 3%;
     }
 
-    .counter_About_us {
-        font-size: 2rem;
+    .counter_about_us {
+        font-size: 2.4rem;
     }
 
     .text_counter {
@@ -215,5 +210,4 @@
     .text_A_us {
         font-size: 1rem;
     }
-
 }

@@ -1,20 +1,24 @@
 /*Footer*/
 .rectangle_big {
     width: 100%;
-    margin-top: 20%;
+    margin-top: 25%;
     min-height: 25vh;
     background-color: white;
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
     justify-content: space-around;
 }
 
 .rectangle_min {
     width: 100%;
-    min-height: 7vh;;
+    min-height: 7vh;
+    ;
     background: #dadada;
+    display: flex;
+    justify-content: center;
+    font-family: 'Lobster', cursive;
+    font-size: 1.5rem;
 }
 
 .logo_footer {
@@ -30,17 +34,20 @@
     background-color: #dadada;
     border-radius: 20px;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
     justify-content: space-around;
 }
 
-.social_network img{
-    width: 80%;
+.icon_instagram,
+.icon_facebook,
+.icon_viber,
+.icon_telegram {
+    width: 10%;
+    position: relative;
+    top: 2.5px;
 }
 
 .dates {
-    /* margin-left: 5%; */
     font-family: 'Lobster', cursive;
     font-size: 1.5rem;
     color: #848484;
@@ -48,17 +55,43 @@
 }
 
 .phone_numberes {
-    /* margin-right: 1%; */
     font-family: 'Lobster', cursive;
     font-size: 1.5rem;
     color: #848484;
     text-align: center;
 }
 
-.rectangle_min {
-    display: flex;
-    justify-content: center;
-    font-family: 'Lobster', cursive;
-    font-size: 1.5rem;
-}
+@media screen and (max-width: 961px) {
 
+    .rectangle_big {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        justify-content: center;
+    }
+
+    .logo_footer {
+        width: 60%;
+        height: 60%;
+        margin: 7%;
+    }
+
+    .social_network {
+        width: 80%;
+        font-size: 1rem;
+    }
+
+    .dates {
+        font-size: 1rem;
+        text-align: center;
+        margin: 3%;
+    }
+
+    .phone_numberes {
+        font-size: 1rem;
+        margin: 5%;
+    }
+
+    .rectangle_min {
+        font-size: 1rem;
+    }
+}
