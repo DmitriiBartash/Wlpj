@@ -15,6 +15,7 @@
 .before_rectangle {
     width: 100%;
     height: 400px;
+    display: flex;
     background-color: #FCE883;
     border-radius: 20px;
     transform: rotate(8deg);
@@ -22,38 +23,40 @@
 }
 
 .map {
-    position: absolute;
-    right: 6%;
-    top: 8%;
+    position: relative;
+    left: 15%;
+    top: 5%;
     transform: rotate(-8deg);
 }
 
-.arrow_up {
-    width: 25%;
-    height: 40%;
-    left: 50%;
-    top: -20%;
-    /* top: -16.6%; */
-    transform: rotate(30deg);
-    z-index: -1;
+.owner_map {
+    width: 65%;
+    height: 80%;
 }
 
-.arrow_right {
-    width: 25%;
+.arrow_up {
+    width: 45%;
     height: 50%;
-    left: 86%;
-    /* left: 85.1%; */
-    top: -8%;
+    bottom: 118%;
+    right: 15%;
     transform: rotate(45deg);
     z-index: -1;
 }
 
+.arrow_right {
+    width: 45%;
+    height: 50%;
+    bottom: 90%;
+    left: 15%; 
+    transform: rotate(57deg);
+    z-index: -1;
+}
+
 .arrow_under {
-    width: 25%;
-    height: 40%;
-    left: 56.3%;
-    top: 80%;
-    /* top: 75.4%; */
+    width: 45%;
+    height: 50%;
+    bottom: 65%;
+    right: 15%;
     transform: rotate(-47deg);
     z-index: -1;
 }
@@ -61,11 +64,88 @@
 .TEXT {
     font-family: 'Lobster', cursive;
     transform: rotate(-8deg);
-    width: 50%;
+    width: 90%;
     text-align: left;
-    font-size: 1.3rem;
+    font-size: 0.95rem;
+    flex-direction: row;
 }
 
 .TEXT span{
     color: green;
+}
+
+@media screen and (max-width: 961px ) {
+
+    .back_rectangle {
+        width: 70%;
+        height: 788px;
+    }
+
+    .before_rectangle {
+        width: 90%;
+        height: 95%;
+        transform: rotate(0deg);
+        padding-left: 0%;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: block;
+    }
+
+    .TEXT {
+        width: 100%;
+        height: 40%;
+        transform: rotate(0deg);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .NAITI{
+        width: 40%;
+    }
+
+    .Grafik{
+        width: 40%;
+    }
+
+    .map {
+        width: 100%;
+        height: 50%;
+        transform: rotate(0deg);
+        top: 10%;
+        left: 20%;
+    }  
+
+    .arrow_up {
+        bottom: 124%;        
+    }
+    
+    .arrow_right {
+        left: 13%; 
+    }
+    
+    .arrow_under {
+        bottom: 57%;
+    }
+}
+
+@media screen and (max-width: 500px ) {
+    .TEXT {
+        font-size: 0.78rem;
+    }
+
+    .arrow_up {
+        bottom: 115%;        
+    }
+    
+    .arrow_right {
+        left: 22.5%; 
+    }
+    
+    .arrow_under {
+        bottom: 70%;
+    }
 }
