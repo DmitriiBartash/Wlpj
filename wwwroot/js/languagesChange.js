@@ -64,9 +64,12 @@ function changeLanguage(element) {
                     "inputbox-2": "Перезвоните мне"
                 },
                 {
-                    "map": {
-                        "TEXT": "Где нас найти? <br><br>”Emirat Travel”<br>Str.ALbisoara 4, oficiu 611 <br> Moldova, Chisinau “Atrium” BC <br><br><br>График работы:<br><br>C 10: 00 - 19: 00, Понедельник-Суббота<br>C 8: 00 - 20: 00, по предварительной договорённости<br><br>+373 601 44 445<br>+373 601 44 442<br>+373 621 57 575"
+                    "TEXT":
+                    {
+                        "NAITI": "Где нас найти? <br><br>”Emirat Travel”<br>Str.ALbisoara 4, oficiu 611 <br> Moldova, Chisinau “Atrium” BC",
+                        "Grafik": "<br>График работы:<br><br>C 10: 00 - 19: 00, Понедельник-Суббота<br>C 8: 00 - 20: 00, по предварительной договорённости<br><br>Связь с нами: <br><br>+373 601 44 445<br>+373 601 44 442<br>+373 621 57 575"
                     }
+
                 },
                 {
                     "footer": {
@@ -135,8 +138,9 @@ function changeLanguage(element) {
                     "inputbox-2": "Call me"
                 },
                 {
-                    "map": {
-                        "TEXT": "Where can you find us? <br><br>”Emirat Travel”<br>Str.ALbisoara 4, oficiu 611 <br> Moldova, Chisinau “Atrium” BC <br><br><br>Schedule:<br><br>10:00 - 19:00, Monday-Saturday<br>8:00 - 20:00, by prior arrangement<br><br>+373 601 44 445<br>+373 601 44 442<br>+373 621 57 575"
+                    "TEXT": {
+                        "NAITI": "Where can you find us? <br><br>”Emirat Travel”<br>Str.ALbisoara 4, oficiu 611 <br> Moldova, Chisinau “Atrium” BC",
+                        "Grafik": "<br>Schedule:<br><br>10:00 - 19:00, Monday-Saturday<br>8:00 - 20:00, by prior arrangement<br><br>Our contacts: <br><br>+373 601 44 445<br>+373 601 44 442<br>+373 621 57 575"
                     }
                 },
                 {
@@ -206,8 +210,9 @@ function changeLanguage(element) {
                     "inputbox-2": "Sună-mă înapoi"
                 },
                 {
-                    "map": {
-                        "TEXT": "Unde ne găsiți? <br><br>”Emirat Travel”<br>Str.ALbisoara 4, oficiu 611 <br> Moldova, Chisinau “Atrium” BC <br><br><br>Orar:<br><br>De la 10:00 la 19:00, Luni-Sâmbătă<br>De la 8:00 - 20:00, cu programare prealabilă<br><br>+373 601 44 445<br>+373 601 44 442<br>+373 621 57 575"
+                    "TEXT": {
+                        "NAITI": "Unde ne găsiți? <br><br>”Emirat Travel”<br>Str.ALbisoara 4, oficiu 611 <br> Moldova, Chisinau “Atrium” BC",
+                        "Grafik": " <br>Orar:<br><br>De la 10:00 la 19:00, Luni-Sâmbătă<br>De la 8:00 - 20:00, cu programare prealabilă<br><br>Сontactele noastre<br><br>+373 601 44 445<br>+373 601 44 442<br>+373 621 57 575"
                     }
                 },
                 {
@@ -269,7 +274,8 @@ function changeLanguage(element) {
         document.getElementsByClassName("inputbox-2")[0].children[0].innerHTML = `<span>${languageModelJson[selectedLanguage][5]["inputbox-2"]}</span>`;
 
         // MAP
-        document.getElementsByClassName("TEXT")[0].innerHTML = languageModelJson[selectedLanguage][6]["map"]["TEXT"];
+        document.getElementsByClassName("NAITI")[0].innerHTML = languageModelJson[selectedLanguage][6]["TEXT"]["NAITI"];
+        document.getElementsByClassName("Grafik")[1].innerHTML = languageModelJson[selectedLanguage][6]["TEXT"]["Grafik"];
 
         // FOOTER 
         document.querySelector(".social_network p").innerHTML = languageModelJson[selectedLanguage][7]["footer"]["FIND US"];
