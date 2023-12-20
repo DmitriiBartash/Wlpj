@@ -1,0 +1,114 @@
+﻿#svg5 {
+    /*scale: 2;*/
+    border-radius: 35%;
+}
+
+#Plane {
+    transform: translateX(-70px) translateY(25px);
+    animation: movePlane 2s forwards;
+}
+
+@keyframes movePlane {
+    from {
+        transform: translateX(-70px) translateY(25px);
+    }
+
+    to {
+        transform: translateX(0) translateY(0);
+    }
+}
+
+#Trail {
+    transform-origin: bottom left;
+    transform-box: content-box;
+    animation: moveTrail 2s forwards;
+    position: relative;
+}
+
+@keyframes moveTrail {
+    from {
+        transform: scale(0, 0);
+    }
+
+    to {
+        transform: scale(1, 1);
+    }
+}
+
+#Travel {
+    animation: moveTravel 2s forwards;
+    transform: translateY(40px);
+    animation-delay: 1s;
+}
+
+#Emirat {
+    animation: moveEmirat 2s forwards;
+    transform: translateY(-50px);
+    animation-delay: 1s;
+}
+
+@keyframes moveTravel {
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes moveEmirat {
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* starting from bottom left leave and going clockwise*/
+#path22943,
+#path22945,
+#path24399,
+#path24401 {
+    transform-origin: right;
+    transform-box: content-box;
+    transform: rotateY(0deg);
+    animation: moveLeaf1 2s forwards linear;
+}
+
+#path24403,
+#path24405,
+#path26587,
+#path26589,
+#path26591 {
+    transform-origin: center;
+    transform-box: content-box;
+    transform: rotateY(0deg);
+    /* animation: moveLeaf2 2s forwards linear; */
+}
+
+@keyframes moveLeaf1 {
+    to {
+        transform: rotateZ(-10deg);
+    }
+}
+
+@keyframes moveLeaf2 {
+    to {
+        transform: rotateY(-40deg);
+    }
+}
+
+
+#Camel {
+    transform-origin: center;
+    transform-box: content-box;
+    transform: translateX(999999px);
+    animation: moveCamel 2s 2s linear forwards;
+}
+
+@keyframes moveCamel {
+    from {
+        stroke-opacity: 0;
+        transform: translateX(-13px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}

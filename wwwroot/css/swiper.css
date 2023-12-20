@@ -19,7 +19,7 @@
     align-items: center;
     justify-content: center;
     width: 40%;
-
+    margin: auto;
     /* Set neon color */
     --neon-text-color: #ffb703;
     /* --neon-border-color: #08f; */

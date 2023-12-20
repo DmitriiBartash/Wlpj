@@ -2,8 +2,12 @@
 let selectedLanguage = "Ru";
 let currentLanguage = "Ru";
 
+const ruElement = document.querySelector('#myRadio3');
+ruElement.checked = true;
+
 function changeLanguage(element) {
     selectedLanguage = element.textContent;
+
     if (selectedLanguage != currentLanguage) {
 
         const languageModelJson = {
@@ -275,14 +279,14 @@ function changeLanguage(element) {
 
         // MAP
         document.getElementsByClassName("NAITI")[0].innerHTML = languageModelJson[selectedLanguage][6]["TEXT"]["NAITI"];
-        document.getElementsByClassName("Grafik")[1].innerHTML = languageModelJson[selectedLanguage][6]["TEXT"]["Grafik"];
+        document.getElementsByClassName("Grafik")[0].innerHTML = languageModelJson[selectedLanguage][6]["TEXT"]["Grafik"];
 
         // FOOTER 
         document.querySelector(".social_network p").innerHTML = languageModelJson[selectedLanguage][7]["footer"]["FIND US"];
         document.getElementsByClassName("phone_numberes")[0].innerHTML = languageModelJson[selectedLanguage][7]["footer"]["phone_numberes"];
 
 
-        document.querySelector(".heading_test_ls").innerHTML = languageModelJson[selectedLanguage][8]["reviews"];
+        document.querySelector(".testimonials-heading").innerHTML = languageModelJson[selectedLanguage][8]["reviews"];
 
         SelectCountry(document.querySelector(`#selectedCountry`));
 

@@ -11,7 +11,7 @@ header {
     align-items: center;
     justify-content: space-between;
     color: black;
-    backdrop-filter: blur(35px);
+    /*backdrop-filter: blur(35px);*/
 }
 
 .nav-header-element {
