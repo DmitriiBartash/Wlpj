@@ -15,6 +15,7 @@ body {
     overflow-x: hidden;
     background-image: url("../content/background/background_sea.png");
     font-family: 'Open Sans', sans-serif;
+    cursor: default;
 }
 
 #Mainpage {

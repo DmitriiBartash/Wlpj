@@ -280,6 +280,12 @@ span.arrow-btn:hover {
 .floating-container .float-element:nth-child(1) {
     background: #00FF00;
     box-shadow: 0 15px 15px -10px #00FF00;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.floating-container .float-element:nth-child(1):hover {
+    box-shadow: 0 0 10px 5px #00FF00;
 }
 
 .fa-instagram{
@@ -289,6 +295,12 @@ span.arrow-btn:hover {
 .floating-container .float-element:nth-child(2) {
     background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
     box-shadow: 0 15px 15px -10px #e70dbf;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.floating-container .float-element:nth-child(2):hover{
+    box-shadow: 0 0 10px 5px #e70dbf;
 }
 
 .fa-facebook{
@@ -298,6 +310,12 @@ span.arrow-btn:hover {
 .floating-container .float-element:nth-child(3) {
     background: #4267B2;
     box-shadow: 0 20px 20px -10px #4267B2;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.floating-container .float-element:nth-child(3):hover{
+    box-shadow: 0 0 10px 5px #4267B2;
 }
 
 .fa-telegram{
@@ -307,6 +325,12 @@ span.arrow-btn:hover {
 .floating-container .float-element:nth-child(4) {
     background: #229ED9;
     box-shadow: 0 20px 20px -10px #229ED9;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.floating-container .float-element:nth-child(4):hover{
+    box-shadow: 0 0 10px 5px #229ED9;
 }
 
 .fa-whatsapp{
@@ -316,6 +340,12 @@ span.arrow-btn:hover {
 .floating-container .float-element:nth-child(5) {
     background: #25D366;
     box-shadow: 0 20px 20px -10px #25D366;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.floating-container .float-element:nth-child(5):hover{
+    box-shadow: 0 0 10px 5px #25D366;
 }
 
 .fa-phone-square{
@@ -325,4 +355,10 @@ span.arrow-btn:hover {
 .floating-container .float-element:nth-child(6) {
     background: #7360F2;
     box-shadow: 0 20px 20px -10px #7360F2;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.floating-container .float-element:nth-child(6):hover{
+    box-shadow: 0 0 10px 5px #7360F2;
 }

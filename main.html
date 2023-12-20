@@ -32,9 +32,12 @@
     <link rel="stylesheet" href="css/findus.css">
     <link rel="stylesheet" href="css/footer.css">
 
-    <link rel="stylesheet" href="css/swiper.css">
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
+    <!-- swiper -->
+    <!-- <link rel="stylesheet" href="css/swiper.css"> -->
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
 </head>
 
 <body>
@@ -135,63 +138,56 @@
     </div>
 
     <p id="Anchor1"></p>
-    <div class="hot-deals-container">
+    <section id="hot-deals-container">
+        <div class="InnerBlock">
+            <div class="firstSwiper">
+                <div class="firstSwiper-element" style="background-color:rgb(15, 189, 125);"></div>
+                <div class="firstSwiper-element" style="background-color:red;"></div>
+                <div class="firstSwiper-element" style="background-color:rgb(8, 62, 37);"></div>
+                <div class="firstSwiper-element" style="background-color:rgb(22, 36, 74);"></div>
+                <div class="firstSwiper-element" style="background-color:rgb(105, 17, 30);"></div>
+                <div class="firstSwiper-element" style="background-color:rgb(0, 0, 0);"></div>
 
-        <h2 class="hot-deals-header">Горящие предложения</h2>
-
-        <div id="Hotdeals" class="swiper hot-deals">
-            <div class="countries">
-                <div class="countriesPadding">
-                    <p>Турция</p>
-                    <p>Занзибар</p> <!-- Photos for Zanzibar are in folder content/img_for_swiper/-->
-                    <p>Egypt</p> <!-- Photos for Egypt are in folder content/img_for_swiper/-->
-                    <p>China4</p>
-                    <p>China5</p>
-                    <p>China6</p>
-                    <p>China7</p>
-                    <p>China8</p>
-                    <p>China9</p>
-                    <p>China10</p>
-                    <p>China11</p>
-                    <p>China12</p>
-                    <p>China13</p>
-                    <p>China13</p>
-                    <p>China13</p>
-                    <p>China13</p>
-                    <p>China13</p>
-                    <p>China13</p>
-                    <p>China13</p>
-                    <p>China13</p>
-                    <p>China13</p>
-                    <p>China13</p>
-                    <p>China13</p>
-                    <p>China13</p>
-                    <p>China13</p>
-                </div>
             </div>
 
-            <!-- Swiper -->
-            <div class="swiperAndTags">
-                <swiper-container class="mySwiper swiper-h" navigation="true" autoplay="false" space-between="50"
-                    loop="true">
-                    <swiper-slide><img src="content/img_for_swiper/turkish_1.jpg"></swiper-slide>
-                    <swiper-slide><img src="content/img_for_swiper/turkish_2.jpg"></swiper-slide>
-                    <swiper-slide><img src="content/img_for_swiper/turkish_3.jpg"></swiper-slide>
-                    <swiper-slide><img src="content/img_for_swiper/turkish_4.jpg"></swiper-slide>
-                </swiper-container>
+            <div class="swiper-tagdescription">
+                <div class="swiper-tagdescription-items">
+                    <div class="tags">
+                        <p>Цена включает:</p>
+                        <div class="tags-text">
+                            <p><img src="content/tags/1.Plane.svg">Перелёт</p>
+                            <p><img src="content/tags/2.Transfer.svg">Трансфер</p>
+                            <p><img src="content/tags/3.Residence.svg">Проживание</p>
+                            <p><img src="content/tags/4.Food.svg">Питание согласно концепции отеля</p>
+                            <p><img src="content/tags/5.Medical insurance.svg">Медицинскую страховку</p>
+                        </div>
+                    </div>
 
-                <div class="swiper-tagdescription">
-                    <div class="swiper-tagdescription-items">
-                        <p><img src="content/tags/1.Plane.svg">Перелёт</p>
-                        <p><img src="content/tags/2.Transfer.svg">Трансфер</p>
-                        <p><img src="content/tags/3.Residence.svg">Проживание</p>
-                        <p><img src="content/tags/4.Food.svg">Питание согласно концепции отеля</p>
-                        <p><img src="content/tags/5.Medical insurance.svg">Медицинскую страховку</p>
+                    <div class="hotprice">
+                        <img src="content/swiper/hot-price!.svg" />
                     </div>
                 </div>
             </div>
+
+            <div class="secondSwiper">
+                <p class="countryNames">Name1</p>
+                <p class="countryNames">Name2</p>
+                <p class="countryNames">Name3</p>
+                <p class="countryNames">Виргинские Острова (Великобритания)</p>
+                <p class="countryNames">Американское Самоа</p>
+                <p class="countryNames">Азорские острова</p>
+                <p class="countryNames">Name7</p>
+                <p class="countryNames">Name8</p>
+                <p class="countryNames">Name9</p>
+                <p class="countryNames">Name10</p>
+                <p class="countryNames">Name11</p>
+                <p class="countryNames">Name12</p>
+                <p class="countryNames">Хургада</p>
+                <p class="countryNames">Новая Зеландия</p>
+
+            </div>
         </div>
-    </div>
+    </section>
 
     <div id="Anchor2"></div>
     <div class="about_us">
@@ -264,10 +260,10 @@
 
     <p id="Anchor4"></p>
     <div class="testimonials">
-        <h2 class="heading_test_ls">Что о нас говорят?</h2>
-        <div class="rectangle_test_ls">
-            <div class="rectangle_test_ls_1">
-                <div class="text_rectangle_test_ls_heading_1">Никита Резниченко
+        <h2 class="testimonials-heading">Что о нас говорят?</h2>
+        <div class="testimonials-swiper">
+            <div class="testimonials-swiper-element">
+                <div class="text_testimonials-swiper_heading">Никита Резниченко
                     <div class="star_1">
                         <img src="content/testimonials/star_testimonials.svg" width="25" height="25"
                             style="position: relative">
@@ -283,13 +279,13 @@
                 </div>
                 <br>
                 <hr>
-                <p class="text_rectangle_test_ls_1">
+                <p class="text_testimonials-swiper-element">
                     <br>"adad asdad
                     уктидуктитукдлиулкдтплдкутилтукитукитукдитдуктидуктиуклтитукитдуктидуктидуктитукдлиулкдтплдкутилтукитукитукдитдуктидуктиуклтитукитдуктидуктидуктитукдли"
                 </p>
             </div>
-            <div class="rectangle_test_ls_1">
-                <div class="text_rectangle_test_ls_heading_1">Дима Барташ
+            <div class="testimonials-swiper-element">
+                <div class="text_testimonials-swiper_heading">Дима Барташ
                     <div class="star_1">
                         <img src="content/testimonials/star_testimonials.svg" width="25" height="25"
                             style="position: relative">
@@ -305,12 +301,12 @@
                 </div>
                 <br>
                 <hr>
-                <p class="text_rectangle_test_ls_1">
+                <p class="text_testimonials-swiper-element">
                     <br>"улкдтплдкутилтукитукитукдитдуктидуктиуклтитукитдуктидуктидуктитукдлиулкдтплдкутилтукитукитукдитдуктидуктиуклтитукитдуктидуктидуктитукдлиулкдтплдкутилтукитукитукдитдуктидуктиуклтитукитдуктидуктидуктитукдлиулкдтплдкутилтукитукитукдитдуктидуктиуклтитукитдуктидуктидуктитукдли"
                 </p>
             </div>
-            <div class="rectangle_test_ls_1">
-                <div class="text_rectangle_test_ls_heading_1">Александр Ртищев
+            <div class="testimonials-swiper-element">
+                <div class="text_testimonials-swiper_heading">Александр Ртищев
                     <div class="star_1">
                         <img src="content/testimonials/star_testimonials.svg" width="25" height="25"
                             style="position: relative">
@@ -326,10 +322,11 @@
                 </div>
                 <br>
                 <hr>
-                <p class="text_rectangle_test_ls_1">
+                <p class="text_testimonials-swiper-element">
                     <br>"улкдтплдкутилтукитукитукдитдуктидуктиуклтитукитдуктидуктидуктитукдлиулкдтплдкутилтукитукитукдитдуктидуктиуклтитукитдуктидуктидуктитукдлиулкдтплдкутилтукитукитукдитдуктидуктиуклтитукитдуктидуктидуктитукдлиулкдтплдкутилтукитукитукдитдуктидуктиуклтитукитдуктидуктидуктитукдли"
                 </p>
             </div>
+            
         </div>
     </div>
 
@@ -339,11 +336,15 @@
             <div class="before_rectangle">
                 <div class="TEXT">
                     <div class="NAITI">Где нас найти?
-                    <br><br>”Emirat Travel”<br>Str.Albisoara 4, oficiu 611 <br> Moldova, Chisinau <span>“Atrium”</span> BC</div>
+                        <br><br>”Emirat Travel”<br>Str.Albisoara 4, oficiu 611 <br> Moldova, Chisinau
+                        <span>“Atrium”</span> BC
+                    </div>
                     <div class="Grafik"><br>График работы:
-                    <br><br>C 10:00 - 19:00, Понедельник-Суббота<br>C 8:00 - 20:00, по предварительной договорённости
-                    <br><br>Связь с нами: 
-                    <br><br>+373 601 44 445 <br>+373 601 44 442 <br>+373 621 57 575</div>    
+                        <br><br>C 10:00 - 19:00, Понедельник-Суббота<br>C 8:00 - 20:00, по предварительной
+                        договорённости
+                        <br><br>Связь с нами:
+                        <br><br>+373 601 44 445 <br>+373 601 44 442 <br>+373 621 57 575
+                    </div>
                 </div>
                 <div class="map">
                     <iframe class="owner_map"
@@ -358,8 +359,12 @@
         </div>
     </div>
 
-    <script src="js/swiper.js"></script>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/swiper.js"></script>
 </body>
 
 <footer>
@@ -369,24 +374,20 @@
             <p class="FIND US"> Найди нас ➜ </p>
             <div class="icon_instagram">
                 <a href="https://instagram.com/emirattravel?igshid=MzRlODBiNWFlZA==">
-                    <img src="content/footer/instagram_footer.svg" alt="instagram" 
-                        style="position: relative"></a>
+                    <img src="content/footer/instagram_footer.svg" alt="instagram" style="position: relative"></a>
             </div>
             <div class="icon_facebook">
                 <a href="https://facebook.com/">
-                    <img src="content/footer/facebook_footer.svg" alt="facebook" 
-                        style="position: relative"></a>
+                    <img src="content/footer/facebook_footer.svg" alt="facebook" style="position: relative"></a>
             </div>
             <div class="icon_viber">
                 <a
                     href="https://invite.viber.com/?g2=AQAz%2FcYq57BWPEvuZsrmFQrffc67K%2FdiTT3gpAfdqLE%2FAWRHPDcDPWyJ5kKkzwAd">
-                    <img src="content/footer/viber_footer.svg" alt="viber" 
-                        style="position: relative"></a>
+                    <img src="content/footer/viber_footer.svg" alt="viber" style="position: relative"></a>
             </div>
             <div class="icon_telegram">
                 <a href="#">
-                    <img src="content/footer/telegram_footer.svg" alt="telegram" 
-                        style="position: relative"></a>
+                    <img src="content/footer/telegram_footer.svg" alt="telegram" style="position: relative"></a>
             </div>
         </div>
 
@@ -398,4 +399,5 @@
 
     <div class="rectangle_min">2023 © Emirat Travel </div>
 </footer>
+
 </html>
