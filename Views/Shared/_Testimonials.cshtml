@@ -6,15 +6,15 @@
 
 <p id="Anchor4"></p>
 <div class="testimonials">
-	<div class="heading_test_ls">Что о нас говорят?</div>
+	<div class="testimonials-heading">Что о нас говорят?</div>
 
-	<div class="rectangle_test_ls">
+	<div class="testimonials-swiper">
 
 		@foreach (var item in Model)
 		{
 			@if (incr++ > 2) break;
-			<div class="rectangle_test_ls_1">
-				<div class="text_rectangle_test_ls_heading_1">
+			<div class="testimonials-swiper-element">
+				<div class="text_testimonials-swiper_heading">
 					@item.Person
 					<div class="star_1">
 						<img src="content/testimonials/star_testimonials.svg" width="25" height="25" style="position: relative">
@@ -26,14 +26,14 @@
 				</div>
 				<br>
 				<hr>
-				<p class="text_rectangle_test_ls_1">
+				<p class="text_testimonials-swiper-element">
 					<br>"@item.Review"
 				</p>
 			</div>
 		}
 
-		@*  <div class="rectangle_test_ls_1">
-		<div class="text_rectangle_test_ls_heading_1">
+		@*  <div class="testimonials-swiper-element">
+		<div class="text_testimonials-swiper_heading">
 		Дима Барташ
 		<div class="star_1">
 		<img src="content/testimonials/star_testimonials.svg" width="25" height="25" style="position: relative">
@@ -45,12 +45,12 @@
 		</div>
 		<br>
 		<hr>
-		<p class="text_rectangle_test_ls_1">
+		<p class="testimonials-swiper-element">
 		<br>"улкдтплдкутилтукитукитукдитдуктидуктиуклтитукитдуктидуктидуктитукдлиулкдтплдкутилтукитукитукдитдуктидуктиуклтитукитдуктидуктидуктитукдлиулкдтплдкутилтукитукитукдитдуктидуктиуклтитукитдуктидуктидуктитукдлиулкдтплдкутилтукитукитукдитдуктидуктиуклтитукитдуктидуктидуктитукдли"
 		</p>
 		</div>
-		<div class="rectangle_test_ls_1">
-		<div class="text_rectangle_test_ls_heading_1">
+		<div class="testimonials-swiper-element">
+		<div class="text_testimonials-swiper_heading">
 		Барон Ррртищев
 		<div class="star_1">
 		<img src="content/testimonials/star_testimonials.svg" width="25" height="25" style="position: relative">
@@ -62,7 +62,7 @@
 		</div>
 		<br>
 		<hr>
-		<p class="text_rectangle_test_ls_1">
+		<p class="testimonials-swiper-element">
 		<br>"улкдтплдкутилтукитукитукдитдуктидуктиуклтитукитдуктидуктидуктитукдлиулкдтплдкутилтукитукитукдитдуктидуктиуклтитукитдуктидуктидуктитукдлиулкдтплдкутилтукитукитукдитдуктидуктиуклтитукитдуктидуктидуктитукдлиулкдтплдкутилтукитукитукдитдуктидуктиуклтитукитдуктидуктидуктитукдли"
 		</p>
 		</div> *@
