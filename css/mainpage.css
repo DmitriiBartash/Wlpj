@@ -21,7 +21,7 @@ body {
 #Mainpage {
     position: relative;
     width: 100%;
-    min-height: 100vh;
+    min-height: 110vh;
 }
 
 /*Video background*/
@@ -61,7 +61,8 @@ body {
     margin-bottom: 10px;
     text-transform: uppercase;
     letter-spacing: 6px;
-    color: #ffa343;
+    /* color: #ffa343; */
+    color: #FCE883;
 }
 
 .mainpage-text h1{
@@ -73,7 +74,8 @@ body {
 }
 
 h1 span{
-    color: #ffa343;
+    /* color: #ffa343; */
+    color: #FCE883;
 }
 
 .mainpage-text p{

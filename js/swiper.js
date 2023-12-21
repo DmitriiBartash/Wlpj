@@ -33,7 +33,7 @@ $('.secondSwiper').slick({
         {
             breakpoint: 480,
             settings: {
-                slidesToShow: 5
+                slidesToShow: 3
             }
         }
         
