@@ -7,9 +7,8 @@ popUpWindow.style.display = 'none';
 let nameId = 0;
 let popupTXT = "";
 
-function openPopUp(element) {
-    console.log(element);
 
+function openPopUp(element) {
     popupTXT = document.querySelector("#popUPName");
     if (element.textContent == "Редактировать") {
         popupTXT.textContent = "Изменить страну";
@@ -17,7 +16,6 @@ function openPopUp(element) {
         let id = document.querySelector("#countrySelectedID").textContent;
         nameId = id;
 
-        console.log("if");
         $.ajax({
             url: '/Admin/LoadPopUp',
             type: 'POST',

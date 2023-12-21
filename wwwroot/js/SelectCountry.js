@@ -1,5 +1,4 @@
 ﻿function SelectCountry(element) {
-
     let desiredId;
     desiredId = (element.getAttribute("id") == "selectedCountry") ? element.textContent : element.getAttribute("id");
 
@@ -7,6 +6,7 @@
         "countryID": desiredId,
         "selectedLanguage": selectedLanguage
     }
+    console.log(dataJSON);
 
     $.ajax({
         url: '/Home/LoadSwiper',
@@ -15,7 +15,8 @@
         contentType: 'application/json',
         success: function (result) {
             $('.hot-deals-container').html(result);
-            changeImgOnClick();
+            //changeImgOnClick();
+            hookSlicks();
         }
     });
 }

@@ -6,8 +6,6 @@ namespace LandingPage.Utils
 {
 	public static class Functions
 	{
-
-
 		public static SwiperMiniModel generateCountriesData(DatabaseContext _context, Dictionary<string, int> _countryCodes, Dictionary<string, string> _icons, StrCountry selectedCountry)
 		{
 			HashSet<string> countryNames = new();

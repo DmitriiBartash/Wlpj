@@ -18,14 +18,15 @@
 		</div>
 
 		<div class="TAGS">
-		@foreach (var tag in @Model.Tags)
-		{
-			<p><img src="~/content/tags/@tag?.icon">@tag?.tag</p>
-		}
+			@foreach (var tag in @Model.Tags)
+			{
+				<p><img src="~/content/tags/@tag?.icon">@tag?.tag</p>
+			}
 		</div>
 
 		<button class="tag_button" onclick="openPopUp(this)">Редактировать</button>
-	
+
+		<button class="tag_button" onclick="deleteThis(this)">Удалить</button>
 	}
 	else
 	{

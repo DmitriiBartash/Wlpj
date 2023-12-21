@@ -38,24 +38,29 @@ body {
 .mainpage-container {
     position: relative;
     display: flex;
-    justify-content: center;
+    /*justify-content: center;*/
 }
 
 .mainpage-innerDiv {
-    position: absolute;
+    /*position: absolute;*/
     /* left: 30%; */
-    top: 15vh;
+    /*top: 15vh;*/
+    width: 100vw;
     display: flex;
+    height: 100vh;
     align-items: center;
+    justify-content: center;
 }
 
 .mainpage-text {
     width: 100%;
     z-index: 1;
+    padding-left: 10%;
 }
 
     .mainpage-text h5 {
-        font-size: 1.2rem;
+        font-size: 4vw;
+        /*font-size: 1.2rem;*/
         font-weight: 800;
         margin-bottom: 10px;
         text-transform: uppercase;
@@ -64,7 +69,8 @@ body {
     }
 
     .mainpage-text h1 {
-        font-size: 2.5rem;
+        font-size: 3vw;
+        /*font-size: 2.5rem;*/
         font-weight: 800;
         line-height: 1.2;
         margin-bottom: 20px;
@@ -76,10 +82,13 @@ h1 span {
 }
 
 .mainpage-text p {
-    font-size: 1.1rem;
+    font-size: 1.5vw;
+    /*font-size: 1.1rem;*/
     font-weight: 700;
-    line-height: 30px;
-    color: #ffffffab;
+    line-height: normal;
+    /*line-height: 30px;*/
+    /*color: #ffffffab;*/
+    color: beige;
 }
 
 /*Logo*/
@@ -89,8 +98,11 @@ h1 span {
     align-items: center;
     flex-direction: column;
     z-index: 1;
-    width: 50%;
-    height: 50%;
+    /*border-radius: 20% 20%;*/
+    /*background-color: bisque;*/
+    /*border: 1px solid red;*/
+    width: 80%;
+    height: 90%;
 }
 
     .logo-holder img {
@@ -100,7 +112,7 @@ h1 span {
     }
 
     .logo-holder::after {
-        content: '';
+        /* content: '';
         position: absolute;
         background-image: linear-gradient( #ECE9E6, #FFFFFF);
         opacity: .4;
@@ -113,7 +125,7 @@ h1 span {
         border-color: rgb(0, 0, 0);
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: center;*/
         /* translate: -150%; */
         /* background: #ECE9E6;*/
         /* filter: blur(15px); */
@@ -192,7 +204,8 @@ h1 span {
         font-family: cursive;
         width: 100%;
         /*height: 100%;*/
-        font-size: 35px;
+        font-size: 2vw;
+        /*font-size: 35px;*/
         /*line-height: 62px;*/
         margin: 0 auto;
         transition: all 0.3s ease-in-out;
@@ -232,4 +245,50 @@ h1 span {
             height: 70%;
             width: 30%;
         }
+}
+
+
+/* media queries*/
+
+@media (max-width: 999px) {
+    /* Styles for screens smaller than 1000px */
+
+    #myVideo {
+        min-height: 100%;
+    }
+
+    #Mainpage {
+        width: 100%;
+    }
+
+    body {
+        width: 100vw;
+        overflow-x: hidden;
+    }
+
+    .mainpage-innerDiv {
+        flex-direction: column-reverse;
+        width: 100%;
+        padding: 0%;
+    }
+
+    #svg5 {
+        width: auto;
+        height: auto;
+    }
+
+    .logo-holder {
+        width: 80%;
+        height: 40vh;
+        padding: 0;
+        justify-content: unset;
+    }
+
+    .Information_car {
+        padding: 0;
+    }
+
+    .mainpage-text {
+        width: calc(100% - 10%);
+    }
 }

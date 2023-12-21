@@ -42,5 +42,19 @@ function deleteImage(element) {
             $('.photos-container').html(result);
         }
     });
+}
 
+function deleteThis(eleemnt) {
+
+    let Cid = document.querySelector('#countrySelectedID').textContent;
+
+    $.ajax({
+        url: '/Admin/DeleteCountry',
+        type: 'POST',
+        data: JSON.stringify(Cid),
+        contentType: 'application/json',
+        success: function (result) {
+            //$('.popup').html(result);
+        }
+    });
 }

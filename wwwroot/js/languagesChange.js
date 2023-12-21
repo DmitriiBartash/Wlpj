@@ -286,7 +286,7 @@ function changeLanguage(element) {
         document.getElementsByClassName("phone_numberes")[0].innerHTML = languageModelJson[selectedLanguage][7]["footer"]["phone_numberes"];
 
 
-        document.querySelector(".testimonials-heading").innerHTML = languageModelJson[selectedLanguage][8]["reviews"];
+        //document.querySelector(".testimonials-heading").innerHTML = languageModelJson[selectedLanguage][8]["reviews"];
 
         SelectCountry(document.querySelector(`#selectedCountry`));
 

@@ -411,7 +411,6 @@ namespace LandingPage.Controllers
 				countryNoPics.Tags.Add(tagsAndIcons);
 			}
 
-
 			CountryTagsNPrices countryTagsNPrices = new()
 			{
 				Tags = countryNoPics.Tags,
@@ -438,6 +437,11 @@ namespace LandingPage.Controllers
 			}
 
 			return PartialView("_AdminCountries", countries);
+		}
+
+		public IActionResult DeleteCountry([FromBody] string ID)
+		{
+			return null;
 		}
 		#endregion
 	}

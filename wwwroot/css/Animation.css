@@ -1,0 +1,268 @@
+﻿#svg5 {
+    /*scale: 2;*/
+    border-radius: 35%;
+    width: 80%;
+    height: 80%;
+}
+
+#Plane {
+    transform: translateX(-70px) translateY(25px);
+    animation: movePlane 2s forwards;
+}
+
+@keyframes movePlane {
+    from {
+        transform: translateX(-70px) translateY(25px);
+    }
+
+    to {
+        transform: translateX(0) translateY(0);
+    }
+}
+
+#Trail {
+    transform-origin: bottom left;
+    transform-box: content-box;
+    animation: moveTrail 2s forwards;
+    position: relative;
+}
+
+@keyframes moveTrail {
+    from {
+        transform: scale(0, 0);
+    }
+
+    to {
+        transform: scale(1, 1);
+    }
+}
+
+#Travel {
+    animation: moveTravel 2s forwards;
+    transform: translateY(40px);
+    animation-delay: 1s;
+}
+
+#Emirat {
+    animation: moveEmirat 2s forwards;
+    transform: translateY(-50px);
+    animation-delay: 1s;
+}
+
+@keyframes moveTravel {
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes moveEmirat {
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* starting from bottom left leave and going clockwise*/
+#path22943,
+#path22945,
+#path24399,
+#path24401 {
+    transform-origin: right;
+    transform-box: content-box;
+    transform: rotateY(0deg);
+    animation: moveLeaf1 2s forwards linear;
+}
+
+#path24403,
+#path24405,
+#path26587,
+#path26589,
+#path26591 {
+    transform-origin: center;
+    transform-box: content-box;
+    transform: rotateY(0deg);
+    /* animation: moveLeaf2 2s forwards linear; */
+}
+
+@keyframes moveLeaf1 {
+    to {
+        transform: rotateZ(-10deg);
+    }
+}
+
+@keyframes moveLeaf2 {
+    to {
+        transform: rotateY(-40deg);
+    }
+}
+
+
+#Camel {
+    transform-origin: center;
+    transform-box: content-box;
+    transform: translateX(999999px);
+    animation: moveCamel 2s 2s linear forwards;
+}
+
+@keyframes moveCamel {
+    from {
+        stroke-opacity: 0;
+        transform: translateX(-13px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+
+/* price tag */
+
+
+/* currency blocks animations */
+#Currency_group {
+    /* transform: translateX(0px); */
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#Currency_Block_1,
+#Currency_Block_2,
+#Currency_Block_3,
+#Currency_Block_4,
+#Currency_Block_5,
+#Currency_Block_6 {
+    transform-origin: center;
+    transform-box: content-box;
+    transform: rotate(0) scale(0.6, 0.6);
+    stroke: red !important;
+    fill: red !important;
+    animation: Sample 4s linear infinite alternate;
+}
+
+#Currency_Block_2 {
+    animation-delay: 0.2s;
+}
+
+#Currency_Block_3 {
+    animation-delay: 0.4s;
+}
+
+#Currency_Block_4 {
+    animation-delay: 0.6s;
+}
+
+#Currency_Block_5 {
+    animation-delay: 0.8s;
+}
+
+#Currency_Block_6 {
+    animation-delay: 1.0s;
+}
+
+@keyframes Sample {
+    0% {
+        transform: scale(0.6, 0.6);
+        stroke: red;
+        fill: red;
+    }
+
+    100% {
+        transform: scale(1.2, 1.2);
+    }
+}
+
+/* currency text animation */
+#tspan31826 {
+    fill: red !important;
+    stroke: black !important;
+    stroke-dasharray: 2 !important;
+    stroke-width: 1.5 !important;
+    animation: dash-outline 4s linear both infinite alternate;
+}
+
+@keyframes dash-outline {
+    from {
+        stroke-dashoffset: 10;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* fire animation */
+#Fire_group {
+    transform-origin: center;
+    transform-box: content-box;
+    animation: fireAnime 1.8s linear infinite alternate;
+}
+
+@keyframes fireAnime {
+    from {
+        transform: skewX(-5deg) skewY(-3deg) scale(0.8, 0.8);
+    }
+
+    to {
+        transform: skewX(5deg) skewY(1deg) scale(0.8, 0.8);
+    }
+}
+
+/* text-shadow:
+0 3px 20px #a11500,
+0 0 20px #a11500,
+0 0 10px #f7961a,
+0 0 0 yellow,
+0 0 5px yellow,
+-2px -5px 5px #b9961b,
+4px -10px 10px yellow; */
+
+/* digits animation */
+#Price {
+    transform-origin: center;
+    transform-box: content-box;
+    animation: burning 1s linear infinite alternate;
+}
+
+@keyframes burning {
+    0% {
+        text-shadow: 0 2px 2px #ff9900, 0 4px 4px #ff7700, 0 6px 6px #ff5500, 0 8px 8px #ff3300;
+    }
+
+    25% {
+        text-shadow: 0 2px 2px #ffcc00, 0 4px 4px #ffaa00, 0 6px 6px #ff8800, 0 8px 8px #ff6600;
+    }
+
+    50% {
+        text-shadow: 0 2px 2px #f00, 0 4px 4px #ff0000, 0 6px 6px #ff0000, 0 8px 8px #ff0000;
+    }
+
+    75% {
+        text-shadow: 0 2px 2px #e67300, 0 4px 4px #d95400, 0 6px 6px #c63300, 0 8px 8px #b31200;
+    }
+
+    100% {
+        text-shadow: 0 2px 2px #c06600, 0 4px 4px #a34900, 0 6px 6px #862c00, 0 8px 8px #690f00;
+    }
+}
+
+
+#From {
+    transform-origin: left;
+    transform-box: content-box;
+    animation: ttt 1s linear infinite forwards alternate;
+    /* animation-delay: 2s; */
+}
+
+@keyframes ttt {
+    0% {
+        /* transform: translateY(0px); */
+        transform: scale(0);
+        opacity: 0.5;
+    }
+
+    100% {
+        /* transform: translateY(2px); */
+        opacity: 1;
+    }
+}
