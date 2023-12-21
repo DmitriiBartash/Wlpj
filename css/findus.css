@@ -27,7 +27,7 @@
     transform: rotate(-8deg);
     width: 90%;
     text-align: left;
-    font-size: 0.95rem;
+    font-size: 0.95em;
     flex-direction: row;
 }
 
