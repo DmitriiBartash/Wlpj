@@ -2,9 +2,9 @@
 {
 	public class CountryTagsNPrices
 	{
-		public int ID { get; set; }	
+		public int ID { get; set; }
 		public List<TagsAndIcons> Tags { get; set; }
-		public double PriceUsd { get; set; }
-		public double PriceEuro { get; set; }
+		public int Price { get; set; }
+		public string Currency { get; set; }
 	}
 }

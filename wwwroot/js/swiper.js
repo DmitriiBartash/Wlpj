@@ -1,5 +1,8 @@
 hookSlicks();
 
+let currentSlideNumber = 0;
+
+let slider1;
 function hookSlicks() {
     $('.firstSwiper').slick({
         infinite: true,
@@ -41,8 +44,24 @@ function hookSlicks() {
         ]
     });
 
+    //slider1 = $('.firstSwiper').slick();
+
+    //$('.secondSwiper').on('beforeChange',
+    //    function (event, slick, currentSlide, nextSlide) {
+    //        currentSlideNumber--;
+    //        console.log(document.querySelector(".slick-center").getAttribute("name"));
+
+    //        SelectCountry(document.querySelector(".slick-center").getAttribute("name"));
+    //        slider1.slickGoTo(currentSlideNumber);
+
+    //    });
     $('.secondSwiper').on('afterChange',
         function (event, slick, currentSlide, nextSlide) {
-            console.log(nextSlide, " ", currentSlide);
+            currentSlideNumber++;
+            console.log(document.querySelector(".slick-center").getAttribute("name"));
+
+            SelectCountry(document.querySelector(".slick-center").getAttribute("name"));
+
+            //slider1.slickGoTo(currentSlideNumber + 1);
         });
 }

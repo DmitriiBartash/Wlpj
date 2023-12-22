@@ -5,7 +5,8 @@
 		public Dictionary<string, int> countriesData { get; set; }
 		public List<string> picturePathsChosen { get; set; }
 		public List<TagsAndIcons> tags { get; set; }
-
+		public int price { get; set; }
+		public string currency { get; set; }
 	}
 
 	public class TagsAndIcons

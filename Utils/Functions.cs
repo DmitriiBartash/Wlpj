@@ -59,7 +59,7 @@ namespace LandingPage.Utils
 				.ToList();
 
 			// populate 
-			SwiperMiniModel model = new() { countriesData = new(), picturePathsChosen = new(), tags = new() };
+			SwiperMiniModel model = new() { countriesData = new(), picturePathsChosen = new(), tags = new(), price = firstItem.Price, currency = firstItem.Currency };
 
 			for (int i = 0; i < countryNames.Count; i++)
 			{
@@ -120,8 +120,8 @@ namespace LandingPage.Utils
 				countryNoPics.ID = id;
 				countryNoPics.Name = firstItem.CountryName.Split("|")[0];
 				countryNoPics.Tags = new();
-				countryNoPics.PriceEuro = firstItem.PriceEuro;
-				countryNoPics.PriceUsd = firstItem.PriceUsd;
+				countryNoPics.Price = firstItem.Price;
+				countryNoPics.Currency = firstItem.Currency;
 
 
 				// somehow get all the tags

@@ -13,13 +13,19 @@
     border-radius: 26px;
 }
 
+#svg4 {
+    height: 100%;
+    width: 100%;
+}
+
 @media (min-width:800px) {
     .InnerBlock {
         display: grid;
         grid-template-columns: 70% 30%;
         grid-template-rows: 85% 15%;
-        height: 100%;
-        width: 50%;
+        height: 80vh;
+        /*width: 50%;*/
+        padding: 0 10%;
         margin: auto;
     }
 }
@@ -66,7 +72,9 @@
 .tags {
     height: 100%;
     margin: 10%;
-    padding: 5%;
+    width: calc(100% - 25%);
+    padding-left: 5%;
+    /*padding: 5%;*/
 }
 
 .swiper-tagdescription {
@@ -91,14 +99,16 @@
     flex-direction: row;
     align-items: center;
     justify-content: left;
-    font-size: 0.9em;
+    font-size: 1.2vw;
+    /*font-size: 0.9em;*/
     font-weight: bold;
     line-height: 1.1;
 }
 
 @media (max-width:1100px) {
     .swiper-tagdescription p {
-        font-size: 0.9rem;
+        font-size: 1.2em;
+        /*font-size: 0.9rem;*/
     }
 }
 
@@ -239,7 +249,8 @@
     color: #18272F;
     position: relative;
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: calc((2.5vw + 2.5vh)/2);
+    /*font-size: 0.9rem;*/
     font-weight: 700;
     border-right: solid 0.5px;
     border-left: solid 0.5px;
@@ -278,7 +289,8 @@
 }
 
 .slick-center {
-    font-size: 1.05rem;
+    font-size: calc((2.5vw + 2.5vh)/2);
+    /*font-size: 1.05rem;*/
     color: red;
     border-right: solid 1px;
     background-color: #ffb703;
@@ -304,8 +316,9 @@
         display: grid;
         grid-template-columns: 100%;
         grid-template-rows: 55% 38% 7%;
-        height: 100%;
-        width: 50%;
+        height: 80vh;
+        /*width: 50%;*/
+        width: 80%;
         margin: auto;
     }
 
@@ -340,7 +353,9 @@
     }
 
     .tags {
-        display: grid;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
         align-items: center;
         margin: 0;
         padding: 0;
@@ -352,7 +367,8 @@
         }
 
     .tags-text p {
-        font-size: 0.6rem;
+        font-size: 1em;
+        /*font-size: 0.6rem;*/
         text-align: center;
         margin: 0;
     }
@@ -368,7 +384,8 @@
     }
 
     .countryNames {
-        font-size: 0.4rem;
+        font-size: 1em;
+        /*font-size: 0.4rem;*/
     }
 
     .tags-text img {
@@ -376,7 +393,8 @@
     }
 
     .slick-center {
-        font-size: 0.6rem;
+        font-size: 1.1em;
+        /*font-size: 0.6rem;*/
     }
 
     .firstSwiper .slick-slide {

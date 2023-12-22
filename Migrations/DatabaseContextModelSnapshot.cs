@@ -81,11 +81,12 @@ namespace LandingPage.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<float>("PriceEuro")
-                        .HasColumnType("REAL");
+                    b.Property<string>("Currency")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
-                    b.Property<float>("PriceUsd")
-                        .HasColumnType("REAL");
+                    b.Property<int>("Price")
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Tags")
                         .IsRequired()

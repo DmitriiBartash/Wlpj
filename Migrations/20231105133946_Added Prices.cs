@@ -11,14 +11,14 @@ namespace LandingPage.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.AddColumn<float>(
-                name: "PriceEuro",
+                name: "Currency",
                 table: "swiperModels",
                 type: "REAL",
                 nullable: false,
                 defaultValue: 0f);
 
             migrationBuilder.AddColumn<float>(
-                name: "PriceUsd",
+                name: "Price",
                 table: "swiperModels",
                 type: "REAL",
                 nullable: false,
@@ -29,11 +29,11 @@ namespace LandingPage.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropColumn(
-                name: "PriceEuro",
+                name: "Currency",
                 table: "swiperModels");
 
             migrationBuilder.DropColumn(
-                name: "PriceUsd",
+                name: "Price",
                 table: "swiperModels");
         }
     }

@@ -34,26 +34,26 @@ namespace LandingPage.Controllers
 			absoluteRootPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "content", "img_for_swiper");
 		}
 
-		public IActionResult Index()
+		public async Task<IActionResult> Index()
 		{
 			return View();
 		}
 
 		#region REVIEWS
 		[HttpGet]
-		public IActionResult Reviews()
+		public async Task<IActionResult> Reviews()
 		{
 			return View(_context.reviewModels);
 		}
 
 		[HttpGet]
-		public IActionResult ReviewAdd()
+		public async Task<IActionResult> ReviewAdd()
 		{
 			return View();
 		}
 
 		[HttpPost]
-		public async Task<IActionResult> ReviewAdd(ReviewModel reviewModel)
+		public async Task<ViewResult> ReviewAdd(ReviewModel reviewModel)
 		{
 			_context.reviewModels.Add(reviewModel);
 			await _context.SaveChangesAsync();
@@ -62,7 +62,7 @@ namespace LandingPage.Controllers
 		}
 
 		[HttpGet]
-		public IActionResult ReviewDelete(int id)
+		public async Task<IActionResult> ReviewDelete(int id)
 		{
 			var review = _context.reviewModels.Find(id);
 			_context.reviewModels.Remove(review);
@@ -71,14 +71,14 @@ namespace LandingPage.Controllers
 		}
 
 		[HttpGet]
-		public IActionResult ReviewEdit(int id)
+		public async Task<IActionResult> ReviewEdit(int id)
 		{
 			var review = _context.reviewModels.Find(id);
 			return View(review);
 		}
 
 		[HttpPost]
-		public IActionResult ReviewEdit(ReviewModel reviewModel)
+		public async Task<IActionResult> ReviewEdit(ReviewModel reviewModel)
 		{
 			var _review = _context.reviewModels.Find(reviewModel.Id);
 			_review.Review = reviewModel.Review;
@@ -91,7 +91,7 @@ namespace LandingPage.Controllers
 
 		#region CALLS
 		[HttpGet]
-		public IActionResult DeleteCall(int id)
+		public async Task<IActionResult> DeleteCall(int id)
 		{
 			_context.callBackModels.Remove(_context.callBackModels.Find(id));
 			_context.SaveChanges();
@@ -100,7 +100,7 @@ namespace LandingPage.Controllers
 		}
 
 		[HttpGet]
-		public IActionResult Calls()
+		public async Task<IActionResult> Calls()
 		{
 			return View(_context.callBackModels);
 		}
@@ -108,7 +108,7 @@ namespace LandingPage.Controllers
 
 		#region COUNTRIES
 		[HttpGet]
-		public IActionResult Countries()
+		public async Task<IActionResult> Countries()
 		{
 			// default shall be Russian 
 			var model = Functions.generateAdminCountriesData(_context, _icons);
@@ -124,8 +124,8 @@ namespace LandingPage.Controllers
 				{
 					ID = model[0].ID,
 					Tags = model[0].Tags,
-					PriceEuro = model[0].PriceEuro,
-					PriceUsd = model[0].PriceUsd
+					Price = model[0].Price,
+					Currency = model[0].Currency
 				};
 
 				ViewBag.Images = photoPaths;
@@ -143,7 +143,7 @@ namespace LandingPage.Controllers
 		}
 
 		[HttpPost]
-		public PartialViewResult LoadImages([FromBody] int selectedCountry)
+		public async Task<PartialViewResult> LoadImages([FromBody] int selectedCountry)
 		{
 			// get the country's name 
 			var name = _context.swiperModels.Find(selectedCountry);
@@ -156,7 +156,7 @@ namespace LandingPage.Controllers
 		}
 
 		[HttpPut]
-		public PartialViewResult LoadImages([FromForm] IFormCollection country)
+		public async Task<PartialViewResult> LoadImages([FromForm] IFormCollection country)
 		{
 			string absoluteFilePath, relativeFilePath;
 
@@ -191,7 +191,7 @@ namespace LandingPage.Controllers
 		}
 
 		[HttpPost]
-		public PartialViewResult DeleteImage([FromBody] PicturePath data)
+		public async Task<PartialViewResult> DeleteImage([FromBody] PicturePath data)
 		{
 			var countryModel = _context.swiperImagesAndPictures.Find(data.pictureID);
 
@@ -224,10 +224,15 @@ namespace LandingPage.Controllers
 		}
 
 		[HttpPost]
-		public PartialViewResult LoadTags([FromBody] int selectedCountry)
+		public async Task<PartialViewResult> LoadTags([FromBody] int selectedCountry)
 		{
 			// get the country's name 
 			var name = _context.swiperModels.Find(selectedCountry);
+			if (name is null)
+			{
+				selectedCountry = _context.swiperModels.FirstOrDefault().ID;
+				name = _context.swiperModels.Find(selectedCountry);
+			}
 
 			CountryNoPics countryNoPics = new();
 			countryNoPics.Tags = new();
@@ -254,8 +259,8 @@ namespace LandingPage.Controllers
 			CountryTagsNPrices countryTagsNPrices = new()
 			{
 				Tags = countryNoPics.Tags,
-				PriceEuro = name.PriceEuro,
-				PriceUsd = name.PriceUsd
+				Price = name.Price,
+				Currency = name.Currency
 			};
 
 			ViewBag.ID = selectedCountry;
@@ -264,7 +269,7 @@ namespace LandingPage.Controllers
 
 
 		[HttpPost]
-		public PartialViewResult LoadPopUp([FromBody] int selectedCountry)
+		public async Task<PartialViewResult> LoadPopUp([FromBody] int selectedCountry)
 		{
 			// get the country's name 
 			var country = _context.swiperModels.Find(selectedCountry);
@@ -286,8 +291,8 @@ namespace LandingPage.Controllers
 				Id = selectedCountry,
 				Name = country.CountryName,
 				ifTagsPresent = ifPresent,
-				PriceEuro = country.PriceEuro,
-				PriceUsd = country.PriceUsd
+				Currency = country.Currency,
+				Price = country.Price
 			};
 
 			// compare tags 
@@ -302,7 +307,7 @@ namespace LandingPage.Controllers
 		}
 
 		[HttpPost]
-		public PartialViewResult SubmitPoster([FromBody] CountryFull countryFull)
+		public async Task<PartialViewResult> SubmitPoster([FromBody] CountryFull countryFull)
 		{
 			var country = _context.swiperModels.Find(countryFull.Id);
 
@@ -325,8 +330,8 @@ namespace LandingPage.Controllers
 			// update the db entry
 			country!.Tags = assembledTags;
 			country.CountryName = countryFull.Name;
-			country.PriceEuro = (float)Convert.ToDouble(countryFull.PriceEuro);
-			country.PriceUsd = (float)Convert.ToDouble(countryFull.PriceUsd);
+			country.Price = countryFull.Price;
+			country.Currency = countryFull.Currency;
 			_context.SaveChanges();
 
 
@@ -354,8 +359,8 @@ namespace LandingPage.Controllers
 			CountryTagsNPrices countryTagsNPrices = new()
 			{
 				Tags = countryNoPics.Tags,
-				PriceEuro = country.PriceEuro,
-				PriceUsd = country.PriceUsd
+				Currency = country.Currency,
+				Price = country.Price
 			};
 
 			ViewBag.ID = countryFull.Id;
@@ -363,7 +368,7 @@ namespace LandingPage.Controllers
 		}
 
 		[HttpPost]
-		public IActionResult CountryAdd([FromBody] CountryFull countryFull)
+		public async Task<IActionResult> CountryAdd([FromBody] CountryFull countryFull)
 		{
 			SwiperModel country = new();
 			// assemble the tags 
@@ -384,8 +389,8 @@ namespace LandingPage.Controllers
 			// update the db entry
 			country.Tags = assembledTags;
 			country.CountryName = countryFull.Name;
-			country.PriceEuro = (float)Convert.ToDouble(countryFull.PriceEuro);
-			country.PriceUsd = (float)Convert.ToDouble(countryFull.PriceUsd);
+			country.Currency = countryFull.Currency;
+			country.Price = countryFull.Price;
 			_context.swiperModels.Add(country);
 			_context.SaveChanges();
 
@@ -414,8 +419,8 @@ namespace LandingPage.Controllers
 			CountryTagsNPrices countryTagsNPrices = new()
 			{
 				Tags = countryNoPics.Tags,
-				PriceEuro = country.PriceEuro,
-				PriceUsd = country.PriceUsd
+				Currency = country.Currency,
+				Price = country.Price
 			};
 
 			ViewBag.ID = countryFull.Id;
@@ -424,7 +429,7 @@ namespace LandingPage.Controllers
 		}
 
 		[HttpPost]
-		public IActionResult ListCountries([FromBody] string data)
+		public async Task<IActionResult> ListCountries([FromBody] string data)
 		{
 			var countries = _context.swiperModels.Select(s => new ExtraMinCountryModel() { ID = s.ID, Name = s.CountryName }).ToList();
 
@@ -439,9 +444,45 @@ namespace LandingPage.Controllers
 			return PartialView("_AdminCountries", countries);
 		}
 
-		public IActionResult DeleteCountry([FromBody] string ID)
+		[HttpPost]
+		public async Task<PartialViewResult> DeleteCountry([FromBody] string ID)
 		{
-			return null;
+			int Pid = Convert.ToInt32(ID);
+			// find the parent & delete him
+			_context.swiperModels.Remove(_context.swiperModels.Find(Pid));
+
+			// get the list of those pics
+			var allPics = _context.swiperImagesAndPictures
+				.Where(s => s.CountryID == Pid)
+				.ToList();
+
+			// delete all pics associated with him
+			_context.swiperImagesAndPictures.RemoveRange(allPics);
+			_context.SaveChanges();
+
+
+			// for the view update
+			//var countries = _context.swiperModels.Select(s => new ExtraMinCountryModel() { ID = s.ID, Name = s.CountryName }).ToList();
+
+			//foreach (var country in countries)
+			//{
+			//	if (country.Name.Split("|").Length > 1)
+			//	{
+			//		country.Name = country.Name.Split("|")[0];
+			//	}
+			//}
+
+			//return PartialView("_AdminCountries", countries);
+
+			// get the country's name 
+			var name = _context.swiperModels.Find(_context.swiperModels.FirstOrDefault().ID);
+
+			var photoPaths = _context.swiperImagesAndPictures
+				.Where(country => country.CountryID == name.ID)
+				.ToList();
+
+			return PartialView("_AdminCountryImages", photoPaths);
+			//return PartialView("_AdminCountries");
 		}
 		#endregion
 	}

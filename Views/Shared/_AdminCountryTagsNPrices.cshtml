@@ -13,8 +13,8 @@
 			<p>Название: </p>
 		</div>
 		<div class="prices">
-			<p>Цена в $: @Model?.PriceUsd</p>
-			<p>Цена в €: @Model?.PriceEuro</p>
+			<p>Цена: @Model?.Price</p>
+			<p>Валюта @Model?.Currency</p>
 		</div>
 
 		<div class="TAGS">
@@ -24,9 +24,9 @@
 			}
 		</div>
 
-		<button class="tag_button" onclick="openPopUp(this)">Редактировать</button>
+		<button class="tag_button" onclick="openPopUp(this)">Редактировать страну</button>
 
-		<button class="tag_button" onclick="deleteThis(this)">Удалить</button>
+		<button class="tag_button" onclick="deleteCountry(this)">Удалить страну</button>
 	}
 	else
 	{

@@ -44,9 +44,11 @@ function deleteImage(element) {
     });
 }
 
-function deleteThis(eleemnt) {
+function deleteCountry(eleemnt) {
 
     let Cid = document.querySelector('#countrySelectedID').textContent;
+
+    console.log(Cid);
 
     $.ajax({
         url: '/Admin/DeleteCountry',
@@ -54,7 +56,30 @@ function deleteThis(eleemnt) {
         data: JSON.stringify(Cid),
         contentType: 'application/json',
         success: function (result) {
-            //$('.popup').html(result);
+            $('#CountryImages').html(result);
+            hookAccordion();
+
+            $.ajax({
+                url: '/Admin/ListCountries',
+                type: 'POST',
+                data: JSON.stringify("dd"),
+                contentType: 'application/json',
+                success: function (result2) {
+                    $('#CountryData').html(result2);
+                    hookAccordion();
+                }
+            });
+
+            $.ajax({
+                url: '/Admin/LoadTags',
+                type: 'POST',
+                data: JSON.stringify(Cid),
+                contentType: 'application/json',
+                success: function (result) {
+                    $('#TagsNPrices').html(result);
+                }
+            });
+
         }
     });
 }

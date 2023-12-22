@@ -71,10 +71,10 @@ namespace LandingPage.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<float>("PriceEuro")
+                    b.Property<float>("Currency")
                         .HasColumnType("REAL");
 
-                    b.Property<float>("PriceUsd")
+                    b.Property<float>("Price")
                         .HasColumnType("REAL");
 
                     b.Property<string>("Tags")

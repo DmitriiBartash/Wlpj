@@ -1,12 +1,18 @@
 ﻿function SelectCountry(element) {
     let desiredId;
-    desiredId = (element.getAttribute("id") == "selectedCountry") ? element.textContent : element.getAttribute("id");
+    let copyID = Number(element);
+
+    if (!Number.isInteger(copyID)) {
+        desiredId = (element.getAttribute("name") == "selectedCountry") ? element.textContent : element.getAttribute("name");
+    }
+    else {
+        desiredId = element;
+    }
 
     let dataJSON = {
         "countryID": desiredId,
         "selectedLanguage": selectedLanguage
     }
-    console.log(dataJSON);
 
     $.ajax({
         url: '/Home/LoadSwiper',

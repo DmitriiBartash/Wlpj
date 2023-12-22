@@ -166,7 +166,7 @@ function assembleData() {
         "Id": countryId,
         "Name": names,
         "ifTagsPresent": tags,
-        "PriceUsd": priceUsd,
-        "PriceEuro": priceEuro
+        "Price": priceUsd,
+        "Currency": priceEuro
     };
 }

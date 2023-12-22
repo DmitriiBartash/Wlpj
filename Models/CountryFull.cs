@@ -7,7 +7,7 @@ namespace LandingPage.Models
 		public int Id { get; set; }
 		public string Name { get; set; }
 		public bool[] ifTagsPresent { get; set; }
-		public double PriceUsd { get; set; }
-		public double PriceEuro { get; set; }
+		public int Price { get; set; }
+		public string Currency { get; set; }
 	}
 }

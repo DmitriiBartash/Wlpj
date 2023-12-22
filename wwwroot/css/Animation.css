@@ -1,4 +1,4 @@
-﻿#svg5 {
+﻿., #svg5 {
     /*scale: 2;*/
     border-radius: 35%;
     width: 80%;
@@ -247,22 +247,22 @@
 }
 
 
-#From {
+/*#From {
     transform-origin: left;
     transform-box: content-box;
-    animation: ttt 1s linear infinite forwards alternate;
+    animation: ttt 1s linear infinite forwards alternate;*/
     /* animation-delay: 2s; */
-}
+/*}
 
 @keyframes ttt {
-    0% {
+    0% {*/
         /* transform: translateY(0px); */
-        transform: scale(0);
+        /*transform: scale(0);
         opacity: 0.5;
     }
 
-    100% {
+    100% {*/
         /* transform: translateY(2px); */
-        opacity: 1;
+        /*opacity: 1;
     }
-}
+}*/

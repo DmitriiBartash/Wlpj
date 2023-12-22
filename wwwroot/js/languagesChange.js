@@ -83,6 +83,9 @@ function changeLanguage(element) {
                 },
                 {
                     "reviews": "Что о нас говорят?"
+                },
+                {
+                    "swiper-tagdescriptionText": "Цена включает:"
                 }
             ],
             "Eng": [
@@ -107,6 +110,7 @@ function changeLanguage(element) {
                 {
                     "hot-deals-container": "Hot Offers"
                 },
+
                 {
                     "heading_about_us": "What do we offer?",
                     "information-cards": [
@@ -155,6 +159,9 @@ function changeLanguage(element) {
                 },
                 {
                     "reviews": "What are we known for?"
+                },
+                {
+                    "swiper-tagdescriptionText": "Price includes:"
                 }
             ],
             "Ro": [
@@ -179,6 +186,7 @@ function changeLanguage(element) {
                 {
                     "hot-deals-container": "Oferte Fierbinți"
                 },
+
                 {
                     "heading_about_us": "Ce noi oferim?",
                     "information-cards": [
@@ -227,6 +235,9 @@ function changeLanguage(element) {
                 },
                 {
                     "reviews": "Ce spun despre noi?"
+                },
+                {
+                    "swiper-tagdescriptionText": "Pretul include:"
                 }
             ]
         }
@@ -263,6 +274,12 @@ function changeLanguage(element) {
             informationCardsDiv.children[i].children[3].innerHTML = languageModelJson[selectedLanguage][3]["information-cards"][i]["information_cards_text"];
         }
 
+        // price includes... 
+        //console.log(document.querySelector(".swiper-tagdescription p"));
+        //document.querySelector(".tags").children[0].innerHTML = languageModelJson[selectedLanguage][9]["swiper-tagdescriptionText"];
+        ////document.querySelector(".swiper-tagdescription p").innerHTML = languageModelJson[selectedLanguage][9]["swiper-tagdescriptionText"];
+
+
         // FACTS
         document.getElementsByClassName("heading_about_us")[1].innerHTML = languageModelJson[selectedLanguage][4]["about-us"]["heading_about_us"];
 
@@ -288,7 +305,9 @@ function changeLanguage(element) {
 
         //document.querySelector(".testimonials-heading").innerHTML = languageModelJson[selectedLanguage][8]["reviews"];
 
-        SelectCountry(document.querySelector(`#selectedCountry`));
+        SelectCountry(document.querySelector(`#selectedCountry`).textContent);
+
+        //SelectCountry(document.querySelector(`#selectedCountry`));
 
     }
     currentLanguage = selectedLanguage;
