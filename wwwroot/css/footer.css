@@ -13,7 +13,7 @@
 .rectangle_min {
     width: 100%;
     min-height: 7vh;
-    ;
+    align-items: center;    
     background: #dadada;
     display: flex;
     justify-content: center;

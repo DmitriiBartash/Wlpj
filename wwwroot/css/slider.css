@@ -297,6 +297,9 @@
 }
 
 .firstSwiper > .slick-dots {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     top: 0px;
     left: 0;
     background-color: antiquewhite;

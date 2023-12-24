@@ -92,11 +92,10 @@ ul.nav-links {
 }
 
 .radio__label {
-    /*padding: 8px 14px;*/
     padding: 1vw 1vw;
-    /*font-size: 15px;*/
     font-family: sans-serif;
     color: black;
+    font-size: 1vw;
     background: #FCE883;
     cursor: pointer;
     transition: background-color 0.1s;

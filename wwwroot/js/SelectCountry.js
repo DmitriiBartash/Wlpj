@@ -2,6 +2,13 @@
     let desiredId;
     let copyID = Number(element);
 
+    // for debug purposesy
+    //console.log(element);
+    console.log(element.getAttribute("data-slick-index"));
+    console.log(currentSecondSlideNumber);
+    currentSecondSlideNumber = parseInt(element.getAttribute("data-slick-index"));
+    console.log(currentSecondSlideNumber);
+
     if (!Number.isInteger(copyID)) {
         desiredId = (element.getAttribute("name") == "selectedCountry") ? element.textContent : element.getAttribute("name");
     }

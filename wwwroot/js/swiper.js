@@ -1,9 +1,22 @@
+let currentSecondSlideNumber = 0;
+let slider1;
+
 hookSlicks();
 
-let currentSlideNumber = 0;
 
-let slider1;
 function hookSlicks() {
+    // hook events
+    //$('.secondSwiper').on('init', function (slick) {
+    //    console.log("init");
+    //})
+
+    $('.secondSwiper').on('afterChange', function (slick, currentSlide) {
+        console.log("afterchange");
+        //$('.secondSwiper').slick('slickNext');
+
+        //SelectCountry();
+    })
+
     $('.firstSwiper').slick({
         infinite: true,
         speed: 500,
@@ -44,24 +57,8 @@ function hookSlicks() {
         ]
     });
 
-    //slider1 = $('.firstSwiper').slick();
 
-    //$('.secondSwiper').on('beforeChange',
-    //    function (event, slick, currentSlide, nextSlide) {
-    //        currentSlideNumber--;
-    //        console.log(document.querySelector(".slick-center").getAttribute("name"));
-
-    //        SelectCountry(document.querySelector(".slick-center").getAttribute("name"));
-    //        slider1.slickGoTo(currentSlideNumber);
-
-    //    });
-    $('.secondSwiper').on('afterChange',
-        function (event, slick, currentSlide, nextSlide) {
-            currentSlideNumber++;
-            console.log(document.querySelector(".slick-center").getAttribute("name"));
-
-            SelectCountry(document.querySelector(".slick-center").getAttribute("name"));
-
-            //slider1.slickGoTo(currentSlideNumber + 1);
-        });
+    const secondSwiperInstance = $('.secondSwiper').slick('getSlick');
+    secondSwiperInstance.slickGoTo(currentSecondSlideNumber, false);
 }
+
