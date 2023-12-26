@@ -5,35 +5,102 @@
 	Layout = "~/Views/Shared/_AdminLayuot.cshtml";
 }
 
-<h1>Звонки</h1>
+<style>
+	header {
+		display: flex;
+		justify-content: space-between;
+		border-bottom: 2px solid black;
+		padding: 1%;
+		margin: -0.6%;
+		background-color: #2c3968;
+		color: white;
+	}
 
-<table class="table">
-	<thead>
-		<tr>
-			<th>
-				<h1>Имя Фамилия</h1>
-			</th>
-			<th>
-				<h1>Номер телефона</h1>
-			</th>
-		</tr>
-	</thead>
-	<tbody>
-		@foreach (var item in Model)
-		{
-			<tr>
-				<td>
-					<h1>@Html.DisplayFor(modelItem => item.NameSurname)</h1>
-				</td>
-				<td>
-					<h1>@Html.DisplayFor(modelItem => item.PhoneNumber)</h1>
-				</td>
-				<td>
-					<a asp-action="DeleteCall" asp-route-id="@item.ID">Delete</a>
-				</td>
-			</tr>
+		header a {
+			color: white;
+			text-decoration: none;
+			font-size: 1rem;
 		}
-	</tbody>
-</table>
+
+			header a:hover {
+				color: red;
+			}
+
+	.body {
+		font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	}
+
+	.table {
+		width: 100%;
+		border: 5px solid grey;
+		border-collapse: collapse;
+		background: linear-gradient(to top left, powderblue, pink);
+	}
+
+	}
+
+	.table th {
+		border: 5px solid grey;
+		padding: 0.5%;
+	}
+
+	.table td {
+		border: 5px solid grey;
+		padding: 0.5%;
+	}
+
+	.delete_call:hover {
+		color: red;
+	}
+
+	.delete_call{
+		display: flex;
+		justify-content: center;
+	}
+</style>
+
+<header>
+	<a href="#">Admin Calls</a>
+
+	<div class="logout-container">
+		<a href="#">Log out</a> |
+		<a href="../Home/Index">Home</a>
+	</div>
+</header>
+
+<body>
+
+	<h1>Звонки</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    <h3>Имя Фамилия</h3>
+                </th>
+                <th>
+                    <h3>Номер телефона</h3>
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        <h1>@Html.DisplayFor(modelItem => item.NameSurname)</h1>
+                    </td>
+                    <td>
+                        <h1>@Html.DisplayFor(modelItem => item.PhoneNumber)</h1>
+                    </td>
+					<td>
+						<a class="delete_call" asp-action="DeleteCall" asp-route-id="@item.ID">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
 
 
