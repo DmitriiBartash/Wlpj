@@ -1,22 +1,13 @@
 ﻿using LandingPage.Data;
 using LandingPage.Models;
 using LandingPage.Utils;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Text;
 
-
-// to do:
-/*
-	when a new country is selected
-	dont update the whole swiper
-	update only pictures and tags
-	(upper part)
-	dont update countries
-*/
-
 namespace LandingPage.Controllers
 {
-	//[Authorize]
+	[Authorize]
 	public class AdminController : Controller
 	{
 		private readonly DatabaseContext _context;
