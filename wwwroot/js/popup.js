@@ -10,7 +10,8 @@ let popupTXT = "";
 
 function openPopUp(element) {
     popupTXT = document.querySelector("#popUPName");
-    if (element.textContent == "Редактировать") {
+    console.log(element.textContent);
+    if (element.textContent == "Редактировать страну") {
         popupTXT.textContent = "Изменить страну";
 
         let id = document.querySelector("#countrySelectedID").textContent;
