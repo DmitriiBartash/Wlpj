@@ -649,3 +649,7 @@ input[type="radio"] {
     font-family: 'PT Serif', serif;
     background-color: #c6ce19;
 }
+
+.panel_tag_button {
+    height: 50%;
+}
