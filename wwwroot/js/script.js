@@ -1,5 +1,11 @@
-let toggle_bar = document.querySelector(".nav-header-element");
+let icons = document.querySelector('.element-container');
+let buttonFloating = document.querySelector('.floating-button');
+let navLinks = document.querySelector('.nav-links');
+let isButtonActive = true;
+icons.style.display = "none";
 
+
+let toggle_bar = document.querySelector(".nav-header-element");
 let sidebar = document.querySelector(".sidebar");
 
 toggle_bar.addEventListener("click", function () {
@@ -28,6 +34,26 @@ floatingButton.addEventListener('click', () => {
         isMenuOpen = false;
     }
 });
+
+buttonFloating.onclick = function () {
+    console.log("asd");
+    isButtonActive = !isButtonActive;
+    if (isButtonActive) {
+        icons.style.display = "none";
+    }
+    else {
+        icons.style.display = "block";
+    }
+};
+
+
+for (const element of navLinks.children) {
+    element.addEventListener('click', function (event) {
+        document.querySelector('.fa.fa-times').click();
+    });
+}
+
+
 
 // reveal();
 // window.addEventListener('scroll', reveal);

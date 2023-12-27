@@ -1,5 +1,4 @@
-﻿
-let selectedLanguage = "Ru";
+﻿let selectedLanguage = "Ru";
 let currentLanguage = "Ru";
 
 const ruElement = document.querySelector('#myRadio3');
@@ -77,7 +76,7 @@ function changeLanguage(element) {
                 },
                 {
                     "footer": {
-                        "FIND US": "Найди нас ➜",
+                        "findUs": "Найди нас ➜",
                         "phone_numberes": "Связь с нами: <br> 060 144 445 <br> 068 525 050"
                     }
                 },
@@ -147,13 +146,13 @@ function changeLanguage(element) {
                 },
                 {
                     "TEXT": {
-                        "NAITI": "Where can you find us? <br><br>”Emirat Travel”<br>Str.ALbisoara 4, oficiu 611 <br> Moldova, Chisinau “Atrium” BC",
+                        "NAITI": "Where can you findUs? <br><br>”Emirat Travel”<br>Str.ALbisoara 4, oficiu 611 <br> Moldova, Chisinau “Atrium” BC",
                         "Grafik": "<br>Schedule:<br><br>10:00 - 19:00, Monday-Saturday<br>8:00 - 20:00, by prior arrangement<br><br>Our contacts: <br><br>+373 601 44 445<br>+373 601 44 442<br>+373 621 57 575"
                     }
                 },
                 {
                     "footer": {
-                        "FIND US": "Find us ➜",
+                        "findUs": "findUs ➜",
                         "phone_numberes": "Contact us: <br> 060 144 445 <br> 068 525 050"
                     }
                 },
@@ -229,7 +228,7 @@ function changeLanguage(element) {
                 },
                 {
                     "footer": {
-                        "FIND US": "Găsiți-ne ➜",
+                        "findUs": "Găsiți-ne ➜",
                         "phone_numberes": "Contactează-ne: <br> 060 144 445 <br> 068 525 050"
                     }
                 },
@@ -299,18 +298,35 @@ function changeLanguage(element) {
         document.getElementsByClassName("Grafik")[0].innerHTML = languageModelJson[selectedLanguage][6]["TEXT"]["Grafik"];
 
         // FOOTER 
-        document.querySelector(".social_network p").innerHTML = languageModelJson[selectedLanguage][7]["footer"]["FIND US"];
+        document.querySelector(".social_network p").innerHTML = languageModelJson[selectedLanguage][7]["footer"]["findUs"];
         document.getElementsByClassName("phone_numberes")[0].innerHTML = languageModelJson[selectedLanguage][7]["footer"]["phone_numberes"];
 
 
         //document.querySelector(".testimonials-heading").innerHTML = languageModelJson[selectedLanguage][8]["reviews"];
 
-        SelectCountry(document.querySelector(`#selectedCountry`).textContent);
 
         //SelectCountry(document.querySelector(`#selectedCountry`));
 
+
+        let dataJSON = {
+            "countryID": document.querySelector(`#selectedCountry`).textContent,
+            "selectedLanguage": selectedLanguage
+        }
+
+        $.ajax({
+            url: '/Home/LoadSwiper',
+            type: 'POST',
+            data: JSON.stringify(dataJSON),
+            contentType: 'application/json',
+            success: function (result) {
+                $('.hot-deals-container').html(result);
+                isFirstStart = false;
+                hookSlicks();
+            }
+        });
+
+        SelectCountry(document.querySelector(`#selectedCountry`).textContent);
     }
     currentLanguage = selectedLanguage;
-
 }
 

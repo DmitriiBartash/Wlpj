@@ -1,34 +1,40 @@
 .findus-container {
-    min-height: 50vh;
+    height: 60vh;
+    width: 100%;
 }
 
 /*Where are we from*/
 .back_rectangle {
+    position: relative;
     margin: auto;
-    margin-top: 15%;
-    width: 55%;
-    height: 395px;
+    width: 70%;
+    display: flex;
+    height: inherit;
     background-color: #FFEF60;
     border-radius: 20px;
 }
 
 .before_rectangle {
-    width: 100%;
-    height: 400px;
-    display: flex;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 110%;
+    height: 50vh;
+    z-index: -1;
     background-color: #FCE883;
     border-radius: 20px;
     transform: rotate(8deg);
-    padding-left: 7%;
 }
 
 .TEXT {
     font-family: 'Lobster', cursive;
-    transform: rotate(-8deg);
     width: 90%;
     text-align: left;
-    font-size: 0.95rem;
-    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    font-size: 1.3vw;
+    padding: 0 0 0 2%;
+    flex-direction: column;
 }
 
     .TEXT span {
@@ -36,85 +42,96 @@
     }
 
 .map {
+    width: 100%;
     position: relative;
-    left: 15%;
-    top: 5%;
-    transform: rotate(-8deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .owner_map {
-    width: 65%;
+    width: 80%;
     height: 80%;
 }
 
 .arrow_up {
+    position: absolute;
     width: 45%;
     height: 50%;
-    bottom: 118%;
-    right: 15%;
+    left: 0;
+    top: -25%;
     transform: rotate(45deg);
-    z-index: -1;
+    z-index: 0;
 }
 
 .arrow_right {
+    position: absolute;
     width: 45%;
     height: 50%;
-    bottom: 90%;
-    left: 15%;
+    top: 0;
+    right: 0;
     transform: rotate(57deg);
-    z-index: -1;
+    z-index: 0;
 }
 
 .arrow_under {
+    position: absolute;
     width: 45%;
     height: 50%;
-    bottom: 65%;
-    right: 15%;
+    bottom: 0;
+    left: 0;
     transform: rotate(-47deg);
-    z-index: -1;
+    z-index: 0;
 }
 
 
 
 @media (max-width: 961px ) {
-
     .back_rectangle {
-        width: 70%;
-        height: 650px;
+        width: 90% !important;
+        height: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .findus-container {
+        height: 90vh !important;
     }
 
     .before_rectangle {
-        width: 90%;
-        height: 95%;
-        transform: rotate(0deg);
-        padding: 0%;
-        position: relative;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        display: block;
+        display: none !important;
+    }
+
+    .NAITI {
+        width: 98%;
     }
 
     .TEXT {
-        width: 100%;
-        height: 40%;
+        width: 98%;
         transform: rotate(0deg);
+        font-size: 1.3rem;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         justify-content: space-around;
     }
 
+    .owner_map {
+        height: 100% !important;
+        width: 100% !important;
+    }
+
+    .arrow_up, .arrow_right, .arrow_under {
+        display: none !important;
+    }
+
     .Grafik {
-        width: 40%;
+        width: 100%;
     }
 
     .map {
         width: 100%;
         height: 50%;
-        transform: rotate(0deg);
-        top: 10%;
-        left: 20%;
     }
 
     .arrow_up {
@@ -127,27 +144,5 @@
 
     .arrow_under {
         bottom: 57%;
-    }
-}
-
-@media (max-width: 500px ) {
-    .back_rectangle {
-        height: 530px;
-    }
-
-    .TEXT {
-        font-size: 0.78rem;
-    }
-
-    .arrow_up {
-        bottom: 117%;
-    }
-
-    .arrow_right {
-        left: 10%;
-    }
-
-    .arrow_under {
-        bottom: 67%;
     }
 }

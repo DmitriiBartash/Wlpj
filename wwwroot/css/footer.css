@@ -10,20 +10,24 @@
     justify-content: space-around;
 }
 
+.findUs {
+    font-size: 1.5vw;
+}
+
 .rectangle_min {
     width: 100%;
     min-height: 7vh;
-    align-items: center;    
+    align-items: center;
     background: #dadada;
     display: flex;
     justify-content: center;
     font-family: 'Lobster', cursive;
-    font-size: 1.5rem;
+    font-size: 1.5vw;
 }
 
 .logo_footer {
-    width: 7%;
-    height: 7%;
+    width: 20vh;
+    /*height: 7%;*/
 }
 
 .social_network {
@@ -49,14 +53,14 @@
 
 .dates {
     font-family: 'Lobster', cursive;
-    font-size: 1.5rem;
+    font-size: 1.5vw;
     color: #848484;
     text-align: left;
 }
 
 .phone_numberes {
     font-family: 'Lobster', cursive;
-    font-size: 1.5rem;
+    font-size: 1.5vw;
     color: #848484;
     text-align: center;
 }

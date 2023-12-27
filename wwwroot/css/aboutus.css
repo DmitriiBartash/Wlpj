@@ -8,7 +8,7 @@
 }
 
 .heading_about_us {
-    font-size: 2rem;
+    font-size: 2vw;
     padding-top: 5%;
     text-align: center;
     color: white;
@@ -61,13 +61,13 @@
 .t_praim {
     margin: 0;
     font-weight: bold;
-    font-size: 2.5rem;
-    color: rgba(255, 255, 255, 0.8);
+    font-size: 2.2vw;
+    color: rgba(255, 255, 255, 1);
 }
 
 .information_cards_text {
     margin: 0;
-    font-size: 1.3rem;
+    font-size: calc((1.8vw + 3.8vh)/2);
 }
 
 /*Info about us*/
@@ -96,14 +96,14 @@
 
 .counter_about_us {
     margin: 0;
-    font-size: 5rem;
+    font-size: 4vw;
     color: white;
     font-family: 'Montserrat', sans-serif;
 }
 
 .text_counter {
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 2.5vw;
     text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
     animation: blink 12s infinite;
     -webkit-animation: blink 12s infinite;
@@ -112,7 +112,7 @@
 .text_A_us {
     margin: 0;
     font-weight: lighter;
-    font-size: 1.8rem;
+    font-size: calc((1.8vw + 3.8vh)/2);
 }
 
 @-webkit-keyframes blink {
@@ -157,6 +157,7 @@
 
     .Information_cards {
         display: flex;
+        padding: 0;
         flex-direction: column;
         width: 100%;
         justify-content: center;
@@ -175,8 +176,12 @@
         }
 
         .Information_cards img {
-            width: 40%;
+            width: 20vh;
         }
+
+    .hand_with_money, .people_notebook, .Earth {
+        width: 20vh;
+    }
 
     .prime_card,
     .second_card,
@@ -185,11 +190,13 @@
     }
 
     .t_praim {
-        font-size: 1.4rem;
+        font-size: 2rem;
+        word-break: auto-phrase;
     }
 
     .information_cards_text {
-        font-size: 1rem;
+        font-size: 1.5rem;
+        color: navajowhite;
     }
 
     /*Text counts*/
@@ -200,20 +207,26 @@
         align-items: center;
         text-align: center;
         word-break: break-word;
-        width: 50%;
+        width: 90%;
         height: 100%;
+        color: navajowhite;
         padding: 0 3%;
     }
 
     .counter_about_us {
-        font-size: 2.4rem;
+        font-size: 2.5rem;
     }
 
     .text_counter {
-        font-size: 1.4rem;
+        font-size: 2rem;
     }
 
     .text_A_us {
-        font-size: 1rem;
+        font-size: 1.5rem;
+    }
+
+    .text_about_us_container {
+        flex-direction: column;
+        align-items: center;
     }
 }

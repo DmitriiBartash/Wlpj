@@ -18,7 +18,7 @@ namespace LandingPage.Controllers
 			_icons = icons.value;
 		}
 
-		public async Task<IActionResult> Index()
+		public IActionResult Index()
 		{
 			//default shall be Russian
 			//MUST RETURN TO BACK
@@ -38,7 +38,7 @@ namespace LandingPage.Controllers
 		}
 
 		[HttpPost]
-		public async Task<IActionResult> AddUserDetails(CallBackModel callBackModel)
+		public IActionResult AddUserDetails(CallBackModel callBackModel)
 		{
 			// validate the data 
 			_context.callBackModels.Add(callBackModel);
@@ -47,7 +47,7 @@ namespace LandingPage.Controllers
 		}
 
 		[HttpPost]
-		public async Task<PartialViewResult> LoadSwiper([FromBody] StrCountry selectedCountry)
+		public PartialViewResult LoadSwiper([FromBody] StrCountry selectedCountry)
 		{
 			var model = Functions.generateCountriesData(_context, _countryCodes, _icons, selectedCountry);
 
@@ -67,6 +67,28 @@ namespace LandingPage.Controllers
 			}
 
 			return PartialView("_Swiper", model);
+		}
+
+		[HttpPost]
+		public PartialViewResult LoadSecondSwiper([FromBody] StrCountry selectedCountry)
+		{
+			var model = Functions.generateCountriesData(_context, _countryCodes, _icons, selectedCountry);
+
+			ViewBag.SelectedCountry = selectedCountry.countryID;
+
+			if (selectedCountry.selectedLanguage == "Ru")
+			{
+				ViewBag.PriceIncludes = "Цена включает:";
+			}
+			else if (selectedCountry.selectedLanguage == "Ro")
+			{
+				ViewBag.PriceIncludes = "Pretul include:";
+			}
+			else if (selectedCountry.selectedLanguage == "Eng")
+			{
+				ViewBag.PriceIncludes = "Price includes:";
+			}
+			return PartialView("_FirstSwiper", model);
 		}
 	}
 }

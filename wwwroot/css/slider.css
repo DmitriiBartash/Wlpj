@@ -14,8 +14,10 @@
 }
 
 #svg4 {
-    height: 100%;
-    width: 100%;
+    display: flex;
+    margin: auto;
+    height: 80%;
+    width: 80%;
 }
 
 @media (min-width:800px) {
@@ -34,6 +36,10 @@
     height: 100%;
     width: 100%;
 }
+
+    .firstSwiper .slick-dots li button:before {
+        font-size: calc((1vw + 2vh)/2);
+    }
 
 .slick-list.draggable,
 .slick-track {
@@ -60,12 +66,40 @@
         content: "";
         position: absolute;
         height: 100%;
-        width: 20%;
-        left: -20%;
+        width: 30%;
+        left: -30%;
         background: #f12711;
         --mask: radial-gradient(40.36px at 57.00px 50%, #000 99%, #0000 101%) 0 calc(50% - 60px)/100% 120px, radial-gradient(40.36px at -27px 50%, #0000 99%, #000 101%) 30px 50%/100% 120px repeat-y;
         -webkit-mask: var(--mask);
         mask: var(--mask);
+    }
+
+    .swiper-tagdescription p {
+        font-size: 1.5rem !important;
+    }
+
+    #svg4 {
+        width: 100% !important;
+        height: 100% !important;
+    }
+}
+
+@media (min-width:800px) {
+    .swiper-tagdescription-items {
+        grid-template-rows: 5% 65% 30% !important;
+        /*grid-template-rows: 10% 50% 40% !important;*/
+    }
+
+    .tags {
+        margin: 0 !important;
+        padding-left: 0 !important;
+        width: 100% !important;
+        grid-column: span 2 !important;
+    }
+
+    .hotprice {
+        display: flex;
+        grid-column: span 2 !important;
     }
 }
 
@@ -91,7 +125,7 @@
     grid-template-rows: 65% 35%;
     height: 100%;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
 }
 
 .swiper-tagdescription p {
@@ -104,14 +138,6 @@
     font-weight: bold;
     line-height: 1.1;
 }
-
-@media (max-width:1100px) {
-    .swiper-tagdescription p {
-        font-size: 1.2em;
-        /*font-size: 0.9rem;*/
-    }
-}
-
 
 .swiper-tagdescription-items img {
     width: 10%;
@@ -299,15 +325,19 @@
 .firstSwiper > .slick-dots {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     top: 0px;
     left: 0;
     background-color: antiquewhite;
-    width: fit-content;
-    border-radius: 35px 0px 50px 0px;
-    height: fit-content;
+    width: 20vw;
+    border-radius: 5vw 0px 10vw 0px;
+    height: 3vh;
 }
 
+#firstSwiperHolder {
+    display: contents;
+    grid-column-start: 1;
+}
 
 /*Media screens for all*/
 @media (max-width:800px) {
@@ -318,8 +348,8 @@
     .InnerBlock {
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: 55% 38% 7%;
-        height: 80vh;
+        grid-template-rows: 50% 43% 7%;
+        height: 90vh;
         /*width: 50%;*/
         width: 80%;
         margin: auto;
@@ -331,29 +361,25 @@
         border-radius: 0;
     }
 
-    .swiper-tagdescription-items {
-        display: grid;
-        grid-template-columns: 60% 40%;
-        grid-template-rows: 100%;
-    }
 
-    .swiper-tagdescription::before {
-        content: "";
-        position: absolute;
-        height: 30%;
-        width: 100%;
-        top: -30%;
-        left: 0;
-        background: #f12711;
-        --mask: radial-gradient(34.99px at 50% 48.00px, #000 99%, #0000 101%) calc(50% - 60px) 0/120px 100%, radial-gradient(34.99px at 50% -18px, #0000 99%, #000 101%) 50% 30px/120px 100% repeat-x;
-        -webkit-mask: var(--mask);
-        mask: var(--mask);
-    }
 
-    .swiper-tagdescription p {
-        display: flex;
-        flex-direction: column;
-    }
+        .swiper-tagdescription::before {
+            content: "";
+            position: absolute;
+            /*height: 30%;*/
+            width: 100%;
+            /*top: -30%;*/
+            left: 0;
+            background: #f12711;
+            --mask: radial-gradient(34.99px at 50% 48.00px, #000 99%, #0000 101%) calc(50% - 60px) 0/120px 100%, radial-gradient(34.99px at 50% -18px, #0000 99%, #000 101%) 50% 30px/120px 100% repeat-x;
+            -webkit-mask: var(--mask);
+            mask: var(--mask);
+        }
+
+        .swiper-tagdescription p {
+            display: flex;
+            flex-direction: column;
+        }
 
     .tags {
         display: flex;
@@ -370,6 +396,8 @@
         }
 
     .tags-text p {
+        width: 100%;
+        grid-column-start: auto;
         font-size: 1em;
         /*font-size: 0.6rem;*/
         text-align: center;
@@ -383,6 +411,7 @@
         grid-column-start: 1;
         grid-column-end: 1;
         padding: 3%;
+        padding-left: 10%;
         height: 100%;
     }
 

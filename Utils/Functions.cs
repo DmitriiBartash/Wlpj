@@ -1,6 +1,5 @@
 ﻿using LandingPage.Data;
 using LandingPage.Models;
-using Microsoft.EntityFrameworkCore;
 
 namespace LandingPage.Utils
 {

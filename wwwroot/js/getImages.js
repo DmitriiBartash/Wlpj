@@ -1,5 +1,4 @@
-﻿
-function asyncGet() {
+﻿function asyncGet() {
     // Click the hidden file input.
     const clickElement = document.getElementById('hidden-file-input');
     clickElement.click();

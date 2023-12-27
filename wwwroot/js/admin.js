@@ -1,4 +1,3 @@
-
 let btnLeft = document.querySelector(".arrow left");
 let btnRight = document.querySelector(".arrow right");
 let allImgs;

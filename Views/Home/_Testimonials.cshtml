@@ -1,18 +1,30 @@
 ﻿@model IEnumerable<LandingPage.Models.ReviewModel>;
 
-@{
-	int incr = 0;
-}
-
 <p id="Anchor4"></p>
 <div class="testimonials">
 	<div class="testimonials-heading">Что о нас говорят?</div>
 
 	<div class="testimonials-swiper">
 
+		@* <div style="background-color:red;width:100px;height:500px;"></div>
+		<div style="background-color:blue;width:100px;height:500px;"></div>
+		<div style="background-color:green;width:100px;height:500px;"></div>
+
+		<div style="background-color:purple;width:100px;height:500px;"></div>
+		<div style="background-color:white;width:100px;height:500px;"></div>
+		<div style="background-color:bisque;width:100px;height:500px;"></div> *@
+
+		@* <div>your content</div>
+		<div>your content</div>
+		<div>your content</div>
+
+		<div>your content</div>
+		<div>your content</div>
+		<div>your content</div>
+		*@
+
 		@foreach (var item in Model)
 		{
-			@if (incr++ > 2) break;
 			<div class="testimonials-swiper-element">
 				<div class="text_testimonials-swiper_heading">
 					@item.Person
@@ -24,48 +36,11 @@
 						<img src="content/testimonials/star_testimonials.svg" width="25" height="25" style="position: relative">
 					</div>
 				</div>
-				<br>
 				<hr>
 				<p class="text_testimonials-swiper-element">
-					<br>"@item.Review"
+					"@item.Review"
 				</p>
 			</div>
 		}
-
-		@*  <div class="testimonials-swiper-element">
-		<div class="text_testimonials-swiper_heading">
-		Дима Барташ
-		<div class="star_1">
-		<img src="content/testimonials/star_testimonials.svg" width="25" height="25" style="position: relative">
-		<img src="content/testimonials/star_testimonials.svg" width="25" height="25" style="position: relative">
-		<img src="content/testimonials/star_testimonials.svg" width="25" height="25" style="position: relative">
-		<img src="content/testimonials/star_testimonials.svg" width="25" height="25" style="position: relative">
-		<img src="content/testimonials/star_testimonials.svg" width="25" height="25" style="position: relative">
-		</div>
-		</div>
-		<br>
-		<hr>
-		<p class="testimonials-swiper-element">
-		<br>"улкдтплдкутилтукитукитукдитдуктидуктиуклтитукитдуктидуктидуктитукдлиулкдтплдкутилтукитукитукдитдуктидуктиуклтитукитдуктидуктидуктитукдлиулкдтплдкутилтукитукитукдитдуктидуктиуклтитукитдуктидуктидуктитукдлиулкдтплдкутилтукитукитукдитдуктидуктиуклтитукитдуктидуктидуктитукдли"
-		</p>
-		</div>
-		<div class="testimonials-swiper-element">
-		<div class="text_testimonials-swiper_heading">
-		Барон Ррртищев
-		<div class="star_1">
-		<img src="content/testimonials/star_testimonials.svg" width="25" height="25" style="position: relative">
-		<img src="content/testimonials/star_testimonials.svg" width="25" height="25" style="position: relative">
-		<img src="content/testimonials/star_testimonials.svg" width="25" height="25" style="position: relative">
-		<img src="content/testimonials/star_testimonials.svg" width="25" height="25" style="position: relative">
-		<img src="content/testimonials/star_testimonials.svg" width="25" height="25" style="position: relative">
-		</div>
-		</div>
-		<br>
-		<hr>
-		<p class="testimonials-swiper-element">
-		<br>"улкдтплдкутилтукитукитукдитдуктидуктиуклтитукитдуктидуктидуктитукдлиулкдтплдкутилтукитукитукдитдуктидуктиуклтитукитдуктидуктидуктитукдлиулкдтплдкутилтукитукитукдитдуктидуктиуклтитукитдуктидуктидуктитукдлиулкдтплдкутилтукитукитукдитдуктидуктиуклтитукитдуктидуктидуктитукдли"
-		</p>
-		</div> *@
-
 	</div>
 </div>

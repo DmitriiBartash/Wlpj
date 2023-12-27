@@ -2,75 +2,64 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
-	@* <meta name="viewport" content="width=1000"> *@
-
-	<meta name="viewport" content="width=device-width,initial-scale=1.0; maximum-scale=1.0, user-scalable=no" />
-
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<title>@ViewData["Title"] - LandingPage</title>
 
+	<link rel="stylesheet" href="~/css/Fonts.css" />
+	<link rel="stylesheet" href="~/lib/slick/slickCDN.css" />
 
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-		  integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-	<link rel="stylesheet"
-		  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="~/css/mainpage.css" />
+	<link rel="stylesheet" href="~/css/header.css" />
+	<link rel="stylesheet" href="~/css/aboutus.css" />
+	<link rel="stylesheet" href="~/css/callrequest.css" />
+	<link rel="stylesheet" href="~/css/testimonials.css" />
+	<link rel="stylesheet" href="~/css/findus.css" />
+	<link rel="stylesheet" href="~/css/footer.css" />
+	<link rel="stylesheet" href="~/css/animations.css" />
+	<link rel="stylesheet" href="~/css/Animation.css" />
 
-	@*Fonts*@
-	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Sofia+Sans+Extra+Condensed:wght@700&display=swap"
-		  rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
-		  rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@700&display=swap" rel="stylesheet">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-	<link rel="stylesheet" href="~/css/mainpage.css" asp-append-version="true" />
-	<link rel="stylesheet" href="~/css/header.css" asp-append-version="true" />
-	<link rel="stylesheet" href="~/css/aboutus.css" asp-append-version="true" />
-	<link rel="stylesheet" href="~/css/callrequest.css" asp-append-version="true" />
-	<link rel="stylesheet" href="~/css/testimonials.css" asp-append-version="true" />
-	<link rel="stylesheet" href="~/css/findus.css" asp-append-version="true" />
-	<link rel="stylesheet" href="~/css/footer.css" asp-append-version="true" />
-	<link rel="stylesheet" href="~/css/animations.css" asp-append-version="true" />
-	<link rel="stylesheet" href="~/css/Animation.css" asp-append-version="true" />
-
-
-
-	<link rel="stylesheet" href="~/css/slider.css" asp-append-version="true" />
-	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+	<link rel="stylesheet" href="~/css/slider.css" />
 </head>
 <body>
-
 	<partial name="_Header" />
-	<partial name="_Video" />
 
-	<p id="Anchor1"></p>
-	<h2 class="hot-deals-header" id="hot_deals_h2">
-		Горящие предложения
-	</h2>
-	<div class="hot-deals-container">
-		<partial name="_Swiper" model="@ViewBag.SwiperViewModel" />
-	</div>
+	<section>
+		<partial name="_Video" />
+	</section>
+
+	<section style="display: flex;flex-direction: column;justify-content: flex-start;">
+		<p id="Anchor1"></p>
+		<h2 class="hot-deals-header" id="hot_deals_h2">
+			Горящие предложения
+		</h2>
+		<div class="hot-deals-container">
+			<partial name="_Swiper" model="@ViewBag.SwiperViewModel" />
+		</div>
+	</section>
 
 	<partial name="_AboutUs" />
-	<partial name="_CallUs" />
-	@* <partial name="_Testimonials" model="@ViewBag.ReviewModel" /> *@
-	<partial name="_Map" />
+
+	<section style="height: 100vh;display: flex;justify-content: center;align-items: center;align-content: center;">
+		<partial name="_CallUs" />
+	</section>
+
+	<partial name="_Testimonials" model="@ViewBag.ReviewModel" />
+
+	<section style="height: 100vh;display: flex;justify-content: center;align-items: center;align-content: center;">
+		<partial name="_Map" />
+	</section>
+
 	<partial name="_Footer" />
 
 	@RenderBody()
 
 	<script src="~/lib/jquery/dist/jquery.min.js"></script>
-	<script src="~/lib/jquery/dist/jquery.js"></script>
-	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script src="~/lib/slick/slick-min.js"></script>
+	@* <script src="~/lib/jquery/dist/jquery.js"></script> *@
 	<script src="~/js/languagesChange.js"></script>
 	<script src="~/js/SelectCountry.js"></script>
 	<script src="~/js/script.js"></script>
 	<script src="~/js/swiper.js"></script>
 	<script src="~/js/scrolling.js"></script>
-
 </body>
 </html>

@@ -1,3 +1,11 @@
+section {
+    height: 110vh;
+}
+
+body {
+    width: 100vw;
+}
+
 header {
     position: fixed;
     width: 100%;
@@ -18,6 +26,8 @@ header {
     color: black;
     /*color: #F4C430;*/
     padding: 10px 20px;
+    width: fit-content;
+    position: fixed;
     font-size: 2.5vw;
     /*font-size: 2.2rem;*/
     cursor: pointer;
@@ -82,6 +92,9 @@ ul.nav-links {
 .headerbar-languages {
     display: inline-flex;
     overflow: hidden;
+    position: absolute;
+    right: 1%;
+    top: 1vh;
     border-radius: 15px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
     margin: 10px;
@@ -95,7 +108,7 @@ ul.nav-links {
     padding: 1vw 1vw;
     font-family: sans-serif;
     color: black;
-    font-size: 1vw;
+    font-size: calc((1.8vw + 1.8vh)/2);
     background: #FCE883;
     cursor: pointer;
     transition: background-color 0.1s;
@@ -120,7 +133,42 @@ ul.nav-links {
     display: block;
     z-index: 1000;
     bottom: 30px;
-    left: 30px;
+    left: 1vh;
+    /*left: 30px;*/
+}
+
+@media (max-width:2000px) {
+    span.arrow-btn {
+        font-size: 2rem !important;
+    }
+
+    .floating-container .floating-button {
+        bottom: 2vh !important;
+        width: 2rem !important;
+        height: 2rem !important;
+        font-size: 3rem !important;
+    }
+
+    .fa-phone, .fa-instagram, .fa-facebook, .fa-telegram, .fa-whatsapp, .fa-phone-square {
+        font-size: 2rem !important;
+    }
+
+    .floating-container .float-element {
+        height: 2rem !important;
+        width: 2rem !important;
+    }
+
+    .floating-container {
+        width: 2rem !important;
+    }
+
+    .floating-container-show {
+        height: auto !important;
+    }
+
+    .element-container {
+        transform: translateY(-3rem);
+    }
 }
 
 span.arrow-btn {
@@ -376,9 +424,157 @@ span.arrow-btn {
 
 
 
-@media (max-width: 700px) {
-    /* Styles for screens smaller than 700px */
+@media (max-width: 1100px) and (min-width:768) {
+    /* Styles for screens smaller than 1100px and bbigger than 768 */
     .sidebar {
-        width: 100%;
+        width: 100% !important;
     }
+
+    .radio__label {
+        font-size: 1.5rem !important;
+    }
+
+    .nav-header-element {
+        font-size: 2rem !important;
+    }
+
+    span.arrow-btn {
+        font-size: 3rem !important;
+    }
+
+    .button-know-container .button-know span {
+        font-size: 2rem !important;
+    }
+
+    .mainpage-text h5 {
+        font-size: 3rem !important;
+    }
+
+    .mainpage-text h1 {
+        font-size: 2.5rem !important;
+    }
+
+    .mainpage-text p {
+        font-size: 1.5rem !important;
+    }
+
+    .floating-container-show {
+        height: 40vh !important;
+    }
+
+    .floating-container .floating-button {
+        height: 3rem !important;
+        width: 3rem !important;
+        font-size: 3rem !important;
+    }
+
+    .floating-container .float-element {
+        height: 2rem !important;
+        width: 2rem !important;
+    }
+
+    .fa-phone, .fa-instagram, .fa-facebook, .fa-telegram, .fa-whatsapp, .fa-phone-square {
+        font-size: 1.8rem !important;
+    }
+
+    .swiper-tagdescription p {
+        font-size: 1.1rem !important;
+    }
+
+    .hotprice {
+        width: 95% !important;
+    }
+
+    .heading_about_us {
+        font-size: 2.5rem !important;
+    }
+
+    .t_praim {
+        font-size: 2rem !important;
+    }
+
+    .information_cards_text {
+        font-size: 1.5rem !important;
+    }
+
+    .counter_about_us {
+        font-size: 2rem !important;
+    }
+
+    .text_counter {
+        font-size: 2rem !important;
+    }
+
+    .text_A_us {
+        font-size: 2rem !important;
+    }
+
+    .text_testimonials-swiper-element {
+        font-size: 1.3rem !important;
+    }
+
+    .text_testimonials-swiper_heading {
+        font-size: 1.5rem !important;
+    }
+
+    .TEXT {
+        font-size: 1.2rem !important;
+    }
+
+    .back_rectangle {
+        width: 80% !important;
+    }
+
+    .arrow_right {
+        top: -18% !important;
+        right: -10% !important;
+    }
+
+    .arrow-up {
+        left: -6% !important;
+        top: -16% !important;
+    }
+
+    .arrow-under {
+        bottom: -14% !important;
+        left: -13% !important;
+    }
+
+    .rectangle_min {
+        font-size: 1.5rem !important;
+    }
+
+    .phone_numberes {
+        font-size: 1.5rem !important;
+    }
+
+    .dates {
+        font-size: 1.5rem !important;
+    }
+
+    .findUs {
+        font-size: 1.5rem !important;
+    }
+
+    ul.nav-links {
+        height: 80vh;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+        ul.nav-links li a {
+            font-size: 2rem;
+            margin-bottom: 0;
+        }
+    /*
+    html {
+    scroll-snap-type: y proximity;
+}
+section {
+    height: 110vh;
+    scroll-snap-align: start;
+}
+*/
 }

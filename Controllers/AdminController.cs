@@ -4,6 +4,16 @@ using LandingPage.Utils;
 using Microsoft.AspNetCore.Mvc;
 using System.Text;
 
+
+// to do:
+/*
+	when a new country is selected
+	dont update the whole swiper
+	update only pictures and tags
+	(upper part)
+	dont update countries
+*/
+
 namespace LandingPage.Controllers
 {
 	//[Authorize]

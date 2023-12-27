@@ -1,7 +1,7 @@
 /*Call request*/
 .call-container {
-    min-height: 100vh;
     display: flex;
+    width: 90%;
     flex-direction: column;
     justify-content: center;
 }
@@ -9,7 +9,7 @@
 .call-header-text {
     padding: 20px 0;
     color: #ffb703;
-    font-size: 2.2rem;
+    font-size: 2vw;
     font-family: 'Rubik-PFDinDisplayPro', Arial, sans-serif;
     line-height: 1.45;
     border-color: transparent;
@@ -19,7 +19,9 @@
 
 .inputbox-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    /*flex-direction: row;*/
+    gap: 5vh;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
@@ -35,50 +37,57 @@
 .inputbox1,
 .inputbox-2,
 .inputbox2 {
-    padding: 0 20px;
+    /*padding: 0 20px;*/
     position: relative;
-    width: 23vw;
-    height: 30px;
+    /*width: 23vw;*/
+    width: 50%;
+    /*height: 30px;*/
     font-size: 16px;
     color: #fff;
     background: transparent;
 }
 
-    .inputbox-1 input,
-    .inputbox-2 input {
-        padding: 0 10px;
-        border: 1.2px solid #fff;
-        outline: none;
-        border-radius: 10px;
-    }
+.inputbox1 {
+    width: 100%;
+}
 
-    .inputbox-1 label {
-        position: absolute;
-        top: 50%;
-        left: 25px;
-        transform: translateY(-50%);
-        font-size: 1.2rem;
-        color: #fff;
-        padding: 0 5px;
-        pointer-events: none;
-        transition: 0.9s;
-    }
+.inputbox-1 input,
+.inputbox-2 input {
+    /*padding: 0 10px;*/
+    border: 1.2px solid #fff;
+    outline: none;
+    font-size: 4vh;
+    border-radius: 10px;
+}
 
-    .inputbox-1 input:focus ~ label,
-    .inputbox-1 input:valid ~ label {
-        top: 0;
-        font-size: 0.7rem;
-        filter: blur(20px);
-    }
+.inputbox-1 label {
+    position: absolute;
+    top: 50%;
+    left: 3%;
+    transform: translateY(-50%);
+    font-size: 4vh;
+    color: #fff;
+    padding: 0 5px;
+    pointer-events: none;
+    transition: 0.9s;
+}
+
+.inputbox-1 input:focus ~ label,
+.inputbox-1 input:valid ~ label {
+    top: 0;
+    font-size: 0.7rem;
+    filter: blur(20px);
+}
 
 .btn-call {
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    height: 100%;
-    width: 105%;
-    font-size: 1.2rem;
+    height: 10vh;
+    /*height: 100%;*/
+    width: 100%;
+    font-size: 4vh;
     cursor: pointer;
     border: none;
     border-radius: 5px;
@@ -94,7 +103,7 @@
     .btn-call::before {
         content: '';
         position: absolute;
-        width: 40px;
+        width: 100%;
         height: 600%;
         background: yellow;
         transition: 1s;
@@ -131,8 +140,9 @@
     position: relative;
     z-index: 1;
     font-size: 0.7em;
+    font-weight: bold;
     color: black;
-    opacity: 0.5;
+    /*opacity: 0.5;*/
     text-transform: uppercase;
     letter-spacing: 4px;
     transition: 0.5s;
@@ -160,6 +170,14 @@
     .inputbox-2,
     .inputbox2 {
         padding: 10px;
-        width: 100%;
+        width: calc(100% - 20px) !important;
     }
+
+        .inputbox-1 input, .inputbox-2 input {
+            font-size: 1.5rem !important;
+        }
+
+        .inputbox-1 label {
+            font-size: 1.5rem !important;
+        }
 }
