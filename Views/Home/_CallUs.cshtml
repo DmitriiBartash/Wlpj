@@ -5,17 +5,18 @@
 	<div class="call-header-text">
 		<h1> Хочу узнать поподробнее:</h1>
 	</div>
-	<form method="post" asp-action="AddUserDetails">
+	<form id="phoneForm">
 		<div class="inputbox-container inputbox">
 			<div class="inputbox-1">
 				<input type="text" class="inputbox1" asp-for="NameSurname" id="name" required /><label for="">Имя и фамилия</label>
 			</div>
 			<div class="inputbox-1">
-				<input type="text" pattern="\d*" class="inputbox1" asp-for="PhoneNumber" id="number" required /><label for="">Телефон</label>
+				<input type="number" class="inputbox1" asp-for="PhoneNumber" id="number" required /><label for="">Телефон</label>
 			</div>
 			<div class="inputbox-2">
 				<button class="btn-call" type="submit"><span>Перезвоните мне</span></button>
 			</div>
+			<div class="inputInformation"></div>
 		</div>
 	</form>
 </div>
