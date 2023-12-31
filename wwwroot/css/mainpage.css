@@ -13,7 +13,8 @@ body {
     padding: 0px;
     margin: 0px;
     overflow-x: hidden;
-    background-image: url("../content/background/background_sea.png");
+    background-image: url("../content/background/SEA.png");
+    background-size: cover;
     font-family: 'Open Sans', sans-serif;
     cursor: default;
 }

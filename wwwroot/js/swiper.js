@@ -75,9 +75,7 @@ window.addEventListener('resize', function (event) {
 
 function hookSlicks() {
     // hook events
-    console.log(currentSecondSlideNumber);
     $('.secondSwiper').on('afterChange', function (slick, direction) {
-        console.log("afterchange");
         currentSecondSlideNumber = $('.secondSwiper').slick('slickCurrentSlide');
         updateSecondSwiper();
 

@@ -4,20 +4,17 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 using System.Security.Cryptography;
+using AspNetCoreRateLimit;
+using Microsoft.AspNetCore.RateLimiting;
 
 namespace LandingPage.Controllers
 {
-	// redo the security
 	public class LoginController : Controller
 	{
 		[HttpGet]
 		public async Task<IActionResult> Index()
 		{
-			ClaimsPrincipal claimuser = HttpContext.User;
-
-			HashAlgorithm algorithm = new SHA256Managed();
-
-			if (claimuser.Identity.IsAuthenticated)
+			if (HttpContext.User.Identity.IsAuthenticated)
 			{
 				return RedirectToAction("Index", "Home");
 			}
@@ -25,26 +22,32 @@ namespace LandingPage.Controllers
 		}
 
 		[HttpPost]
+		[EnableRateLimiting("fixed")]
 		public async Task<IActionResult> Login(AdminModel userdetails)
 		{
-			if (userdetails.Login == "Admin" && userdetails.Password == "Admin")
+			// https://jasonwatmore.com/post/2022/01/16/net-6-hash-and-verify-passwords-with-bcrypt
+			string passwordHash = "$2a$11$MFUFQl6VLOLB.5VkC8SAluVGFyeELpvop8qP1T5wlOzYspqX5VbWW";
+
+			bool verified = BCrypt.Net.BCrypt.Verify(userdetails.Password, passwordHash);
+
+			if (userdetails.Login == "Admin" && verified)
 			{
-				List<Claim> claims = new List<Claim>()
+				List<Claim> claims = new()
 				{
 					new(ClaimTypes.NameIdentifier,userdetails.Login)
 				};
 				ClaimsIdentity claimsIdentity = new(claims, CookieAuthenticationDefaults.AuthenticationScheme);
 
-				AuthenticationProperties properties = new() { AllowRefresh = true, IsPersistent = true };
+				AuthenticationProperties properties = new() { AllowRefresh = true, IsPersistent = false };
 
 				await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new(claimsIdentity), properties);
 
-				return RedirectToAction("Index", "Home");
+				return RedirectToAction("Index", "Admin");
 			}
 			return View("Index");
 		}
 
-		public async Task<IActionResult> LogOut()
+		public async Task<IActionResult> Logout()
 		{
 			await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
 			return RedirectToAction("Index", "Home");

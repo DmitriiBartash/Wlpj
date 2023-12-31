@@ -6,8 +6,7 @@ let currentPos = 0;
 function changeMainPhoto(element) {
     const mainImg = document.querySelector(".main-photo img");
     currentImg = mainImg;
-    currentPos =
-        mainImg.src = element.src;
+    currentPos = mainImg.src = element.src;
 }
 
 function goBack() {
@@ -46,8 +45,6 @@ function deleteImage(element) {
 function deleteCountry(eleemnt) {
 
     let Cid = document.querySelector('#countrySelectedID').textContent;
-
-    console.log(Cid);
 
     $.ajax({
         url: '/Admin/DeleteCountry',

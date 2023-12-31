@@ -5,30 +5,36 @@ using LandingPage.Utils;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.RateLimiting;
 using System.Threading.RateLimiting;
+using Microsoft.Extensions.Options;
+using AspNetCoreRateLimit;
 
+// Create builder
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+// Add antiforgery
 builder.Services.AddAntiforgery(options => options.HeaderName = "X-CSRF-TOKEN");
 
+// Add https redirection
 builder.Services.AddHttpsRedirection(options =>
 {
 	options.RedirectStatusCode = StatusCodes.Status307TemporaryRedirect;
 	options.HttpsPort = 5001;
 });
 
-builder.Services.AddRateLimiter(options => options.AddFixedWindowLimiter(policyName: "fixed", options =>
+// Configure rate limiter for login attempts
+// 3 attempts and then 60 min ban
+// might remove it
+builder.Services.AddRateLimiter(options => options.AddFixedWindowLimiter(policyName: "fixed", _ =>
 {
-	options.PermitLimit = 4;
-	options.Window = TimeSpan.FromSeconds(12);
-	options.QueueProcessingOrder = QueueProcessingOrder.OldestFirst;
-	options.QueueLimit = 2;
+	_.PermitLimit = 3;
+	_.Window = TimeSpan.FromMinutes(60);
 }));
 
-builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-	.AddCookie(options =>
+// Configure cookies
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options =>
 {
 	options.Cookie.SecurePolicy = CookieSecurePolicy.Always;
 	options.Cookie.HttpOnly = true;
@@ -38,20 +44,28 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
 	options.LogoutPath = "/Login/LogOut";
 });
 
+// Coonect DB
 builder.Services.AddDbContext<DatabaseContext>(Options =>
 {
 	Options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
-// dependency injection
+// Add web optimizer for bundling and minifier
+builder.Services.AddWebOptimizer(pipeline =>
+{
+	pipeline.AddCssBundle("/css/bundledMain.css", "/css/mainpage.css", "/css/header.css", "/css/aboutus.css", "/css/callrequest.css", "/css/testimonials.css", "/css/findus.css", "/css/footer.css", "/css/animations.css", "/css/Animation.css", "/css/slider.css");
+
+	pipeline.AddJavaScriptBundle("/js/bundledMain.js", "/js/languagesChange.js", "/js/SelectCountry.js", "/js/script.js", "/js/swiper.js", "/js/scrolling.js", "/js/validateForm.js");
+});
+
+// Dependency injection
 CountryCodes countryCodes = new();
 Icons icons = new();
 builder.Services.AddSingleton<CountryCodes>(countryCodes);
 builder.Services.AddSingleton<Icons>(icons);
 
+// Build app
 var app = builder.Build();
-
-app.UseRateLimiter();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -61,13 +75,13 @@ if (!app.Environment.IsDevelopment())
 	app.UseHsts();
 }
 
-static string GetTicks() => (DateTime.Now.Ticks & 0x11111).ToString("00000");
-
-
+// Hook middleware
 app.UseHttpsRedirection();
+app.UseWebOptimizer();
 app.UseStaticFiles();
 
 app.UseRouting();
+app.UseRateLimiter();
 
 app.UseAuthentication();
 app.UseAuthorization();

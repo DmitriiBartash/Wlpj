@@ -169,8 +169,8 @@ namespace LandingPage.Controllers
 			{
 				int randomNumber = new Random((int)(DateTime.Now.Ticks - DateTime.UnixEpoch.Ticks)).Next();
 
-				absoluteFilePath = Path.Combine(absoluteRootPath, $"{countryEn.Normalize()}_{randomNumber}.jpg");
-				relativeFilePath = $"/content/img_for_swiper/{countryEn.Normalize()}_{randomNumber}.jpg";
+				absoluteFilePath = Path.Combine(absoluteRootPath, $"{countryEn.Normalize()}_{randomNumber}.webp");
+				relativeFilePath = $"/content/img_for_swiper/{countryEn.Normalize()}_{randomNumber}.webp";
 
 				// Create a new file stream to the destination file path.
 				using (var fileStream = new FileStream(absoluteFilePath, FileMode.Create))
@@ -268,10 +268,17 @@ namespace LandingPage.Controllers
 			return PartialView("_AdminCountryTagsNPrices", countryTagsNPrices);
 		}
 
-
 		[HttpPost]
 		public async Task<PartialViewResult> LoadPopUp([FromBody] int selectedCountry)
 		{
+			// compare tags 
+			// 0-	fly
+			// 1-   transfer
+			// 2-	accommodation
+			// 3-	nutrition
+			// 4-	insurance
+			// if the tag is not present, mark as false
+
 			// get the country's name 
 			var country = _context.swiperModels.Find(selectedCountry);
 
@@ -295,14 +302,6 @@ namespace LandingPage.Controllers
 				Currency = country.Currency,
 				Price = country.Price
 			};
-
-			// compare tags 
-			// 0-	fly
-			// 1-   transfer
-			// 2-	accommodation
-			// 3-	nutrition
-			// 4-	insurance
-			// if the tag is not present, mark as false
 
 			return PartialView("_AdminPopUp", countryFull);
 		}
@@ -461,20 +460,6 @@ namespace LandingPage.Controllers
 			_context.swiperImagesAndPictures.RemoveRange(allPics);
 			_context.SaveChanges();
 
-
-			// for the view update
-			//var countries = _context.swiperModels.Select(s => new ExtraMinCountryModel() { ID = s.ID, Name = s.CountryName }).ToList();
-
-			//foreach (var country in countries)
-			//{
-			//	if (country.Name.Split("|").Length > 1)
-			//	{
-			//		country.Name = country.Name.Split("|")[0];
-			//	}
-			//}
-
-			//return PartialView("_AdminCountries", countries);
-
 			// get the country's name 
 			var name = _context.swiperModels.Find(_context.swiperModels.FirstOrDefault().ID);
 
@@ -483,7 +468,6 @@ namespace LandingPage.Controllers
 				.ToList();
 
 			return PartialView("_AdminCountryImages", photoPaths);
-			//return PartialView("_AdminCountries");
 		}
 		#endregion
 	}

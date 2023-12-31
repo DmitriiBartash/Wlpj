@@ -7,7 +7,6 @@ popUpWindow.style.display = 'none';
 let nameId = 0;
 let popupTXT = "";
 
-
 function openPopUp(element) {
     popupTXT = document.querySelector("#popUPName");
     if (element.textContent == "Редактировать страну") {
@@ -136,7 +135,6 @@ function customCountryValidation() {
     }
 
     return isValid;
-
 }
 
 function assembleData() {
