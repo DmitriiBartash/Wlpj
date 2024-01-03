@@ -1,7 +1,7 @@
 /*Footer*/
 .rectangle_big {
     width: 100%;
-    margin-top: 25%;
+    margin-top: 10%;
     min-height: 25vh;
     background-color: white;
     display: flex;
@@ -42,13 +42,12 @@
     justify-content: space-around;
 }
 
-.icon_instagram,
-.icon_facebook,
-.icon_viber,
-.icon_telegram {
-    width: 10%;
-    position: relative;
-    top: 2.5px;
+.social_network-icons {
+    display: flex;
+    flex-direction: column;
+     width: 10%;
+   /* position: relative;
+    top: 2.5px;*/
 }
 
 .dates {
@@ -99,10 +98,7 @@
         font-size: 1rem;
     }
 
-    .icon_instagram,
-    .icon_facebook,
-    .icon_viber,
-    .icon_telegram {
+    .social_network-icons {
         right: 5%;
     }
 }
