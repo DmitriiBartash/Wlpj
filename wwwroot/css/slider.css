@@ -446,24 +446,24 @@
     justify-content: center;
 }
 
-    .hot-deals-header h2 {
-        text-align: center;
-        /* Set neon color */
-        --neon-text-color: #ffb703;
-        --neon-border-color: #ffb703;
-        font-family: 'Montserrat', sans-serif;
-        font-size: 1.7rem;
-        line-height: 1.2vw;
-        padding: 1% 7%;
-        color: #fff;
-        border: 0.4rem solid #fff;
-        border-radius: 2vw;
-        text-transform: uppercase;
-        animation: flicker 1.5s infinite alternate;
-    }
+#hot_deals_h2 {
+    text-align: center;
+    /* Set neon color */
+    --neon-text-color: #ffb703;
+    --neon-border-color: #ffb703;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5vw;
+    line-height: 1.2vw;
+    padding: 1% 7%;
+    color: #fff;
+    border: 0.4rem solid #fff;
+    border-radius: 2vw;
+    text-transform: uppercase;
+    animation: flicker 1.5s infinite alternate;
+}
 
 @media (max-width:1100px) {
-    .hot-deals-header h2 {
+    #hot_deals_h2{
         font-size: 1.2rem;
         padding: 2% 7%;
         border-radius: 3vw;
@@ -471,17 +471,17 @@
 }
 
 
-h2::-moz-selection {
+#hot_deals_h2::-moz-selection {
     background-color: var(--neon-border-color);
     color: var(--neon-text-color);
 }
 
-h2::selection {
+#hot_deals_h2::selection {
     background-color: var(--neon-border-color);
     color: var(--neon-text-color);
 }
 
-h2:focus {
+#hot_deals_h2:focus {
     outline: none;
 }
 
