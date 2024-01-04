@@ -2,6 +2,8 @@ let currentSecondSlideNumber = 0;
 let isFirstStart = false;
 let oldSide = 0;
 
+const slidesCounterBig = 5;
+const slidesCounterMedium = 3;
 document.addEventListener('DOMContentLoaded', function () {
     $('.testimonials-swiper').slick({
         dots: true,
@@ -17,17 +19,17 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             },
             {
-                breakpoint: 500,
+                breakpoint: 800,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 2,
                     arrows: true,
                     dots: false,
                 }
             },
             {
-                breakpoint: 800,
+                breakpoint: 500,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 1,
                     arrows: true,
                     dots: false,
                 }
@@ -37,40 +39,41 @@ document.addEventListener('DOMContentLoaded', function () {
 
     hookSlicks();
 });
-window.addEventListener('resize', function (event) {
-    $('.testimonials-swiper').slick('unslick');
-    $('.testimonials-swiper').slick({
-        dots: true,
-        slidesToShow: 3,
-        arrows: false,
-        slidesToScroll: 1,
-        cssEase: 'linear',
-        responsive: [
-            {
-                breakpoint: 1100,
-                settings: {
-                    slidesToShow: 3
-                }
-            },
-            {
-                breakpoint: 500,
-                settings: {
-                    slidesToShow: 1,
-                    arrows: true,
-                    dots: false,
-                }
-            },
-            {
-                breakpoint: 800,
-                settings: {
-                    slidesToShow: 2,
-                    arrows: true,
-                    dots: false,
-                }
-            }
-        ]
-    });
-})
+//window.addEventListener('resize', function (event) {
+//    console.log("resize");
+//    $('.testimonials-swiper').slick('unslick');
+//    $('.testimonials-swiper').slick({
+//        dots: true,
+//        slidesToShow: 3,
+//        arrows: false,
+//        slidesToScroll: 1,
+//        cssEase: 'linear',
+//        responsive: [
+//            {
+//                breakpoint: 1100,
+//                settings: {
+//                    slidesToShow: 5
+//                }
+//            },
+//            {
+//                breakpoint: 500,
+//                settings: {
+//                    slidesToShow: 1,
+//                    arrows: true,
+//                    dots: false,
+//                }
+//            },
+//            {
+//                breakpoint: 800,
+//                settings: {
+//                    slidesToShow: 2,
+//                    arrows: true,
+//                    dots: false,
+//                }
+//            }
+//        ]
+//    });
+//})
 
 
 function hookSlicks() {
@@ -120,7 +123,7 @@ function hookSlicks() {
         $('.secondSwiper').slick({
             centerMode: true,
             infinite: true,
-            slidesToShow: 4,
+            slidesToShow: slidesCounterBig,
             // slidesToScroll: 5,
             // arrows: false,
             centerPadding: '0',
@@ -133,7 +136,7 @@ function hookSlicks() {
                 {
                     breakpoint: 1100,
                     settings: {
-                        slidesToShow: 3
+                        slidesToShow: slidesCounterMedium
                     }
                 },
                 {

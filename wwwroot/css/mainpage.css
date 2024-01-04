@@ -1,9 +1,3 @@
-/*For Test of navigation*/
-section {
-    height: 300vh;
-}
-
-/*---------------------*/
 html {
     scroll-behavior: smooth;
 }
@@ -11,6 +5,7 @@ html {
 /*begin of body*/
 body {
     padding: 0px;
+    width: 100vw;
     margin: 0px;
     overflow-x: hidden;
     background-image: url("../content/background/SEA.png");
@@ -216,110 +211,15 @@ h1 span {
         -webkit-text-fill-color: transparent;
     }
 
-@media (max-width:700px) and (min-width:320px) {
-    .InnerBlock {
-        grid-template-rows: 25vh 50vh 6vh !important;
-    }
-
-    .swiper-tagdescription-items {
-        display: flex !important;
-        flex-direction: column !important;
-    }
-}
-
-@media (max-width:800px) {
-    .swiper-tagdescription::before {
-        bottom: 100% !important;
-        height: 0 !important;
-        height: 6% !important;
-        --mask: radial-gradient(16px at 50% 16px, #000 99%, #0000 101%) calc(50% - 30px) 0/60px 100%, radial-gradient(14px at 50% -6px, #0000 99%, #000 101%) 50% 15px/60px 100% repeat-x !important;
-    }
-}
-
-@media (max-width:800px) {
-    .swiper-tagdescription p {
-        justify-content: center !important;
-        font-size: 1.1rem !important;
-        margin-bottom: 0 !important;
-    }
-}
-
+/* MEDIA QUERIES */
 @media (max-width:961px) {
-    .sidebar {
-        width: 100% !important;
-    }
-
-    .nav-links {
-        height: 80vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
-
-    ul.nav-links li a {
-        font-size: 2rem !important;
-    }
-
-    .countryNames {
-        font-size: 1rem !important;
-    }
-
-    .tags-text {
-        grid-template-columns: 50% 50% !important;
-        /*grid-template-columns: auto !important;*/
-        grid-template-rows: auto !important;
-    }
-
-    .second-slick-next,
-    .second-slick-prev {
-        font-size: 1rem !important;
-    }
-
-    .firstSwiper .slick-dots li button:before {
-        font-size: small !important;
-    }
-
-    .firstSwiper > .slick-dots {
-        width: fit-content !important;
-    }
-
-    .span.arrow-btn {
-        font-size: 2.3rem !important;
-    }
-
-    .arrowup-container {
-        bottom: 1% !important;
-    }
-
-    .button-know-container {
-        margin-top: 0 !important;
-        width: 50% !important;
-    }
-
-    .nav-header-element {
-        font-size: 1.5rem !important;
-    }
-
-    .radio__label {
-        font-size: 1rem !important;
-    }
-
-    .mainpage-innerDiv {
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
-        padding: 5% 0;
-        justify-content: start;
-        top: 10vh;
-    }
-
     .mainpage-text {
         padding: 5% 5%;
     }
 
         .mainpage-text h5 {
-            font-size: 2rem !important;
-            margin: 0 !important;
+            font-size: 2rem;
+            margin: 0;
         }
 
         .mainpage-text h1 {
@@ -344,40 +244,12 @@ h1 span {
         }
 }
 
-@media (min-width:760px) {
-    swiper-tagdescription p {
-        grid-column: 0 !important;
-    }
-}
-
-@media (min-width:701px) and (max-width:1100px) {
-    .swiper-tagdescription-items {
-        grid-template-columns: 50% 50% !important;
-        grid-template-rows: 10% 90% !important;
-    }
-
-    .swiper-tagdescription p {
-        grid-column: span 2;
-    }
-
-    #svg4 {
-        width: 100% !important;
-        height: 100% !important;
-    }
-
-    .hotprice {
-        width: 95%;
-    }
-
-    .swiper-tagdescription p {
-        font-size: 1.5rem !important;
-    }
-}
-
-/* media queries*/
-
 @media (max-width: 999px) {
     /* Styles for screens smaller than 1000px */
+    .button-know-container {
+        margin-top: 0 !important;
+        width: 50% !important;
+    }
 
     #myVideo {
         min-height: 100%;
@@ -387,15 +259,12 @@ h1 span {
         width: 100%;
     }
 
-    body {
-        width: 100vw;
-        overflow-x: hidden;
-    }
-
     .mainpage-innerDiv {
+        display: flex;
         flex-direction: column-reverse;
+        align-items: center;
         width: 100%;
-        padding: 0%;
+        justify-content: start;
     }
 
     #svg5 {
@@ -410,11 +279,43 @@ h1 span {
         justify-content: unset;
     }
 
-    .Information_car {
-        padding: 0;
-    }
-
     .mainpage-text {
         width: calc(100% - 10%);
+    }
+}
+
+@media (max-height:800px) {
+    .logo-holder {
+        margin-top: 5%;
+    }
+
+    .button-know-container .button-know {
+        height: auto;
+    }
+
+    .button-know-container {
+        margin-left: 20%;
+    }
+
+    .mainpage-text h5, .mainpage-text h1 {
+        font-size: 1.5rem !important;
+    }
+}
+
+@media (max-width: 1100px) and (min-width:768) {
+    .button-know-container .button-know span {
+        font-size: 2rem !important;
+    }
+
+    .mainpage-text h5 {
+        font-size: 3rem;
+    }
+
+    .mainpage-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .mainpage-text p {
+        font-size: 1.5rem;
     }
 }
