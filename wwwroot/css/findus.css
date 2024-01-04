@@ -84,8 +84,7 @@
     z-index: 0;
 }
 
-
-
+/* MEDIA QUERIES */
 @media (max-width: 961px ) {
     .back_rectangle {
         width: 90% !important;
@@ -144,5 +143,34 @@
 
     .arrow_under {
         bottom: 57%;
+    }
+}
+
+@media (max-width: 1100px) and (min-width:768) {
+    .TEXT {
+        font-size: 1.2rem !important;
+    }
+
+    .back_rectangle {
+        width: 80% !important;
+    }
+
+    .arrow_right {
+        top: -18% !important;
+        right: -10% !important;
+    }
+
+    .arrow-up {
+        left: -6% !important;
+        top: -16% !important;
+    }
+
+    .arrow-under {
+        bottom: -14% !important;
+        left: -13% !important;
+    }
+
+    .findUs {
+        font-size: 1.5rem !important;
     }
 }

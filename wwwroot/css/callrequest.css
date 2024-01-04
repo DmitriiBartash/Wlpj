@@ -4,6 +4,7 @@ input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0; /* Remove extra space around the input */
 }
+
 .call-container {
     display: flex;
     width: 90%;
@@ -119,6 +120,35 @@ input[type="number"]::-webkit-outer-spin-button {
         width: 100%;
     }
 
+    .btn-call::after {
+        content: '';
+        position: absolute;
+        inset: 4px;
+        background: #e5e5e5;
+        transition: 0.5s;
+    }
+
+    .btn-call:hover::after {
+        background: yellow;
+    }
+
+    .btn-call span {
+        position: relative;
+        z-index: 1;
+        font-size: 0.7em;
+        font-weight: bold;
+        color: black;
+        /*opacity: 0.5;*/
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        transition: 0.5s;
+    }
+
+    .btn-call:hover span {
+        opacity: 1;
+    }
+
+/* Animation */
 @keyframes animate {
     0% {
         transform: rotate(0deg);
@@ -129,34 +159,7 @@ input[type="number"]::-webkit-outer-spin-button {
     }
 }
 
-.btn-call::after {
-    content: '';
-    position: absolute;
-    inset: 4px;
-    background: #e5e5e5;
-    transition: 0.5s;
-}
-
-.btn-call:hover::after {
-    background: yellow;
-}
-
-.btn-call span {
-    position: relative;
-    z-index: 1;
-    font-size: 0.7em;
-    font-weight: bold;
-    color: black;
-    /*opacity: 0.5;*/
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    transition: 0.5s;
-}
-
-.btn-call:hover span {
-    opacity: 1;
-}
-
+/* MEDIA QUERIES*/
 @media (max-width:961px) {
     .call-header-text {
         font-size: 1rem;
