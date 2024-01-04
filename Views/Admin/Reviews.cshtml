@@ -6,12 +6,21 @@
 }
 
 <style>
+	* {
+		margin: 0;
+	}
+
+	body {
+		cursor: default;
+	}
+
 	header {
 		display: flex;
+		align-items: center;
 		justify-content: space-between;
 		border-bottom: 2px solid black;
 		padding: 1%;
-		margin: -0.6%;
+		margin: 0px;
 		background-color: #2c3968;
 		color: white;
 	}
@@ -20,21 +29,48 @@
 			color: white;
 			text-decoration: none;
 			font-size: 1rem;
+			transition: ease .3s;
 		}
 
 			header a:hover {
 				color: red;
 			}
 
-	.body {
-		font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	h3 {
+		padding: 1%;
 	}
 
-	.addendum:hover,
-	.edit:hover,
-	.delete:hover {
-		color: red;
+	.addendum {
+		display: block;
+		width: 30%;
+		border: none;
+		outline: none;
+		background-color: #00FF00;
+		color: #fff;
+		font-size: 1.8vw;
+		border-radius: 60px;
+		text-align: center;
+		text-decoration: none;
+		box-shadow: 0 6px 20px -5px rgba(0, 0, 0, 0.4);
+		position: relative;
+		overflow: hidden;
+		cursor: pointer;
+		transition: 0.5s ease-in;
 	}
+
+		.addendum:hover {
+			color: red;
+			background-color: yellow;
+		}
+
+	.edit, .delete {
+		transition: ease .3s;
+	}
+
+		.edit:hover,
+		.delete:hover {
+			color: red;
+		}
 
 	.table {
 		width: 100%;
@@ -43,34 +79,28 @@
 		background: linear-gradient(to top left, powderblue, pink);
 	}
 
-	}
+		.table th {
+			border: 5px solid grey;
+		}
 
-	.table th {
-		border: 5px solid grey;
-		padding: 0.5%;
-	}
-
-	.table td {
-		border: 5px solid grey;
-		padding: 0.5%;
-	}
+		.table td {
+			border: 5px solid grey;
+			padding: 0.5%;
+		}
 </style>
 
 <header>
-	<a href="#">Admin Revies</a>
-
+	<h1>Admin reviews</h1>
 	<div class="logout-container">
-		<a href="#">Log out</a> |
-		<a href="../Home/Index">Home</a>
+		<a href="~/Login/Logout">Log out</a> |
+		<a asp-controller="Home" asp-action="Index">Home</a> |
+		<a href="#">Back</a>
 	</div>
 </header>
 
 <body>
-
-	<h1>Reviews</h1>
-
 	<h3>
-		<a class="addendum" asp-action="ReviewAdd">Create New</a>
+		<a class="addendum" asp-action="ReviewAdd">Напишите новый отзыв</a>
 	</h3>
 
 	<table class="table">
@@ -95,7 +125,7 @@
 					<td>
 						@Html.DisplayFor(modelItem => item.Review)
 					</td>
-					<td>
+					<td width="8%">
 						<a class="edit" asp-action="ReviewEdit" asp-route-id="@item.Id">Edit</a> |
 						<a class="delete" asp-action="ReviewDelete" asp-route-id="@item.Id">Delete</a>
 					</td>

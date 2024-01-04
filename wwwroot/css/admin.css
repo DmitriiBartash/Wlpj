@@ -1,21 +1,24 @@
 /*Body*/
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@1,700&display=swap');
 
+* {
+    margin: 0;
+}
+
 body {
     display: grid;
-    grid-template-rows: 5% 95%;
+    grid-template-rows: 7% 93%;
     flex-direction: column;
     margin: 0px;
     padding: 0px;
     height: 100vh;
     overflow-y: hidden;
-    font-family: 'PT Serif', serif;
+    cursor: default;
 }
-
-
 
 header {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     border-bottom: 2px solid black;
     padding: 1%;
@@ -28,6 +31,7 @@ header {
         color: white;
         text-decoration: none;
         font-size: 1rem;
+        transition: ease .3s;
     }
 
         header a:hover {
@@ -36,25 +40,13 @@ header {
 
 /*Main*/
 main {
-    /*  display: grid;
-    grid-template-columns: 40% 35% 25%;*/
-
     display: flex;
     background-color: #d7d6d6;
     height: 100%;
-    /*height: calc(100% - 20px - 2%);*/
     grid-gap: 2%;
     padding: 0 10% 0 10%;
     padding: 0% 5%;
 }
-
-/* .photos-container {
-    display: grid;
-    grid-template-rows: 50% 10% 30%;
-    justify-content: center;
-    height: inherit;
-
-} */
 
 .photos-container {
     margin-top: -1%;
@@ -62,10 +54,6 @@ main {
     width: 40%;
     padding: 1% 0 0 0;
 }
-
-/* .photos-container p{
-    padding: 5px;
-} */
 
 .main-photo {
     height: 40%;
@@ -77,68 +65,14 @@ main {
         position: relative;
         height: 100%;
         width: 95%;
-        object-fit: contain;
         border-style: dashed;
         border-width: 5px;
         border-color: #5820aa;
     }
 
     .main-photo:hover {
-        filter: blur(2px);
         transform: scale(1.02);
-        /* position: absolute; */
-        /* background-repeat: no-repeat; */
-        /* background-image: url('/content/+.png'); */
     }
-
-/*Arrows*/
-.arrows-container {
-    display: flex;
-    height: 5%;
-    justify-content: center;
-    padding: 1%;
-}
-
-    .arrows-container button {
-        -webkit-appearance: none;
-        background: transparent;
-        border: 0;
-        outline: 0;
-    }
-
-    .arrows-container svg {
-        padding: 5px;
-        height: 100%;
-    }
-
-.arrow {
-    cursor: pointer;
-    height: 100%;
-}
-
-.left:hover polyline,
-.left:focus polyline {
-    stroke-width: 3;
-}
-
-.left:active polyline {
-    stroke-width: 6;
-    transition: all 100ms ease-in-out;
-}
-
-.right:hover polyline,
-.right:focus polyline {
-    stroke-width: 3;
-}
-
-.right:active polyline {
-    stroke-width: 6;
-    transition: all 100ms ease-in-out;
-}
-
-polyline {
-    transition: all 250ms ease-in-out;
-}
 
 /*Photos of countries*/
 .photos-of-countries {
@@ -190,24 +124,36 @@ polyline {
 
 .CTRLButtons {
     height: 15%;
-    margin-left: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
-
     .CTRLButtons > button {
-        height: 100%;
-        width: 90%;
-        border-radius: 12.5%;
-        margin-top: 3%;
-        font-family: 'PT Serif', serif;
-        background-color: #d52814;
-        margin-left: 3%;
+        margin: 2%;
+        width: 270px;
+        height: 80px;
+        border: none;
+        outline: none;
+        background: #2f2f2f;
+        color: #fff;
+        font-size: 22px;
+        border-radius: 40px;
+        text-align: center;
+        box-shadow: 0 6px 20px -5px rgba(0, 0, 0, 0.4);
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        transition: 0.5s ease-in;
     }
+
+        .CTRLButtons > button:hover {
+            background-color: #00ff00;
+        }
 
 .countries {
     height: 100%;
-    /*max-height: 50%;*/
     overflow-y: scroll;
 }
 
@@ -235,6 +181,7 @@ polyline {
     transition: 1s;
     box-shadow: 6px 6px 0 black;
     transform: skewX(-15deg);
+    cursor: pointer;
 }
 
     .cta:focus {
@@ -293,7 +240,6 @@ path.two {
 }
 
 /* SVG animations */
-
 @keyframes color_anim {
     0% {
         fill: white;
@@ -395,7 +341,6 @@ svg path {
 .add:hover {
     background-color: orange;
 }
-
 
 
 /*Buttons submit - reject of popup*/
@@ -530,6 +475,7 @@ input[type="radio"] {
 .validationDiv {
     display: flex;
     flex-direction: column;
+    padding: 1%;
 }
 
 .text-danger {
@@ -555,7 +501,6 @@ input[type="radio"] {
 }
 
 
-
 #CountryImages {
     height: 100%;
     display: flex;
@@ -575,38 +520,66 @@ input[type="radio"] {
 
 .panel {
     height: inherit;
-    margin-left: 1%;
 }
 
 
-/*button*/
-
+/*Add button of countries*/
 #imagesToAdd {
     height: 100px;
 }
 
-.stretched-button button {
+.stretched-button {
     width: 100%;
-    height: inherit
+    height: 100%;
+    transition: all .2s ease-in-out;
 }
 
-.stretched-button {
-    height: inherit;
-}
+    .stretched-button:hover {
+        transform: scale(0.9);
+        border-radius: 10%;
+        border: 2px solid red;
+    }
+
+    .stretched-button button {
+        width: 100%;
+        height: inherit;
+        border-radius: 10%;
+        color: white;
+        font-size: 3vw;
+        background-color: #00FF00;
+        transition: all .2s ease-in-out;
+        cursor: pointer;
+    }
+
+        .stretched-button button:hover {
+            background-color: red;
+        }
 
 .imgEntity {
     position: relative;
+    cursor: pointer;
 }
 
     .imgEntity p {
         position: absolute;
+        width: 20%;
+        text-align: center;
+        border-radius: 50%;
         background-color: antiquewhite;
-        font-size: 1.5em;
+        font-size: 2vw;
         margin: 0;
         top: 0%;
         right: 1%;
         z-index: 0;
+        transition: all .2s ease-in-out;
     }
+
+        .imgEntity p:hover {
+            transform: scale(0.8);
+            border-radius: 50%;
+            border: 2px solid red;
+            background-color: red;
+        }
 
 .prices {
     display: flex;
@@ -618,12 +591,9 @@ input[type="radio"] {
     grid-template-columns: 50% 50%;
     grid-template-rows: 30% 30% 30%;
     align-items: center;
-    min-height: 430px;
-    margin-top: 5%;
+    min-height: 450px;
     font-size: 1rem;
     padding: 0%;
-    margin-left: 3%;
-    margin-right: 3%;
 }
 
     .TAGS img {
@@ -635,21 +605,43 @@ input[type="radio"] {
         display: flex;
         flex-direction: column;
         align-items: center;
+        text-align: center;
     }
 
 .name_country {
     display: flex;
     justify-content: center;
+    color: green;
+    font-size: 1vw;
+}
+
+.panel_tag_button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .tag_button {
-    width: 99%;
-    height: 13%;
-    border-radius: 5px;
+    margin: 1%;
+    width: 80%;
+    height: 50px;
+    border: none;
+    outline: none;
+    background: #2f2f2f;
+    color: #fff;
+    font-size: 1.2vw;
+    border-radius: 40px;
+    text-align: center;
+    box-shadow: 0 6px 20px -5px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.5s ease-in;
     font-family: 'PT Serif', serif;
     background-color: #c6ce19;
 }
 
-.panel_tag_button {
-    height: 50%;
-}
+    .tag_button:hover {
+        background-color: red;
+    }
