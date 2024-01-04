@@ -15,7 +15,8 @@
 }
 
 .iconsHolder {
-    width: inherit;
+    width: 50%;
+    /*width: inherit;*/
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
@@ -53,7 +54,8 @@
 .icon_facebook,
 .icon_viber,
 .icon_telegram {
-    width: 10%;
+    width: calc(2rem + 1vw);
+    /*width: 10%;*/
     position: relative;
     top: 2.5px;
 }

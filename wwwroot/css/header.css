@@ -433,29 +433,29 @@ span.arrow-btn {
         }
 }
 
-@media (max-width:2000px) {
+@media (max-width:8000px) {
     span.arrow-btn {
-        font-size: 2rem !important;
+        font-size: calc(2rem + 2vw) !important;
     }
 
     .floating-container .floating-button {
         bottom: 2vh !important;
-        width: 2rem !important;
-        height: 2rem !important;
-        font-size: 3rem !important;
+        width: calc(2rem + 2vw) !important;
+        height: calc(2rem + 2vw) !important;
+        font-size: calc(3rem + 2vw) !important;
     }
 
     .fa-phone, .fa-instagram, .fa-facebook, .fa-telegram, .fa-whatsapp, .fa-phone-square {
-        font-size: 2rem !important;
+        font-size: calc(1rem + 2vw) !important;
     }
 
     .floating-container .float-element {
-        height: 2rem !important;
-        width: 2rem !important;
+        height: calc(1rem + 2vw) !important;
+        width: calc(1rem + 2vw) !important;
     }
 
     .floating-container {
-        width: 2rem !important;
+        width: calc(2rem + 2vw) !important;
     }
 
     .floating-container-show {
@@ -463,7 +463,7 @@ span.arrow-btn {
     }
 
     .element-container {
-        transform: translateY(-3rem);
+        transform :translateY(calc(-3rem - 3vw));
     }
 }
 
