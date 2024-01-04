@@ -161,8 +161,10 @@ h1 span {
 }
 
 .button-know-container .button-know-sun {
-    width: 5vw;
-    height: 5vw;
+    /*    width: 5vw;
+    height: 5vw;*/
+    width: calc(6vh + 2rem);
+    height: calc(6vh + 2rem);
     transform: translateY(-10%);
     background: linear-gradient(180deg, #ffdc21 0%, #fb2182 41.54%);
     box-shadow: 0 0 36px #ffdc20;
@@ -284,13 +286,13 @@ h1 span {
     }
 }
 
-@media (max-height:800px) {
+@media (max-width:1100px) and (max-height:800px) {
     .logo-holder {
         margin-top: 5%;
     }
 
     .button-know-container .button-know {
-        height: auto;
+        /*height: auto;*/
     }
 
     .button-know-container {
@@ -317,5 +319,19 @@ h1 span {
 
     .mainpage-text p {
         font-size: 1.5rem;
+    }
+}
+
+@media (min-width:1100px) and (max-height:800px) {
+    .logo-holder {
+        margin-top: 0;
+    }
+
+    .mainpage-text h5, .mainpage-text h1 {
+        font-size: 1.5rem !important;
+    }
+
+    .mainpage-text p {
+        font-size: 1.2rem !important;
     }
 }
