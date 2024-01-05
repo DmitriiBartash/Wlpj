@@ -362,3 +362,20 @@
         transform: translate(70px, 0px);
     }
 }
+
+/*Animation of woman_notebook*/
+#background_people_notebook {
+    animation: people_notebook 400s linear;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes people_notebook {
+    from {
+        transform: rotateZ(0deg);
+    }
+
+    to {
+        transform: rotateZ(3600deg);
+    }
+}
