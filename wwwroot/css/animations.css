@@ -295,3 +295,87 @@
 .st72 {
     opacity: 0.6;
 }
+
+/*1 svg about us*/
+/*Coins*/
+#coin1 {
+    animation: coin1 6s infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes coin1 {
+    0%,20% {
+        transform: rotateY(0deg);
+    }
+
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+#coin3 {
+    animation: coin3 6s infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes coin3 {
+    0%, 40% {
+        transform: rotateY(0deg);
+    }
+
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+#coin2 {
+    animation: coin2 6s infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes coin2 {
+    0%, 30% {
+        transform: rotateY(0deg);
+    }
+
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+/*Animation1 of plane1*/
+#plane1 {
+    transform-origin: center;
+    transform-box: fill-box;
+    animation: flight 6s linear infinite;
+}
+
+@keyframes flight {
+    0% {
+        transform: translate(-70px, 0px);
+    }
+
+    100% {
+        transform: translate(70px, 0px);
+    }
+}
+
+/*Animation of woman_notebook*/
+#background_people_notebook {
+    animation: people_notebook 400s linear;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes people_notebook {
+    from {
+        transform: rotateZ(0deg);
+    }
+
+    to {
+        transform: rotateZ(3600deg);
+    }
+}
