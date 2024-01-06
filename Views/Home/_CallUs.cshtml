@@ -1,4 +1,4 @@
-﻿@model LandingPage.Models.CallBackModel;
+﻿@model LandingPage.Models.CallBackMiniModel;
 
 <p id="Anchor3"></p>
 <div id="callme" class="call-container">
@@ -8,10 +8,12 @@
 	<form id="phoneForm">
 		<div class="inputbox-container inputbox">
 			<div class="inputbox-1">
-				<input type="text" class="inputbox1" asp-for="NameSurname" id="name" required /><label for="">Имя и фамилия</label>
+				<input type="text" maxlength="40" class="inputbox1" id="name" />
+				<label>Имя и фамилия</label>
 			</div>
 			<div class="inputbox-1">
-				<input type="number" class="inputbox1" asp-for="PhoneNumber" id="number" required /><label for="">Телефон</label>
+				<input type="number" class="inputbox1" id="number" />
+				<label>Телефон</label>
 			</div>
 			<div class="inputbox-2">
 				<button class="btn-call" type="submit"><span>Перезвоните мне</span></button>

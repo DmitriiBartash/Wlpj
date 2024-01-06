@@ -38,10 +38,16 @@ namespace LandingPage.Controllers
 		}
 
 		[HttpPost]
-		public IActionResult AddUserDetails(CallBackModel callBackModel)
+		public IActionResult AddUserDetails([FromBody] CallBackMiniModel callBackModel)
 		{
 			// validate the data 
-			_context.callBackModels.Add(callBackModel);
+			CallBackModel _callBackModel = new()
+			{
+				CreationDate = DateTime.Now,
+				NameSurname = callBackModel.NameSurname,
+				PhoneNumber = callBackModel.PhoneNumber,
+			};
+			_context.callBackModels.Add(_callBackModel);
 			_context.SaveChanges();
 			return RedirectToAction("Index");
 		}
