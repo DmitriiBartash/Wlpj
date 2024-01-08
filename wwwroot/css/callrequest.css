@@ -79,7 +79,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .inputbox-1 input:focus ~ label,
-.notEmptyForm{
+.notEmptyForm {
     top: 0;
     font-size: 0.7rem;
     filter: blur(20px);
@@ -160,18 +160,20 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .inputInformation {
-    height: 5vh;
+    /*height: 5vh;*/
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 50%;
+    flex-direction: column;
 }
 
     .inputInformation p {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 35%;
+        width: 100%;
+        /*width: 35%;*/
         min-height: 5vh;
         border: 0;
         border-radius: 5px;
@@ -181,7 +183,7 @@ input[type="number"]::-webkit-outer-spin-button {
         font-size: 2vh;
     }
 
-.fa-times-circle:before, .fa-check:before{
+.fa-times-circle:before, .fa-check:before {
     padding: 2%
 }
 
@@ -226,5 +228,4 @@ input[type="number"]::-webkit-outer-spin-button {
     .inputInformation p {
         width: calc(100% - 100px) !important;
     }
-
 }

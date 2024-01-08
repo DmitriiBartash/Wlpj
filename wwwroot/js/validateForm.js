@@ -3,11 +3,14 @@ const inputName = document.querySelectorAll('.inputbox1')[0];
 const inputPhone = document.querySelectorAll('.inputbox1')[1];
 const inputInformation = document.querySelector('.inputInformation');
 
+
+
 form.addEventListener('submit', (event) => {
     event.preventDefault(); // Prevent default form submission
 
     if (validateInput()) {
-        inputInformation.textContent = "Принято!";
+        inputInformation.innerHTML = "<p>" + validationModelJson.text.accepted[selectedLanguage] + "</p>";
+        inputInformation.style.backgroundColor = "#12c99b";
 
         let callDataJSON = {
             "NameSurname": inputName.value,
@@ -33,7 +36,7 @@ function validateInput() {
     // IF NAME IS EMPTY
     if (inputName.value.length == 0) {
         isOkay = false;
-        message += "<p>Пожалуйста введите Имя и Фамилию</p>";
+        message += "<p>" + validationModelJson.text.errors.name[selectedLanguage] + "</p>";
     }
     // validate word count
     // name and family name cant be less or greater than 2
@@ -41,16 +44,16 @@ function validateInput() {
         let completeData = wordValidationData(inputName.value);
         let wordNumber = completeData.wordCounter;
         let fixedString = completeData.result;
-        console.log(completeData);
+        //console.log(completeData);
         if (wordNumber != 2) {
             isOkay = false;
-            message += "<p>Должно быть только 2 слова в первом поле</p>";
+            message += "<p>" + validationModelJson.text.errors.name_format[selectedLanguage] + "</p>";
         }
     }
 
     // IF PHONE IS EMPTY
     if (inputPhone.value.length == 0) {
-        message += "<p>Пожалуйста введите Номер Телефона</p>";
+        message += "<p>" + validationModelJson.text.errors.phone[selectedLanguage] + "</p>";
         isOkay = false;
     }
     // validate phone number
@@ -59,15 +62,16 @@ function validateInput() {
         let digitsNumber = countDigits(inputPhone.value);
         if (digitsNumber < 6) {
             isOkay = false;
-            message += "<p>Слишком мало цифр</p>";
+            message += "<p>" + validationModelJson.text.errors.few_digits[selectedLanguage] + "</p>";
         }
         if (digitsNumber >= 15) {
             isOkay = false;
-            message += "<p>Слишком много цифр</p>";
+            message += "<p>" + validationModelJson.text.errors.many_digits[selectedLanguage] + "</p>";
         }
     }
 
     inputInformation.innerHTML = message;
+    inputInformation.style.backgroundColor = "#e41749";
     return isOkay;
 }
 
