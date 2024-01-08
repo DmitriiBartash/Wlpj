@@ -110,7 +110,7 @@ const languageModelJson = {
         {
             "footer": {
                 "findUs": "Найди нас ➜",
-                "phone_numberes": "Связь с нами: <br> 060 144 445 <br> 068 525 050"
+                "phone_numberes": "Связь с нами: <br> 060 144 445 <br> 060 144 442"
             }
         },
         {
@@ -185,7 +185,7 @@ const languageModelJson = {
         {
             "footer": {
                 "findUs": "findUs ➜",
-                "phone_numberes": "Contact us: <br> 060 144 445 <br> 068 525 050"
+                "phone_numberes": "Contact us: <br> 060 144 445 <br> 060 144 442"
             }
         },
         {
@@ -260,7 +260,7 @@ const languageModelJson = {
         {
             "footer": {
                 "findUs": "Găsiți-ne ➜",
-                "phone_numberes": "Contactează-ne: <br> 060 144 445 <br> 068 525 050"
+                "phone_numberes": "Contactează-ne: <br> 060 144 445 <br> 060 144 442"
             }
         },
         {
