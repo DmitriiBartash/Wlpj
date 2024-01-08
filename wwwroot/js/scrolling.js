@@ -35,3 +35,35 @@ window.addEventListener("scroll", async () => {
 });
 
 
+const targetDiv = document.querySelector(".text_about_us_container");
+const options = {
+    root: null, // Observe the viewport
+    threshold: 0.5 // Trigger when 50% of the element is visible
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            // Element is in viewport, fire your function here
+            incrementYear();
+            incremenyClients();
+            observer.disconnect(); // Disconnect if needed (one-time trigger)
+        }
+    });
+}, options);
+
+observer.observe(targetDiv);
+const incrementDiv = document.querySelector('.counter_about_us');
+// get number value 
+const maxValue = incrementDiv.textContent | 1;
+const delay = 100;
+let number = 0;
+async function incrementYear() {
+    while (number <= maxValue) {
+        let myPromise = new Promise(function (resolve) {
+            setTimeout(function () { resolve("<br>" + number); }, delay);
+        });
+        incrementDiv.innerHTML = await myPromise;
+        number++;
+    }
+}
