@@ -3,6 +3,7 @@ using LandingPage.Models;
 using LandingPage.Utils;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 
 namespace LandingPage.Controllers
@@ -56,10 +57,16 @@ namespace LandingPage.Controllers
 		[HttpPost]
 		public async Task<ViewResult> ReviewAdd(ReviewModel reviewModel)
 		{
-			_context.reviewModels.Add(reviewModel);
-			await _context.SaveChangesAsync();
-
-			return View("Reviews", _context.reviewModels);
+			if (ModelState.IsValid)
+			{
+				_context.reviewModels.Add(reviewModel);
+				await _context.SaveChangesAsync();
+				return View("Reviews", _context.reviewModels);
+			}
+			else
+			{
+				return View("ReviewAdd");
+			}
 		}
 
 		[HttpGet]
@@ -74,19 +81,28 @@ namespace LandingPage.Controllers
 		[HttpGet]
 		public async Task<IActionResult> ReviewEdit(int id)
 		{
+
 			var review = _context.reviewModels.Find(id);
 			return View(review);
+
 		}
 
 		[HttpPost]
 		public async Task<IActionResult> ReviewEdit(ReviewModel reviewModel)
 		{
-			var _review = _context.reviewModels.Find(reviewModel.Id);
-			_review.Review = reviewModel.Review;
-			_review.Person = reviewModel.Person;
+			if (ModelState.IsValid)
+			{
+				var _review = _context.reviewModels.Find(reviewModel.Id);
+				_review.Review = reviewModel.Review;
+				_review.Person = reviewModel.Person;
 
-			_context.SaveChanges();
-			return View("Reviews", _context.reviewModels);
+				_context.SaveChanges();
+				return View("Reviews", _context.reviewModels);
+			}
+			else
+			{
+				return View("ReviewEdit");
+			}
 		}
 		#endregion
 

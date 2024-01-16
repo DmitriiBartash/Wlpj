@@ -6,6 +6,7 @@ using System.Security.Claims;
 using System.Security.Cryptography;
 using AspNetCoreRateLimit;
 using Microsoft.AspNetCore.RateLimiting;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace LandingPage.Controllers
 {
@@ -25,26 +26,32 @@ namespace LandingPage.Controllers
 		[EnableRateLimiting("fixed")]
 		public async Task<IActionResult> Login(AdminModel userdetails)
 		{
-			// https://jasonwatmore.com/post/2022/01/16/net-6-hash-and-verify-passwords-with-bcrypt
-			string passwordHash = "$2a$11$MFUFQl6VLOLB.5VkC8SAluVGFyeELpvop8qP1T5wlOzYspqX5VbWW";
-
-			bool verified = BCrypt.Net.BCrypt.Verify(userdetails.Password, passwordHash);
-
-			if (userdetails.Login == "Admin" && verified)
+			if (ModelState.IsValid)
 			{
-				List<Claim> claims = new()
+
+				// https://jasonwatmore.com/post/2022/01/16/net-6-hash-and-verify-passwords-with-bcrypt
+				string passwordHash = "$2a$11$MFUFQl6VLOLB.5VkC8SAluVGFyeELpvop8qP1T5wlOzYspqX5VbWW";
+
+				bool verified = BCrypt.Net.BCrypt.Verify(userdetails.Password, passwordHash);
+
+				if (userdetails.Login == "Admin" && verified)
+				{
+					List<Claim> claims = new()
 				{
 					new(ClaimTypes.NameIdentifier,userdetails.Login)
 				};
-				ClaimsIdentity claimsIdentity = new(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+					ClaimsIdentity claimsIdentity = new(claims, CookieAuthenticationDefaults.AuthenticationScheme);
 
-				AuthenticationProperties properties = new() { AllowRefresh = true, IsPersistent = false };
+					AuthenticationProperties properties = new() { AllowRefresh = true, IsPersistent = false };
 
-				await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new(claimsIdentity), properties);
+					await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new(claimsIdentity), properties);
 
-				return RedirectToAction("Index", "Admin");
+					return RedirectToAction("Index", "Admin");
+				}
+				return View("Index");
 			}
-			return View("Index");
+			else { return View("Index"); }
+
 		}
 
 		public async Task<IActionResult> Logout()
