@@ -13,29 +13,29 @@ const validationModelJson = {
         },
         "errors": {
             "name": {
-                "Ru": "Пожалуйста введите Имя и Фамилию",
-                "Eng": "Please enter your first and last name",
-                "Ro": "Vă rugăm să introduceți numele și prenumele dvs"
+                "Ru": "Пожалуйста введите Имя и Фамилию!",
+                "Eng": "Please enter your first and last name!",
+                "Ro": "Vă rugăm să introduceți numele și prenumele dvs!"
             },
             "phone": {
-                "Ru": "Пожалуйста введите Номер Телефона",
-                "Eng": "Please enter your Phone Number",
-                "Ro": "Vă rugăm să introduceți numărul dvs. de telefon"
+                "Ru": "Пожалуйста введите Номер Телефона!",
+                "Eng": "Please enter your Phone Number!",
+                "Ro": "Vă rugăm să introduceți numărul dvs. de telefon!"
             },
             "name_format": {
-                "Ru": "Должно быть только 2 слова в первом поле",
-                "Eng": "There should be only 2 words in the first field",
-                "Ro": "În primul câmp ar trebui să existe doar 2 cuvinte"
+                "Ru": "Должно быть только 2 слова в первом поле!",
+                "Eng": "There should be only 2 words in the first field!",
+                "Ro": "În primul câmp ar trebui să existe doar 2 cuvinte!"
             },
             "few_digits": {
-                "Ru": "Слишком мало цифр",
-                "Eng": "Too few digits",
-                "Ro": "Prea puține numere"
+                "Ru": "Слишком мало цифр!",
+                "Eng": "Too few digits!",
+                "Ro": "Prea puține numere!"
             },
             "many_digits": {
-                "Ru": "Слишком много цифр",
-                "Eng": "Too many digits",
-                "Ro": "Prea multe numere"
+                "Ru": "Слишком много цифр!",
+                "Eng": "Too many digits!",
+                "Ro": "Prea multe numere!"
             }
         }
     }
@@ -110,7 +110,7 @@ const languageModelJson = {
         {
             "footer": {
                 "findUs": "Найди нас ➜",
-                "phone_numberes": "Связь с нами: <br> 060 144 445 <br> 068 525 050"
+                "phone_numberes": "Связь с нами: <br> 060 144 445 <br> 060 144 442"
             }
         },
         {
@@ -185,7 +185,7 @@ const languageModelJson = {
         {
             "footer": {
                 "findUs": "findUs ➜",
-                "phone_numberes": "Contact us: <br> 060 144 445 <br> 068 525 050"
+                "phone_numberes": "Contact us: <br> 060 144 445 <br> 060 144 442"
             }
         },
         {
@@ -260,14 +260,14 @@ const languageModelJson = {
         {
             "footer": {
                 "findUs": "Găsiți-ne ➜",
-                "phone_numberes": "Contactează-ne: <br> 060 144 445 <br> 068 525 050"
+                "phone_numberes": "Contactează-ne: <br> 060 144 445 <br> 060 144 442"
             }
         },
         {
             "reviews": "Ce spun despre noi?"
         },
         {
-            "swiper-tagdescriptionText": "Pretul include:"
+            "swiper-tagdescriptionText": "Prețul include:"
         }
     ]
 }

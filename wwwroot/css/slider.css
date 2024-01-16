@@ -42,7 +42,7 @@
     width: 100%;
     height: 100%;
     color: white;
-    background: linear-gradient(90deg, #f12711, #f5af19);
+    background: linear-gradient(90deg, #febc88, #f5af19);
     border-radius: 0 20px 0 0;
 }
 
@@ -52,6 +52,7 @@
     height: 100%;
     align-items: center;
     justify-content: start;
+    color: black;
 }
 
 .swiper-tagdescription p {
@@ -366,7 +367,7 @@
 
     .swiper-tagdescription {
         grid-row-start: 2;
-        background: linear-gradient(180deg, #f12711, #f5af19);
+        background: linear-gradient(180deg, #febc88, #f5af19);
         border-radius: 0;
     }
 
@@ -375,7 +376,7 @@
             position: absolute;
             width: 100% !important;
             left: 0 !important;
-            background: #f12711;
+            background: #febc88;
             --mask: radial-gradient(34.99px at 50% 48.00px, #000 99%, #0000 101%) calc(50% - 60px) 0/120px 100%, radial-gradient(34.99px at 50% -18px, #0000 99%, #000 101%) 50% 30px/120px 100% repeat-x;
             -webkit-mask: var(--mask);
             mask: var(--mask);
@@ -457,7 +458,7 @@
         height: 100%;
         width: 30%;
         left: -30%;
-        background: #f12711;
+        background: #febc88;
         --mask: radial-gradient(40.36px at 57.00px 50%, #000 99%, #0000 101%) 0 calc(50% - 60px)/100% 120px, radial-gradient(40.36px at -27px 50%, #0000 99%, #000 101%) 30px 50%/100% 120px repeat-y;
         -webkit-mask: var(--mask);
         mask: var(--mask);
@@ -489,7 +490,7 @@
         height: 100%;
         width: 30%;
         left: -30%;
-        background: #f12711;
+        background: #febc88;
         --mask: radial-gradient(40.36px at 57.00px 50%, #000 99%, #0000 101%) 0 calc(50% - 60px)/100% 120px, radial-gradient(40.36px at -27px 50%, #0000 99%, #000 101%) 30px 50%/100% 120px repeat-y;
         -webkit-mask: var(--mask);
         mask: var(--mask);

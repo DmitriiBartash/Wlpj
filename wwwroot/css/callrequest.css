@@ -225,7 +225,11 @@ input[type="number"]::-webkit-outer-spin-button {
             font-size: 1.5rem !important;
         }
 
-    .inputInformation p {
+    .inputInformation {
+        width: 100%;
+    }
+
+    .inputInformation p{
         width: calc(100% - 100px) !important;
     }
 }
