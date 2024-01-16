@@ -267,7 +267,7 @@ const languageModelJson = {
             "reviews": "Ce spun despre noi?"
         },
         {
-            "swiper-tagdescriptionText": "Pretul include:"
+            "swiper-tagdescriptionText": "Prețul include:"
         }
     ]
 }
