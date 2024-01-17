@@ -9,8 +9,7 @@ form.addEventListener('submit', (event) => {
     event.preventDefault(); // Prevent default form submission
 
     if (validateInput()) {
-        inputInformation.innerHTML = "<p>" + validationModelJson.text.accepted[selectedLanguage] + "</p>";
-        inputInformation.style.backgroundColor = "#12c99b";
+        inputInformation.innerHTML = "<p class='inputInformation_success fa fa-check'>" + validationModelJson.text.accepted[selectedLanguage] + "</p>";
 
         let callDataJSON = {
             "NameSurname": inputName.value,
@@ -36,7 +35,7 @@ function validateInput() {
     // IF NAME IS EMPTY
     if (inputName.value.length == 0) {
         isOkay = false;
-        message += "<p>" + validationModelJson.text.errors.name[selectedLanguage] + "</p>";
+        message += "<p class='inputInformation_error fa fa-times-circle'>" + validationModelJson.text.errors.name[selectedLanguage] + "</p>";
     }
     // validate word count
     // name and family name cant be less or greater than 2
@@ -47,13 +46,13 @@ function validateInput() {
         //console.log(completeData);
         if (wordNumber != 2) {
             isOkay = false;
-            message += "<p>" + validationModelJson.text.errors.name_format[selectedLanguage] + "</p>";
+            message += "<p class='inputInformation_error fa fa-times-circle'>" + validationModelJson.text.errors.name_format[selectedLanguage] + "</p>";
         }
     }
 
     // IF PHONE IS EMPTY
     if (inputPhone.value.length == 0) {
-        message += "<p>" + validationModelJson.text.errors.phone[selectedLanguage] + "</p>";
+        message += "<p class='inputInformation_error fa fa-times-circle'>" + validationModelJson.text.errors.phone[selectedLanguage] + "</p>";
         isOkay = false;
     }
     // validate phone number
@@ -62,16 +61,15 @@ function validateInput() {
         let digitsNumber = countDigits(inputPhone.value);
         if (digitsNumber < 6) {
             isOkay = false;
-            message += "<p>" + validationModelJson.text.errors.few_digits[selectedLanguage] + "</p>";
+            message += "<p class='inputInformation_error fa fa-times-circle'>" + validationModelJson.text.errors.few_digits[selectedLanguage] + "</p>";
         }
         if (digitsNumber >= 15) {
             isOkay = false;
-            message += "<p>" + validationModelJson.text.errors.many_digits[selectedLanguage] + "</p>";
+            message += "<p class='inputInformation_error fa fa-times-circle'>" + validationModelJson.text.errors.few_digits[selectedLanguage] + "</p>";
         }
     }
 
     inputInformation.innerHTML = message;
-    inputInformation.style.backgroundColor = "#e41749";
     return isOkay;
 }
 
