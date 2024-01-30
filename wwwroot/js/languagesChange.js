@@ -363,6 +363,44 @@ function changeLanguage(element) {
 
         //SelectCountry(document.querySelector(`#selectedCountry`));
 
+        // VALIDATION MSG
+        let validDiv = document.querySelector(".inputInformation");
+        if (validDiv.children.length > 0) {
+            console.log(validDiv.children);
+
+            // first get all keys
+            let parentKeys = Object.keys(validationModelJson.text.errors);
+
+            // if it's not accepted
+            let errorsDiv = document.querySelectorAll(".inputInformation_error");
+            let successDiv = document.querySelector(".inputInformation_success");
+            if (errorsDiv.length > 0) {
+                console.log("ERRORS");
+                for (let errorDiv of errorsDiv) {
+                    for (let errorType of parentKeys) {
+                        let childKeys = Object.keys(validationModelJson.text.errors[errorType]);
+
+                        for (let languageVersion of childKeys) {
+                            if (validationModelJson.text.errors[errorType][languageVersion] == errorsDiv[0].textContent) {
+                                errorDiv.textContent = validationModelJson.text.errors[errorType][selectedLanguage];
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+            else if (successDiv != null) {
+                console.log("NO ERRORS");
+                for (let languageVersion of Object.keys(validationModelJson.text.accepted)) {
+                    if (validationModelJson.text.accepted[languageVersion] == successDiv.textContent) {
+                        successDiv.textContent = validationModelJson.text.accepted[selectedLanguage];
+                        break;
+                    }
+                }
+            }
+
+            // if it's accepted
+        }
 
         let dataJSON = {
             "countryID": document.querySelector(`#selectedCountry`).textContent,
