@@ -2,6 +2,70 @@ section {
     height: 110vh;
 }
 
+/* anim */
+.pulseCircle {
+    position: relative;
+    width: 100%;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    align-items: center;
+}
+
+.floating-container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.circleIcon svg circle {
+    transform: translate(50%, 50%);
+    transform-box: view-box;
+    transform-origin: center;
+    stroke: purple;
+    opacity: 1;
+    scale: 0;
+    animation: grow 2s infinite linear;
+}
+
+@keyframes grow {
+    0% {
+        scale: 0;
+    }
+
+    80% {
+        scale: 1;
+        opacity: 0.5;
+    }
+
+    100% {
+        scale: 1.25;
+        opacity: 0;
+    }
+}
+
+.circleIcon {
+    position: absolute;
+    display: flex;
+    align-items: center;
+}
+
+.pulseCircle svg {
+    position: absolute;
+}
+
+    .pulseCircle svg circle {
+        transform: translate(50%, 50%);
+        transform-box: view-box;
+        transform-origin: center;
+    }
+
+.pulseCircle p {
+    z-index: 1;
+}
+
 /* Header */
 header {
     position: fixed;
@@ -153,8 +217,8 @@ span.arrow-btn {
     width: 4vw;
     bottom: 0;
     right: 0;
-    margin-bottom: 1%;
-    margin-right: 1%;
+    margin-bottom: 5%;
+    margin-right: 10%;
     /*margin: 35px 25px;*/
 }
 
@@ -219,7 +283,6 @@ span.arrow-btn {
     font-size: 3vw;
     z-index: 100;
     box-shadow: 0 10px 25px -5px rgba(246, 196, 71, 0.6);
-    cursor: pointer;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
 }

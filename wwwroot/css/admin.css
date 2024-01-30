@@ -465,7 +465,8 @@ input[type="radio"] {
 }
 
 .price-input input {
-    width: 12em;
+    width: 100%;
+    /*width: 12em;*/
     height: 1.5em;
     padding-left: 10px;
     box-shadow: 7px 7px 10px #cbced1, -7px -7px 10px white;

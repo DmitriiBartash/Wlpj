@@ -36,31 +36,31 @@ namespace LandingPage.Controllers
 			absoluteRootPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "content", "img_for_swiper");
 		}
 
-		public async Task<IActionResult> Index()
+		public IActionResult Index()
 		{
 			return View();
 		}
 
 		#region REVIEWS
 		[HttpGet]
-		public async Task<IActionResult> Reviews()
+		public IActionResult Reviews()
 		{
 			return View(_context.reviewModels);
 		}
 
 		[HttpGet]
-		public async Task<IActionResult> ReviewAdd()
+		public IActionResult ReviewAdd()
 		{
 			return View();
 		}
 
 		[HttpPost]
-		public async Task<ViewResult> ReviewAdd(ReviewModel reviewModel)
+		public ViewResult ReviewAdd(ReviewModel reviewModel)
 		{
 			if (ModelState.IsValid)
 			{
 				_context.reviewModels.Add(reviewModel);
-				await _context.SaveChangesAsync();
+				_context.SaveChanges();
 				return View("Reviews", _context.reviewModels);
 			}
 			else
@@ -70,7 +70,7 @@ namespace LandingPage.Controllers
 		}
 
 		[HttpGet]
-		public async Task<IActionResult> ReviewDelete(int id)
+		public IActionResult ReviewDelete(int id)
 		{
 			var review = _context.reviewModels.Find(id);
 			_context.reviewModels.Remove(review);
@@ -79,7 +79,7 @@ namespace LandingPage.Controllers
 		}
 
 		[HttpGet]
-		public async Task<IActionResult> ReviewEdit(int id)
+		public IActionResult ReviewEdit(int id)
 		{
 
 			var review = _context.reviewModels.Find(id);
@@ -88,7 +88,7 @@ namespace LandingPage.Controllers
 		}
 
 		[HttpPost]
-		public async Task<IActionResult> ReviewEdit(ReviewModel reviewModel)
+		public IActionResult ReviewEdit(ReviewModel reviewModel)
 		{
 			if (ModelState.IsValid)
 			{
@@ -108,7 +108,7 @@ namespace LandingPage.Controllers
 
 		#region CALLS
 		[HttpGet]
-		public async Task<IActionResult> DeleteCall(int id)
+		public IActionResult DeleteCall(int id)
 		{
 			_context.callBackModels.Remove(_context.callBackModels.Find(id));
 			_context.SaveChanges();
@@ -117,7 +117,7 @@ namespace LandingPage.Controllers
 		}
 
 		[HttpGet]
-		public async Task<IActionResult> Calls()
+		public IActionResult Calls()
 		{
 			return View(_context.callBackModels);
 		}
@@ -125,7 +125,7 @@ namespace LandingPage.Controllers
 
 		#region COUNTRIES
 		[HttpGet]
-		public async Task<IActionResult> Countries()
+		public IActionResult Countries()
 		{
 			// default shall be Russian 
 			var model = Functions.generateAdminCountriesData(_context, _icons);
@@ -160,7 +160,7 @@ namespace LandingPage.Controllers
 		}
 
 		[HttpPost]
-		public async Task<PartialViewResult> LoadImages([FromBody] int selectedCountry)
+		public PartialViewResult LoadImages([FromBody] int selectedCountry)
 		{
 			// get the country's name 
 			var name = _context.swiperModels.Find(selectedCountry);
@@ -173,7 +173,7 @@ namespace LandingPage.Controllers
 		}
 
 		[HttpPut]
-		public async Task<PartialViewResult> LoadImages([FromForm] IFormCollection country)
+		public PartialViewResult LoadImages([FromForm] IFormCollection country)
 		{
 			string absoluteFilePath, relativeFilePath;
 
@@ -208,7 +208,7 @@ namespace LandingPage.Controllers
 		}
 
 		[HttpPost]
-		public async Task<PartialViewResult> DeleteImage([FromBody] PicturePath data)
+		public PartialViewResult DeleteImage([FromBody] PicturePath data)
 		{
 			var countryModel = _context.swiperImagesAndPictures.Find(data.pictureID);
 
@@ -241,7 +241,7 @@ namespace LandingPage.Controllers
 		}
 
 		[HttpPost]
-		public async Task<PartialViewResult> LoadTags([FromBody] int selectedCountry)
+		public PartialViewResult LoadTags([FromBody] int selectedCountry)
 		{
 			// get the country's name 
 			var name = _context.swiperModels.Find(selectedCountry);
@@ -285,7 +285,7 @@ namespace LandingPage.Controllers
 		}
 
 		[HttpPost]
-		public async Task<PartialViewResult> LoadPopUp([FromBody] int selectedCountry)
+		public PartialViewResult LoadPopUp([FromBody] int selectedCountry)
 		{
 			// compare tags 
 			// 0-	fly
@@ -323,129 +323,155 @@ namespace LandingPage.Controllers
 		}
 
 		[HttpPost]
-		public async Task<PartialViewResult> SubmitPoster([FromBody] CountryFull countryFull)
+		public IActionResult SubmitPoster([FromBody] CountryFull countryFull)
 		{
-			var country = _context.swiperModels.Find(countryFull.Id);
-
-			// assemble the tags 
-			int i = 0;
-			string assembledTags = "";
-			StringBuilder stringBuilder = new();
-			foreach (var item in countryFull.ifTagsPresent)
+			// str1|str2|str3
+			// if country exists return error msg
+			string[] countryNames = countryFull.Name.Split("|");
+			if (IfCountryExists(countryNames[0], countryNames[1], countryNames[2], countryFull.Id))
 			{
-				if (item)
-				{
-					stringBuilder.Append(tagsList[i]);
-					stringBuilder.Append('|');
-				}
-				i++;
+				string message = "Error";
+
+				return Json(new { message = message });
 			}
-			stringBuilder.Remove(stringBuilder.Length - 1, 1);
-			assembledTags = stringBuilder.ToString();
-
-			// update the db entry
-			country!.Tags = assembledTags;
-			country.CountryName = countryFull.Name;
-			country.Price = countryFull.Price;
-			country.Currency = countryFull.Currency;
-			_context.SaveChanges();
-
-
-			CountryNoPics countryNoPics = new();
-			countryNoPics.Tags = new();
-
-			// first need to split them by '|' and only then by ','
-			string tagsRaw = country.Tags;
-
-			List<string> tagsFinal = new();
-			List<string> tagsForIcons = tagsRaw.Split("|").ToList();
-			int j = 0;
-			for (int k = 0; k < tagsForIcons.Count; k++)
+			// if country doesnt exist, add it
+			else
 			{
-				tagsFinal.Add(tagsForIcons[k].Split(",")[0]);
-				var tagToSearch = tagsForIcons[k].Split(",")[0];
-				if (tagsForIcons[k].Contains('\n'))
+				var country = _context.swiperModels.Find(countryFull.Id);
+
+				// assemble the tags 
+				int i = 0;
+				string assembledTags = "";
+				StringBuilder stringBuilder = new();
+				foreach (var item in countryFull.ifTagsPresent)
 				{
-					tagsForIcons[j] = tagsForIcons[k][..^1];
+					if (item)
+					{
+						stringBuilder.Append(tagsList[i]);
+						stringBuilder.Append('|');
+					}
+					i++;
 				}
-				TagsAndIcons tagsAndIcons = new() { tag = tagToSearch, icon = _icons[tagsForIcons[j++]] };
-				countryNoPics.Tags.Add(tagsAndIcons);
+				stringBuilder.Remove(stringBuilder.Length - 1, 1);
+				assembledTags = stringBuilder.ToString();
+
+				// update the db entry
+				country!.Tags = assembledTags;
+				country.CountryName = countryFull.Name;
+				country.Price = countryFull.Price;
+				country.Currency = countryFull.Currency;
+				_context.SaveChanges();
+
+
+				CountryNoPics countryNoPics = new();
+				countryNoPics.Tags = new();
+
+				// first need to split them by '|' and only then by ','
+				string tagsRaw = country.Tags;
+
+				List<string> tagsFinal = new();
+				List<string> tagsForIcons = tagsRaw.Split("|").ToList();
+				int j = 0;
+				for (int k = 0; k < tagsForIcons.Count; k++)
+				{
+					tagsFinal.Add(tagsForIcons[k].Split(",")[0]);
+					var tagToSearch = tagsForIcons[k].Split(",")[0];
+					if (tagsForIcons[k].Contains('\n'))
+					{
+						tagsForIcons[j] = tagsForIcons[k][..^1];
+					}
+					TagsAndIcons tagsAndIcons = new() { tag = tagToSearch, icon = _icons[tagsForIcons[j++]] };
+					countryNoPics.Tags.Add(tagsAndIcons);
+				}
+
+				CountryTagsNPrices countryTagsNPrices = new()
+				{
+					Tags = countryNoPics.Tags,
+					Currency = country.Currency,
+					Price = country.Price
+				};
+
+				ViewBag.ID = countryFull.Id;
+				return PartialView("_AdminCountryTagsNPrices", countryTagsNPrices);
 			}
-
-			CountryTagsNPrices countryTagsNPrices = new()
-			{
-				Tags = countryNoPics.Tags,
-				Currency = country.Currency,
-				Price = country.Price
-			};
-
-			ViewBag.ID = countryFull.Id;
-			return PartialView("_AdminCountryTagsNPrices", countryTagsNPrices);
 		}
 
 		[HttpPost]
-		public async Task<IActionResult> CountryAdd([FromBody] CountryFull countryFull)
+		public IActionResult CountryAdd([FromBody] CountryFull countryFull)
 		{
-			SwiperModel country = new();
-			// assemble the tags 
-			int i = 0;
-			StringBuilder stringBuilder = new();
-			foreach (var item in countryFull.ifTagsPresent)
+			// str1|str2|str3
+			// if country exists return error msg
+			string[] countryNames = countryFull.Name.Split("|");
+			if (IfCountryExists(countryNames[0], countryNames[1], countryNames[2], -1))
 			{
-				if (item)
-				{
-					stringBuilder.Append(tagsList[i]);
-					stringBuilder.Append('|');
-				}
-				i++;
+				string message = "Error";
+
+				return Json(new { message = message });
 			}
-			stringBuilder.Remove(stringBuilder.Length - 1, 1);
-			string assembledTags = stringBuilder.ToString();
-
-			// update the db entry
-			country.Tags = assembledTags;
-			country.CountryName = countryFull.Name;
-			country.Currency = countryFull.Currency;
-			country.Price = countryFull.Price;
-			_context.swiperModels.Add(country);
-			_context.SaveChanges();
-
-
-			CountryNoPics countryNoPics = new();
-			countryNoPics.Tags = new();
-
-			// first need to split them by '|' and only then by ','
-			string tagsRaw = country.Tags;
-
-			List<string> tagsFinal = new();
-			List<string> tagsForIcons = tagsRaw.Split("|").ToList();
-			int j = 0;
-			for (int k = 0; k < tagsForIcons.Count; k++)
+			// if country doesnt exist, add it
+			else
 			{
-				tagsFinal.Add(tagsForIcons[k].Split(",")[0]);
-				var tagToSearch = tagsForIcons[k].Split(",")[0];
-				if (tagsForIcons[k].Contains('\n'))
+				SwiperModel country = new();
+				// assemble the tags 
+				int i = 0;
+				StringBuilder stringBuilder = new();
+				foreach (var item in countryFull.ifTagsPresent)
 				{
-					tagsForIcons[j] = tagsForIcons[k][..^1];
+					if (item)
+					{
+						stringBuilder.Append(tagsList[i]);
+						stringBuilder.Append('|');
+					}
+					i++;
 				}
-				TagsAndIcons tagsAndIcons = new() { tag = tagToSearch, icon = _icons[tagsForIcons[j++]] };
-				countryNoPics.Tags.Add(tagsAndIcons);
+				stringBuilder.Remove(stringBuilder.Length - 1, 1);
+				string assembledTags = stringBuilder.ToString();
+
+				// update the db entry
+				country.Tags = assembledTags;
+				country.CountryName = countryFull.Name;
+				country.Currency = countryFull.Currency;
+				country.Price = countryFull.Price;
+				_context.swiperModels.Add(country);
+				_context.SaveChanges();
+
+
+				CountryNoPics countryNoPics = new();
+				countryNoPics.Tags = new();
+
+				// first need to split them by '|' and only then by ','
+				string tagsRaw = country.Tags;
+
+				List<string> tagsFinal = new();
+				List<string> tagsForIcons = tagsRaw.Split("|").ToList();
+				int j = 0;
+				for (int k = 0; k < tagsForIcons.Count; k++)
+				{
+					tagsFinal.Add(tagsForIcons[k].Split(",")[0]);
+					var tagToSearch = tagsForIcons[k].Split(",")[0];
+					if (tagsForIcons[k].Contains('\n'))
+					{
+						tagsForIcons[j] = tagsForIcons[k][..^1];
+					}
+					TagsAndIcons tagsAndIcons = new() { tag = tagToSearch, icon = _icons[tagsForIcons[j++]] };
+					countryNoPics.Tags.Add(tagsAndIcons);
+				}
+
+				CountryTagsNPrices countryTagsNPrices = new()
+				{
+					Tags = countryNoPics.Tags,
+					Currency = country.Currency,
+					Price = country.Price
+				};
+
+				ViewBag.ID = countryFull.Id;
+
+				return PartialView("_AdminCountryTagsNPrices", countryTagsNPrices);
 			}
-
-			CountryTagsNPrices countryTagsNPrices = new()
-			{
-				Tags = countryNoPics.Tags,
-				Currency = country.Currency,
-				Price = country.Price
-			};
-
-			ViewBag.ID = countryFull.Id;
-
-			return PartialView("_AdminCountryTagsNPrices", countryTagsNPrices);
 		}
 
 		[HttpPost]
-		public async Task<IActionResult> ListCountries([FromBody] string data)
+		public IActionResult ListCountries([FromBody] string data)
 		{
 			var countries = _context.swiperModels.Select(s => new ExtraMinCountryModel() { ID = s.ID, Name = s.CountryName }).ToList();
 
@@ -461,7 +487,7 @@ namespace LandingPage.Controllers
 		}
 
 		[HttpPost]
-		public async Task<PartialViewResult> DeleteCountry([FromBody] string ID)
+		public PartialViewResult DeleteCountry([FromBody] string ID)
 		{
 			int Pid = Convert.ToInt32(ID);
 			// find the parent & delete him
@@ -486,5 +512,51 @@ namespace LandingPage.Controllers
 			return PartialView("_AdminCountryImages", photoPaths);
 		}
 		#endregion
+
+		private bool IfCountryExists(string RuName, string EnName, string RoName, int CID)
+		{
+			// get all countries names
+			//_context.swiperModels
+			// separate or do not?
+			string lowercaseRu = RuName.ToLower();
+			string lowercaseRo = RoName.ToLower();
+			string lowercaseEn = EnName.ToLower();
+
+			var countryNames = _context.swiperModels.Select(s => s.CountryName).ToArray();
+
+			string existingCountry = "";
+			if (CID != -1)
+			{
+				existingCountry = _context.swiperModels
+					.Where(s => s.ID == CID).Select(str => str.CountryName).FirstOrDefault();
+			}
+
+			foreach (var country in countryNames)
+			{
+				if (CID != -1)
+				{
+					// convert country name to lowercase
+					string lowercaseCountry = country.ToLower();
+					// case scenario:
+					// i want to change name of Loss angheles to Loss Angeles
+					// in that case i just need to check if its present in OTHER COUNTRIES
+					// and if the iterable country is the same as the country that's been identified by ID
+					// *while iterating i dont check the country that's been identified
+
+					// check if data submitted with JS is present anywhere in DB
+					bool isCountryPresent =
+						lowercaseCountry.Contains(lowercaseRu) ||
+						lowercaseCountry.Contains(lowercaseRo) ||
+						lowercaseCountry.Contains(lowercaseEn);
+
+					if (isCountryPresent && country != existingCountry)
+					{
+						return true;
+					}
+				}
+			}
+
+			return false;
+		}
 	}
 }

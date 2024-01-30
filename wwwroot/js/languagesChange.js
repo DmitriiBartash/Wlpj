@@ -36,6 +36,24 @@ const validationModelJson = {
                 "Ru": "Слишком много цифр!",
                 "Eng": "Too many digits!",
                 "Ro": "Prea multe numere!"
+            },
+            "patternName":
+            {
+                "Ru": "Первое поле не соответствует шаблону",
+                "Eng": "The first field does not match the pattern",
+                "Ro": "Primul câmp nu se potrivește cu modelul"
+            },
+            "patternPhone":
+            {
+                "Ru": "Второе поле не соответствует шаблону",
+                "Eng": "The second field does not match the pattern",
+                "Ro": "Al doilea câmp nu se potrivește cu modelul"
+            },
+            "requests":
+            {
+                "Ru": "Слишком много запросов!",
+                "Eng": "Too many requests!",
+                "Ro": "Prea multe cereri"
             }
         }
     }
@@ -66,7 +84,7 @@ const languageModelJson = {
             "hot-deals-container": "Горящие предложения"
         },
         {
-            "heading_about_us": "Что мы предлагаем?",
+            "heading_about_us": "<h1>Что мы предлагаем?</h1>",
             "information-cards": [
                 {
                     "title": "Персонализированный Подход",
@@ -84,10 +102,10 @@ const languageModelJson = {
         },
         {
             "about-us": {
-                "heading_about_us": "Несколько фактов о нас",
-                "years_count_text": "Лет на рынке:",
+                "heading_about_us": "<h1>Несколько фактов о нас</h1>",
+                "years_count_text": "лет на рынке",
                 "text_A_us1": "Мы заслужили репутацию надежного партнера среди тысяч путешественников.",
-                "client_count_text": "Счастливых клиентов:",
+                "client_count_text": "счастливых клиентов",
                 "text_A_us2": "Мы организовали тысячи удовлетворенных клиентов, которые оставляют нам положительные отзывы и рекомендации."
             }
         },
@@ -143,7 +161,7 @@ const languageModelJson = {
             "hot-deals-container": "Hot Offers"
         },
         {
-            "heading_about_us": "What do we offer?",
+            "heading_about_us": "<h1>What do we offer?</h1>",
             "information-cards": [
                 {
                     "title": "Personalized approach",
@@ -161,10 +179,10 @@ const languageModelJson = {
         },
         {
             "about-us": {
-                "heading_about_us": "A few facts about us",
+                "heading_about_us": "<h1>A few facts about us</h1>",
                 "years_count_text": "years on the market",
                 "text_A_us1": "We have earned a reputation as a reliable partner among thousands of travelers.",
-                "client_count_text": "Happy Clients",
+                "client_count_text": "happy clients",
                 "text_A_us2": "We have thousands of satisfied customers who leave us positive reviews and recommendations."
             }
         },
@@ -218,7 +236,7 @@ const languageModelJson = {
             "hot-deals-container": "Oferte Fierbinți"
         },
         {
-            "heading_about_us": "Ce noi oferim?",
+            "heading_about_us": "<h1>Ce noi oferim?</h1>",
             "information-cards": [
                 {
                     "title": "Abordare personală",
@@ -236,8 +254,8 @@ const languageModelJson = {
         },
         {
             "about-us": {
-                "heading_about_us": "Experiența noastră",
-                "years_count_text": "ani de activitate.",
+                "heading_about_us": "<h1>Experiența noastră</h1>",
+                "years_count_text": "ani de activitate",
                 "text_A_us1": "Mii de călători au făcut din noi partenerul lor de încredere.",
                 "client_count_text": "de clienți mulțumiți",
                 "text_A_us2": "Mii de clienți mulțumiți au lăsat recenzii și recomandări pozitive."

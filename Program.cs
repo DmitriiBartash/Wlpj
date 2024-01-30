@@ -27,11 +27,21 @@ builder.Services.AddHttpsRedirection(options =>
 // Configure rate limiter for login attempts
 // 3 attempts and then 60 min ban
 // might remove it
-builder.Services.AddRateLimiter(options => options.AddFixedWindowLimiter(policyName: "fixed", _ =>
+builder.Services.AddMemoryCache();
+builder.Services.AddRateLimiter(options =>
 {
-	_.PermitLimit = 3;
-	_.Window = TimeSpan.FromMinutes(60);
-}));
+	options.AddFixedWindowLimiter(policyName: "fixed", _ =>
+	{
+		_.PermitLimit = 3;
+		_.Window = TimeSpan.FromMinutes(1);
+	});
+
+	options.AddFixedWindowLimiter(policyName: "longerBan", _ =>
+	{
+		_.PermitLimit = 5; 
+		_.Window = TimeSpan.FromMinutes(60);
+	});
+});
 
 // Configure cookies
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options =>
@@ -54,7 +64,6 @@ builder.Services.AddDbContext<DatabaseContext>(Options =>
 builder.Services.AddWebOptimizer(pipeline =>
 {
 	pipeline.AddCssBundle("/css/bundledMain.css", "/css/mainpage.css", "/css/header.css", "/css/aboutus.css", "/css/callrequest.css", "/css/testimonials.css", "/css/findus.css", "/css/footer.css", "/css/animations.css", "/css/Animation.css", "/css/slider.css");
-
 	pipeline.AddJavaScriptBundle("/js/bundledMain.js", "/js/languagesChange.js", "/js/SelectCountry.js", "/js/script.js", "/js/swiper.js", "/js/scrolling.js", "/js/validateForm.js");
 });
 

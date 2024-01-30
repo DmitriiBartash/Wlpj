@@ -2,6 +2,7 @@
 using LandingPage.Models;
 using LandingPage.Utils;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.RateLimiting;
 
 namespace LandingPage.Controllers
 {
@@ -10,6 +11,7 @@ namespace LandingPage.Controllers
 		private readonly DatabaseContext _context;
 		public readonly Dictionary<string, int> _countryCodes;
 		public readonly Dictionary<string, string> _icons;
+
 
 		public HomeController(DatabaseContext context, CountryCodes countryCodes, Icons icons)
 		{
@@ -38,9 +40,9 @@ namespace LandingPage.Controllers
 		}
 
 		[HttpPost]
+		[EnableRateLimiting("fixed")]
 		public IActionResult AddUserDetails([FromBody] CallBackMiniModel callBackModel)
 		{
-			// validate the data 
 			CallBackModel _callBackModel = new()
 			{
 				CreationDate = DateTime.Now,
@@ -65,7 +67,7 @@ namespace LandingPage.Controllers
 			}
 			else if (selectedCountry.selectedLanguage == "Ro")
 			{
-				ViewBag.PriceIncludes = "Pretul include:";
+				ViewBag.PriceIncludes = "Prețul include:";
 			}
 			else if (selectedCountry.selectedLanguage == "Eng")
 			{
@@ -88,7 +90,7 @@ namespace LandingPage.Controllers
 			}
 			else if (selectedCountry.selectedLanguage == "Ro")
 			{
-				ViewBag.PriceIncludes = "Pretul include:";
+				ViewBag.PriceIncludes = "Prețul include:";
 			}
 			else if (selectedCountry.selectedLanguage == "Eng")
 			{

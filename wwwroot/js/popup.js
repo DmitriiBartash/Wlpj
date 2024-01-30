@@ -1,32 +1,53 @@
 let isPopupOpen = false;
-let popUpWindow = document.querySelector(".popup");
+let nameId = 0;
 let EditTxt = 'Измените страну';
 
-popUpWindow.style.display = 'none';
-
-let nameId = 0;
+// divs
+let popUpWindow = "";
 let popupTXT = "";
+let namesDivs = "";
+let tagsDivs = "";
+let priceDiv = "";
+let currencyDiv = "";
+let tagsErr = "";
+let idDiv = "";
+fillDivs(true);
 
 function openPopUp(element) {
-    popupTXT = document.querySelector("#popUPName");
+    //popupTXT = document.querySelector("#popUPName");
+    console.log(element.textContent);
     if (element.textContent == "Редактировать страну") {
-        popupTXT.textContent = "Изменить страну";
-
-        let id = document.querySelector("#countrySelectedID").textContent;
-        nameId = id;
+        nameId = document.querySelector("#countrySelectedID").textContent;
 
         $.ajax({
             url: '/Admin/LoadPopUp',
             type: 'POST',
-            data: JSON.stringify(id),
+            data: JSON.stringify(nameId),
             contentType: 'application/json',
             success: function (result) {
                 $('.popup').html(result);
+                document.querySelector("#popUPName").textContent = "Изменить страну";
+                document.querySelector("#currency").value = document.getElementById("modelCurrency").value;
+                document.querySelector('.price-input').children[0].addEventListener("input", function () {
+                    console.log("wtf");
+                    let inputSymbol1 = this.value.charAt(this.value.length - 1);
+                    const pattern2 = /\d/;
+
+                    let isValid = pattern2.test(inputSymbol1);
+                    if (!isValid) {
+                        this.value = this.value.slice(0, -1);
+                        console.log(this.value);
+                    }
+                    console.log(inputSymbol1, pattern2.test(inputSymbol1));
+                });
+
             }
         });
         hookAccordion();
     }
     else {
+        fillDivs(false);
+        console.log("here");
         popupTXT.textContent = "Добавить страну";
     }
     popUpWindow.style.display = 'flex';
@@ -42,46 +63,62 @@ function submit() {
                 data: JSON.stringify(assembleData()),
                 contentType: 'application/json',
                 success: function (result) {
-                    $('#TagsNPrices').html(result);
-                    hookAccordion();
+                    if (typeof result === 'object') {
+                        // it's error
+                        alert("Ошибка!");
+                    }
+                    else {
+                        // add country and update UI
+                        $('#TagsNPrices').html(result);
+                        hookAccordion();
 
-                    $.ajax({
-                        url: '/Admin/ListCountries',
-                        type: 'POST',
-                        data: JSON.stringify("dd"),
-                        contentType: 'application/json',
-                        success: function (result2) {
-                            $('#CountryData').html(result2);
-                            hookAccordion();
-                        }
-                    });
+                        $.ajax({
+                            url: '/Admin/ListCountries',
+                            type: 'POST',
+                            data: JSON.stringify("dd"),
+                            contentType: 'application/json',
+                            success: function (result2) {
+                                $('#CountryData').html(result2);
+                                hookAccordion();
+                            }
+                        });
+                        popUpWindow.style.display = 'none';
+                    }
                 }
             });
         }
         else {
+            console.log("submitPoster");
             $.ajax({
                 url: '/Admin/SubmitPoster',
                 type: 'POST',
                 data: JSON.stringify(assembleData()),
                 contentType: 'application/json',
                 success: function (result) {
-                    $('#TagsNPrices').html(result);
-                    hookAccordion();
+                    if (typeof result === 'object') {
+                        // it's error
+                        alert("Ошибка!");
+                    }
+                    else {
+                        // IMPORTANT !! ADD LOGIC HERE AS WELL
+                        $('#TagsNPrices').html(result);
+                        hookAccordion();
 
-                    $.ajax({
-                        url: '/Admin/ListCountries',
-                        type: 'POST',
-                        data: JSON.stringify("dd"),
-                        contentType: 'application/json',
-                        success: function (result3) {
-                            $('#CountryData').html(result3);
-                            hookAccordion();
-                        }
-                    });
+                        $.ajax({
+                            url: '/Admin/ListCountries',
+                            type: 'POST',
+                            data: JSON.stringify("dd"),
+                            contentType: 'application/json',
+                            success: function (result3) {
+                                $('#CountryData').html(result3);
+                                hookAccordion();
+                            }
+                        });
+                        popUpWindow.style.display = 'none';
+                    }
                 }
             });
         }
-        popUpWindow.style.display = 'none';
     }
     else {
         console.log("invalid");
@@ -89,12 +126,32 @@ function submit() {
 }
 function reject() {
     popUpWindow.style.display = 'none';
+    fillDivs(false);
+    // CLEAN THE FIELDS
+    // clean names
+    for (let item of namesDivs) {
+        item.children[0].value = '';
+        item.children[1].textContent = '';
+    }
+
+    // clean prices
+    priceDiv.children[0].value = '';
+    priceDiv.parentElement.children[2].textContent = '';
+
+    // clean currency
+    currencyDiv.value = "MDL";
+
+    // clean tags
+    for (let item of tagsDivs) {
+        item.children[0].checked = false;
+    }
+    tagsErr.textContent = '';
 }
 function customCountryValidation() {
     let isValid = true;
+    fillDivs(false);
 
     // validate names
-    let namesDivs = document.querySelectorAll('.validationDiv');
     for (let item of namesDivs) {
         if (item.children[0].value == '' || item.children[0].value == null) {
             item.children[1].textContent = "Ошибка!";
@@ -106,26 +163,24 @@ function customCountryValidation() {
     }
 
     // validate prices
-    let pricesDivs = document.querySelectorAll('.price-input');
-    for (let item of pricesDivs) {
-        if (item.children[0] == '' || item.children[0].value == null || item.children[0].value == 0) {
-            item.children[1].textContent = "Ошибка!";
-            isValid = false;
-        }
-        else {
-            item.children[1].textContent = '';
-        }
+    if (priceDiv.children[0] == '' ||
+        priceDiv.children[0].value == null ||
+        priceDiv.children[0].value == 0 ||
+        priceDiv.children[0].value < 10) {
+        priceDiv.parentElement.children[2].textContent = "Ошибка!";
+        isValid = false;
+    }
+    else {
+        priceDiv.parentElement.children[2].textContent = '';
     }
 
     // validate tags
-    let tagsDivs = document.querySelectorAll('.form__group');
     let markedTagsDivs = 0;
     for (let item of tagsDivs) {
         if (item.children[0].checked) {
             markedTagsDivs++;
         }
     }
-    let tagsErr = document.querySelector('#tagsErr');
     if (markedTagsDivs == 0) {
         isValid = false;
         tagsErr.textContent = "Ошибка!";
@@ -138,11 +193,6 @@ function customCountryValidation() {
 }
 
 function assembleData() {
-    let countryId = nameId;
-    let namesDivs = document.querySelectorAll('.validationDiv');
-    let tagsDivs = document.querySelectorAll('.form__group');
-    let pricesDivs = document.querySelectorAll('.price-input');
-
     // get names
     let names = "";
     for (let item of namesDivs) {
@@ -156,15 +206,30 @@ function assembleData() {
         tags.push(item.children[0].checked);
     }
 
-    // get prices
-    let priceUsd = pricesDivs[0].children[0].value;
-    let priceEuro = pricesDivs[1].children[0].value;
+    // get price
+    let priceUsd = priceDiv.children[0].value;
+    // get currency
+    let currency = currencyDiv.value;
 
     return {
-        "Id": countryId,
+        "Id": nameId,
         "Name": names,
         "ifTagsPresent": tags,
         "Price": priceUsd,
-        "Currency": priceEuro
+        "Currency": currency
     };
+}
+
+function fillDivs(isFirstTime) {
+    popUpWindow = document.querySelector(".popup");
+    popupTXT = document.querySelector("#popUPName");
+    namesDivs = document.querySelectorAll('.validationDiv');
+    tagsDivs = document.querySelectorAll('.form__group');
+    priceDiv = document.querySelector('.price-input');
+    currencyDiv = document.querySelector('#currency');
+    tagsErr = document.querySelector('#tagsErr');
+    idDiv = document.querySelector("#countrySelectedID");
+    if (isFirstTime) {
+        popUpWindow.style.display = 'none';
+    }
 }

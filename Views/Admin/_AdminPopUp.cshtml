@@ -5,10 +5,11 @@
 		Names = Model.Name.Split("|");
 }
 
+<input type="hidden" id="modelCurrency" value="@Model?.Currency">
+
 <div class="popup-wrapper">
 	<p id="countrySelected" hidden>@ViewBag.ID</p>
 	<div class="popup-grid">
-
 		<form action="SubmitPoster" method="post">
 			<fieldset>
 				<legend id="popUPName"></legend>
@@ -55,22 +56,21 @@
 
 			<fieldset>
 				<legend>Цена начинается от</legend>
-				<div class="price-input">
-					<input type="text" placeholder="Цена" value="@Model?.Price">
-					<p class="text-danger"></p>
+				<div class="price-input" style="display: flex;flex-direction: row;">
+					<input type="text" placeholder="Цена" maxlength="5" value="@Model?.Price">
+					<select name="currencies" id="currency" value="@Model?.Currency">
+						<option value="MDL">MDL</option>
+						<option value="USD">USD</option>
+						<option value="EUR">EUR</option>
+					</select>
 				</div>
-				<legend>Валюта</legend>
-				<div class="price-input">
-					<input type="text" placeholder="Валюта" value="@Model?.Currency">
-					<p class="text-danger"></p>
-				</div>
+				<p class="text-danger"></p>
 			</fieldset>
 
 			<fieldset>
-				<div onclick="submit()" class="submit1">V</div>
-				<div onclick="reject()" class="reject1">Х</div>
+				<div onclick="submit()" class="submit1" style="margin-right:0px;">V</div>
+				<div onclick="reject()" class="reject1" style="margin-right:0px;">Х</div>
 			</fieldset>
 		</form>
-
 	</div>
 </div>

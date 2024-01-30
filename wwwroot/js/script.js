@@ -1,5 +1,5 @@
 let icons = document.querySelector('.element-container');
-let buttonFloating = document.querySelector('.floating-button');
+let buttonFloating = document.querySelector('.pulseCircle');
 let navLinks = document.querySelector('.nav-links');
 let isButtonActive = true;
 icons.style.display = "none";

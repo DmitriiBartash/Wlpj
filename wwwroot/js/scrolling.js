@@ -46,7 +46,6 @@ const observer = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             // Element is in viewport, fire your function here
             incrementYear();
-            incremenyClients();
             observer.disconnect(); // Disconnect if needed (one-time trigger)
         }
     });

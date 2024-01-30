@@ -3,6 +3,13 @@ const inputName = document.querySelectorAll('.inputbox1')[0];
 const inputPhone = document.querySelectorAll('.inputbox1')[1];
 const inputInformation = document.querySelector('.inputInformation');
 
+// '-', ' ', english, russian, romanian
+const allowedCharacters = "[a-zA-Z\u0410-\u04FF\u00e2\u00c2\u00ee\u00ce\u0103\u0102\u021b\u021a\u0219\u0218]+";
+const patternSubmit = new RegExp(`^(${allowedCharacters}-?){1,5} ?(${allowedCharacters}-?){1,5}$`);
+const patternInput = /[- a-zA-Z\u0410-\u04FF\u00e2\u00c2\u00ee\u00ce\u0103\u0102\u021b\u021a\u0219\u0218]/;
+
+const patternPhone = /[ \d+-]+/;
+const patternPhoneSubm = /^(\+?((\d+) ?-?)+)$/;
 
 
 form.addEventListener('submit', (event) => {
@@ -21,9 +28,9 @@ form.addEventListener('submit', (event) => {
             type: 'POST',
             data: JSON.stringify(callDataJSON),
             contentType: 'application/json',
-            //success: function (result) {
-            //    console.log("suzce");
-            //}
+            error: function (result) {
+                inputInformation.innerHTML = "<p class='inputInformation_error fa fa-times-circle'>" + validationModelJson.text.errors.requests[selectedLanguage] + "</p>";
+            }
         });
     }
 });
@@ -43,10 +50,14 @@ function validateInput() {
         let completeData = wordValidationData(inputName.value);
         let wordNumber = completeData.wordCounter;
         let fixedString = completeData.result;
-        //console.log(completeData);
+
         if (wordNumber != 2) {
             isOkay = false;
             message += "<p class='inputInformation_error fa fa-times-circle'>" + validationModelJson.text.errors.name_format[selectedLanguage] + "</p>";
+        }
+        else if (!patternSubmit.test(fixedString)) {
+            isOkay = false;
+            message += "<p class='inputInformation_error fa fa-times-circle'>" + validationModelJson.text.errors.patternName[selectedLanguage] + "</p>";
         }
     }
 
@@ -56,16 +67,16 @@ function validateInput() {
         isOkay = false;
     }
     // validate phone number
-    // phone number cant be less than 6 and greater than 15
+    // phone number cant be less than 10 and must match the pattern
     else {
         let digitsNumber = countDigits(inputPhone.value);
-        if (digitsNumber < 6) {
+        if (digitsNumber <= 9) {
             isOkay = false;
             message += "<p class='inputInformation_error fa fa-times-circle'>" + validationModelJson.text.errors.few_digits[selectedLanguage] + "</p>";
         }
-        if (digitsNumber >= 15) {
+        else if (!patternPhoneSubm.test(inputPhone.value)) {
             isOkay = false;
-            message += "<p class='inputInformation_error fa fa-times-circle'>" + validationModelJson.text.errors.few_digits[selectedLanguage] + "</p>";
+            message += "<p class='inputInformation_error fa fa-times-circle'>" + validationModelJson.text.errors.patternPhone[selectedLanguage] + "</p>";
         }
     }
 
@@ -114,26 +125,28 @@ function countDigits(string) {
     return count;
 }
 
-// mini animation
 inputName.addEventListener("input", function () {
     ControlInputStyles(this);
     // IT'S FOR RESTRICTING USER TO ENTER FORBIDDEN CHARACTERS
     let inputSymbol = this.value.charAt(this.value.length - 1);
     // to test the reg expression insert pattern's content into
     // https://regexr.com
-    // '-', ' ', english, russian, romanian
-    const pattern = /[- a-zA-Z\u0410-\u04FF\u00e2\u00c2\u00ee\u00ce\u0103\u0102\u021b\u021a\u0219\u0218]/;
-
-    let isValid = pattern.test(inputSymbol);
+    let isValid = patternInput.test(inputSymbol);
     if (!isValid) {
         this.value = this.value.slice(0, -1);
-        //console.log(this.value);
     }
-    //console.log(inputSymbol, pattern.test(inputSymbol));
 });
 
 inputPhone.addEventListener("input", function () {
     ControlInputStyles(this);
+    // IT'S FOR RESTRICTING USER TO ENTER FORBIDDEN CHARACTERS
+    let inputPSymbol = this.value.charAt(this.value.length - 1);
+    // to test the reg expression insert pattern's content into
+    // https://regexr.com
+    let isValid = patternPhone.test(inputPSymbol);
+    if (!isValid) {
+        this.value = this.value.slice(0, -1);
+    }
 });
 
 function ControlInputStyles(element) {

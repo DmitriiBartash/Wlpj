@@ -21,6 +21,4 @@ namespace LandingPage.Models
 		[MaybeNull]
 		public string PathToPicture { get; set; }
 	}
-
-
 }

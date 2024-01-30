@@ -13,7 +13,7 @@ namespace LandingPage.Controllers
 	public class LoginController : Controller
 	{
 		[HttpGet]
-		public async Task<IActionResult> Index()
+		public IActionResult Index()
 		{
 			if (HttpContext.User.Identity.IsAuthenticated)
 			{
@@ -23,8 +23,8 @@ namespace LandingPage.Controllers
 		}
 
 		[HttpPost]
-		[EnableRateLimiting("fixed")]
-		public async Task<IActionResult> Login(AdminModel userdetails)
+		[EnableRateLimiting("longerBan")]
+		public IActionResult Login(AdminModel userdetails)
 		{
 			if (ModelState.IsValid)
 			{
@@ -44,7 +44,7 @@ namespace LandingPage.Controllers
 
 					AuthenticationProperties properties = new() { AllowRefresh = true, IsPersistent = false };
 
-					await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new(claimsIdentity), properties);
+					HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new(claimsIdentity), properties);
 
 					return RedirectToAction("Index", "Admin");
 				}
@@ -54,9 +54,9 @@ namespace LandingPage.Controllers
 
 		}
 
-		public async Task<IActionResult> Logout()
+		public IActionResult Logout()
 		{
-			await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+			HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
 			return RedirectToAction("Index", "Home");
 		}
 	}
