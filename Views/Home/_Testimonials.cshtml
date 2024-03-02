@@ -5,24 +5,27 @@
 	<div class="testimonials-heading">Что о нас говорят?</div>
 
 	<div class="testimonials-swiper">
-		@foreach (var item in Model)
+		@if (Model != null)
 		{
-			<div class="testimonials-swiper-element">
-				<div class="text_testimonials-swiper_heading">
-					@item.Person
-					<div class="star_1">
-						<img src="~/content/testimonials/star_testimonials.svg" width="25" height="25" style="position: relative">
-						<img src="~/content/testimonials/star_testimonials.svg" width="25" height="25" style="position: relative">
-						<img src="~/content/testimonials/star_testimonials.svg" width="25" height="25" style="position: relative">
-						<img src="~/content/testimonials/star_testimonials.svg" width="25" height="25" style="position: relative">
-						<img src="~/content/testimonials/star_testimonials.svg" width="25" height="25" style="position: relative">
+			@foreach (var item in Model)
+			{
+				<div class="testimonials-swiper-element">
+					<div class="text_testimonials-swiper_heading">
+						@item.Person
+						<div class="star_1">
+							<img src="~/content/testimonials/star_testimonials.svg" width="25" height="25" style="position: relative">
+							<img src="~/content/testimonials/star_testimonials.svg" width="25" height="25" style="position: relative">
+							<img src="~/content/testimonials/star_testimonials.svg" width="25" height="25" style="position: relative">
+							<img src="~/content/testimonials/star_testimonials.svg" width="25" height="25" style="position: relative">
+							<img src="~/content/testimonials/star_testimonials.svg" width="25" height="25" style="position: relative">
+						</div>
 					</div>
+					<hr>
+					<p class="text_testimonials-swiper-element">
+						"@item.Review"
+					</p>
 				</div>
-				<hr>
-				<p class="text_testimonials-swiper-element">
-					"@item.Review"
-				</p>
-			</div>
+			}
 		}
 	</div>
 </div>

@@ -1,4 +1,23 @@
-﻿<div class="panel">
+﻿@{
+	string[] CNames = { "", "", "" };
+	bool isFilled = false;
+	if (Model is not null)
+	{
+		if (Model.CountryName != null)
+		{
+			if (Model.CountryName != "")
+			{
+				CNames = Model.CountryName.Split("|");
+				if (Model.CountryName.Split("|").Length > 1)
+				{
+					isFilled = true;
+				}
+			}
+		}
+	}
+}
+
+<div class="panel">
 	@if (Model is not null)
 	{
 		@if (@ViewBag.ID == null)
@@ -10,7 +29,13 @@
 			<p id="countrySelectedID" hidden>@ViewBag.ID</p>
 		}
 		<div class="name_country">
-			<p>Название: </p>
+			<p>Название страны: </p>
+			@if (isFilled)
+			{
+				<div>Ru: @CNames[0]</div>
+				<div>En: @CNames[1]</div>
+				<div>Ro: @CNames[2]</div>
+			}
 		</div>
 		<div class="prices">
 			<p>Цена: @Model?.Price</p>

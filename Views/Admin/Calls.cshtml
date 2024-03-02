@@ -47,24 +47,24 @@
 		background: linear-gradient(to top left, powderblue, pink);
 	}
 
-	.table th {
-		border: 5px solid grey;
-		padding: 0.5%;
-	}
+		.table th {
+			border: 5px solid grey;
+			padding: 0.5%;
+		}
 
-	.table td {
-		border: 5px solid grey;
-		padding: 0.5%;
-	}
+		.table td {
+			border: 5px solid grey;
+			padding: 0.5%;
+		}
 
 	.delete_call {
 		display: flex;
 		justify-content: center;
 	}
 
-	.delete_call:hover {
-		color: red;
-	}
+		.delete_call:hover {
+			color: red;
+		}
 
 </style>
 
@@ -73,7 +73,7 @@
 	<div class="logout-container">
 		<a href="~/Login/Logout">Log out</a> |
 		<a asp-controller="Home" asp-action="Index">Home</a> |
-		<a href="#">Back</a>
+		<a asp-controller="Admin" asp-action="Index">Back</a>
 	</div>
 </header>
 

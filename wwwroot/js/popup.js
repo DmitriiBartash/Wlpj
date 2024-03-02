@@ -14,11 +14,8 @@ let idDiv = "";
 fillDivs(true);
 
 function openPopUp(element) {
-    //popupTXT = document.querySelector("#popUPName");
-    console.log(element.textContent);
     if (element.textContent == "Редактировать страну") {
         nameId = document.querySelector("#countrySelectedID").textContent;
-
         $.ajax({
             url: '/Admin/LoadPopUp',
             type: 'POST',
@@ -28,27 +25,18 @@ function openPopUp(element) {
                 $('.popup').html(result);
                 document.querySelector("#popUPName").textContent = "Изменить страну";
                 document.querySelector("#currency").value = document.getElementById("modelCurrency").value;
-                document.querySelector('.price-input').children[0].addEventListener("input", function () {
-                    console.log("wtf");
-                    let inputSymbol1 = this.value.charAt(this.value.length - 1);
-                    const pattern2 = /\d/;
-
-                    let isValid = pattern2.test(inputSymbol1);
-                    if (!isValid) {
-                        this.value = this.value.slice(0, -1);
-                        console.log(this.value);
-                    }
-                    console.log(inputSymbol1, pattern2.test(inputSymbol1));
-                });
-
+                document.querySelector('.price-input').children[0].addEventListener("input", processInput);
+                document.querySelector('.price-input').children[0].addEventListener("paste", processPaste);
             }
         });
         hookAccordion();
     }
     else {
         fillDivs(false);
-        console.log("here");
+        cleanDivs();
         popupTXT.textContent = "Добавить страну";
+        document.querySelector('.price-input').children[0].addEventListener("input", processInput);
+        document.querySelector('.price-input').children[0].addEventListener("paste", processPaste);
     }
     popUpWindow.style.display = 'flex';
 }
@@ -57,6 +45,7 @@ function submit() {
     let isValid = customCountryValidation();
     if (isValid) {
         if (popupTXT.textContent == "Добавить страну") {
+            console.log("addCount");
             $.ajax({
                 url: '/Admin/CountryAdd',
                 type: 'POST',
@@ -65,7 +54,7 @@ function submit() {
                 success: function (result) {
                     if (typeof result === 'object') {
                         // it's error
-                        alert("Ошибка!");
+                        alert("Ошибка при добавлении страны!");
                     }
                     else {
                         // add country and update UI
@@ -82,13 +71,24 @@ function submit() {
                                 hookAccordion();
                             }
                         });
+
+                        console.log("Submit");
+                        let cId = document.querySelector('#countrySelectedID').textContent | 0;
+                        $.ajax({
+                            url: '/Admin/LoadImages',
+                            type: 'POST',
+                            data: JSON.stringify(cId),
+                            contentType: 'application/json',
+                            success: function (result3) {
+                                $('#CountryImages').html(result3);
+                            }
+                        });
                         popUpWindow.style.display = 'none';
                     }
                 }
             });
         }
         else {
-            console.log("submitPoster");
             $.ajax({
                 url: '/Admin/SubmitPoster',
                 type: 'POST',
@@ -97,7 +97,7 @@ function submit() {
                 success: function (result) {
                     if (typeof result === 'object') {
                         // it's error
-                        alert("Ошибка!");
+                        alert("Ошибка при добавлении/редактировании!");
                     }
                     else {
                         // IMPORTANT !! ADD LOGIC HERE AS WELL
@@ -121,7 +121,7 @@ function submit() {
         }
     }
     else {
-        console.log("invalid");
+        alert("invalid");
     }
 }
 function reject() {
@@ -231,5 +231,47 @@ function fillDivs(isFirstTime) {
     idDiv = document.querySelector("#countrySelectedID");
     if (isFirstTime) {
         popUpWindow.style.display = 'none';
+    }
+}
+
+function cleanDivs() {
+    for (let item of namesDivs) {
+        item.children[0].value = "";
+    }
+    for (let item of tagsDivs) {
+        item.children[0].checked = false;
+    }
+    priceDiv.children[0].value = "";
+    currencyDiv.value = "MDL";
+}
+
+
+function processPaste(event) {
+    // Prevent default paste behavior
+    event.preventDefault();
+
+    let inputElement = event.target;
+
+    // Access the clipboard data
+    const clipboardData = event.clipboardData || window.clipboardData;
+
+    // Get the pasted text
+    const pastedText = clipboardData.getData("text/plain");
+
+    let isOkay = /^\d+$/.test(pastedText);
+    if (isOkay && pastedText.length <= 5) {
+        inputElement.value = pastedText;
+    }
+}
+function processInput(event) {
+    // Get the input element that triggered the event
+    let inputElement = event.target;
+
+    let lastCharacter = inputElement.value.charAt(inputElement.value.length - 1);
+    let isDigit = /\d/.test(lastCharacter);
+
+    if (!isDigit) {
+        // Remove the last character
+        inputElement.value = inputElement.value.slice(0, -1);
     }
 }

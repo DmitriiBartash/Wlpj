@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', function () {
         slidesToShow: 3,
         arrows: false,
         slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 4000,
         cssEase: 'linear',
         responsive: [
             {
@@ -129,8 +131,9 @@ function hookSlicks() {
             centerPadding: '0',
             prevArrow: '<button type="button" class="second-slick-prev"></button>',
             nextArrow: '<button type="button" class="second-slick-next"></button>',
-            autoplay: false,
-            autoplaySpeed: 2000,
+            // CHANGE MAIN SWIPER COUNTRIES TIMER
+            autoplay: true,
+            autoplaySpeed: 5000,
 
             responsive: [
                 {

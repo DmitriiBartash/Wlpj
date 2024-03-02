@@ -54,7 +54,12 @@ const observer = new IntersectionObserver((entries) => {
 observer.observe(targetDiv);
 const incrementDiv = document.querySelector('.counter_about_us');
 // get number value 
-const maxValue = incrementDiv.textContent | 1;
+
+const currentYear = new Date().getFullYear();
+console.log(currentYear); // Output: 2024
+
+const maxValue = currentYear - 2008 - 1;
+//const maxValue = incrementDiv.textContent | 1;
 const delay = 100;
 let number = 0;
 async function incrementYear() {

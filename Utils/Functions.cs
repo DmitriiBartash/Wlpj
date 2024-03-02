@@ -34,7 +34,8 @@ namespace LandingPage.Utils
 
 			// somehow get all the tags
 			// first need to split them by '|' and only then by ','
-			string tagsRaw = _context.swiperModels.Where(country => country.CountryName == firstItem.CountryName)
+			string tagsRaw = _context.swiperModels
+				.Where(country => country.CountryName == firstItem.CountryName)
 				.Select(s => s.Tags)
 				.First<string>();
 
@@ -53,7 +54,8 @@ namespace LandingPage.Utils
 			}
 
 			// iterate through the loop and grab all items that have the same Country
-			var photoPaths = _context.swiperImagesAndPictures.Where(country => country.CountryID == firstItem.ID)
+			var photoPaths = _context.swiperImagesAndPictures
+				.Where(country => country.CountryID == firstItem.ID)
 				//.Select(s => s.PathToPicture)
 				.ToList();
 
@@ -80,8 +82,6 @@ namespace LandingPage.Utils
 
 			return model;
 		}
-
-
 
 		public static List<CountryNoPics> generateAdminCountriesData(DatabaseContext _context, Dictionary<string, string> _icons)
 		{

@@ -22,16 +22,16 @@
 		font-size: 1vw;
 	}
 
-	header a {
-		color: white;
-		text-decoration: none;
-		font-size: 1rem;
-		transition: ease .3s;
-	}
+		header a {
+			color: white;
+			text-decoration: none;
+			font-size: 1rem;
+			transition: ease .3s;
+		}
 
-	header a:hover {
-		color: red;
-	}
+			header a:hover {
+				color: red;
+			}
 
 	h2 {
 		font-size: 1.5vw;
@@ -57,16 +57,19 @@
 		transition: ease .3s;
 	}
 
-	.btn:hover {
-		background-color: #55e755cc;
-	}
+		.btn:hover {
+			background-color: #55e755cc;
+		}
 </style>
 
 <header>
 	<h1>Welcome</h1>
 
 	<div class="logout-container">
-		<a href="#"> Log out</a> |
+		@if (User.Identity.IsAuthenticated)
+		{
+			<a href="#"> Log out |</a>
+		}
 		<a href="../Home/Index"> Home</a>
 	</div>
 </header>

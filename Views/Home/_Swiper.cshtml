@@ -9,9 +9,12 @@
 	</div>
 
 	<div class="secondSwiper">
-		@foreach (var countryName in Model.countriesData)
+		@if (Model != null)
 		{
-			<p class="countryNames" name="@countryName.Value" >@countryName.Key</p>
+			@foreach (var countryName in Model.countriesData)
+			{
+				<p class="countryNames" name="@countryName.Value">@countryName.Key</p>
+			}
 		}
 	</div>
 </div>

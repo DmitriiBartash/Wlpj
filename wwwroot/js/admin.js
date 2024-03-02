@@ -52,8 +52,14 @@ function deleteCountry(eleemnt) {
         data: JSON.stringify(Cid),
         contentType: 'application/json',
         success: function (result) {
-            $('#CountryImages').html(result);
-            hookAccordion();
+            if (result == 'Error') {
+                // it's error
+                alert("Ошибка при удалении!");
+            }
+            else {
+                $('#CountryImages').html(result);
+                hookAccordion();
+            }
 
             $.ajax({
                 url: '/Admin/ListCountries',

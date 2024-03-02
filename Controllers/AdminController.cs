@@ -3,12 +3,11 @@ using LandingPage.Models;
 using LandingPage.Utils;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System.Reflection.Metadata.Ecma335;
 using System.Text;
 
 namespace LandingPage.Controllers
 {
-	[Authorize]
+	//[Authorize]
 	public class AdminController : Controller
 	{
 		private readonly DatabaseContext _context;
@@ -142,7 +141,8 @@ namespace LandingPage.Controllers
 					ID = model[0].ID,
 					Tags = model[0].Tags,
 					Price = model[0].Price,
-					Currency = model[0].Currency
+					Currency = model[0].Currency,
+					CountryName = model[0].Name
 				};
 
 				ViewBag.Images = photoPaths;
@@ -241,47 +241,57 @@ namespace LandingPage.Controllers
 		}
 
 		[HttpPost]
-		public PartialViewResult LoadTags([FromBody] int selectedCountry)
+		public IActionResult LoadTags([FromBody] int selectedCountry)
 		{
 			// get the country's name 
-			var name = _context.swiperModels.Find(selectedCountry);
-			if (name is null)
+			if (_context.swiperModels.Count() != 0)
 			{
-				selectedCountry = _context.swiperModels.FirstOrDefault().ID;
-				name = _context.swiperModels.Find(selectedCountry);
-			}
-
-			CountryNoPics countryNoPics = new();
-			countryNoPics.Tags = new();
-
-			// first need to split them by '|' and only then by ','
-			string tagsRaw = name.Tags;
-
-			List<string> tagsFinal = new();
-			List<string> tagsForIcons = tagsRaw.Split("|").ToList();
-			int j = 0;
-			for (int k = 0; k < tagsForIcons.Count; k++)
-			{
-				tagsFinal.Add(tagsForIcons[k].Split(",")[0]);
-				var tagToSearch = tagsForIcons[k].Split(",")[0];
-				if (tagsForIcons[k].Contains('\n'))
+				var name = _context.swiperModels.Find(selectedCountry);
+				if (name is null)
 				{
-					tagsForIcons[j] = tagsForIcons[k][..^1];
+					selectedCountry = _context.swiperModels.FirstOrDefault().ID;
+					name = _context.swiperModels.Find(selectedCountry);
 				}
-				TagsAndIcons tagsAndIcons = new() { tag = tagToSearch, icon = _icons[tagsForIcons[j++]] };
-				countryNoPics.Tags.Add(tagsAndIcons);
+
+				CountryNoPics countryNoPics = new();
+				countryNoPics.Tags = new();
+
+				// first need to split them by '|' and only then by ','
+				string tagsRaw = name.Tags;
+
+				List<string> tagsFinal = new();
+				List<string> tagsForIcons = tagsRaw.Split("|").ToList();
+				int j = 0;
+				for (int k = 0; k < tagsForIcons.Count; k++)
+				{
+					tagsFinal.Add(tagsForIcons[k].Split(",")[0]);
+					var tagToSearch = tagsForIcons[k].Split(",")[0];
+					if (tagsForIcons[k].Contains('\n'))
+					{
+						tagsForIcons[j] = tagsForIcons[k][..^1];
+					}
+					TagsAndIcons tagsAndIcons = new() { tag = tagToSearch, icon = _icons[tagsForIcons[j++]] };
+					countryNoPics.Tags.Add(tagsAndIcons);
+				}
+
+
+				CountryTagsNPrices countryTagsNPrices = new()
+				{
+					Tags = countryNoPics.Tags,
+					Price = name.Price,
+					Currency = name.Currency,
+					CountryName = name.CountryName
+				};
+
+				ViewBag.ID = selectedCountry;
+				return PartialView("_AdminCountryTagsNPrices", countryTagsNPrices);
 			}
-
-
-			CountryTagsNPrices countryTagsNPrices = new()
+			else
 			{
-				Tags = countryNoPics.Tags,
-				Price = name.Price,
-				Currency = name.Currency
-			};
+				string message = "";
 
-			ViewBag.ID = selectedCountry;
-			return PartialView("_AdminCountryTagsNPrices", countryTagsNPrices);
+				return Json(new { message = message });
+			}
 		}
 
 		[HttpPost]
@@ -388,7 +398,8 @@ namespace LandingPage.Controllers
 				{
 					Tags = countryNoPics.Tags,
 					Currency = country.Currency,
-					Price = country.Price
+					Price = country.Price,
+					CountryName = country.CountryName
 				};
 
 				ViewBag.ID = countryFull.Id;
@@ -436,6 +447,14 @@ namespace LandingPage.Controllers
 				_context.SaveChanges();
 
 
+				ViewBag.ID = _context.swiperModels
+					.Where(s =>
+					s.Price == country.Price &&
+					s.Currency == country.Currency &&
+					s.CountryName == country.CountryName &&
+					s.Tags == country.Tags).FirstOrDefault().ID;
+
+
 				CountryNoPics countryNoPics = new();
 				countryNoPics.Tags = new();
 
@@ -461,10 +480,10 @@ namespace LandingPage.Controllers
 				{
 					Tags = countryNoPics.Tags,
 					Currency = country.Currency,
-					Price = country.Price
+					Price = country.Price,
+					CountryName = country.CountryName
 				};
 
-				ViewBag.ID = countryFull.Id;
 
 				return PartialView("_AdminCountryTagsNPrices", countryTagsNPrices);
 			}
@@ -487,7 +506,7 @@ namespace LandingPage.Controllers
 		}
 
 		[HttpPost]
-		public PartialViewResult DeleteCountry([FromBody] string ID)
+		public IActionResult DeleteCountry([FromBody] string ID)
 		{
 			int Pid = Convert.ToInt32(ID);
 			// find the parent & delete him
@@ -503,13 +522,21 @@ namespace LandingPage.Controllers
 			_context.SaveChanges();
 
 			// get the country's name 
-			var name = _context.swiperModels.Find(_context.swiperModels.FirstOrDefault().ID);
+			if (_context.swiperModels.Count() != 0)
+			{
+				var name = _context.swiperModels.Find(_context.swiperModels.FirstOrDefault().ID);
 
-			var photoPaths = _context.swiperImagesAndPictures
-				.Where(country => country.CountryID == name.ID)
-				.ToList();
+				var photoPaths = _context.swiperImagesAndPictures
+					.Where(country => country.CountryID == name.ID)
+					.ToList();
 
-			return PartialView("_AdminCountryImages", photoPaths);
+				return PartialView("_AdminCountryImages", photoPaths);
+			}
+			else
+			{
+				string message = "Error";
+				return Json(new { message = message });
+			}
 		}
 		#endregion
 
@@ -533,27 +560,27 @@ namespace LandingPage.Controllers
 
 			foreach (var country in countryNames)
 			{
-				if (CID != -1)
+				//if (CID != -1)
+				//{
+				// convert country name to lowercase
+				string lowercaseCountry = country.ToLower();
+				// case scenario:
+				// i want to change name of Loss angheles to Loss Angeles
+				// in that case i just need to check if its present in OTHER COUNTRIES
+				// and if the iterable country is the same as the country that's been identified by ID
+				// *while iterating i dont check the country that's been identified
+
+				// check if data submitted with JS is present anywhere in DB
+				bool isCountryPresent =
+					lowercaseCountry.Contains(lowercaseRu) ||
+					lowercaseCountry.Contains(lowercaseRo) ||
+					lowercaseCountry.Contains(lowercaseEn);
+
+				if (isCountryPresent && country != existingCountry)
 				{
-					// convert country name to lowercase
-					string lowercaseCountry = country.ToLower();
-					// case scenario:
-					// i want to change name of Loss angheles to Loss Angeles
-					// in that case i just need to check if its present in OTHER COUNTRIES
-					// and if the iterable country is the same as the country that's been identified by ID
-					// *while iterating i dont check the country that's been identified
-
-					// check if data submitted with JS is present anywhere in DB
-					bool isCountryPresent =
-						lowercaseCountry.Contains(lowercaseRu) ||
-						lowercaseCountry.Contains(lowercaseRo) ||
-						lowercaseCountry.Contains(lowercaseEn);
-
-					if (isCountryPresent && country != existingCountry)
-					{
-						return true;
-					}
+					return true;
 				}
+				//}
 			}
 
 			return false;
