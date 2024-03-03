@@ -24,7 +24,7 @@ section {
     transform: translate(50%, 50%);
     transform-box: view-box;
     transform-origin: center;
-    stroke: purple;
+    stroke: #fce883;
     opacity: 1;
     scale: 0;
     animation: grow 2s infinite linear;
@@ -200,7 +200,6 @@ ul.nav-links {
 
 span.arrow-btn {
     font-size: 3vw;
-    /*font-size: 50px;*/
     color: #DAA520;
     transition: ease .3s;
 }
@@ -217,9 +216,8 @@ span.arrow-btn {
     width: 4vw;
     bottom: 0;
     right: 0;
-    margin-bottom: 5%;
-    margin-right: 10%;
-    /*margin: 35px 25px;*/
+    margin-bottom: 30px;
+    margin-right: 2%;
 }
 
 .floating-container-show {
@@ -560,5 +558,9 @@ span.arrow-btn {
 
     .span.arrow-btn {
         font-size: 2.3rem !important;
+    }
+
+    .floating-container {
+        margin-bottom: 1% !important;
     }
 }
