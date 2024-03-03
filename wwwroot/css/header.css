@@ -24,7 +24,7 @@ section {
     transform: translate(50%, 50%);
     transform-box: view-box;
     transform-origin: center;
-    stroke: purple;
+    stroke: #fce883;
     opacity: 1;
     scale: 0;
     animation: grow 2s infinite linear;
