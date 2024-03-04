@@ -416,10 +416,6 @@ svg path {
     z-index: 1000;
 }
 
-.popup-wrapper {
-    background-color: orange;
-}
-
 .popup-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
