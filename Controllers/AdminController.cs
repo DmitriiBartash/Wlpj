@@ -412,11 +412,15 @@ namespace LandingPage.Controllers
 		{
 			// str1|str2|str3
 			// if country exists return error msg
+			if (countryFull == null)
+			{
+				string message = "Error";
+				return Json(new { message = message });
+			}
 			string[] countryNames = countryFull.Name.Split("|");
 			if (IfCountryExists(countryNames[0], countryNames[1], countryNames[2], -1))
 			{
 				string message = "Error";
-
 				return Json(new { message = message });
 			}
 			// if country doesnt exist, add it
@@ -508,29 +512,46 @@ namespace LandingPage.Controllers
 		[HttpPost]
 		public IActionResult DeleteCountry([FromBody] string ID)
 		{
-			int Pid = Convert.ToInt32(ID);
-			// find the parent & delete him
-			_context.swiperModels.Remove(_context.swiperModels.Find(Pid));
-
-			// get the list of those pics
-			var allPics = _context.swiperImagesAndPictures
-				.Where(s => s.CountryID == Pid)
-				.ToList();
-
-			// delete all pics associated with him
-			_context.swiperImagesAndPictures.RemoveRange(allPics);
-			_context.SaveChanges();
-
-			// get the country's name 
-			if (_context.swiperModels.Count() != 0)
+			int Pid;
+			if (int.TryParse(ID, out Pid))
 			{
-				var name = _context.swiperModels.Find(_context.swiperModels.FirstOrDefault().ID);
+				// successfull converted
+				if (Pid > 0)
+				{
+					// find the parent & delete him
+					_context.swiperModels.Remove(_context.swiperModels.Find(Pid));
 
-				var photoPaths = _context.swiperImagesAndPictures
-					.Where(country => country.CountryID == name.ID)
-					.ToList();
+					// get the list of those pics
+					var allPics = _context.swiperImagesAndPictures
+						.Where(s => s.CountryID == Pid)
+						.ToList();
 
-				return PartialView("_AdminCountryImages", photoPaths);
+					// delete all pics associated with him
+					_context.swiperImagesAndPictures.RemoveRange(allPics);
+					_context.SaveChanges();
+
+					// get the country's name 
+					if (_context.swiperModels.Count() != 0)
+					{
+						var name = _context.swiperModels.Find(_context.swiperModels.FirstOrDefault().ID);
+
+						var photoPaths = _context.swiperImagesAndPictures
+							.Where(country => country.CountryID == name.ID)
+							.ToList();
+
+						return PartialView("_AdminCountryImages", photoPaths);
+					}
+					else
+					{
+						string message = "Error";
+						return Json(new { message = message });
+					}
+				}
+				else
+				{
+					string message = "Error";
+					return Json(new { message = message });
+				}
 			}
 			else
 			{
