@@ -45,7 +45,7 @@ namespace LandingPage.Controllers
 
 					HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new(claimsIdentity), properties);
 
-					return RedirectToAction("Index", "Admin");
+					return RedirectToAction("Index", "Admin47");
 				}
 				return View("Index");
 			}

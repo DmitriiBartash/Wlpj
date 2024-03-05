@@ -7,7 +7,7 @@ using System.Text;
 
 namespace LandingPage.Controllers
 {
-	//[Authorize]
+	[Authorize]
 	public class Admin47Controller : Controller
 	{
 		private readonly DatabaseContext _context;

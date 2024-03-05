@@ -134,7 +134,7 @@ function hookSlicks() {
             nextArrow: '<button type="button" class="second-slick-next"></button>',
             // CHANGE MAIN SWIPER COUNTRIES TIMER
             autoplay: true,
-            autoplaySpeed: 5000,
+            autoplaySpeed: 2000,
 
             responsive: [
                 {
