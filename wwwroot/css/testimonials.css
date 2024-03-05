@@ -106,8 +106,10 @@
     overflow-y: auto;
     font-size: calc((1.5vw + 1.5vh)/2);
     display: inline-block;
-    word-break: break-all;
-    margin: 0;
+    word-break: auto-phrase;
+    /*word-break: break-all;*/
+    margin: 5%;
+    /*margin: 0%;*/
 }
 
 .testimonials-swiper.slick-initialized.slick-slider .slick-prev {

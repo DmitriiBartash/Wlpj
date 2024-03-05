@@ -17,7 +17,7 @@
 
         $(document).ready(function () {
             $.ajax({
-                url: '/Admin/LoadImages',
+                url: '/Admin47/LoadImages',
                 type: 'PUT',
                 data: formData,
                 processData: false,

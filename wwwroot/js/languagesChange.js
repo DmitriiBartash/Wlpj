@@ -123,7 +123,6 @@ const languageModelJson = {
                 "NAITI": "Где нас найти? <br><br>”Emirat Travel”<br>Str.ALbisoara 4, oficiu 611 <br> Moldova, Chisinau “Atrium” BC",
                 "Grafik": "<br>График работы:<br><br>C 10: 00 - 19: 00, Понедельник-Суббота<br>C 8: 00 - 20: 00, по предварительной договорённости<br><br>Связь с нами: <br><br>+373 601 44 445<br>+373 601 44 442<br>+373 621 57 575"
             }
-
         },
         {
             "footer": {
@@ -136,6 +135,9 @@ const languageModelJson = {
         },
         {
             "swiper-tagdescriptionText": "Цена включает:"
+        },
+        {
+            "fromSVG": "От"
         }
     ],
     "Eng": [
@@ -211,6 +213,9 @@ const languageModelJson = {
         },
         {
             "swiper-tagdescriptionText": "Price includes:"
+        },
+        {
+            "fromSVG": "From"
         }
     ],
     "Ro": [
@@ -286,6 +291,9 @@ const languageModelJson = {
         },
         {
             "swiper-tagdescriptionText": "Prețul include:"
+        },
+        {
+            "fromSVG": "De la"
         }
     ]
 }
@@ -327,11 +335,13 @@ function changeLanguage(element) {
             informationCardsDiv.children[i].children[3].innerHTML = languageModelJson[selectedLanguage][3]["information-cards"][i]["information_cards_text"];
         }
 
-        // price includes... 
+        // price includes...
         //console.log(document.querySelector(".swiper-tagdescription p"));
         //document.querySelector(".tags").children[0].innerHTML = languageModelJson[selectedLanguage][9]["swiper-tagdescriptionText"];
         ////document.querySelector(".swiper-tagdescription p").innerHTML = languageModelJson[selectedLanguage][9]["swiper-tagdescriptionText"];
 
+        // SVG FROM
+        document.querySelector('#tspan8024').textContent = languageModelJson[selectedLanguage][10]["fromSVG"];
 
         // FACTS
         document.getElementsByClassName("heading_about_us")[1].innerHTML = languageModelJson[selectedLanguage][4]["about-us"]["heading_about_us"];

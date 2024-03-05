@@ -20,33 +20,35 @@
 <div class="panel">
 	@if (Model is not null)
 	{
-		@if (@ViewBag.ID == null)
-		{
-			<p id="countrySelectedID" hidden>@Model.ID</p>
-		}
-		else
-		{
-			<p id="countrySelectedID" hidden>@ViewBag.ID</p>
-		}
-		<div class="name_country">
-			<p>Название страны: </p>
-			@if (isFilled)
+		<div class="countryData">
+			@if (@ViewBag.ID == null)
 			{
-				<div>Ru: @CNames[0]</div>
-				<div>En: @CNames[1]</div>
-				<div>Ro: @CNames[2]</div>
+				<p id="countrySelectedID" hidden>@Model.ID</p>
 			}
-		</div>
-		<div class="prices">
-			<p>Цена: @Model?.Price</p>
-			<p>Валюта @Model?.Currency</p>
-		</div>
+			else
+			{
+				<p id="countrySelectedID" hidden>@ViewBag.ID</p>
+			}
+			<div class="name_country">
+				<p>Название страны: </p>
+				@if (isFilled)
+				{
+					<div>Ru: @CNames[0]</div>
+					<div>En: @CNames[1]</div>
+					<div>Ro: @CNames[2]</div>
+				}
+			</div>
+			<div class="prices">
+				<p>Цена: @Model?.Price</p>
+				<p>Валюта @Model?.Currency</p>
+			</div>
 
-		<div class="TAGS">
-			@foreach (var tag in @Model.Tags)
-			{
-				<p><img src="~/content/tags/@tag?.icon">@tag?.tag</p>
-			}
+			<div class="TAGS">
+				@foreach (var tag in @Model.Tags)
+				{
+					<p><img src="~/content/tags/@tag?.icon">@tag?.tag</p>
+				}
+			</div>
 		</div>
 
 		<div class="panel_tag_button">

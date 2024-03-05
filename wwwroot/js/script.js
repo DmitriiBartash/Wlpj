@@ -36,7 +36,6 @@ floatingButton.addEventListener('click', () => {
 });
 
 buttonFloating.onclick = function () {
-    console.log("asd");
     isButtonActive = !isButtonActive;
     if (isButtonActive) {
         icons.style.display = "none";

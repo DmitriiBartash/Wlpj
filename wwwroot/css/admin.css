@@ -517,9 +517,14 @@ input[type="radio"] {
 
 .panel {
     height: inherit;
+    display: grid;
+    grid-template-rows: 80% 20%;
+    /*grid-template-rows: auto auto auto auto;*/
 }
 
-
+.countryData {
+    display: grid;
+}
 /*Add button of countries*/
 #imagesToAdd {
     height: 100px;

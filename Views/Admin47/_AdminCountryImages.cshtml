@@ -1,0 +1,48 @@
+﻿@model IEnumerable<LandingPage.Models.SwiperImagesAndPictures>
+
+<div id="CountryImages">
+	<!-- <p>Country name</p> -->
+	<div class="main-photo">
+		@* @if (Model is null || Model.Count() <= 0)
+		{
+		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/330px-No-Image-Placeholder.svg.png?20200912122019" />
+		}
+		else
+		{
+		<img src="@Model.FirstOrDefault().PathToPicture" />
+		} *@
+		@if (Model is not null)
+		{
+			if (Model.Count() > 0)
+			{
+				<img src="@Model.FirstOrDefault().PathToPicture" />
+			}
+			else
+			{
+				<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/330px-No-Image-Placeholder.svg.png?20200912122019" />
+			}
+		}
+	</div>
+
+	<div class="photoMain">
+		<div class="photos-of-countries">
+			@if (Model is not null)
+			{
+				@foreach (var photo in Model)
+				{
+					<div class="imgEntity">
+						<img onclick="changeMainPhoto(this)" class="photo" src="@photo.PathToPicture">
+						<p hidden>@photo.ID</p>
+						<p onclick="deleteImage(this)">X</p>
+					</div>
+				}
+				<div id="imagesToAdd">
+					<div class="stretched-button">
+						<input type="file" id="hidden-file-input" multiple accept="image/*" hidden>
+						<button type="button" onclick="asyncGet()">+</button>
+					</div>
+				</div>
+			}
+		</div>
+	</div>
+</div>

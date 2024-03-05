@@ -22,6 +22,8 @@
         "selectedLanguage": selectedLanguage
     }
 
+    document.querySelector('#tspan8024').textContent = languageModelJson[selectedLanguage][10]["fromSVG"];
+
     $.ajax({
         url: '/Home/LoadSecondSwiper',
         type: 'POST',

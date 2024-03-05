@@ -50,6 +50,7 @@ section {
     position: absolute;
     display: flex;
     align-items: center;
+    pointer-events: none;
 }
 
 .pulseCircle svg {

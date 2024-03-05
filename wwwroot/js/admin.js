@@ -32,7 +32,7 @@ function deleteImage(element) {
     };
 
     $.ajax({
-        url: '/Admin/DeleteImage',
+        url: '/Admin47/DeleteImage',
         type: 'POST',
         data: JSON.stringify(dataJSON),
         contentType: 'application/json',
@@ -47,7 +47,7 @@ function deleteCountry(eleemnt) {
     let Cid = document.querySelector('#countrySelectedID').textContent;
 
     $.ajax({
-        url: '/Admin/DeleteCountry',
+        url: '/Admin47/DeleteCountry',
         type: 'POST',
         data: JSON.stringify(Cid),
         contentType: 'application/json',
@@ -62,7 +62,7 @@ function deleteCountry(eleemnt) {
             }
 
             $.ajax({
-                url: '/Admin/ListCountries',
+                url: '/Admin47/ListCountries',
                 type: 'POST',
                 data: JSON.stringify("dd"),
                 contentType: 'application/json',
@@ -73,7 +73,7 @@ function deleteCountry(eleemnt) {
             });
 
             $.ajax({
-                url: '/Admin/LoadTags',
+                url: '/Admin47/LoadTags',
                 type: 'POST',
                 data: JSON.stringify(Cid),
                 contentType: 'application/json',

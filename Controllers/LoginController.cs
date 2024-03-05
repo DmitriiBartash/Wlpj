@@ -28,18 +28,17 @@ namespace LandingPage.Controllers
 		{
 			if (ModelState.IsValid)
 			{
-
 				// https://jasonwatmore.com/post/2022/01/16/net-6-hash-and-verify-passwords-with-bcrypt
-				string passwordHash = "$2a$11$MFUFQl6VLOLB.5VkC8SAluVGFyeELpvop8qP1T5wlOzYspqX5VbWW";
+				string passwordHash = "$2a$11$vtO1nAKaxpuOmxkHuXe2x.vEI5po9PWuOUtNTVoPxppKzxRp5QerW";
 
 				bool verified = BCrypt.Net.BCrypt.Verify(userdetails.Password, passwordHash);
 
-				if (userdetails.Login == "Admin" && verified)
+				if (userdetails.Login == "emirat.travel@gmail.com" && verified)
 				{
 					List<Claim> claims = new()
-				{
-					new(ClaimTypes.NameIdentifier,userdetails.Login)
-				};
+					{
+						new(ClaimTypes.NameIdentifier,userdetails.Login)
+					};
 					ClaimsIdentity claimsIdentity = new(claims, CookieAuthenticationDefaults.AuthenticationScheme);
 
 					AuthenticationProperties properties = new() { AllowRefresh = true, IsPersistent = false };

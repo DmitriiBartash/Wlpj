@@ -17,7 +17,7 @@ function openPopUp(element) {
     if (element.textContent == "Редактировать страну") {
         nameId = document.querySelector("#countrySelectedID").textContent;
         $.ajax({
-            url: '/Admin/LoadPopUp',
+            url: '/Admin47/LoadPopUp',
             type: 'POST',
             data: JSON.stringify(nameId),
             contentType: 'application/json',
@@ -27,6 +27,7 @@ function openPopUp(element) {
                 document.querySelector("#currency").value = document.getElementById("modelCurrency").value;
                 document.querySelector('.price-input').children[0].addEventListener("input", processInput);
                 document.querySelector('.price-input').children[0].addEventListener("paste", processPaste);
+                document.querySelector('.price-input').children[0].addEventListener("select", processSelect);
             }
         });
         hookAccordion();
@@ -37,6 +38,7 @@ function openPopUp(element) {
         popupTXT.textContent = "Добавить страну";
         document.querySelector('.price-input').children[0].addEventListener("input", processInput);
         document.querySelector('.price-input').children[0].addEventListener("paste", processPaste);
+        document.querySelector('.price-input').children[0].addEventListener("select", processSelect);
     }
     popUpWindow.style.display = 'flex';
 }
@@ -47,7 +49,7 @@ function submit() {
         if (popupTXT.textContent == "Добавить страну") {
             console.log("addCount");
             $.ajax({
-                url: '/Admin/CountryAdd',
+                url: '/Admin47/CountryAdd',
                 type: 'POST',
                 data: JSON.stringify(assembleData()),
                 contentType: 'application/json',
@@ -62,7 +64,7 @@ function submit() {
                         hookAccordion();
 
                         $.ajax({
-                            url: '/Admin/ListCountries',
+                            url: '/Admin47/ListCountries',
                             type: 'POST',
                             data: JSON.stringify("dd"),
                             contentType: 'application/json',
@@ -75,7 +77,7 @@ function submit() {
                         console.log("Submit");
                         let cId = document.querySelector('#countrySelectedID').textContent | 0;
                         $.ajax({
-                            url: '/Admin/LoadImages',
+                            url: '/Admin47/LoadImages',
                             type: 'POST',
                             data: JSON.stringify(cId),
                             contentType: 'application/json',
@@ -89,35 +91,41 @@ function submit() {
             });
         }
         else {
-            $.ajax({
-                url: '/Admin/SubmitPoster',
-                type: 'POST',
-                data: JSON.stringify(assembleData()),
-                contentType: 'application/json',
-                success: function (result) {
-                    if (typeof result === 'object') {
-                        // it's error
-                        alert("Ошибка при добавлении/редактировании!");
-                    }
-                    else {
-                        // IMPORTANT !! ADD LOGIC HERE AS WELL
-                        $('#TagsNPrices').html(result);
-                        hookAccordion();
+            let tempikD = assembleData();
+            if (isNaN(Number(tempikD.Price))) {
+                alert('ERROR');
+            }
+            else {
+                $.ajax({
+                    url: '/Admin47/SubmitPoster',
+                    type: 'POST',
+                    data: JSON.stringify(assembleData()),
+                    contentType: 'application/json',
+                    success: function (result) {
+                        if (typeof result === 'object') {
+                            // it's error
+                            alert("Ошибка при добавлении/редактировании!");
+                        }
+                        else {
+                            // IMPORTANT !! ADD LOGIC HERE AS WELL
+                            $('#TagsNPrices').html(result);
+                            hookAccordion();
 
-                        $.ajax({
-                            url: '/Admin/ListCountries',
-                            type: 'POST',
-                            data: JSON.stringify("dd"),
-                            contentType: 'application/json',
-                            success: function (result3) {
-                                $('#CountryData').html(result3);
-                                hookAccordion();
-                            }
-                        });
-                        popUpWindow.style.display = 'none';
+                            $.ajax({
+                                url: '/Admin47/ListCountries',
+                                type: 'POST',
+                                data: JSON.stringify("dd"),
+                                contentType: 'application/json',
+                                success: function (result3) {
+                                    $('#CountryData').html(result3);
+                                    hookAccordion();
+                                }
+                            });
+                            popUpWindow.style.display = 'none';
+                        }
                     }
-                }
-            });
+                });
+            }
         }
     }
     else {
@@ -196,7 +204,7 @@ function assembleData() {
     // get names
     let names = "";
     for (let item of namesDivs) {
-        names += item.children[0].value + "|";
+        names += item.children[0].value.trim() + "|";
     }
     names = names.substring(0, names.length - 1);
 
@@ -274,4 +282,19 @@ function processInput(event) {
         // Remove the last character
         inputElement.value = inputElement.value.slice(0, -1);
     }
+}
+function processSelect(event) {
+    // Get the input element that triggered the event
+    let inputElement = event.target;
+
+    event.preventDefault();
+
+    console.log("asdfsghtgrfedqwert");
+    //let lastCharacter = inputElement.value.charAt(inputElement.value.length - 1);
+    //let isDigit = /\d/.test(lastCharacter);
+
+    //if (!isDigit) {
+    // Remove the last character
+    //inputElement.value = inputElement.value.slice(0, -1);
+    //}
 }

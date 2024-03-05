@@ -9,7 +9,7 @@ function hookAccordion() {
         element.addEventListener("click", function () {
 
             $.ajax({
-                url: '/Admin/LoadTags',
+                url: '/Admin47/LoadTags',
                 type: 'POST',
                 data: JSON.stringify(this.children[0].id),
                 contentType: 'application/json',
@@ -19,7 +19,7 @@ function hookAccordion() {
             });
 
             $.ajax({
-                url: '/Admin/LoadImages',
+                url: '/Admin47/LoadImages',
                 type: 'POST',
                 data: JSON.stringify(this.children[0].id),
                 contentType: 'application/json',

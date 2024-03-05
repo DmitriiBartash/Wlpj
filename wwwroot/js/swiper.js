@@ -99,6 +99,7 @@ function hookSlicks() {
             contentType: 'application/json',
             success: function (result) {
                 $('#firstSwiperHolder').html(result);
+                document.querySelector('#tspan8024').textContent = languageModelJson[selectedLanguage][10]["fromSVG"];
                 $('.firstSwiper').slick({
                     infinite: true,
                     speed: 500,
@@ -156,4 +157,5 @@ function hookSlicks() {
 
 function updateSecondSwiper() {
     $('.secondSwiper').slick('getSlick').slickGoTo(currentSecondSlideNumber, true);
+    document.querySelector('#tspan8024').textContent = languageModelJson[selectedLanguage][10]["fromSVG"];
 }

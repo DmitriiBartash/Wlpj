@@ -2,7 +2,7 @@
 
 @{
 	ViewData["Title"] = "Reviews";
-	Layout = "~/Views/Admin/_AdminLayuot.cshtml";
+	Layout = "~/Views/Admin47/_AdminLayuot.cshtml";
 }
 
 <style>
@@ -63,30 +63,54 @@
 			background-color: yellow;
 		}
 
-	.edit, .delete {
-		transition: ease .3s;
+	.reviewsGrid {
+		display: flex;
+		gap: 1rem;
+		flex-direction: column;
 	}
 
-		.edit:hover,
-		.delete:hover {
-			color: red;
+		.reviewsGrid p {
+			word-wrap: break-word;
 		}
 
-	.table {
-		width: 100%;
-		border: 5px solid grey;
-		border-collapse: collapse;
-		background: linear-gradient(to top left, powderblue, pink);
+	.reviewsRow {
+		margin: 1rem;
+		padding: 1rem;
+		border: 3px solid skyblue;
+		border-radius: 1rem;
+		display: grid;
+		grid-template-columns: 10% 85% 5%;
+		align-items: center;
 	}
 
-		.table th {
-			border: 5px solid grey;
+	.reviewAuthor {
+		height: 100%;
+		border-right: 1px dashed red;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.reviewTxt {
+		margin: .5rem;
+	}
+
+		.reviewTxt p {
+			word-wrap: break-word;
 		}
 
-		.table td {
-			border: 5px solid grey;
-			padding: 0.5%;
-		}
+	.reviewBtns {
+		height: 100%;
+		display: flex;
+		border-left: 1px dashed red;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.reviewsGrid {
+		font-size: 1.4rem;
+	}
 </style>
 
 <header>
@@ -94,7 +118,7 @@
 	<div class="logout-container">
 		<a href="~/Login/Logout">Log out</a> |
 		<a asp-controller="Home" asp-action="Index">Home</a> |
-		<a asp-controller="Admin" asp-action="Index">Back</a>
+		<a asp-controller="Admin47" asp-action="Index">Back</a>
 	</div>
 </header>
 
@@ -103,34 +127,39 @@
 		<a class="addendum" asp-action="ReviewAdd">Напишите новый отзыв</a>
 	</h3>
 
-	<table class="table">
-		<thead>
-			<tr>
-				<th>
+	<div class="reviewsGrid">
+		<div class="reviewsRow">
+			<div class="reviewAuthor">
+				<p>
 					@Html.DisplayNameFor(model => model.Person)
-				</th>
-				<th>
+				</p>
+			</div>
+			<div class="reviewAuthor">
+				<p>
 					@Html.DisplayNameFor(model => model.Review)
-				</th>
-				<th></th>
-			</tr>
-		</thead>
-		<tbody>
-			@foreach (var item in Model)
-			{
-				<tr>
-					<td>
+				</p>
+			</div>
+			<p></p>
+		</div>
+
+		@foreach (var item in Model)
+		{
+			<div class="reviewsRow">
+				<div class="reviewAuthor">
+					<p>
 						@Html.DisplayFor(modelItem => item.Person)
-					</td>
-					<td>
+					</p>
+				</div>
+				<div class="reviewTxt">
+					<p>
 						@Html.DisplayFor(modelItem => item.Review)
-					</td>
-					<td width="8%">
-						<a class="edit" asp-action="ReviewEdit" asp-route-id="@item.Id">Edit</a> |
-						<a class="delete" asp-action="ReviewDelete" asp-route-id="@item.Id">Delete</a>
-					</td>
-				</tr>
-			}
-		</tbody>
-	</table>
+					</p>
+				</div>
+				<div class="reviewBtns">
+					<a class="edit" asp-action="ReviewEdit" asp-route-id="@item.Id">Edit</a>
+					<a class="delete" asp-action="ReviewDelete" asp-route-id="@item.Id">Delete</a>
+				</div>
+			</div>
+		}
+	</div>
 </body>

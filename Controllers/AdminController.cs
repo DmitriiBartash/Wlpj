@@ -8,7 +8,7 @@ using System.Text;
 namespace LandingPage.Controllers
 {
 	//[Authorize]
-	public class AdminController : Controller
+	public class Admin47Controller : Controller
 	{
 		private readonly DatabaseContext _context;
 		private readonly string absoluteRootPath;
@@ -17,7 +17,7 @@ namespace LandingPage.Controllers
 
 		public readonly string[] tagsList;
 
-		public AdminController(DatabaseContext context, CountryCodes countryCodes, Icons icons)
+		public Admin47Controller(DatabaseContext context, CountryCodes countryCodes, Icons icons)
 		{
 			_context = context;
 			_countryCodes = countryCodes.value;
@@ -136,13 +136,15 @@ namespace LandingPage.Controllers
 					.Where(country => country.CountryID == model[0].ID)
 					.ToList();
 
+				var name = _context.swiperModels.Find(model[0].ID);
+
 				CountryTagsNPrices countryTagsNPrices = new()
 				{
 					ID = model[0].ID,
 					Tags = model[0].Tags,
 					Price = model[0].Price,
 					Currency = model[0].Currency,
-					CountryName = model[0].Name
+					CountryName = name.CountryName
 				};
 
 				ViewBag.Images = photoPaths;
